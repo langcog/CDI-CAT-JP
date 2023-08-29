@@ -52,11 +52,29 @@ names(hiro2_proc) = hiro2_header[2,]
 
 
 # import Yasuyo's data, which are split by sex and each child's data is in a column
-yas_m <- read_xlsx("data/Yasuyo/①日本語CDI語と文法2019BoysPilot.xlsx")
-yas_f <- read_xlsx("data/Yasuyo/①日本語CDI語と文法2019GirlsPilot.xlsx")
+yas_m <- read_xlsx("data/Yasuyo/①日本語CDI語と文法2019BoysPilot.xlsx") #  847 x 64
+# first 7 rows (translated with Google translate):
+# Ⅰ Expressive Vocabulary A～X: Say ⇒ "1", Do not say ⇒ "0"
+# II How to use words: Say often ⇒ “2”, say occasionally ⇒ “1”, never say ⇒ “0”
+# Part 2 Grammar A: Say often ⇒ “2”, say occasionally ⇒ “1”, never say ⇒ “0”
+# Part 2 Grammar B to C: Say ⇒ "1", Do not say ⇒ "0"
+# Part 2 Grammar D: I speak quite often ⇒ 2, I speak occasionally ⇒ 1, I can't speak yet ⇒ 0
+# Part 2 Grammar F: Lower selection ⇒ "1" Upper selection ⇒ "0"
+yas_m_proc <- yas_m[10:nrow(yas_m),1:63] # final column is all NA
+names(yas_m_proc) = c("category","word_id","definition",paste0("m",1:61))
+
+yas_f <- read_xlsx("data/Yasuyo/①日本語CDI語と文法2019GirlsPilot.xlsx") # 847 x 63
+# similar to yas_m: data starts on row 10
+yas_f_proc <- yas_f[10:nrow(yas_f),]
+names(yas_f_proc) = c("category","word_id","definition",paste0("f",1:20))
+# ToDo: look at categories, fill in (does order of definitions match Sho's forms?)
+
 yas_demo <- read_xlsx("data/Yasuyo/AgeBoys&Girls.xlsx") # 80
 yas_demo <- yas_demo %>%
-  mutate(sex = ifelse(`...1`=="Boy", "Male", "Female"))
+  rename(age = `Age(month)`) %>%
+  mutate(sex = ifelse(`...1`=="Boy", "Male", "Female")) %>%
+  select(-`...1`) %>%
+  mutate(ID = ifelse(sex=="Male", paste0("m",ID), paste0("f",ID))) # unique-ify the IDs
 
 wg <- read_csv("forms/wordsandgestures.csv") %>% # 548
   filter(type=="word") # 448
