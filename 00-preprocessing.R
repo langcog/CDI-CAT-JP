@@ -2,15 +2,23 @@ require(tidyverse)
 require(readxl)
 
 # import Sho's WG data
-sho_d <- read_csv("data/Sho/data_wordsandgestures_2023-08-10-16-53-17.csv")
+sho_d <- read_csv("data/Sho/data_wordsandgestures_2023-08-10-16-53-17.csv") %>%
+  select(-`Birthday.(yyyy/mm/dd)`)
 # warning: has birthdays
 sum(sho_d$ID!=sho_d$id)
 # id and ID are same
 
 # response:
 table(sho_d$value)
+#           ERROR          no     not_yet       often    produces   sometimes understands         yes
+# 408          42         855         148          82          40          45         882         208
 # blank = No?
 # what is "yes"? produces?
+
+# proposed recoding:
+# "", "no", "not_yet", and "understands" -> 0;
+# "yes", "often", "sometimes", or "produces" -> 1;
+# "ERROR" -> NA
 
 sho_proc <- sho_d %>%
   rename(age = agemonths,
@@ -44,12 +52,14 @@ hiro2_header = hiro2[1:3,]
 # ...
 # 787: "Ⅴ結合後発話"
 
-hiro1_proc <- hiro1[3:nrow(hiro1),1:801]
+hiro1_proc <- hiro1[3:(nrow(hiro1)-1),1:801] # last row is a header
 names(hiro1_proc) = hiro1_header[2,1:801] # seq, ID, .., A1, A2, etc. - use row 1 for Hiragana
 
 hiro2_proc <- hiro2[4:nrow(hiro2),]
 names(hiro2_proc) = hiro2_header[2,]
 
+hiro1_proc <- hiro1_proc %>% select(-starts_with("pg")) # remove these (pg1 - pg11)
+hiro2_proc <- hiro2_proc %>% select(-starts_with("pg")) # remove these (pg1 - pg9)
 
 # import Yasuyo's data, which are split by sex and each child's data is in a column
 yas_m <- read_xlsx("data/Yasuyo/①日本語CDI語と文法2019BoysPilot.xlsx") #  847 x 64
@@ -76,9 +86,33 @@ yas_demo <- yas_demo %>%
   select(-`...1`) %>%
   mutate(ID = ifelse(sex=="Male", paste0("m",ID), paste0("f",ID))) # unique-ify the IDs
 
-wg <- read_csv("forms/wordsandgestures.csv") %>% # 548
+# issues reading the unicode from the CSVs..
+# wg <- read_csv("forms/wordsandgestures.csv")
+# ws <- read_csv("forms/wordsandsentences.csv")
+
+wg <- read_xlsx("forms/wordsandgestures.xlsx") %>% # 548
   filter(type=="word") # 448
-ws <- read_csv("forms/wordsandsentences.csv") %>% # 816
+ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
   filter(type=="word") # 711
 
 
+hiro_words1 = hiro1_header[1,7:ncol(hiro1_header)]
+hiro_words2 = hiro2_header[1,7:ncol(hiro2_header)]
+length(intersect(unlist(hiro_words1[1:779]), unlist(hiro_words2[1:780]))) # 766 out of 780
+setdiff(unlist(hiro_words1[1:779]), unlist(hiro_words2[1:780])) # none
+setdiff(unlist(hiro_words2[1:780]), unlist(hiro_words1[1:779])) # none...
+
+
+# matching Hiro items to WG/WS:
+length(intersect(wg$definition_ja1, unlist(hiro_words1[1:779]))) # WG and hiro1: 318 (of 448)
+length(intersect(ws$definition_ja1, unlist(hiro_words1[1:779]))) # WS and hiro1: 539 (of 711)
+
+length(intersect(wg$definition_ja1, unlist(hiro_words2[1:780]))) # WG and hiro1: 318 (of 448)
+length(intersect(ws$definition_ja1, unlist(hiro_words2[1:780]))) # WS and hiro1: 539 (of 711)
+
+intersect(wg$definition_ja1, unlist(hiro_words1[1:779]))
+intersect(ws$definition_ja1, unlist(hiro_words1[1:779]))
+
+# matching Sho items to WG/WS:
+length(intersect(wg$item_id, sho_proc$item_id)) # 448
+length(intersect(ws$item_id, sho_proc$item_id)) # 547
