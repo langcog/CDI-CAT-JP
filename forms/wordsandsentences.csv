@@ -1,817 +1,817 @@
-item_id,type,category_ja,category_en,definition_ja1,definition_ja2,definition_en
-item_1,word,—c™Œê,sounds,‚ [‚ ‚Á (‚æ‚­‚È‚¢‚±‚Æ)  ,Aaa,Oh_no
-item_2,word,—c™Œê,sounds,ƒAƒCƒ^ (‚¢‚½‚¢),Aita,Ouch
-item_3,word,—c™Œê,sounds,ƒIƒCƒ`ƒB (‚¨‚¢‚µ‚¢),Oichii,Yummy 
-item_4,word,—c™Œê,sounds,ƒK[ƒK[ (ƒAƒqƒ‹),Gaagaa,Quack_quack
-item_5,word,—c™Œê,sounds,ƒKƒI[ (ƒ‰ƒCƒIƒ“),Gaoo,Roar
-item_6,word,—c™Œê,sounds,‚±‚¯‚±‚Á‚± (‚É‚í‚Æ‚è),Kokekokko,Cock_a_doodle_doo
-item_7,word,—c™Œê,sounds,ƒVƒ…ƒbƒ|ƒbƒ|[ (‹DÔ),Syupoppoo,Choo-choo
-item_8,word,—c™Œê,sounds,ƒjƒƒƒ“ƒjƒƒƒ“ (ƒlƒR),Nyannyan,Meow
-item_9,word,—c™Œê,sounds,ƒu[ƒu[ (Ô),Buubuu,Broom_broom
-item_10,word,—c™Œê,sounds,ƒ[ƒ[ (ƒ„ƒM),meemee,Baa_baa
-item_11,word,—c™Œê,sounds,ƒ‚[ (‹),Moo,Moo
-item_12,word,—c™Œê,sounds,ƒƒ“ƒƒ“ (Œ¢),Wanwan,Bowwow
-item_13,word,“®•¨‚Ì–¼‘O,animals,ƒAƒqƒ‹,Ahiru,Duck
-item_14,word,“®•¨‚Ì–¼‘O,animals,ƒAƒŠ,Ari,Ant
-item_15,word,“®•¨‚Ì–¼‘O,animals,Œ¢,Inu,Dog
-item_16,word,“®•¨‚Ì–¼‘O,animals,‚¤‚³‚¬,Usagi,Rabbit
-item_17,word,“®•¨‚Ì–¼‘O,animals,‹,Ushi,Cow
-item_18,word,“®•¨‚Ì–¼‘O,animals,‚¤‚Ü,Uma,Horse
-item_19,word,“®•¨‚Ì–¼‘O,animals,‚¦‚Ñ,Ebi,Shrimp
-item_20,word,“®•¨‚Ì–¼‘O,animals,‚¨‚¨‚©‚İ,Ookami,Wolf
-item_21,word,“®•¨‚Ì–¼‘O,animals,ƒJƒGƒ‹,Kaeru,Frog
-item_22,word,“®•¨‚Ì–¼‘O,animals,‚©‚É,Kani,Crab
-item_23,word,“®•¨‚Ì–¼‘O,animals,ƒJƒo,Kaba,Hippopotamus
-item_24,word,“®•¨‚Ì–¼‘O,animals,‚©‚ß,Kame,Turtle
-item_25,word,“®•¨‚Ì–¼‘O,animals,ƒJƒ‰ƒX,Karasu,Crow
-item_26,word,“®•¨‚Ì–¼‘O,animals,‚«‚Â‚Ë,Kitsune,Fox
-item_27,word,“®•¨‚Ì–¼‘O,animals,‚«‚è‚ñ,Kirin,Giraffe 
-item_28,word,“®•¨‚Ì–¼‘O,animals,‚­‚¶‚ç,Kujira,Whale
-item_29,word,“®•¨‚Ì–¼‘O,animals,‚­‚Ü,Kuma,Bear
-item_30,word,“®•¨‚Ì–¼‘O,animals,ƒRƒAƒ‰,Koara,Koala
-item_31,word,“®•¨‚Ì–¼‘O,animals,ƒSƒŠƒ‰,Gorira,Gorilla
-item_32,word,“®•¨‚Ì–¼‘O,animals,‚³‚©‚È,Sakana,Fish
-item_33,word,“®•¨‚Ì–¼‘O,animals,‚³‚é,Saru,Monkey
-item_34,word,“®•¨‚Ì–¼‘O,animals,‚µ‚Ü‚¤‚Ü,Shimauma,Zebra
-item_35,word,“®•¨‚Ì–¼‘O,animals,‚¼‚¤,Zou,Elephant
-item_36,word,“®•¨‚Ì–¼‘O,animals,‚½‚Ê‚«,Tanuki,Raccoon
-item_37,word,“®•¨‚Ì–¼‘O,animals,ƒ`ƒ‡ƒEƒ`ƒ‡,Choucho,Butterfly
-item_38,word,“®•¨‚Ì–¼‘O,animals,‚Ç‚¤‚Ô‚Â,Doubutsu,Animal
-item_39,word,“®•¨‚Ì–¼‘O,animals,ƒgƒ‰,Tora,Tiger
-item_40,word,“®•¨‚Ì–¼‘O,animals,‚Æ‚è,Tori,Bird
-item_41,word,“®•¨‚Ì–¼‘O,animals,‚É‚í‚Æ‚è,Niwatori,Chicken
-item_42,word,“®•¨‚Ì–¼‘O,animals,‚Ë‚±,Neko,Cat
-item_43,word,“®•¨‚Ì–¼‘O,animals,‚Ë‚¸‚İ,Nezumi,Mouse
-item_44,word,“®•¨‚Ì–¼‘O,animals,‚Í‚¿,Hachi,Bee
-item_45,word,“®•¨‚Ì–¼‘O,animals,‚Í‚Æ,Hato,Pigeon
-item_46,word,“®•¨‚Ì–¼‘O,animals,ƒpƒ“ƒ_,Panda,Panda
-item_47,word,“®•¨‚Ì–¼‘O,animals,‚Ğ‚Â‚¶,Hitsuji,Sheep
-item_48,word,“®•¨‚Ì–¼‘O,animals,‚Ğ‚æ‚±,Hiyoko,Chick
-item_49,word,“®•¨‚Ì–¼‘O,animals,‚Ô‚½,Buta,Pig
-item_50,word,“®•¨‚Ì–¼‘O,animals,‚Ö‚Ñ,Hebi,Snake
-item_51,word,“®•¨‚Ì–¼‘O,animals,ƒyƒ“ƒMƒ“,Pengin,Penguin
-item_52,word,“®•¨‚Ì–¼‘O,animals,’,Mushi,Insect
-item_53,word,“®•¨‚Ì–¼‘O,animals,ƒ‰ƒCƒIƒ“,Raion,Lion
-item_54,word,“®•¨‚Ì–¼‘O,animals,ƒŠƒX,Risu,Squirrel
-item_55,word,“®•¨‚Ì–¼‘O,animals,ƒƒj,Wani,Crocodile
-item_56,word,æ‚è•¨,vehicles,‹DÔ,Kisya,Locomotive
-item_57,word,æ‚è•¨,vehicles,Ô (©“®Ô),Kuruma,Car
-item_58,word,æ‚è•¨,vehicles,O—ÖÔ,Sanrinsya,Tricycle
-item_59,word,æ‚è•¨,vehicles,©“]Ô,Jitensya,Bicycle
-item_60,word,æ‚è•¨,vehicles,Á–hÔ,Shoubousya,Fire_engine
-item_61,word,æ‚è•¨,vehicles,ƒ_ƒ“ƒvƒJ[,Danpukaa,Dump_truck
-item_62,word,æ‚è•¨,vehicles,“dÔ,Densya,Train
-item_63,word,æ‚è•¨,vehicles,ƒgƒ‰ƒbƒN,Torakku,Truck
-item_64,word,æ‚è•¨,vehicles,ƒoƒCƒN,Baiku,Motorcycle
-item_65,word,æ‚è•¨,vehicles,ƒoƒX,Basu,Bus
-item_66,word,æ‚è•¨,vehicles,ƒpƒgƒJ[,Patokaa,Police_car
-item_67,word,æ‚è•¨,vehicles,”òs‹@,Hikouki,Airplane
-item_68,word,æ‚è•¨,vehicles,‘D,Fune,Ship
-item_69,word,æ‚è•¨,vehicles,ƒwƒŠƒRƒvƒ^[,Herikoputaa,Helicopter
-item_70,word,‚¨‚à‚¿‚á,toys,ŠG–{,Ehon,Picture_book
-item_71,word,‚¨‚à‚¿‚á,toys,‚¦‚ñ‚Ò‚Â,Enpitsu,Pencil
-item_72,word,‚¨‚à‚¿‚á,toys,‚¨‚à‚¿‚á,Omocha,Toy
-item_73,word,‚¨‚à‚¿‚á,toys,ƒNƒŒƒˆƒ“,Kureyon,Crayon
-item_74,word,‚¨‚à‚¿‚á,toys,ƒQ[ƒ€,Geemu,Game
-item_75,word,‚¨‚à‚¿‚á,toys,ƒVƒƒƒ{ƒ“‹Ê,Shabondama,Soap_bubble
-item_76,word,‚¨‚à‚¿‚á,toys,‚½‚¢‚±,Taiko,Drum
-item_77,word,‚¨‚à‚¿‚á,toys,‚Â‚İ‚«,Tsumiki,Building_blocks
-item_78,word,‚¨‚à‚¿‚á,toys,lŒ`,Ningyoo,Doll
-item_79,word,‚¨‚à‚¿‚á,toys,”S“y,Nendo,Clay
-item_80,word,‚¨‚à‚¿‚á,toys,‚Ì‚è (ŒĞ),Nori,Paste
-item_81,word,‚¨‚à‚¿‚á,toys,ƒpƒYƒ‹,Pazuru,Puzzle
-item_82,word,‚¨‚à‚¿‚á,toys,ƒoƒbƒg,Batto,Bat
-item_83,word,‚¨‚à‚¿‚á,toys,•—‘D,Fuusen,Balloon
-item_84,word,‚¨‚à‚¿‚á,toys,ƒvƒŒƒ[ƒ“ƒg,Purezento,Present
-item_85,word,‚¨‚à‚¿‚á,toys,ƒyƒ“,Pen,Pen
-item_86,word,‚¨‚à‚¿‚á,toys,ƒ{[ƒ‹,Booru,Ball
-item_87,word,‚¨‚à‚¿‚á,toys,–{,Hon,Book
-item_88,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒAƒCƒXƒNƒŠ[ƒ€,Aisukuriimu,Ice_cream
-item_89,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚ ‚ßiˆ¹j,Ame,Candy
-item_90,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¢‚¿‚²iä•j,Ichigo,Strawberry
-item_91,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¤‚Ç‚ñ,Udon,Udon
-item_92,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¨‚¢‚à,Oimo,Sweet_potato
-item_93,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¨‰Ùq,Okashi,Sweets
-item_94,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¨»“œ,Osatou,Sugar
-item_95,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¨‚·‚µ,Osushi,Sushi
-item_96,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¨‚É‚¬‚èE‚¨‚Ş‚·‚Ñ,Onigiri_omusubi,Rice_ball
-item_97,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¨’ƒ,Ocha,Tea
-item_98,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,Š`,Kaki,Persimmon
-item_99,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚©‚Ú‚¿‚á,Kabocha,Pumpkin
-item_100,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒKƒ€,Gamu,Gum
-item_101,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒJƒŒ[,Karee,Curry
-item_102,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‹“û,GyuuNyuu,Milk
-item_103,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚«‚ã‚¤‚è,Kyuuri,Cucumber
-item_104,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒNƒbƒL[,Kukkii,Cookie
-item_105,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒP[ƒL,Keeki,Cake
-item_106,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒR[ƒq[,Koohii,Coffee
-item_107,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚±‚¨‚èi•Xj,Koori,Ice
-item_108,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒR[ƒ“,Koon,Corn
-item_109,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚²‚Í‚ñi‚¨•Ä‚Ì‚±‚Æj,Gohan,Rice
-item_110,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚³‚©‚È,Sakana,Fish
-item_111,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒTƒ“ƒhƒCƒbƒ`,Sandoicchi,Sandwich
-item_112,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒWƒƒƒ€,Jamu,Jam
-item_113,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒWƒ…[ƒX,Juusu,Juice
-item_114,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚µ‚å‚¤‚ä,Shouyu,Soy_sauce
-item_115,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚·‚¢‚©,Suika,Watermelon
-item_116,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒX[ƒv,Suupu,Soup
-item_117,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒXƒpƒQƒbƒeƒB[,Supagettii,Spaghetti
-item_118,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒ[ƒŠ[,Zerii,Jelly
-item_119,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚¹‚ñ‚×‚¢,Senbei,Rice_crackers
-item_120,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‘åª,Daikon,Radish
-item_121,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚½‚Ü‚²,Tamago,Egg
-item_122,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒ`[ƒY,Chiizu,Cheese
-item_123,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒ`ƒ‡ƒRƒŒ[ƒg,Chokoreeto,Chocolate
-item_124,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚Æ‚¤‚Ói“¤•…j,Toufu,Tofu
-item_125,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ÄŞ°ÅÂ,Doonatsu,Donut
-item_126,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒgƒ}ƒg,Tomato,Tomato
-item_127,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚È‚µi—œj,Nashi,Pear
-item_128,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚È‚·,Nasu,Eggplant
-item_129,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚È‚Á‚Æ‚¤i”[“¤j,Nattou,Natto
-item_130,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,“÷,Niku,Meat
-item_131,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚É‚ñ‚¶‚ñ,Ninjin,Carrot
-item_132,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚Ì‚èiŠC‘Ûj,Nori,Seaweed
-item_133,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒoƒ^[,Bataa,Butter
-item_134,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒoƒiƒi,Banana,Banana
-item_135,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒpƒ“,Pan,Bread
-item_136,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒnƒ€,Hamu,Ham
-item_137,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒnƒ“ƒo[ƒO,Hanbaagu,Hamburger
-item_138,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒs[ƒ}ƒ“,Piiman,Green_pepper
-item_139,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚Ô‚Ç‚¤,Budou,Grape
-item_140,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒvƒŠƒ“,Purin,Pudding
-item_141,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚Ù‚¤‚ê‚ñ‘,Hourensou,Spinach
-item_142,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒ|ƒbƒL[,Pokkii,Pocky
-item_143,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒzƒbƒgƒP[ƒL,Hottokeeki,Pancake
-item_144,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒ|ƒeƒgiƒ`ƒbƒvƒXj,Potetochippusu,Potato_chips
-item_145,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,“¤,Mame,Bean
-item_146,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚İ‚©‚ñ,Mikan,Orange
-item_147,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,…,Mizu,Water
-item_148,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚İ‚»‚µ‚é,Misoshiru,Miso_soup
-item_149,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒ~ƒ‹ƒN,Miruku,Milk
-item_150,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒƒƒ“,Meron,Melon
-item_151,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚à‚à,Momo,Peach
-item_152,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,‚â‚³‚¢,Yasai,Vegetable
-item_153,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒˆ[ƒOƒ‹ƒg,Yooguruto,Yogurt
-item_154,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒ‰[ƒƒ“,Raamen,Ramen
-item_155,word,H‚×•¨‚Æˆù‚İ•¨,food_drink,ƒŠƒ“ƒS,Ringo,Apple
-item_156,word,ˆß—Ş,clothing,ƒGƒvƒƒ“,Epuron,Apron
-item_157,word,ˆß—Ş,clothing,ƒI[ƒo[,Oobaa,Overcoat
-item_158,word,ˆß—Ş,clothing,‚¨‚Ş‚Â,Omutsu,Diaper
-item_159,word,ˆß—Ş,clothing,‚­‚Â,Kutsu,Shoes
-item_160,word,ˆß—Ş,clothing,‚­‚Â‰º,Kutsushita,Socks
-item_161,word,ˆß—Ş,clothing,ƒW[ƒpƒ“,Jiipan,Jeans
-item_162,word,ˆß—Ş,clothing,ƒVƒƒƒc,Syatsu,Shirt
-item_163,word,ˆß—Ş,clothing,ƒWƒƒƒ“ƒp[,Janpaa,Jacket
-item_164,word,ˆß—Ş,clothing,ƒXƒJ[ƒg,Sukaato,Skirt
-item_165,word,ˆß—Ş,clothing,ƒYƒbƒN,Zukku,Zuck
-item_166,word,ˆß—Ş,clothing,ƒYƒ{ƒ“,Zubon,Pants
-item_167,word,ˆß—Ş,clothing,ƒXƒŠƒbƒp,Surippa,Slippers
-item_168,word,ˆß—Ş,clothing,ƒZ[ƒ^[,Seetaa,Sweater
-item_169,word,ˆß—Ş,clothing,ƒ\ƒbƒNƒX,Sokkusu,Socks
-item_170,word,ˆß—Ş,clothing,ƒ^ƒCƒc,Taitsu,Tights
-item_171,word,ˆß—Ş,clothing,ƒ`ƒƒƒbƒN,Chakku,Zipper
-item_172,word,ˆß—Ş,clothing,‚Ä‚Ô‚­‚ë,Tebukuro,Gloves
-item_173,word,ˆß—Ş,clothing,’·‚®‚Â,Nagagutsu,Boots
-item_174,word,ˆß—Ş,clothing,ƒlƒNƒ^ƒC,Nekutai,Tie
-item_175,word,ˆß—Ş,clothing,ƒlƒbƒNƒŒƒX,Nekkuresu,Necklace
-item_176,word,ˆß—Ş,clothing,ƒpƒWƒƒƒ},Pajama,Pajama
-item_177,word,ˆß—Ş,clothing,ƒpƒ“ƒc,Pantsu,Shorts
-item_178,word,ˆß—Ş,clothing,ƒxƒ‹ƒg,Beruto,Belt
-item_179,word,ˆß—Ş,clothing,‚Ú‚¤‚µ,Boushi,Hat
-item_180,word,ˆß—Ş,clothing,ƒ{ƒ^ƒ“,Botan,Button
-item_181,word,ˆß—Ş,clothing,ƒ}ƒtƒ‰[,Mafuraa,Scarf
-item_182,word,ˆß—Ş,clothing,—m•,Youfuku,Clothes
-item_183,word,ˆß—Ş,clothing,ƒŠƒ{ƒ“,Ribon,Ribbon
-item_184,word,‘Ì‚Ì•”•ª,body_parts,‚ ‚²,Ago,Chin
-item_185,word,‘Ì‚Ì•”•ª,body_parts,‘«,Ashi,Leg
-item_186,word,‘Ì‚Ì•”•ª,body_parts,‚ ‚½‚Ü,Atama,Head
-item_187,word,‘Ì‚Ì•”•ª,body_parts,‚¨‚µ‚è,Oshiri,Buttocks
-item_188,word,‘Ì‚Ì•”•ª,body_parts,‚¨ƒ`ƒ“ƒ`ƒ“,Ochinchin,Penis
-item_189,word,‘Ì‚Ì•”•ª,body_parts,‚¨‚Á‚Ï‚¢,Oppai,Breasts
-item_190,word,‘Ì‚Ì•”•ª,body_parts,‚¨‚Å‚±,Odeko,Forehead
-item_191,word,‘Ì‚Ì•”•ª,body_parts,‚¨‚È‚©,Onaka,Stomach
-item_192,word,‘Ì‚Ì•”•ª,body_parts,‚¨‚Ö‚»,Oheso,Navel
-item_193,word,‘Ì‚Ì•”•ª,body_parts,Šç,Kao,Face
-item_194,word,‘Ì‚Ì•”•ª,body_parts,Œ¨,Kata,Shoulder
-item_195,word,‘Ì‚Ì•”•ª,body_parts,‚©‚İi”¯j,Kami,Hair
-item_196,word,‘Ì‚Ì•”•ª,body_parts,‚­‚¿,Kuchi,Mouth
-item_197,word,‘Ì‚Ì•”•ª,body_parts,‚­‚Ñ,Kubi,Neck
-item_198,word,‘Ì‚Ì•”•ª,body_parts,‚¯‚ª,Kega,Injury
-item_199,word,‘Ì‚Ì•”•ª,body_parts,‚µ‚Á‚Û,Shippo,Tail
-item_200,word,‘Ì‚Ì•”•ª,body_parts,”w’†,Senaka,Back
-item_201,word,‘Ì‚Ì•”•ª,body_parts,‚Â‚ß,Tsume,Nail
-item_202,word,‘Ì‚Ì•”•ª,body_parts,è,Te,Hand
-item_203,word,‘Ì‚Ì•”•ª,body_parts,•,Ha,Tooth
-item_204,word,‘Ì‚Ì•”•ª,body_parts,•@,Hana,Nose
-item_205,word,‘Ì‚Ì•”•ª,body_parts,ãi‚×‚ëj,Shita_bero,Tongue
-item_206,word,‘Ì‚Ì•”•ª,body_parts,‚Ù‚Á‚Ø,Hoppe,Cheek
-item_207,word,‘Ì‚Ì•”•ª,body_parts,‚Ü‚äE‚Ü‚ä–Ñ,Mayu_mayuge,Eyebrow
-item_208,word,‘Ì‚Ì•”•ª,body_parts,¨,Mimi,Ear
-item_209,word,‘Ì‚Ì•”•ª,body_parts,–Ú,Me,Eye
-item_210,word,‘Ì‚Ì•”•ª,body_parts,w,Yubi,Finger
-item_211,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‚¢‚·,Isu,Chair
-item_212,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒGƒAƒRƒ“,Eakon,Air_conditioner
-item_213,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‚¨‚µ‚¢‚ê,Oshiire,Closet
-item_214,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‚¨‚Ó‚ëi•—˜Cêj,Ofuro,Bath
-item_215,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‚¨‚Ü‚é,Omaru,Potty
-item_216,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒJ[ƒeƒ“,Kaaten,Curtain
-item_217,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ŠK’i,Kaidan,Stairs
-item_218,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‚°‚½‚Î‚±i‚°‚½” j,Getabako,Shoes_rack
-item_219,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ŒºŠÖ,Genkan,Entrance
-item_220,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‚±‚½‚Â,Kotatsu,Kotatsu
-item_221,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒVƒƒƒ[,Syawaa,Shower
-item_222,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,…“¹,Suidou,Water_crew
-item_223,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒXƒg[ƒu,Sutoobu,Stove
-item_224,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,î•—‹@,Senpuuki,Fan
-item_225,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‘äŠ,Daidokoro,Kitchen
-item_226,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‚½‚½‚İ,Tatami,Tatami
-item_227,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒ^ƒ“ƒX,Tansu,Wardrobe
-item_228,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,’“Ôê,Cyuushajou,Parking_Lot
-item_229,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,Š÷,Tsukue,Desk
-item_230,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒe[ƒuƒ‹,Teeburu,Table
-item_231,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒeƒŒƒr,Terebi,Television
-item_232,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,“d‹C,Denki,Light
-item_233,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒhƒA,Doa,Door
-item_234,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒgƒCƒŒ,Toire,Toilet
-item_235,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒhƒ‰ƒCƒ„[,Doraiyaa,Hairdryer
-item_236,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒsƒAƒm,Piano,Piano
-item_237,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‚Ğ‚«‚¾‚µ,Hikidashi,Drawer
-item_238,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒrƒfƒI,Bideo,Video
-item_239,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒxƒbƒh,Beddo,Bed
-item_240,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,•”‰®,Heya,Room
-item_241,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,‘‹,Mado,Window
-item_242,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,—â‘ ŒÉ,Reizouko,Refrigerator
-item_243,word,‰Æ‹ï‚Æ•”‰®,furniture_rooms,ƒŒƒ“ƒW,Renji,Range
-item_244,word,¬‚³‚È‰Æ’ë—p•i,household,ƒAƒCƒƒ“,Airon,Iron
-item_245,word,¬‚³‚È‰Æ’ë—p•i,household,ŠG,E,Picture
-item_246,word,¬‚³‚È‰Æ’ë—p•i,household,‚¨‹à,Okane,Money
-item_247,word,¬‚³‚È‰Æ’ë—p•i,household,‚¨M,Osara,Dish
-item_248,word,¬‚³‚È‰Æ’ë—p•i,household,‚©‚¬iŒ®j,Kagi,Key
-item_249,word,¬‚³‚È‰Æ’ë—p•i,household,‚©‚²,Kago,Basket
-item_250,word,¬‚³‚È‰Æ’ë—p•i,household,‚©‚³iPj,Kasa,Umbrella
-item_251,word,¬‚³‚È‰Æ’ë—p•i,household,‚©‚Î‚ñ,Kaban,Bag
-item_252,word,¬‚³‚È‰Æ’ë—p•i,household,‚©‚İi†j,Kami,Paper
-item_253,word,¬‚³‚È‰Æ’ë—p•i,household,ƒJƒƒ‰,Kamera,Camera
-item_254,word,¬‚³‚È‰Æ’ë—p•i,household,ŠÊ,Kan,Can
-item_255,word,¬‚³‚È‰Æ’ë—p•i,household,‚­‚¬,Kugi,Nail
-item_256,word,¬‚³‚È‰Æ’ë—p•i,household,‚­‚µ,Kushi,Comb
-item_257,word,¬‚³‚È‰Æ’ë—p•i,household,‚­‚·‚è,Kusuri,Medicine
-item_258,word,¬‚³‚È‰Æ’ë—p•i,household,ƒRƒbƒv,Koppu,Cup
-item_259,word,¬‚³‚È‰Æ’ë—p•i,household,‚²‚İ” ,Gomibako,Trash_box
-item_260,word,¬‚³‚È‰Æ’ë—p•i,household,à•z,Saifu,Wallet
-item_261,word,¬‚³‚È‰Æ’ë—p•i,household,ƒVƒƒƒ“ƒv[,Syanpuu,Shampoo
-item_262,word,¬‚³‚È‰Æ’ë—p•i,household,ƒXƒgƒ[,Sutoroo,Straw
-item_263,word,¬‚³‚È‰Æ’ë—p•i,household,ƒXƒv[ƒ“,Supuun,Spoon
-item_264,word,¬‚³‚È‰Æ’ë—p•i,household,ÎŒ²,Sekken,Soap
-item_265,word,¬‚³‚È‰Æ’ë—p•i,household,‚¼‚¤‚«‚ñ,Zoukin,Rag
-item_266,word,¬‚³‚È‰Æ’ë—p•i,household,‚»‚¤‚¶‹@,Soujiki,Vacuum_cleaner
-item_267,word,¬‚³‚È‰Æ’ë—p•i,household,ƒ^ƒIƒ‹,Taoru,Towel
-item_268,word,¬‚³‚È‰Æ’ë—p•i,household,’ƒ‚í‚ñ,Chawan,Bowl
-item_269,word,¬‚³‚È‰Æ’ë—p•i,household,ƒeƒBƒbƒVƒ…,Tissyu,Tissue
-item_270,word,¬‚³‚È‰Æ’ë—p•i,household,ƒe[ƒv,Teepu,Tape
-item_271,word,¬‚³‚È‰Æ’ë—p•i,household,“d’r,Denchi,Battery
-item_272,word,¬‚³‚È‰Æ’ë—p•i,household,‚Å‚ñ‚íi“d˜bj,Denwa,Phone
-item_273,word,¬‚³‚È‰Æ’ë—p•i,household,Œv,Tokei,Clock
-item_274,word,¬‚³‚È‰Æ’ë—p•i,household,ƒiƒCƒt,Naifu,Knife
-item_275,word,¬‚³‚È‰Æ’ë—p•i,household,‚È‚×,Nabe,Pan
-item_276,word,¬‚³‚È‰Æ’ë—p•i,household,ƒoƒPƒc,Baketsu,Bucket
-item_277,word,¬‚³‚È‰Æ’ë—p•i,household,‚Í‚±i” j,Hako,Box
-item_278,word,¬‚³‚È‰Æ’ë—p•i,household,‚Í‚³‚İ,Hasami,Scissors
-item_279,word,¬‚³‚È‰Æ’ë—p•i,household,‚Í‚µi”¢j,Hashi,Chopsticks
-item_280,word,¬‚³‚È‰Æ’ë—p•i,household,•ƒuƒ‰ƒV,Haburashi,Toothbrush
-item_281,word,¬‚³‚È‰Æ’ë—p•i,household,ƒnƒ“ƒJƒ`,Hankachi,Handkerchief
-item_282,word,¬‚³‚È‰Æ’ë—p•i,household,‚Ñ‚ñ,Bin,Bottle
-item_283,word,¬‚³‚È‰Æ’ë—p•i,household,ƒtƒH[ƒN,Fwooku,Fork
-item_284,word,¬‚³‚È‰Æ’ë—p•i,household,‚Ó‚Æ‚ñ,Futon,Futon
-item_285,word,¬‚³‚È‰Æ’ë—p•i,household,ƒtƒ‰ƒCƒpƒ“,Furaipan,Frying_pan
-item_286,word,¬‚³‚È‰Æ’ë—p•i,household,‚Ù‚¤‚«,Houki,Broom
-item_287,word,¬‚³‚È‰Æ’ë—p•i,household,•ï’š,Houchou,Kitchen_knife
-item_288,word,¬‚³‚È‰Æ’ë—p•i,household,ƒ|ƒbƒg,Potto,Pot
-item_289,word,¬‚³‚È‰Æ’ë—p•i,household,ƒ}ƒCƒN,Maiku,Microphone
-item_290,word,¬‚³‚È‰Æ’ë—p•i,household,–,Makura,Pillow
-item_291,word,¬‚³‚È‰Æ’ë—p•i,household,‚ß‚ª‚Ë,Megane,Glasses
-item_292,word,¬‚³‚È‰Æ’ë—p•i,household,‚ß‚´‚Ü‚µ,Mezamashi,Alarm_clock
-item_293,word,¬‚³‚È‰Æ’ë—p•i,household,–Ñ•z,Moufu,Blanket
-item_294,word,ŒËŠO‚Ì‚à‚Ì,outside,‰J,Ame,Rain
-item_295,word,ŒËŠO‚Ì‚à‚Ì,outside,Î,Ishi,Stone
-item_296,word,ŒËŠO‚Ì‚à‚Ì,outside,Šâ,Iwa,Rock
-item_297,word,ŒËŠO‚Ì‚à‚Ì,outside,},Eda,Branch
-item_298,word,ŒËŠO‚Ì‚à‚Ì,outside,‚¨Œ‚³‚ñ,Otsukisan,Moon
-item_299,word,ŒËŠO‚Ì‚à‚Ì,outside,‚¨“V‹C,Otenki,Weather
-item_300,word,ŒËŠO‚Ì‚à‚Ì,outside,‚¨‚Ğ‚³‚Ü,Ohisama,Sun
-item_301,word,ŒËŠO‚Ì‚à‚Ì,outside,•—,Kaze,Wind
-item_302,word,ŒËŠO‚Ì‚à‚Ì,outside,ì,Kawa,River
-item_303,word,ŒËŠO‚Ì‚à‚Ì,outside,–Ø,Ki,Tree
-item_304,word,ŒËŠO‚Ì‚à‚Ì,outside,‘,Kusa,Grass
-item_305,word,ŒËŠO‚Ì‚à‚Ì,outside,‰_,Kumo,Cloud
-item_306,word,ŒËŠO‚Ì‚à‚Ì,outside,ƒXƒRƒbƒv,Sukoppu,Scoop
-item_307,word,ŒËŠO‚Ì‚à‚Ì,outside,»ê,Sunaba,Sandpit
-item_308,word,ŒËŠO‚Ì‚à‚Ì,outside,‚·‚×‚è‘ä,Suberidai,Slide
-item_309,word,ŒËŠO‚Ì‚à‚Ì,outside,‹ó,Sora,Sky
-item_310,word,ŒËŠO‚Ì‚à‚Ì,outside,’ë,Niwa,Garden
-item_311,word,ŒËŠO‚Ì‚à‚Ì,outside,‚Í‚µ‚²,Hashigo,Ladder
-item_312,word,ŒËŠO‚Ì‚à‚Ì,outside,Šø,Hata,Flag
-item_313,word,ŒËŠO‚Ì‚à‚Ì,outside,‚Í‚Á‚Ï,Happa,Leaf
-item_314,word,ŒËŠO‚Ì‚à‚Ì,outside,‰Ô,Hana,Flower
-item_315,word,ŒËŠO‚Ì‚à‚Ì,outside,ƒv[ƒ‹,Puuru,Pool
-item_316,word,ŒËŠO‚Ì‚à‚Ì,outside,ƒuƒ‰ƒ“ƒR,Buranko,Swing
-item_317,word,ŒËŠO‚Ì‚à‚Ì,outside,ƒxƒ‰ƒ“ƒ_,Beranda,Veranda
-item_318,word,ŒËŠO‚Ì‚à‚Ì,outside,ƒz[ƒX,Hoosu,Hose
-item_319,word,ŒËŠO‚Ì‚à‚Ì,outside,¯,Hoshi,Star
-item_320,word,ŒËŠO‚Ì‚à‚Ì,outside,…‚Ü‚«,Mizumaki,Watering
-item_321,word,ŒËŠO‚Ì‚à‚Ì,outside,“¹,Michi,Road
-item_322,word,ŒËŠO‚Ì‚à‚Ì,outside,‰®ª,Yane,Roof
-item_323,word,ŒËŠO‚Ì‚à‚Ì,outside,á,Yuki,Snow
-item_324,word,ŒËŠO‚Ì‚à‚Ì,outside,á‚¾‚é‚Ü,Yukidaruma,Snowman
-item_325,word,‚¨‚Å‚©‚¯,places,‚¢‚¦i‰Æj,Ie,House
-item_326,word,‚¨‚Å‚©‚¯,places,ŠC,Umi,Sea
-item_327,word,‚¨‚Å‚©‚¯,places,‰f‰æ,Eiga,Movies
-item_328,word,‚¨‚Å‚©‚¯,places,‚¨‚¤‚¿,Ouchi,House
-item_329,word,‚¨‚Å‚©‚¯,places,‚¨d–,Oshigoto,Job
-item_330,word,‚¨‚Å‚©‚¯,places,‚¨‚»‚Æ,Osoto,Outside
-item_331,word,‚¨‚Å‚©‚¯,places,‚¨“X,Omise,Shop
-item_332,word,‚¨‚Å‚©‚¯,places,‰ïĞ,Kaisya,Company
-item_333,word,‚¨‚Å‚©‚¯,places,ƒKƒ\ƒŠƒ“ƒXƒ^ƒ“ƒh,Gasorinsutando,Gas_station
-item_334,word,‚¨‚Å‚©‚¯,places,ŠwZ,Gakkou,School
-item_335,word,‚¨‚Å‚©‚¯,places,ƒLƒƒƒ“ƒv,Kyanpu,Camp
-item_336,word,‚¨‚Å‚©‚¯,places,Œö‰€,Kouen,Park
-item_337,word,‚¨‚Å‚©‚¯,places,ƒT[ƒJƒX,Saakasu,Circus
-item_338,word,‚¨‚Å‚©‚¯,places,ƒX[ƒp[,Suupaa,Supermarket
-item_339,word,‚¨‚Å‚©‚¯,places,ƒfƒp[ƒg,Depaato,Department_store
-item_340,word,‚¨‚Å‚©‚¯,places,“®•¨‰€,Doubutsuen,Zoo
-item_341,word,‚¨‚Å‚©‚¯,places,ƒsƒNƒjƒbƒN,Pikunikku,Picnic
-item_342,word,‚¨‚Å‚©‚¯,places,•ÛˆçŠ,Hoikujyo,Nursery_school
-item_343,word,‚¨‚Å‚©‚¯,places,X,Mori,Woods
-item_344,word,‚¨‚Å‚©‚¯,places,R,Yama,Mountain
-item_345,word,‚¨‚Å‚©‚¯,places,—c’t‰€,Youchien,Kindergarten
-item_346,word,‚¨‚Å‚©‚¯,places,ƒŒƒXƒgƒ‰ƒ“,Resutoran,Restaurant
-item_347,word,lX,people,Ô‚¿‚á‚ñ,Akachan,Baby
-item_348,word,lX,people,‰^“]è,Untensyu,Driver
-item_349,word,lX,people,‚¨ˆãÒ‚³‚ñ,Oishasan,Doctor
-item_350,word,lX,people,‰¤—l,Oosama,King
-item_351,word,lX,people,‚¨•ê‚³‚ñ,Okaasan,Mother
-item_352,word,lX,people,‚¨‚¶‚¢‚³‚ñ,Ojiisan,Grandfather
-item_353,word,lX,people,‚¨‚¶‚³‚ñ,Ojisan,Uncle
-item_354,word,lX,people,‚¨‘Š–o‚³‚ñ,Osumousan,Sumo_wrestler
-item_355,word,lX,people,‚¨•ƒ‚³‚ñ,Otousan,Father
-item_356,word,lX,people,‚¨‚Æ‚à‚¾‚¿,Otomodachi,Friend
-item_357,word,lX,people,‚¨ŒZ‚³‚ñ,Oniisan,Older_brother
-item_358,word,lX,people,‚¨o‚³‚ñ,Oneesan,Older_sister
-item_359,word,lX,people,‚¨‚Î‚ ‚³‚ñ,Obaasan,Grandmother
-item_360,word,lX,people,‚¨‚Î‚³‚ñ,Obasan,Aunt
-item_361,word,lX,people,‚¨•P—l,Ohimesama,Princess
-item_362,word,lX,people,‚¨‚Ü‚í‚è‚³‚ñ,Omawarisan,Policeman
-item_363,word,lX,people,ŠÅŒì•w‚³‚ñ,Kangofusan,Nurse
-item_364,word,lX,people,ƒLƒƒƒ‰ƒNƒ^[‚Ì–¼‘OiƒAƒ“ƒpƒ“ƒ}ƒ““™j,Particular_character_name,Particular_character_name
-item_365,word,lX,people,‚«‚å‚¤‚¾‚¢‚Ì–¼‘O,Particular_sibling_name,Particular_sibling_name
-item_366,word,lX,people,‚±‚Ç‚àiq‚Ç‚àj,Kodomo,Child
-item_367,word,lX,people,©•ª‚Ì–¼‘O,Own_name,Own_name
-item_368,word,lX,people,‚¹‚ñ‚¹‚¢iæ¶j,Sensei,Teacher
-item_369,word,lX,people,æ¶‚Ì–¼‘O,Particular_teacher_name,Particular_teacher_name
-item_370,word,lX,people,—F‚¾‚¿‚Ì–¼‘O,Particular_friend_name,Particular_friend_name
-item_371,word,lX,people,ƒpƒp,Papa,Daddy
-item_372,word,lX,people,l,Hito,People
-item_373,word,lX,people,ƒyƒbƒg‚Ì–¼‘O,Particular_pet_name,Particular_pet_name
-item_374,word,lX,people,ƒ}ƒ},Mama,Mom
-item_375,word,lX,people,—X•Ö‰®‚³‚ñ,Yuubinyasan,Postman
-item_376,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚ ‚è‚ª‚Æ‚¤,Arigatou,Thank_you
-item_377,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¢‚½‚¾‚«‚Ü‚·,Itadakimasu,Letfs_eat
-item_378,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¢‚Á‚Ä‚ç‚Á‚µ‚á‚¢,Itterassyai,Have_a_good_day
-item_379,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,iƒCƒiƒCƒCƒiƒCjƒo[,Inaiinaibaa,Peekaboo
-item_380,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¤‚ñ‚¿,Unchi,Poop
-item_381,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¨‚¤‚½i‚¨‰Ìj,Outa,Song
-item_382,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¨”ƒ‚¢‚à‚Ì,Okaimono,Shopping
-item_383,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¨‚µ‚Á‚±,Oshikko,Pee
-item_384,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¨‚µ‚Ü‚¢,Oshimai,End
-item_385,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¨‚Í‚æ‚¤,Ohayou,Good_morning
-item_386,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¨‚Ó‚ëi“ü—j,Ofuro,Bath
-item_387,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¨‚â‚·‚İ,Oyasumi,Good_night
-item_388,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¨‚â‚Â,Oyatsu,Snack
-item_389,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚²‚¿‚»‚¤‚³‚Ü,Gochisousama,Thank_you_for_the_meal
-item_390,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚²‚Í‚ñiH–j,Gohan,Meal
-item_391,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚²‚ß‚ñ‚È‚³‚¢,Gomennasai,Sorry
-item_392,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚±‚ñ‚É‚¿‚Í,Konnichiwa,Hello
-item_393,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,ƒV[iÃ‚©‚Éj,Shii,Shush
-item_394,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¶‚á‚ñ‚¯‚ñ‚Û‚ñ,Jankenpon,Rock_paper_scissors
-item_395,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¾‚ß,Dame,No_good
-item_396,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚¿‚å‚¤‚¾‚¢,Choudai,Give_me
-item_397,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚Ç‚¤‚¼,Douzo,Here_you_are
-item_398,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚Í‚¢,Hai,Yes
-item_399,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,ƒoƒCƒoƒC,BaiBai,Bye_bye
-item_400,word,“ú‰Û‚Æ‚ ‚¢‚³‚Â,games_routines,‚Í‚İ‚ª‚«i•–‚«j,Hamigaki,Teethbrushing
-item_401,word,“®ìŒê,action_words,‚ ‚ª‚é,Agaru,Go_up 
-item_402,word,“®ìŒê,action_words,‚ ‚¯‚éiŠJ‚¯‚éj,Akeru,Open
-item_403,word,“®ìŒê,action_words,‚ ‚°‚é,Ageru,Rise
-item_404,word,“®ìŒê,action_words,‚ ‚»‚Ôi—V‚Ôj,Asobu,Play
-item_405,word,“®ìŒê,action_words,‚ ‚ç‚¤iô‚¤j,Arau,Wash
-item_406,word,“®ìŒê,action_words,‚ ‚é,Aru,Exist
-item_407,word,“®ìŒê,action_words,‚ ‚é‚­i•à‚­j,Aruku,Walk
-item_408,word,“®ìŒê,action_words,‚¢‚¤iŒ¾‚¤j,Iu,Say
-item_409,word,“®ìŒê,action_words,s‚­,Iku,Go
-item_410,word,“®ìŒê,action_words,‚¢‚éi—v‚éj,Iru,Need
-item_411,word,“®ìŒê,action_words,‚¢‚éi‹‚éj,Iru,Be_there
-item_412,word,“®ìŒê,action_words,‚¢‚ê‚éi“ü‚ê‚éj,Ireru,Put_in
-item_413,word,“®ìŒê,action_words,‚¤‚½‚¤i‰Ì‚¤j,Utau,Sing
-item_414,word,“®ìŒê,action_words,‚¨‚«‚éi‹N‚«‚éj,Okiru,Get_up
-item_415,word,“®ìŒê,action_words,‚¨‚­i’u‚­j,Oku,Put
-item_416,word,“®ìŒê,action_words,‚¨‚±‚éi“{‚éj,Okoru,Get_angry
-item_417,word,“®ìŒê,action_words,‚¨‚·i‰Ÿ‚·j,Osu,Push
-item_418,word,“®ìŒê,action_words,‚¨‚¿‚éi—‚¿‚éj,Ochiru,Fall
-item_419,word,“®ìŒê,action_words,‚¨‚Ç‚é,Odoru,Dance
-item_420,word,“®ìŒê,action_words,‚¨‚Ô‚¤,Obuu,To_piggyback
-item_421,word,“®ìŒê,action_words,‚¨‚æ‚®i‰j‚®j,Oyogu,Swim
-item_422,word,“®ìŒê,action_words,‚¨‚è‚éi~‚è‚éj,Oriru,Get_off
-item_423,word,“®ìŒê,action_words,‚¨‚í‚éiI‚í‚éj,Owaru,End
-item_424,word,“®ìŒê,action_words,”ƒ‚¤,Kau,Buy
-item_425,word,“®ìŒê,action_words,‚©‚¦‚éi‹A‚éj,Kaeru,Go_home
-item_426,word,“®ìŒê,action_words,‚©‚­i‘‚­j,Kaku,Write
-item_427,word,“®ìŒê,action_words,‚©‚­‚·i‰B‚·j,Kakusu,Hide
-item_428,word,“®ìŒê,action_words,‚©‚¯‚é,Kakeru,Hang
-item_429,word,“®ìŒê,action_words,‚©‚·i‘İ‚·j,Kasu,Lend
-item_430,word,“®ìŒê,action_words,‚©‚½‚Ã‚¯‚é,Katazukeru,Clean_up
-item_431,word,“®ìŒê,action_words,‚©‚Ô‚é,Kaburu,Put_on
-item_432,word,“®ìŒê,action_words,Á‚¦‚é,Kieru,Disappear
-item_433,word,“®ìŒê,action_words,‚«‚­i•·‚­j,Kiku,Listen
-item_434,word,“®ìŒê,action_words,•·‚±‚¦‚é,Kikoeru,Hear
-item_435,word,“®ìŒê,action_words,’…‚é,Kiru,Wear
-item_436,word,“®ìŒê,action_words,Ø‚é,Kiru,Cut
-item_437,word,“®ìŒê,action_words,‚­‚Á‚Â‚¯‚é,Kuttsukeru,Stick
-item_438,word,“®ìŒê,action_words,‚­‚éi—ˆ‚éj,Kuru,Come
-item_439,word,“®ìŒê,action_words,‚¯‚éiR‚éj,Keru,Kick
-item_440,word,“®ìŒê,action_words,‚±‚Ú‚·,Kobosu,Spill
-item_441,word,“®ìŒê,action_words,‚±‚ë‚Ô,Korobu,Fall
-item_442,word,“®ìŒê,action_words,‚±‚í‚·i‰ó‚·j,Kowasu,Break_down
-item_443,word,“®ìŒê,action_words,‚³‚í‚éiG‚éj,Sawaru,Touch
-item_444,word,“®ìŒê,action_words,‚µ‚ß‚éi•Â‚ß‚éj,Shimeru,Close
-item_445,word,“®ìŒê,action_words,‚µ‚éi’m‚éj,Shiru,Know
-item_446,word,“®ìŒê,action_words,‚·‚«iD‚«j,Suki,Like
-item_447,word,“®ìŒê,action_words,Ì‚Ä‚é,Suteru,Throw_away
-item_448,word,“®ìŒê,action_words,‚·‚é,Suru,Do
-item_449,word,“®ìŒê,action_words,‚·‚í‚é,Suwaru,Sit
-item_450,word,“®ìŒê,action_words,‚¾‚­i•ø‚­j,Daku,Hug
-item_451,word,“®ìŒê,action_words,‚¾‚·io‚·j,Dasu,Put_out
-item_452,word,“®ìŒê,action_words,‚½‚·‚¯‚éi•‚¯‚éj,Tasukeru,Help
-item_453,word,“®ìŒê,action_words,‚½‚½‚­,Tataku,Hit
-item_454,word,“®ìŒê,action_words,‚½‚Âi—§‚Âj,Tatsu,Stand
-item_455,word,“®ìŒê,action_words,‚½‚×‚éiH‚×‚éj,Taberu,Eat
-item_456,word,“®ìŒê,action_words,‚Â‚©‚Ü‚¦‚é,Tsukamaeru,Catch
-item_457,word,“®ìŒê,action_words,‚Â‚­i’…‚­j,Tsuku,Reach
-item_458,word,“®ìŒê,action_words,‚Â‚­‚éiì‚éj,Tsukuru,Create
-item_459,word,“®ìŒê,action_words,‚Â‚¯‚éi•t‚¯‚éj,Tsukeru,Attach
-item_460,word,“®ìŒê,action_words,‚Å‚«‚éio—ˆ‚éj,Dekiru,Can_do
-item_461,word,“®ìŒê,action_words,‚Å‚éio‚éj,Deru,Get_out
-item_462,word,“®ìŒê,action_words,‚Æ‚Ôi”ò‚Ôj,Tobu,Jump
-item_463,word,“®ìŒê,action_words,‚Æ‚Ü‚é,Tomaru,Stop
-item_464,word,“®ìŒê,action_words,‚Æ‚éiæ‚éj,Toru,Take
-item_465,word,“®ìŒê,action_words,‚È‚¨‚·,Naosu,Fix
-item_466,word,“®ìŒê,action_words,‚È‚­i‹ƒ‚­j,Naku,Cry
-item_467,word,“®ìŒê,action_words,‚È‚°‚éi“Š‚°‚éj,Nageru,Throw
-item_468,word,“®ìŒê,action_words,‚È‚ß‚é,Nameru,Lick
-item_469,word,“®ìŒê,action_words,‚È‚éic‚È‚éj,Naru,Become
-item_470,word,“®ìŒê,action_words,‚É‚°‚éi“¦‚°‚éj,Nigeru,Escape
-item_471,word,“®ìŒê,action_words,‚Ê‚®i’E‚®j,Nugu,Take_off
-item_472,word,“®ìŒê,action_words,‚Ê‚éi“h‚éj,Nuru,Paint
-item_473,word,“®ìŒê,action_words,‚Ë‚éiQ‚éj,Neru,Sleep
-item_474,word,“®ìŒê,action_words,‚Ì‚Ú‚éi“o‚éj,Noboru,Climb
-item_475,word,“®ìŒê,action_words,‚Ì‚Şiˆù‚Şj,Nomu,Drink
-item_476,word,“®ìŒê,action_words,‚Ì‚éiæ‚éj,Noru,Get_on
-item_477,word,“®ìŒê,action_words,‚Í‚¢‚éi“ü‚éj,Hairu,Enter
-item_478,word,“®ìŒê,action_words,‚Í‚­i—š‚­j,Haku,Wear
-item_479,word,“®ìŒê,action_words,‚Í‚±‚Ôi‰^‚Ôj,Hakobu,Carry
-item_480,word,“®ìŒê,action_words,‚Í‚µ‚éi‘–‚éj,Hashiru,Run
-item_481,word,“®ìŒê,action_words,‚Ğ‚Á‚Ï‚éiˆø‚Á‚Ï‚éj,Hipparu,Pull
-item_482,word,“®ìŒê,action_words,‚Ğ‚ë‚¤iE‚¤j,Hirou,Pick_up
-item_483,word,“®ìŒê,action_words,‚Ó‚­i@‚­j,Fuku,Wipe
-item_484,word,“®ìŒê,action_words,‚Ó‚­i‚­j,Fuku,Blow
-item_485,word,“®ìŒê,action_words,‚Ô‚Â‚©‚é,Butsukaru,Collide
-item_486,word,“®ìŒê,action_words,‚Ù‚µ‚¢i—~‚µ‚¢j,Hoshii,Want
-item_487,word,“®ìŒê,action_words,‚Ü‚Âi‘Ò‚Âj,Matsu,Wait
-item_488,word,“®ìŒê,action_words,‚Ü‚í‚é,Mawaru,Turn_around
-item_489,word,“®ìŒê,action_words,‚İ‚¦‚é,Mieru,Appear
-item_490,word,“®ìŒê,action_words,‚İ‚¹‚é,Miseru,Show
-item_491,word,“®ìŒê,action_words,‚İ‚éiŒ©‚éj,Miru,Look
-item_492,word,“®ìŒê,action_words,‚Ş‚­i”ç‚È‚Çj,Muku,Peel
-item_493,word,“®ìŒê,action_words,‚à‚Âi‚Âj,Motsu,Have
-item_494,word,“®ìŒê,action_words,‚Á‚Ä‚­‚é,Mottekuru,Bring_up
-item_495,word,“®ìŒê,action_words,‚à‚ç‚¤,Morau,Get
-item_496,word,“®ìŒê,action_words,‚â‚Ô‚éi”j‚éj,Yaburu,Break
-item_497,word,“®ìŒê,action_words,‚â‚ß‚é,Yameru,Stop
-item_498,word,“®ìŒê,action_words,‚â‚é,Yaru,Do
-item_499,word,“®ìŒê,action_words,‚æ‚²‚·i‰˜‚·j,Yogosu,Defile
-item_500,word,“®ìŒê,action_words,‚æ‚ÔiŒÄ‚Ôj,Yobu,Call
-item_501,word,“®ìŒê,action_words,‚æ‚Şi“Ç‚Şj,Yomu,Read
-item_502,word,“®ìŒê,action_words,‚í‚©‚é,Wakaru,Understand
-item_503,word,“®ìŒê,action_words,‚í‚ç‚¤iÎ‚¤j,Warau,Laugh
-item_504,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚ ‚³i’©j,Asa,Morning
-item_505,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚ ‚µ‚½i–¾“új,Ashita,Tomorrow
-item_506,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚ ‚Æ‚Å,Atode,Later
-item_507,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚¢‚Üi¡j,Ima,Now
-item_508,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚«‚Ì‚¤iğ“új,Kinou,Yesterday
-item_509,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚«‚å‚¤i¡“új,Kyou,Today
-item_510,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚³‚Á‚«,Sakki,A_moment_ago
-item_511,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,ŠÔ,Jikan,Time
-item_512,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚Ğ‚éi’‹j,Hiru,Daytime
-item_513,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚Ü‚¾,Mada,Yet
-item_514,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,—[•û,Yuugata,Evening
-item_515,word,ŠÔ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,time_words,‚æ‚éi–éj,Yoru,Night
-item_516,word,‚æ‚¤‚·E«¿,descriptive_words,Â‚¢,Aoi,Blue
-item_517,word,‚æ‚¤‚·E«¿,descriptive_words,Ô‚¢,Akai,Red
-item_518,word,‚æ‚¤‚·E«¿,descriptive_words,–¾‚é‚¢,Akarui,Bright
-item_519,word,‚æ‚¤‚·E«¿,descriptive_words,‚ ‚½‚ç‚µ‚¢,Atarashii,New
-item_520,word,‚æ‚¤‚·E«¿,descriptive_words,‚ ‚Â‚¢i”M‚¢E‹‚¢j,Atsui,Hot
-item_521,word,‚æ‚¤‚·E«¿,descriptive_words,‚ ‚Ü‚¢,Amai,Sweet
-item_522,word,‚æ‚¤‚·E«¿,descriptive_words,‚¢‚¢,Ii,Good
-item_523,word,‚æ‚¤‚·E«¿,descriptive_words,‚¢‚¶‚í‚é,Ijiwaru,Mean
-item_524,word,‚æ‚¤‚·E«¿,descriptive_words,‚¢‚½‚¢i’É‚¢j,Itai,Painful
-item_525,word,‚æ‚¤‚·E«¿,descriptive_words,‚¤‚Ü‚¢,Umai,Good
-item_526,word,‚æ‚¤‚·E«¿,descriptive_words,‚¤‚é‚³‚¢,Urusai,Noisy
-item_527,word,‚æ‚¤‚·E«¿,descriptive_words,‚¤‚ê‚µ‚¢,Ureshii,Glad
-item_528,word,‚æ‚¤‚·E«¿,descriptive_words,‚¨‚¢‚µ‚¢,Oishii,Delicious
-item_529,word,‚æ‚¤‚·E«¿,descriptive_words,‘å‚«‚¢,Ookii,Large
-item_530,word,‚æ‚¤‚·E«¿,descriptive_words,‚¨‚©‚µ‚¢,Okashii,Funny
-item_531,word,‚æ‚¤‚·E«¿,descriptive_words,’x‚¢,Osoi,Slow
-item_532,word,‚æ‚¤‚·E«¿,descriptive_words,d‚¢,Omoi,Heavy
-item_533,word,‚æ‚¤‚·E«¿,descriptive_words,‚¨‚è‚±‚¤,Orikou,Clever
-item_534,word,‚æ‚¤‚·E«¿,descriptive_words,‚©‚½‚¢iŒÅ‚¢j,Katai,Hard
-item_535,word,‚æ‚¤‚·E«¿,descriptive_words,‚©‚ä‚¢,Kayui,Itchy
-item_536,word,‚æ‚¤‚·E«¿,descriptive_words,‚©‚ç‚¢,Karai,Spicy
-item_537,word,‚æ‚¤‚·E«¿,descriptive_words,‚©‚ç‚Á‚Û,Karappo,Empty
-item_538,word,‚æ‚¤‚·E«¿,descriptive_words,‚©‚í‚¢‚¢,Kawaii,Cute
-item_539,word,‚æ‚¤‚·E«¿,descriptive_words,‚©‚í‚¢‚»‚¤,Kawaisou,Pity
-item_540,word,‚æ‚¤‚·E«¿,descriptive_words,‚©‚í‚¢‚½,Kawaita,Dried
-item_541,word,‚æ‚¤‚·E«¿,descriptive_words,‚«‚½‚È‚¢,Kitanai,Dirty
-item_542,word,‚æ‚¤‚·E«¿,descriptive_words,‚«‚ç‚¢iŒ™‚¢j,Kirai,Dislike
-item_543,word,‚æ‚¤‚·E«¿,descriptive_words,‚«‚ê‚¢,Kirei,Clean
-item_544,word,‚æ‚¤‚·E«¿,descriptive_words,‚­‚³‚¢iL‚¢j,Kusai,Odor
-item_545,word,‚æ‚¤‚·E«¿,descriptive_words,‚­‚ç‚¢iˆÃ‚¢j,Kurai,Dark
-item_546,word,‚æ‚¤‚·E«¿,descriptive_words,•‚¢,Kuroi,Black
-item_547,word,‚æ‚¤‚·E«¿,descriptive_words,Œ³‹C,Genki,Energy
-item_548,word,‚æ‚¤‚·E«¿,descriptive_words,‚±‚í‚¢,Kowai,Scary
-item_549,word,‚æ‚¤‚·E«¿,descriptive_words,Š¦‚¢,Samui,Cold
-item_550,word,‚æ‚¤‚·E«¿,descriptive_words,lŠp‚¢,Shikakui,Square
-item_551,word,‚æ‚¤‚·E«¿,descriptive_words,‚µ‚¸‚©iÃ‚©j,Shizuka,Quiet
-item_552,word,‚æ‚¤‚·E«¿,descriptive_words,‚¶‚å‚¤‚¸,Jyouzu,Good
-item_553,word,‚æ‚¤‚·E«¿,descriptive_words,”’‚¢,Shiroi,White
-item_554,word,‚æ‚¤‚·E«¿,descriptive_words,‚·‚²‚¢,Sugoi,Great
-item_555,word,‚æ‚¤‚·E«¿,descriptive_words,‚·‚Á‚Ï‚¢,Suppai,Sour
-item_556,word,‚æ‚¤‚·E«¿,descriptive_words,‚¾‚¢‚¶i‘å–j,Daiji,Important
-item_557,word,‚æ‚¤‚·E«¿,descriptive_words,‘åä•v,Daijoubu,All_right
-item_558,word,‚æ‚¤‚·E«¿,descriptive_words,‚½‚©‚¢i‚‚¢j,Takai,High
-item_559,word,‚æ‚¤‚·E«¿,descriptive_words,‚½‚Ì‚µ‚¢iŠy‚µ‚¢j,Tanoshii,Pleasant
-item_560,word,‚æ‚¤‚·E«¿,descriptive_words,¬‚³‚¢,Chiisai,Small
-item_561,word,‚æ‚¤‚·E«¿,descriptive_words,‚¿‚ª‚¤,Chigau,Wrong
-item_562,word,‚æ‚¤‚·E«¿,descriptive_words,”æ‚ê‚½,Tsukareta,Exhausted
-item_563,word,‚æ‚¤‚·E«¿,descriptive_words,‚Â‚ß‚½‚¢i—â‚½‚¢j,Tsumetai,Cold
-item_564,word,‚æ‚¤‚·E«¿,descriptive_words,‚È‚¢,Nai,None
-item_565,word,‚æ‚¤‚·E«¿,descriptive_words,’·‚¢,Nagai,Long
-item_566,word,‚æ‚¤‚·E«¿,descriptive_words,‚Ê‚ê‚½i”G‚ê‚½j,Nureta,Wet
-item_567,word,‚æ‚¤‚·E«¿,descriptive_words,‚Ë‚Ş‚¢,Nemui,Sleepy
-item_568,word,‚æ‚¤‚·E«¿,descriptive_words,‚Í‚â‚¢,Hayai,Fast
-item_569,word,‚æ‚¤‚·E«¿,descriptive_words,•a‹C,Byouki,Sick
-item_570,word,‚æ‚¤‚·E«¿,descriptive_words,‚Ö‚ñi•Ïj,Hen,Strange
-item_571,word,‚æ‚¤‚·E«¿,descriptive_words,‚Ü‚¸‚¢,Mazui,Bad_taste
-item_572,word,‚æ‚¤‚·E«¿,descriptive_words,‚Ü‚é‚¢iŠÛ‚¢j,Marui,Round
-item_573,word,‚æ‚¤‚·E«¿,descriptive_words,‚İ‚Ç‚èi—Îj,Midori,Green
-item_574,word,‚æ‚¤‚·E«¿,descriptive_words,‚Ş‚¸‚©‚µ‚¢,Muzukashii,Difficult
-item_575,word,‚æ‚¤‚·E«¿,descriptive_words,‚â‚³‚µ‚¢,Yasashii,Easy
-item_576,word,‚æ‚¤‚·E«¿,descriptive_words,‚â‚í‚ç‚©‚¢i_‚ç‚©‚¢j,Yawarakai,Soft
-item_577,word,‚æ‚¤‚·E«¿,descriptive_words,‚ä‚Á‚­‚è,Yukkuri,Slowly
-item_578,word,‚æ‚¤‚·E«¿,descriptive_words,ˆ«‚¢,Warui,Bad
-item_579,word,‘ã–¼Œ,pronouns,‚ ‚»‚±,Asoko,Overthere
-item_580,word,‘ã–¼Œ,pronouns,‚ ‚Á‚¿,Acchi,Overthere
-item_581,word,‘ã–¼Œ,pronouns,‚ ‚Ì,Ano,That
-item_582,word,‘ã–¼Œ,pronouns,‚ ‚ê,Are,That
-item_583,word,‘ã–¼Œ,pronouns,‚ ‚ñ‚½,Anta,You
-item_584,word,‘ã–¼Œ,pronouns,‚ ‚ñ‚È,Anna,Such
-item_585,word,‘ã–¼Œ,pronouns,‚±‚¤,Kou,Like_this
-item_586,word,‘ã–¼Œ,pronouns,‚±‚±,Koko,Here
-item_587,word,‘ã–¼Œ,pronouns,‚±‚Á‚¿,Kocchi,Here
-item_588,word,‘ã–¼Œ,pronouns,‚±‚Ì,Kono,This
-item_589,word,‘ã–¼Œ,pronouns,‚±‚ê,Kore,This
-item_590,word,‘ã–¼Œ,pronouns,‚±‚ñ‚È,Konna,Such
-item_591,word,‘ã–¼Œ,pronouns,‚»‚¤,Sou,So
-item_592,word,‘ã–¼Œ,pronouns,‚»‚±,Soko,There
-item_593,word,‘ã–¼Œ,pronouns,‚»‚Á‚¿,Socchi,Over_there
-item_594,word,‘ã–¼Œ,pronouns,‚»‚Ì,Sono,That
-item_595,word,‘ã–¼Œ,pronouns,‚»‚ê,Sore,It
-item_596,word,‘ã–¼Œ,pronouns,‚»‚ñ‚È,Sonna,Such
-item_597,word,‘ã–¼Œ,pronouns,‚Ú‚­,Boku,I
-item_598,word,‘ã–¼Œ,pronouns,‚Ú‚­‚Ì,Bokuno,My
-item_599,word,‘ã–¼Œ,pronouns,‚í‚½‚µ,Watashi,I
-item_600,word,‘ã–¼Œ,pronouns,‚í‚½‚µ‚Ì,Watashino,My
-item_601,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚¢‚Â,Itsu,When
-item_602,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚¾‚ê,Dare,Who
-item_603,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚Ç‚¤,Dou,How
-item_604,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚Ç‚¤‚µ‚Ä,Doushite,Why
-item_605,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚Ç‚±,Doko,Where
-item_606,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚Ç‚Á‚¿,Docchi,Which
-item_607,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚Ç‚ê,Dore,Which_one
-item_608,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚È‚º,Naze,Why
-item_609,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚È‚É,Nani,What
-item_610,word,¿–â‚Ì‚±‚Æ‚Î,question_words,‚È‚ñ‚Å,Nande,Why
-item_611,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚ ‚¢‚¾,Aida,Between
-item_612,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚¤‚¦iãj,Ue,Up
-item_613,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚¤‚µ‚ëiŒã‚ëj,Ushiro,Behind
-item_614,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚¤‚¿i“àj,Uchi,Inside
-item_615,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚©‚ÇiŠpj,Kado,Horn
-item_616,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚µ‚½i‰ºj,Shita,Under
-item_617,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚·‚İi‹÷j,Sumi,Corner
-item_618,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚»‚ÆiŠOj,Soto,Outside
-item_619,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚»‚Î,Soba,By_the_side
-item_620,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‹ß‚­,Chikaku,Near
-item_621,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Â‚¬iŸj,Tsugi,Next
-item_622,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‰“‚­,Tooku,Far
-item_623,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Æ‚±‚ëE‚Æ‚±,Tokoro_toko,Place
-item_624,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Æ‚È‚èi—×‚èj,Tonari,Next_to
-item_625,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚È‚©i’†j,Naka,Center
-item_626,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Í‚µi’[j,Hashi,End
-item_627,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,”½‘Î,Hantai,Opposite
-item_628,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,¶,Hidari,Left
-item_629,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Ó‚¿i‰j,Fuchi,Edge
-item_630,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Ü‚¦i‘Oj,Mae,Before
-item_631,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Ü‚í‚è,Mawari,Around
-item_632,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Ü‚ñ’†,Mannaka,Middle
-item_633,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‰E,Migi,Right
-item_634,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚Ş‚±‚¤iŒü‚±‚¤j,Mukou,Over_there
-item_635,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚æ‚±i‰¡j,Yoko,Beside
-item_636,word,ˆÊ’u‚ÆêŠ‚É‚Â‚¢‚Ä‚Ì‚±‚Æ‚Î,locations,‚í‚«,Waki,Side
-item_637,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚¢‚¿,Ichi,One
-item_638,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚¢‚¿‚Î‚ñiˆê”Ôj,Ichiban,First
-item_639,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚¢‚Á‚©‚¢iˆê‰ñj,Ikkai,Once
-item_640,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚¢‚Á‚µ‚åiˆêj,Issho,Together
-item_641,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚¢‚Á‚Ï‚¢,Ippai,Full
-item_642,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,“¯‚¶,Onaji,Same
-item_643,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚º‚ñ‚Ôi‘S•”j,Zenbu,All
-item_644,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚½‚­‚³‚ñ,Takusan,Lots
-item_645,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚¿‚å‚Á‚Æ,Chotto,A_little
-item_646,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚È‚µ,Nashi,None
-item_647,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,”¼•ª,Hanbun,Half
-item_648,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚Ğ‚Æ‚Â,Hitotsu,One
-item_649,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚Ù‚©‚Ì,Hokano,Other
-item_650,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚İ‚ñ‚È,Minna,Everyone
-item_651,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚à‚¤‚¢‚Á‚©‚¢,Mouikkai,Again
-item_652,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚à‚¤‚Ğ‚Æ‚ÂE‚à‚Ğ‚Æ‚Â,Mouhitotsu_mohitotsu,Another
-item_653,word,”—Ê‚ğ‚ ‚ç‚í‚·‚±‚Æ‚Î,quantifiers,‚à‚Á‚Æ,Motto,More
-item_654,word,Ú‘±Œê,connecting_words,‚»‚µ‚Ä,Soshite,And
-item_655,word,Ú‘±Œê,connecting_words,‚¾‚©‚ç,Dakara,So
-item_656,word,Ú‘±Œê,connecting_words,‚¾‚¯‚Ç,Dakedo,However
-item_657,word,Ú‘±Œê,connecting_words,‚¾‚Á‚Ä,Datte,Because
-item_658,word,Ú‘±Œê,connecting_words,‚Å‚à,Demo,But
-item_659,word,Ú‘±Œê,connecting_words,‚à‚µ‚à,Moshimo,If
-item_660,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒGƒ“ƒGƒ“i‹ƒ‚­j,Enen,Cry
-item_661,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚¨‚Ä‚Äi‚¨èXj,Otete,Hand
-item_662,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚¨‚ñ‚Ô,Onbu,Piggyback_ride
-item_663,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒJ[ƒJ[iƒJƒ‰ƒXj,Kaakaa,Caw_caw
-item_664,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚«‚ê‚¢‚«‚ê‚¢,Kireikirei,Clean_up
-item_665,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒNƒbƒNiŒCj,Kukku,Shoes
-item_666,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚®‚é‚®‚é,Guruguru,Spin
-item_667,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚²‚Á‚Â‚ñ,Gottsun,Hit_head
-item_668,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒWƒƒ[i…‚È‚Ç‚±‚Ú‚·j,Jaa,Spill_water
-item_669,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒW[ƒWEƒWƒWi‘c•ƒj,Jiiji_Jiji,Grandfather
-item_670,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒW[ƒWišj,Jiiji,Writing
-item_671,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒV[ƒVi‚¨‚µ‚Á‚±j,Shiishi,Pee
-item_672,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒ^ƒCƒ^ƒCE‚¨‚Æ‚Æi‹›j,Taitai_ototo,Fish
-item_673,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚¾‚Á‚±,Dakko,Hold_me
-item_674,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚¿‚á‚ñ‚±i‚¨‚·‚í‚èj,Chanko,Sitting
-item_675,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒ`ƒ…[ƒ`ƒ…[i‚Ë‚¸‚İj,Cyuucyuu,Squeak
-item_676,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒ`ƒ…ƒ“ƒ`ƒ…ƒ“i’¹j,Cyuncyun,Little_bird
-item_677,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒ`ƒ‡ƒLƒ`ƒ‡ƒLi‚Í‚³‚İj,Chokichoki,Scissors
-item_678,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚È‚¢‚È‚¢i•Ğ‚Ã‚¯j,Nainai,Clean_up
-item_679,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒlƒ“ƒl,Nenne,Sleep
-item_680,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒo[ƒoEƒoƒoi‘c•êj,Baaba_baba,Grandmother
-item_681,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒpƒJƒpƒJi”nj,Pakapaka,Horse
-item_682,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒpƒNƒpƒNiH‚×‚éj,Pakupaku,Eat
-item_683,word,—c™Œêi‚»‚Ì‚Qj,sounds2,‚Ò‚æ‚Ò‚æi‚Ğ‚æ‚±j,Piyopiyo,Chirp
-item_684,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒu[ƒu[i“Øj,Buubuu,Oink
-item_685,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒu[ƒ“i”òs‹@j,Buun,Airplane
-item_686,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒ|[ƒ“i“Š‚°‚éj,Poon,Throw
-item_687,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒ|ƒ“ƒ|ƒ“i‚¨‚È‚©j,Ponpon,Stomach
-item_688,word,—c™Œêi‚»‚Ì‚Qj,sounds2,ƒ}ƒ“ƒ}iH‚×•¨j,Manma,Food
-item_689,word,‰ï˜bŒê,conversations,‚ ‚Á,At,Ah
-item_690,word,‰ï˜bŒê,conversations,‚ ‚Ì‚Ë,Anone,Well
-item_691,word,‰ï˜bŒê,conversations,‚ ‚ê‚ÁE‚ ‚ç,Aret_Ara,What?
-item_692,word,‰ï˜bŒê,conversations,‚¢‚¢‚æ,Iiyo,OK
-item_693,word,‰ï˜bŒê,conversations,‚¢‚â,Iya,Disagreeable
-item_694,word,‰ï˜bŒê,conversations,‚¤‚¤‚ñi‘Å‚¿Á‚µj,Uun,No
-item_695,word,‰ï˜bŒê,conversations,‚¤‚ñi•Ô–‚Æ‚µ‚Äj,Un,Yup
-item_696,word,‰ï˜bŒê,conversations,‚¦‚Á‚ÆE‚¦‚¦‚Æ,Etto_eeto,Um
-item_697,word,‰ï˜bŒê,conversations,‚»‚¤‚»‚¤,Sousou,Oh_yeah
-item_698,word,‰ï˜bŒê,conversations,‚Ë‚¦,Nee,Hey
-item_699,word,‰ï˜bŒê,conversations,‚Ù‚ç,Hora,You_see
-item_700,word,‰ï˜bŒê,conversations,‚à‚µ‚à‚µ,Moshimoshi,Hello
-item_701,word,‰ï˜bŒê,conversations,‚â‚¾E‚¢‚â‚¾,Yada_Iyada,No
-item_702,word,‰ï˜bŒê,conversations,‚ñiŠÔ‚ğ‚Æ‚é‚Ì‚Éj,N,Hmm
-item_703,word,‚»‚Ì‘¼,others,‚ ‚Á‚½iŒ©‚Â‚¯‚½‚Éj,Atta,Found_it
-item_704,word,‚»‚Ì‘¼,others,‚¨‚¢‚Å,Oide,Come_here
-item_705,word,‚»‚Ì‘¼,others,ƒJƒ“ƒp[ƒCiŠ£”tj,Kanpaai,Cheers
-item_706,word,‚»‚Ì‘¼,others,‚±‚ñ‚Ç,Kondo,Next_time
-item_707,word,‚»‚Ì‘¼,others,‚µ‚Ü‚¤,Shimau,Store
-item_708,word,‚»‚Ì‘¼,others,‚Ü‚½,Mata,Also
-item_709,word,‚»‚Ì‘¼,others,‚à‚¤,Mou,Already
-item_710,word,‚»‚Ì‘¼,others,‚æ‚¢‚µ‚å,Yoisho,Heave_ho
-item_711,word,‚»‚Ì‘¼,others,‚æ‚µ‚æ‚µ,Yoshiyoshi,There_there
-item_712,how_use_words,NA,NA,‚¨q‚³‚ñ‚Í‚»‚Ìê‚É‚¢‚È‚¢l‚Ì‚¿•¨‚ğ‚³‚í‚Á‚½‚èAw‚³‚µ‚µ‚ÄA‚»‚Ìl‚Ì–¼‘O‚ğŒ¾‚¢‚Ü‚·‚©B‚½‚Æ‚¦‚ÎAhƒpƒph‚Æ‚©hƒg[ƒ`ƒƒƒ“h‚ÆŒ¾‚¢‚Ü‚·‚©B,,does your child ever pick up or point to an object and name an absent person to whom the object belongs?
-item_713,how_use_words,NA,NA,‚¨q‚³‚ñ‚Í–Ú‚Ì‘O‚É‚È‚¢•¨‚É‚Â‚¢‚Ä‚½‚¸‚Ë‚ç‚ê‚½A‚í‚©‚è‚Ü‚·‚©B‚½‚Æ‚¦‚ÎA‚ ‚È‚½‚ªh‚Ç‚±‚ÉƒNƒ}‚³‚ñ‚ ‚é‚©‚ÈHvh‚Æ‚½‚¸‚Ë‚½AƒIƒ‚ƒ`ƒƒ‚Ì‚Ê‚¢‚®‚é‚İ‚ğæ‚è‚ÉA‚¢‚Â‚à‚¨‚¢‚Ä‚ ‚é•”‰®‚Ös‚«‚Ü‚·‚©B,,does your child understand if you ask for something that is not in the room?
-item_714,how_use_words,NA,NA,‚¨q‚³‚ñ‚ÍŒ©‚Â‚©‚ç‚È‚¢ƒIƒ‚ƒ`ƒƒ‚âA‚È‚¢ƒIƒ‚ƒ`ƒƒ‚É‚Â‚¢‚Ä‚½‚¸‚Ë‚½‚èA‚¢‚È‚¢l‚É‚Â‚¢‚Ä‚½‚¸‚Ë‚½‚èA–Ú‚Ì‘O‚É‚È‚¢‚à‚Ì‚É‚Â‚¢‚Ä˜b‚µ‚Ü‚·‚©B,,does your child talk a bout objects that are not present?
-item_715,how_use_words,NA,NA,‚¨q‚³‚ñ‚Í‚±‚ê‚©‚ç‹N‚±‚é‚±‚Æ‚É‚Â‚¢‚Ä˜b‚µ‚Ü‚·‚©B‚½‚Æ‚¦‚ÎA‚¨•ƒ‚³‚ñ‚ª—·s‚Öo‚©‚¯‚é‘O‚Éh‹DÔ‚Û‚Á‚Ûh‚Æ‚©h”òs‹@h‚ÆŒ¾‚Á‚½‚èA‚¨q‚³‚ñ‚ğŒö‰€‚É‚Â‚ê‚Äs‚±‚¤‚Æ‚·‚é‚Éhƒuƒ‰ƒ“ƒRh‚ÆŒ¾‚Á‚½‚è‚µ‚Ü‚·‚©B,,does your child ever talk about something that's going to happen in the future?
-item_716,how_use_words,NA,NA,‚¨q‚³‚ñ‚Í‰ß‹‚ÉŒoŒ±‚µ‚½‚±‚Æ‚É‚Â‚¢‚Ä˜b‚µ‚Ü‚·‚©B‚½‚Æ‚¦‚ÎAˆÈ‘O‚É“®•¨‰€‚Å‚¼‚¤‚ğ‚İ‚½ŒoŒ±‚ª‚ ‚Á‚½‚çA‚»‚ê‚ğv‚¢o‚µ‚ÄAh‚»‚¤‚³‚ñh‚Æ‚©h“®•¨‰€h‚ÆŒ¾‚Á‚½‚è‚µ‚Ü‚·‚©B,,does your child ever talk about past events or people who are not present?
-item_717,function_words,NA,NA,•¨‚Ì‚¿å‚âA•¨‚Ì•t‘®‚·‚éå‘Ì‚ğŒ¾‚¢•\‚µ‚½‚¢A‘ål‚ÍA•Œ‚Ìu‚Ìv‚ğ–¼h‚É‚­‚Á‚Â‚¯‚Ä•\Œ»‚µ‚Ü‚·B‚½‚Æ‚¦‚ÎAu‚¨•ƒ‚³‚ñ‚ÌvAu‚í‚½‚µ‚ÌvAu©“®Ô‚ÌvAu—c’t‰€‚Ìv‚È‚ÇA‚ ‚È‚½‚Ì‚¨q‚³‚ñ‚ÍAu‚Ìv‚ğ‚­‚Á‚Â‚¯‚Ä˜b‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·‚©B,,
-item_718,function_words,NA,NA,is’†‚Ìo—ˆ–‚â•¨–‚Ìó‘Ô‚ğŒ¾‚¢•\‚µ‚½‚¢A‘ål‚ÍA•“®Œu`‚Ä‚¢‚év‚ğ“®Œ‚É‚­‚Á‚Â‚¯‚Ä•\Œ»‚µ‚Ü‚·B‚½‚Æ‚¦‚ÎAu‘–‚Á‚Ä‚¢‚évAu~‚Á‚Ä‚¢‚évAu‚Á‚Ä‚¢‚év‚È‚ÇA‚ ‚È‚½‚Ì‚¨q‚³‚ñ‚ÍAu`‚Ä‚¢‚év‚ğ‚­‚Á‚Â‚¯‚Ä˜b‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·‚©B,,
-item_719,function_words,NA,NA,o—ˆ–‚â“®Œ‚ğ‘Å‚¿Á‚µi”Û’è‚µj‚½‚¢A‘ål‚ÍA•“®Œu`‚È‚¢v‚ğ“®Œ‚É‚­‚Á‚Â‚¯‚Ä•\Œ»‚µ‚Ü‚·B‚½‚Æ‚¦‚ÎAus‚©‚È‚¢vAu‚Á‚Ä‚¢‚È‚¢vAuH‚×‚È‚¢v‚È‚ÇA‚ ‚È‚½‚Ì‚¨q‚³‚ñ‚ÍAu`‚È‚¢v‚ğ‚­‚Á‚Â‚¯‚Ä˜b‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·‚©B,,
-item_720,function_words,NA,NA,‚Ä‚¢‚Ë‚¢‚É•\Œ»‚µ‚½‚¢A‘ål‚ÍA•“®Œu`‚Ü‚·v‚ğ“®Œ‚Ì‚¤‚µ‚ë‚É‚­‚Á‚Â‚¯‚Ä•\Œ»‚µ‚Ü‚·B‚½‚Æ‚¦‚ÎAuH‚×‚Ü‚·vAus‚«‚Ü‚·v‚È‚Ç‚Ì‚æ‚¤‚ÉŒ¾‚¢‚Ü‚·B‚ ‚È‚½‚Ì‚¨q‚³‚ñ‚Íu`‚Ü‚·v‚ğ‚­‚Á‚Â‚¯‚Ä˜b‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·‚©B,,
-item_721,case_markers,NA,NA,‚ªi‚¨•ê‚³‚ñ‚ªj,Ga,
-item_722,case_markers,NA,NA,‚Ìiƒpƒp‚Ìj,No,
-item_723,case_markers,NA,NA,‚Éi‚¨ŠO‚Éj,Ni,
-item_724,case_markers,NA,NA,‚ğiƒpƒ“‚ğj,Wo,
-item_725,case_markers,NA,NA,‚Åi‰”•M‚Åj,De,
-item_726,case_markers,NA,NA,‚ÖiŒö‰€‚Öj,He,
-item_727,case_markers,NA,NA,‚Æi‚¨•ê‚³‚ñ‚Æj,To,
-item_728,case_markers,NA,NA,‚©‚çi‰ïĞ‚©‚çj,Kara,
-item_729,case_markers,NA,NA,‚Á‚ÄiƒKƒ`ƒƒƒ“‚Á‚Äj,Tte,
-item_730,case_markers,NA,NA,‚Íiƒpƒp‚Íj,Wa_ha,
-item_731,case_markers,NA,NA,‚àiƒ}ƒ}‚àj,Mo,
-item_732,case_markers,NA,NA,‚¾‚¯i‚²‚Í‚ñ‚¾‚¯j,Dake,
-item_733,case_markers,NA,NA,‚µ‚©iƒpƒ“‚µ‚©j,Shika,
-item_734,case_markers,NA,NA,‚âi‚è‚ñ‚²‚âj,Ya,
-item_735,case_markers,NA,NA,‚½‚çiH‚×‚½‚çj,Tara,
-item_736,case_markers,NA,NA,‚Äiæ‚Á‚Äj,Te,
-item_737,case_markers,NA,NA,‚©‚çiH‚×‚Ä‚©‚çj,Kara,
-item_738,case_markers,NA,NA,‚Ì‚Åi—‚¿‚½‚Ì‚Åj,Node,
-item_739,case_markers,NA,NA,‚Ì‚Éi“ü‚ê‚½‚Ì‚Éj,Noni,
-item_740,case_markers,NA,NA,‚Ëi‚«‚ê‚¢‚Ëj,Ne,
-item_741,case_markers,NA,NA,‚æi”M‚¢‚æj,Yo,
-item_742,case_markers,NA,NA,‚Ìi‚à‚ç‚Á‚½‚Ìj,No,
-item_743,case_markers,NA,NA,‚íi‚©‚í‚¢‚¢‚íj,Wa,
-item_744,case_markers,NA,NA,‚©iH‚×‚æ‚¤‚©j,Ka,
-item_745,case_markers,NA,NA,‚©‚Èis‚±‚¤‚©‚Èj,Kana,
-item_746,auxiliary_verbs,NA,NA,?‚Ü‚·iH‚×‚Ü‚·j,Masu,
-item_747,auxiliary_verbs,NA,NA,?‚Ü‚µ‚½iH‚×‚Ü‚µ‚½j,Mashita,
-item_748,auxiliary_verbs,NA,NA,?‚Ü‚µ‚å‚¤iH‚×‚Ü‚µ‚å‚¤j,Mashou,
-item_749,auxiliary_verbs,NA,NA,?‚Ü‚¹‚ñiH‚×‚Ü‚¹‚ñj,Masen,
-item_750,auxiliary_verbs,NA,NA,?‚éiH‚×‚éj,Ru,
-item_751,auxiliary_verbs,NA,NA,?‚½iH‚×‚½j,Ta,
-item_752,auxiliary_verbs,NA,NA,?‚³‚¹‚éiH‚×‚³‚¹‚éj,Saseru,
-item_753,auxiliary_verbs,NA,NA,?‚³‚¹‚½iH‚×‚³‚¹‚½j,Saseta,
-item_754,auxiliary_verbs,NA,NA,?‚³‚¹‚È‚¢iH‚×‚³‚¹‚È‚¢j,Sasenai,
-item_755,auxiliary_verbs,NA,NA,?‚¹‚éiˆù‚Ü‚¹‚éj,Seru,
-item_756,auxiliary_verbs,NA,NA,?‚¹‚½iˆù‚Ü‚¹‚½j,Seta,
-item_757,auxiliary_verbs,NA,NA,?‚¹‚È‚¢iˆù‚Ü‚¹‚È‚¢j,Senai,
-item_758,auxiliary_verbs,NA,NA,?‚È‚¢iH‚×‚È‚¢j,Nai,
-item_759,auxiliary_verbs,NA,NA,?‚ñiH‚×‚ñj,N,
-item_760,auxiliary_verbs,NA,NA,?‚È‚©‚Á‚½iH‚×‚È‚©‚Á‚½j,Nakatta,
-item_761,auxiliary_verbs,NA,NA,?‚æ‚¤iH‚×‚æ‚¤j,You,
-item_762,auxiliary_verbs,NA,NA,?‚¤iˆù‚à‚¤j,U,
-item_763,auxiliary_verbs,NA,NA,?‚½‚¢iH‚×‚½‚¢j,Tai,
-item_764,auxiliary_verbs,NA,NA,?‚½‚©‚Á‚½iH‚×‚½‚©‚Á‚½j,Takatta,
-item_765,auxiliary_verbs,NA,NA,?‚½‚­‚È‚¢iH‚×‚½‚­‚È‚¢j,Takunai,
-item_766,auxiliary_verbs,NA,NA,?‚ç‚ê‚éiH‚×‚ç‚ê‚éj,Rareru,
-item_767,auxiliary_verbs,NA,NA,?‚ç‚ê‚½iH‚×‚ç‚ê‚½j,Rareta,
-item_768,auxiliary_verbs,NA,NA,?‚ç‚ê‚È‚¢iH‚×‚ç‚ê‚È‚¢j,Rarenai,
-item_769,auxiliary_verbs,NA,NA,?‚ê‚éiH‚×‚ê‚éj,Reru,
-item_770,auxiliary_verbs,NA,NA,?‚ê‚½iH‚×‚ê‚½j,Reta,
-item_771,auxiliary_verbs,NA,NA,?‚ê‚È‚¢iH‚×‚ê‚È‚¢j,Renai,
-item_772,auxiliary_verbs,NA,NA,?‚Å‚µ‚å‚¤iH‚×‚ê‚é‚Å‚µ‚å‚¤j,Deshou,
-item_773,auxiliary_verbs,NA,NA,?‚Å‚·iƒpƒ“‚Å‚·j,Desu,
-item_774,auxiliary_verbs,NA,NA,?‚¾iƒpƒ“‚¾j,Da,
-item_775,auxiliary_verbs,NA,NA,?‚¶‚á‚È‚¢iƒpƒ“‚¶‚á‚È‚¢j,Jyanai,
-item_776,combine,NA,NA,‚¨q‚³‚ñ‚ÍA‚à‚¤A“ñŒê•¶‚ª˜b‚¹‚Ü‚·‚©B‚½‚Æ‚¦‚ÎAu‚¨•ê‚¿‚á‚ñ ‚¾‚Á‚±vuƒlƒ“ƒl ‚·‚évuƒu[ƒu[ æ‚Á‚½v‚È‚Ç‚Å‚·B,,has your child begun to combine word yet?
-item_777,max_length,NA,NA,‚ ‚½‚È‚Ì‚¨q‚³‚ñ‚ªÅ‹ß˜b‚³‚ê‚½‚±‚Æ‚Î‚Ì’†‚ÅA•¶‚Ì’·‚³‚ªˆê”Ô’·‚©‚Á‚½•¶‚ğ‚R‚Â‚Ù‚Çv‚¢o‚µ‚Ä‹L“ü‚µ‚Ä‚­‚¾‚³‚¢B,,
-item_778,max_length,NA,NA,‚ ‚½‚È‚Ì‚¨q‚³‚ñ‚ªÅ‹ß˜b‚³‚ê‚½‚±‚Æ‚Î‚Ì’†‚ÅA•¶‚Ì’·‚³‚ªˆê”Ô’·‚©‚Á‚½•¶‚ğ‚R‚Â‚Ù‚Çv‚¢o‚µ‚Ä‹L“ü‚µ‚Ä‚­‚¾‚³‚¢B,,
-item_779,max_length,NA,NA,‚ ‚½‚È‚Ì‚¨q‚³‚ñ‚ªÅ‹ß˜b‚³‚ê‚½‚±‚Æ‚Î‚Ì’†‚ÅA•¶‚Ì’·‚³‚ªˆê”Ô’·‚©‚Á‚½•¶‚ğ‚R‚Â‚Ù‚Çv‚¢o‚µ‚Ä‹L“ü‚µ‚Ä‚­‚¾‚³‚¢B,,
-item_780,complexity,NA,NA,ƒpƒp ƒYƒ{ƒ“ / ƒpƒp‚Ì ƒYƒ{ƒ“,Papa_no_zubon_(target_No),
-item_781,complexity,NA,NA,››‚¿‚á‚ñ ‚·‚é / ››‚¿‚á‚ñ‚ª ‚·‚é,XXchan_ga_suru_(target_Ga),
-item_782,complexity,NA,NA,ƒoƒX æ‚Á‚½ / ƒoƒX‚É æ‚Á‚½,Basu_ni_notta_(target_Ni),
-item_783,complexity,NA,NA,‚­‚Â ‚ ‚Á‚½ / ‚­‚Â‚ª ‚ ‚Á‚½,Kutsu_ga_atta_(target_Ga),
-item_784,complexity,NA,NA,‚±‚ê —V‚Ô / ‚±‚ê‚Å —V‚Ô,Kore_de_asobu_(target_De),
-item_785,complexity,NA,NA,‚¨•ê‚³‚ñ s‚Á‚½ / ‚¨•ê‚³‚ñ‚Æ s‚Á‚½,Okaasan_to_itta_(target_To),
-item_786,complexity,NA,NA,–{ ‚İ‚é / –{‚ğ ‚İ‚é,Hon_o_miru_(target_Wo),
-item_787,complexity,NA,NA,ƒpƒp ‰ïĞ / ƒpƒp‚Í ‰ïĞ,Papa_wa_kaisha_(target_Wa),
-item_788,complexity,NA,NA,‚±‚ê D‚« / ‚±‚ê‚ª D‚«,Kore_ga_suki_(target_Ga),
-item_789,complexity,NA,NA,‚¨‚Î‚ ‚¿‚á‚ñ ‚à‚ç‚Á‚½ / ‚¨‚Î‚ ‚¿‚á‚ñ‚É ‚à‚ç‚Á‚½,Obaachan_ni_moratta_(target_Ni),
-item_790,complexity,NA,NA,‚¢‚¿‚²  ƒoƒiƒi / ‚¢‚¿‚²‚Æ ƒoƒiƒi,Ichigo_to_banana_(target_To),
-item_791,complexity,NA,NA,››‚¿‚á‚ñ H‚×‚é / ››‚¿‚á‚ñ‚à H‚×‚é,XXchan_mo_taberu_(target_Mo),
-item_792,complexity,NA,NA,‚¨‚¢‚µ‚¢ / ‚¨‚¢‚µ‚¢‚Ë,Oishii_ne_(target_Ne),
-item_793,complexity,NA,NA,’É‚¢ / ’É‚¢‚Ì,Itai_no_(target_No),
-item_794,complexity,NA,NA,H‚×‚½ / H‚×‚½‚æ,Tabeta_yo_(target_Yo),
-item_795,complexity,NA,NA,ƒlƒ“ƒl / ƒlƒ“ƒl ‚·‚é,Nenne_suru_(target_Suru),
-item_796,complexity,NA,NA,‚«‚ê‚¢ ‚È‚¢ / ‚«‚ê‚¢‚¶‚á‚È‚¢,Kirei_ja_nai_(target_Ja),
-item_797,complexity,NA,NA,æ‚Á‚Ä / æ‚Á‚Ä ‚¿‚å‚¤‚¾‚¢,totte_choudai_(target_Choudai),
-item_798,complexity,NA,NA,H‚×‚é ‚¾‚ß / H‚×‚½‚ç ‚¾‚ß,Tabeta_ra_dame_(target_Ra),
-item_799,complexity,NA,NA,‘å‚«‚¢ ‚È‚¢ / ‘å‚«‚­‚È‚¢,Ookiku_nai_(target_Ku),
-item_800,complexity,NA,NA,‚«‚ê‚¢ ‰Ô / ‚«‚ê‚¢‚È ‰Ô,Kirei_na_hana_(target_Na),
-item_801,complexity,NA,NA,Ô‚¿‚á‚ñ ‹ƒ‚­ / Ô‚¿‚á‚ñ ‹ƒ‚¢‚Ä‚é,Akachan_nai_teru_(target_Teru),
-item_802,complexity,NA,NA,‚¨ŠO s‚­ / ‚¨ŠO s‚±‚¤,Osoto_i_kou_(target_Kou),
-item_803,complexity,NA,NA,ƒeƒŒƒr ‚İ‚é / ƒeƒŒƒr ‚İ‚½‚¢,Terebi_mi_tai_(target_Tai),
-item_804,complexity,NA,NA,H‚×‚½ / H‚×‚Ü‚µ‚½,Tabe_mashita_(target_Mashita),
-item_805,complexity,NA,NA,‚«‚ê‚¢ ‚È‚Á‚½ / ‚«‚ê‚¢‚É ‚È‚Á‚½,Kirei_ni_natta_(target_Ni),
-item_806,complexity,NA,NA,‚Ç‚±H / ‚¨‚à‚¿‚á ‚Ç‚±H,Omocha_doko_(target_Doko),
-item_807,complexity,NA,NA,H‚×‚é / ‚Ü‚¾ H‚×‚é,Mada_taberu_(target_Mada),
-item_808,complexity,NA,NA,—v‚ç‚ñ / ‚à‚¤ —v‚ç‚ñ,Mou_Iran_(target_Mou),
-item_809,complexity,NA,NA,ƒu[ƒu[ / ƒu[ƒu[ ©“®Ô,Buubuu_jidousha_(target_Jidousha),
-item_810,complexity,NA,NA,‚¨•ê‚³‚ñ ‚¨‚¢‚Å / ‚¨•ê‚³‚ñ ‚±‚Á‚¿ ‚¨‚¢‚Å,Okaasan_kocchi_oide_(target_Kocchi),
-item_811,complexity,NA,NA,‚­‚Â ‚¿‚Á‚¿‚á‚¢ / ‚±‚Ì ‚­‚Â ‚¿‚Á‚¿‚á‚¢,Kono_kutsu_chicchai_(target_Kono),
-item_812,complexity,NA,NA,•@ ’·‚¢ / ‚¼‚¤‚³‚ñ •@ ’·‚¢,Zousan_hana_nagai_(target_Zousan),
-item_813,complexity,NA,NA,lŒ` ‚ ‚é / Ô‚¿‚á‚ñ lŒ` ‚ ‚é,Akachan_ningyou _aru_(target_Akachan),
-item_814,complexity,NA,NA,ƒpƒp s‚Á‚½ / ƒpƒp ‰ïĞ s‚Á‚½,Papa_kaisha _itta_(target_Kaisha),
-item_815,complexity,NA,NA,‚¢‚Á‚Ï‚¢ ‚ ‚é / ‚­‚é‚Ü ‚¢‚Á‚Ï‚¢ ‚ ‚é,Kuruma_ippai_aru_(target_Kuruma),
-item_816,complexity,NA,NA,‚±‚ê ƒiƒCƒiƒC / ‚±‚ê ƒiƒCƒiƒC ‚·‚é,Kore_nainai_suru_(target_Suru),
+ï»¿questionnaire_id,item_id,type,category_ja,category_en,definition_ja1,definition_ja2,definition_en,,,
+A1,item_1,word,å¹¼å…èª,sounds,ã‚ãƒ¼ã‚ã£ (ã‚ˆããªã„ã“ã¨)  ,Aaa,Oh_no,,,
+A2,item_2,word,å¹¼å…èª,sounds,ã‚¢ã‚¤ã‚¿ (ã„ãŸã„),Aita,Ouch,,,
+A3,item_3,word,å¹¼å…èª,sounds,ã‚ªã‚¤ãƒã‚£ (ãŠã„ã—ã„),Oichii,Yummy ,,,
+A4,item_4,word,å¹¼å…èª,sounds,ã‚¬ãƒ¼ã‚¬ãƒ¼ (ã‚¢ãƒ’ãƒ«),Gaagaa,Quack_quack,,,
+A5,item_5,word,å¹¼å…èª,sounds,ã‚¬ã‚ªãƒ¼ (ãƒ©ã‚¤ã‚ªãƒ³),Gaoo,Roar,,,
+A6,item_6,word,å¹¼å…èª,sounds,ã“ã‘ã“ã£ã“ (ã«ã‚ã¨ã‚Š),Kokekokko,Cock_a_doodle_doo,,,
+A7,item_7,word,å¹¼å…èª,sounds,ã‚·ãƒ¥ãƒƒãƒãƒƒãƒãƒ¼ (æ±½è»Š),Syupoppoo,Choo-choo,,,
+A8,item_8,word,å¹¼å…èª,sounds,ãƒ‹ãƒ£ãƒ³ãƒ‹ãƒ£ãƒ³ (ãƒã‚³),Nyannyan,Meow,,,
+A9,item_9,word,å¹¼å…èª,sounds,ãƒ–ãƒ¼ãƒ–ãƒ¼ (è»Š),Buubuu,Broom_broom,,,
+A10,item_10,word,å¹¼å…èª,sounds,ãƒ¡ãƒ¼ãƒ¡ãƒ¼ (ãƒ¤ã‚®),meemee,Baa_baa,,,
+A11,item_11,word,å¹¼å…èª,sounds,ãƒ¢ãƒ¼ (ç‰›),Moo,Moo,,,
+A12,item_12,word,å¹¼å…èª,sounds,ãƒ¯ãƒ³ãƒ¯ãƒ³ (çŠ¬),Wanwan,Bowwow,,,
+B1,item_13,word,å‹•ç‰©ã®åå‰,animals,ã‚¢ãƒ’ãƒ«,Ahiru,Duck,,,
+B2,item_14,word,å‹•ç‰©ã®åå‰,animals,ã‚¢ãƒª,Ari,Ant,,,
+B3,item_15,word,å‹•ç‰©ã®åå‰,animals,çŠ¬,Inu,Dog,,,
+B4,item_16,word,å‹•ç‰©ã®åå‰,animals,ã†ã•ã,Usagi,Rabbit,,,
+B5,item_17,word,å‹•ç‰©ã®åå‰,animals,ç‰›,Ushi,Cow,,,
+B6,item_18,word,å‹•ç‰©ã®åå‰,animals,ã†ã¾,Uma,Horse,,,
+B7,item_19,word,å‹•ç‰©ã®åå‰,animals,ãˆã³,Ebi,Shrimp,,,
+B8,item_20,word,å‹•ç‰©ã®åå‰,animals,ãŠãŠã‹ã¿,Ookami,Wolf,,,
+B9,item_21,word,å‹•ç‰©ã®åå‰,animals,ã‚«ã‚¨ãƒ«,Kaeru,Frog,,,
+B10,item_22,word,å‹•ç‰©ã®åå‰,animals,ã‹ã«,Kani,Crab,,,
+B11,item_23,word,å‹•ç‰©ã®åå‰,animals,ã‚«ãƒ,Kaba,Hippopotamus,,,
+B12,item_24,word,å‹•ç‰©ã®åå‰,animals,ã‹ã‚,Kame,Turtle,,,
+B13,item_25,word,å‹•ç‰©ã®åå‰,animals,ã‚«ãƒ©ã‚¹,Karasu,Crow,,,
+B14,item_26,word,å‹•ç‰©ã®åå‰,animals,ãã¤ã­,Kitsune,Fox,,,
+B15,item_27,word,å‹•ç‰©ã®åå‰,animals,ãã‚Šã‚“,Kirin,Giraffe ,,,
+B16,item_28,word,å‹•ç‰©ã®åå‰,animals,ãã˜ã‚‰,Kujira,Whale,,,
+B17,item_29,word,å‹•ç‰©ã®åå‰,animals,ãã¾,Kuma,Bear,,,
+B18,item_30,word,å‹•ç‰©ã®åå‰,animals,ã‚³ã‚¢ãƒ©,Koara,Koala,,,
+B19,item_31,word,å‹•ç‰©ã®åå‰,animals,ã‚´ãƒªãƒ©,Gorira,Gorilla,,,
+B20,item_32,word,å‹•ç‰©ã®åå‰,animals,ã•ã‹ãª,Sakana,Fish,,,
+B21,item_33,word,å‹•ç‰©ã®åå‰,animals,ã•ã‚‹,Saru,Monkey,,,
+B22,item_34,word,å‹•ç‰©ã®åå‰,animals,ã—ã¾ã†ã¾,Shimauma,Zebra,,,
+B23,item_35,word,å‹•ç‰©ã®åå‰,animals,ãã†,Zou,Elephant,,,
+B24,item_36,word,å‹•ç‰©ã®åå‰,animals,ãŸã¬ã,Tanuki,Raccoon,,,
+B25,item_37,word,å‹•ç‰©ã®åå‰,animals,ãƒãƒ§ã‚¦ãƒãƒ§,Choucho,Butterfly,,,
+B26,item_38,word,å‹•ç‰©ã®åå‰,animals,ã©ã†ã¶ã¤,Doubutsu,Animal,,,
+B27,item_39,word,å‹•ç‰©ã®åå‰,animals,ãƒˆãƒ©,Tora,Tiger,,,
+B28,item_40,word,å‹•ç‰©ã®åå‰,animals,ã¨ã‚Š,Tori,Bird,,,
+B29,item_41,word,å‹•ç‰©ã®åå‰,animals,ã«ã‚ã¨ã‚Š,Niwatori,Chicken,,,
+B30,item_42,word,å‹•ç‰©ã®åå‰,animals,ã­ã“,Neko,Cat,,,
+B31,item_43,word,å‹•ç‰©ã®åå‰,animals,ã­ãšã¿,Nezumi,Mouse,,,
+B32,item_44,word,å‹•ç‰©ã®åå‰,animals,ã¯ã¡,Hachi,Bee,,,
+B33,item_45,word,å‹•ç‰©ã®åå‰,animals,ã¯ã¨,Hato,Pigeon,,,
+B34,item_46,word,å‹•ç‰©ã®åå‰,animals,ãƒ‘ãƒ³ãƒ€,Panda,Panda,,,
+B35,item_47,word,å‹•ç‰©ã®åå‰,animals,ã²ã¤ã˜,Hitsuji,Sheep,,,
+B36,item_48,word,å‹•ç‰©ã®åå‰,animals,ã²ã‚ˆã“,Hiyoko,Chick,,,
+B37,item_49,word,å‹•ç‰©ã®åå‰,animals,ã¶ãŸ,Buta,Pig,,,
+B38,item_50,word,å‹•ç‰©ã®åå‰,animals,ã¸ã³,Hebi,Snake,,,
+B39,item_51,word,å‹•ç‰©ã®åå‰,animals,ãƒšãƒ³ã‚®ãƒ³,Pengin,Penguin,,,
+B40,item_52,word,å‹•ç‰©ã®åå‰,animals,è™«,Mushi,Insect,,,
+B41,item_53,word,å‹•ç‰©ã®åå‰,animals,ãƒ©ã‚¤ã‚ªãƒ³,Raion,Lion,,,
+B42,item_54,word,å‹•ç‰©ã®åå‰,animals,ãƒªã‚¹,Risu,Squirrel,,,
+B43,item_55,word,å‹•ç‰©ã®åå‰,animals,ãƒ¯ãƒ‹,Wani,Crocodile,,,
+C1,item_56,word,ä¹—ã‚Šç‰©,vehicles,æ±½è»Š,Kisya,Locomotive,,,
+C2,item_57,word,ä¹—ã‚Šç‰©,vehicles,è»Š (è‡ªå‹•è»Š),Kuruma,Car,,,
+C3,item_58,word,ä¹—ã‚Šç‰©,vehicles,ä¸‰è¼ªè»Š,Sanrinsya,Tricycle,,,
+C4,item_59,word,ä¹—ã‚Šç‰©,vehicles,è‡ªè»¢è»Š,Jitensya,Bicycle,,,
+C5,item_60,word,ä¹—ã‚Šç‰©,vehicles,æ¶ˆé˜²è»Š,Shoubousya,Fire_engine,,,
+C6,item_61,word,ä¹—ã‚Šç‰©,vehicles,ãƒ€ãƒ³ãƒ—ã‚«ãƒ¼,Danpukaa,Dump_truck,,,
+C7,item_62,word,ä¹—ã‚Šç‰©,vehicles,é›»è»Š,Densya,Train,,,
+C8,item_63,word,ä¹—ã‚Šç‰©,vehicles,ãƒˆãƒ©ãƒƒã‚¯,Torakku,Truck,,,
+C9,item_64,word,ä¹—ã‚Šç‰©,vehicles,ãƒã‚¤ã‚¯,Baiku,Motorcycle,,,
+C10,item_65,word,ä¹—ã‚Šç‰©,vehicles,ãƒã‚¹,Basu,Bus,,,
+C11,item_66,word,ä¹—ã‚Šç‰©,vehicles,ãƒ‘ãƒˆã‚«ãƒ¼,Patokaa,Police_car,,,
+C12,item_67,word,ä¹—ã‚Šç‰©,vehicles,é£›è¡Œæ©Ÿ,Hikouki,Airplane,,,
+C13,item_68,word,ä¹—ã‚Šç‰©,vehicles,èˆ¹,Fune,Ship,,,
+C14,item_69,word,ä¹—ã‚Šç‰©,vehicles,ãƒ˜ãƒªã‚³ãƒ—ã‚¿ãƒ¼,Herikoputaa,Helicopter,,,
+D1,item_70,word,ãŠã‚‚ã¡ã‚ƒ,toys,çµµæœ¬,Ehon,Picture_book,,,
+D2,item_71,word,ãŠã‚‚ã¡ã‚ƒ,toys,ãˆã‚“ã´ã¤,Enpitsu,Pencil,,,
+D3,item_72,word,ãŠã‚‚ã¡ã‚ƒ,toys,ãŠã‚‚ã¡ã‚ƒ,Omocha,Toy,,,
+D4,item_73,word,ãŠã‚‚ã¡ã‚ƒ,toys,ã‚¯ãƒ¬ãƒ¨ãƒ³,Kureyon,Crayon,,,
+D5,item_74,word,ãŠã‚‚ã¡ã‚ƒ,toys,ã‚²ãƒ¼ãƒ ,Geemu,Game,,,
+D6,item_75,word,ãŠã‚‚ã¡ã‚ƒ,toys,ã‚·ãƒ£ãƒœãƒ³ç‰,Shabondama,Soap_bubble,,,
+D7,item_76,word,ãŠã‚‚ã¡ã‚ƒ,toys,ãŸã„ã“,Taiko,Drum,,,
+D8,item_77,word,ãŠã‚‚ã¡ã‚ƒ,toys,ã¤ã¿ã,Tsumiki,Building_blocks,,,
+D9,item_78,word,ãŠã‚‚ã¡ã‚ƒ,toys,äººå½¢,Ningyoo,Doll,,,
+D10,item_79,word,ãŠã‚‚ã¡ã‚ƒ,toys,ç²˜åœŸ,Nendo,Clay,,,
+D11,item_80,word,ãŠã‚‚ã¡ã‚ƒ,toys,ã®ã‚Š (ç³Š),Nori,Paste,,,
+D12,item_81,word,ãŠã‚‚ã¡ã‚ƒ,toys,ãƒ‘ã‚ºãƒ«,Pazuru,Puzzle,,,
+D13,item_82,word,ãŠã‚‚ã¡ã‚ƒ,toys,ãƒãƒƒãƒˆ,Batto,Bat,,,
+D14,item_83,word,ãŠã‚‚ã¡ã‚ƒ,toys,é¢¨èˆ¹,Fuusen,Balloon,,,
+D15,item_84,word,ãŠã‚‚ã¡ã‚ƒ,toys,ãƒ—ãƒ¬ã‚¼ãƒ³ãƒˆ,Purezento,Present,,,
+D16,item_85,word,ãŠã‚‚ã¡ã‚ƒ,toys,ãƒšãƒ³,Pen,Pen,,,
+D17,item_86,word,ãŠã‚‚ã¡ã‚ƒ,toys,ãƒœãƒ¼ãƒ«,Booru,Ball,,,
+D18,item_87,word,ãŠã‚‚ã¡ã‚ƒ,toys,æœ¬,Hon,Book,,,
+E1,item_88,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚¢ã‚¤ã‚¹ã‚¯ãƒªãƒ¼ãƒ ,Aisukuriimu,Ice_cream,,,
+E2,item_89,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚ã‚ï¼ˆé£´ï¼‰,Ame,Candy,,,
+E3,item_90,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã„ã¡ã”ï¼ˆè‹ºï¼‰,Ichigo,Strawberry,,,
+E4,item_91,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã†ã©ã‚“,Udon,Udon,,,
+E5,item_92,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãŠã„ã‚‚,Oimo,Sweet_potato,,,
+E6,item_93,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãŠè“å­,Okashi,Sweets,,,
+E7,item_94,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãŠç ‚ç³–,Osatou,Sugar,,,
+E8,item_95,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãŠã™ã—,Osushi,Sushi,,,
+E9,item_96,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãŠã«ãã‚Šãƒ»ãŠã‚€ã™ã³,Onigiri_omusubi,Rice_ball,,,
+E10,item_97,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãŠèŒ¶,Ocha,Tea,,,
+E11,item_98,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,æŸ¿,Kaki,Persimmon,,,
+E12,item_99,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‹ã¼ã¡ã‚ƒ,Kabocha,Pumpkin,,,
+E13,item_100,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚¬ãƒ ,Gamu,Gum,,,
+E14,item_101,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚«ãƒ¬ãƒ¼,Karee,Curry,,,
+E15,item_102,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ç‰›ä¹³,GyuuNyuu,Milk,,,
+E16,item_103,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãã‚…ã†ã‚Š,Kyuuri,Cucumber,,,
+E17,item_104,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚¯ãƒƒã‚­ãƒ¼,Kukkii,Cookie,,,
+E18,item_105,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚±ãƒ¼ã‚­,Keeki,Cake,,,
+E19,item_106,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚³ãƒ¼ãƒ’ãƒ¼,Koohii,Coffee,,,
+E20,item_107,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã“ãŠã‚Šï¼ˆæ°·ï¼‰,Koori,Ice,,,
+E21,item_108,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚³ãƒ¼ãƒ³,Koon,Corn,,,
+E22,item_109,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã”ã¯ã‚“ï¼ˆãŠç±³ã®ã“ã¨ï¼‰,Gohan,Rice,,,
+E23,item_110,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã•ã‹ãª,Sakana,Fish,,,
+E24,item_111,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚µãƒ³ãƒ‰ã‚¤ãƒƒãƒ,Sandoicchi,Sandwich,,,
+E25,item_112,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚¸ãƒ£ãƒ ,Jamu,Jam,,,
+E26,item_113,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚¸ãƒ¥ãƒ¼ã‚¹,Juusu,Juice,,,
+E27,item_114,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã—ã‚‡ã†ã‚†,Shouyu,Soy_sauce,,,
+E28,item_115,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã™ã„ã‹,Suika,Watermelon,,,
+E29,item_116,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚¹ãƒ¼ãƒ—,Suupu,Soup,,,
+E30,item_117,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚¹ãƒ‘ã‚²ãƒƒãƒ†ã‚£ãƒ¼,Supagettii,Spaghetti,,,
+E31,item_118,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚¼ãƒªãƒ¼,Zerii,Jelly,,,
+E32,item_119,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã›ã‚“ã¹ã„,Senbei,Rice_crackers,,,
+E33,item_120,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,å¤§æ ¹,Daikon,Radish,,,
+E34,item_121,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãŸã¾ã”,Tamago,Egg,,,
+E35,item_122,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒãƒ¼ã‚º,Chiizu,Cheese,,,
+E36,item_123,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒãƒ§ã‚³ãƒ¬ãƒ¼ãƒˆ,Chokoreeto,Chocolate,,,
+E37,item_124,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã¨ã†ãµï¼ˆè±†è…ï¼‰,Toufu,Tofu,,,
+E38,item_125,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ï¾„ï¾ï½°ï¾…ï¾‚,Doonatsu,Donut,,,
+E39,item_126,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒˆãƒãƒˆ,Tomato,Tomato,,,
+E40,item_127,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãªã—ï¼ˆæ¢¨ï¼‰,Nashi,Pear,,,
+E41,item_128,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãªã™,Nasu,Eggplant,,,
+E42,item_129,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãªã£ã¨ã†ï¼ˆç´è±†ï¼‰,Nattou,Natto,,,
+E43,item_130,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,è‚‰,Niku,Meat,,,
+E44,item_131,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã«ã‚“ã˜ã‚“,Ninjin,Carrot,,,
+E45,item_132,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã®ã‚Šï¼ˆæµ·è‹”ï¼‰,Nori,Seaweed,,,
+E46,item_133,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒã‚¿ãƒ¼,Bataa,Butter,,,
+E47,item_134,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒãƒŠãƒŠ,Banana,Banana,,,
+E48,item_135,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒ‘ãƒ³,Pan,Bread,,,
+E49,item_136,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒãƒ ,Hamu,Ham,,,
+E50,item_137,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒãƒ³ãƒãƒ¼ã‚°,Hanbaagu,Hamburger,,,
+E51,item_138,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒ”ãƒ¼ãƒãƒ³,Piiman,Green_pepper,,,
+E52,item_139,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã¶ã©ã†,Budou,Grape,,,
+E53,item_140,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒ—ãƒªãƒ³,Purin,Pudding,,,
+E54,item_141,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã»ã†ã‚Œã‚“è‰,Hourensou,Spinach,,,
+E55,item_142,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒãƒƒã‚­ãƒ¼,Pokkii,Pocky,,,
+E56,item_143,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒ›ãƒƒãƒˆã‚±ãƒ¼ã‚­,Hottokeeki,Pancake,,,
+E57,item_144,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒãƒ†ãƒˆï¼ˆãƒãƒƒãƒ—ã‚¹ï¼‰,Potetochippusu,Potato_chips,,,
+E58,item_145,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,è±†,Mame,Bean,,,
+E59,item_146,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã¿ã‹ã‚“,Mikan,Orange,,,
+E60,item_147,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,æ°´,Mizu,Water,,,
+E61,item_148,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã¿ãã—ã‚‹,Misoshiru,Miso_soup,,,
+E62,item_149,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒŸãƒ«ã‚¯,Miruku,Milk,,,
+E63,item_150,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒ¡ãƒ­ãƒ³,Meron,Melon,,,
+E64,item_151,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚‚ã‚‚,Momo,Peach,,,
+E65,item_152,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ã‚„ã•ã„,Yasai,Vegetable,,,
+E66,item_153,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒ¨ãƒ¼ã‚°ãƒ«ãƒˆ,Yooguruto,Yogurt,,,
+E67,item_154,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒ©ãƒ¼ãƒ¡ãƒ³,Raamen,Ramen,,,
+E68,item_155,word,é£Ÿã¹ç‰©ã¨é£²ã¿ç‰©,food_drink,ãƒªãƒ³ã‚´,Ringo,Apple,,,
+F1,item_156,word,è¡£é¡,clothing,ã‚¨ãƒ—ãƒ­ãƒ³,Epuron,Apron,,,
+F2,item_157,word,è¡£é¡,clothing,ã‚ªãƒ¼ãƒãƒ¼,Oobaa,Overcoat,,,
+F3,item_158,word,è¡£é¡,clothing,ãŠã‚€ã¤,Omutsu,Diaper,,,
+F4,item_159,word,è¡£é¡,clothing,ãã¤,Kutsu,Shoes,,,
+F5,item_160,word,è¡£é¡,clothing,ãã¤ä¸‹,Kutsushita,Socks,,,
+F6,item_161,word,è¡£é¡,clothing,ã‚¸ãƒ¼ãƒ‘ãƒ³,Jiipan,Jeans,,,
+F7,item_162,word,è¡£é¡,clothing,ã‚·ãƒ£ãƒ„,Syatsu,Shirt,,,
+F8,item_163,word,è¡£é¡,clothing,ã‚¸ãƒ£ãƒ³ãƒ‘ãƒ¼,Janpaa,Jacket,,,
+F9,item_164,word,è¡£é¡,clothing,ã‚¹ã‚«ãƒ¼ãƒˆ,Sukaato,Skirt,,,
+F10,item_165,word,è¡£é¡,clothing,ã‚ºãƒƒã‚¯,Zukku,Zuck,,,
+F11,item_166,word,è¡£é¡,clothing,ã‚ºãƒœãƒ³,Zubon,Pants,,,
+F12,item_167,word,è¡£é¡,clothing,ã‚¹ãƒªãƒƒãƒ‘,Surippa,Slippers,,,
+F13,item_168,word,è¡£é¡,clothing,ã‚»ãƒ¼ã‚¿ãƒ¼,Seetaa,Sweater,,,
+F14,item_169,word,è¡£é¡,clothing,ã‚½ãƒƒã‚¯ã‚¹,Sokkusu,Socks,,,
+F15,item_170,word,è¡£é¡,clothing,ã‚¿ã‚¤ãƒ„,Taitsu,Tights,,,
+F16,item_171,word,è¡£é¡,clothing,ãƒãƒ£ãƒƒã‚¯,Chakku,Zipper,,,
+F17,item_172,word,è¡£é¡,clothing,ã¦ã¶ãã‚,Tebukuro,Gloves,,,
+F18,item_173,word,è¡£é¡,clothing,é•·ãã¤,Nagagutsu,Boots,,,
+F19,item_174,word,è¡£é¡,clothing,ãƒã‚¯ã‚¿ã‚¤,Nekutai,Tie,,,
+F20,item_175,word,è¡£é¡,clothing,ãƒãƒƒã‚¯ãƒ¬ã‚¹,Nekkuresu,Necklace,,,
+F21,item_176,word,è¡£é¡,clothing,ãƒ‘ã‚¸ãƒ£ãƒ,Pajama,Pajama,,,
+F22,item_177,word,è¡£é¡,clothing,ãƒ‘ãƒ³ãƒ„,Pantsu,Shorts,,,
+F23,item_178,word,è¡£é¡,clothing,ãƒ™ãƒ«ãƒˆ,Beruto,Belt,,,
+F24,item_179,word,è¡£é¡,clothing,ã¼ã†ã—,Boushi,Hat,,,
+F25,item_180,word,è¡£é¡,clothing,ãƒœã‚¿ãƒ³,Botan,Button,,,
+F26,item_181,word,è¡£é¡,clothing,ãƒãƒ•ãƒ©ãƒ¼,Mafuraa,Scarf,,,
+F27,item_182,word,è¡£é¡,clothing,æ´‹æœ,Youfuku,Clothes,,,
+F28,item_183,word,è¡£é¡,clothing,ãƒªãƒœãƒ³,Ribon,Ribbon,,,
+G1,item_184,word,ä½“ã®éƒ¨åˆ†,body_parts,ã‚ã”,Ago,Chin,,,
+G2,item_185,word,ä½“ã®éƒ¨åˆ†,body_parts,è¶³,Ashi,Leg,,,
+G3,item_186,word,ä½“ã®éƒ¨åˆ†,body_parts,ã‚ãŸã¾,Atama,Head,,,
+G4,item_187,word,ä½“ã®éƒ¨åˆ†,body_parts,ãŠã—ã‚Š,Oshiri,Buttocks,,,
+G5,item_188,word,ä½“ã®éƒ¨åˆ†,body_parts,ãŠãƒãƒ³ãƒãƒ³,Ochinchin,Penis,,,
+G6,item_189,word,ä½“ã®éƒ¨åˆ†,body_parts,ãŠã£ã±ã„,Oppai,Breasts,,,
+G7,item_190,word,ä½“ã®éƒ¨åˆ†,body_parts,ãŠã§ã“,Odeko,Forehead,,,
+G8,item_191,word,ä½“ã®éƒ¨åˆ†,body_parts,ãŠãªã‹,Onaka,Stomach,,,
+G9,item_192,word,ä½“ã®éƒ¨åˆ†,body_parts,ãŠã¸ã,Oheso,Navel,,,
+G10,item_193,word,ä½“ã®éƒ¨åˆ†,body_parts,é¡”,Kao,Face,,,
+G11,item_194,word,ä½“ã®éƒ¨åˆ†,body_parts,è‚©,Kata,Shoulder,,,
+G12,item_195,word,ä½“ã®éƒ¨åˆ†,body_parts,ã‹ã¿ï¼ˆé«ªï¼‰,Kami,Hair,,,
+G13,item_196,word,ä½“ã®éƒ¨åˆ†,body_parts,ãã¡,Kuchi,Mouth,,,
+G14,item_197,word,ä½“ã®éƒ¨åˆ†,body_parts,ãã³,Kubi,Neck,,,
+G15,item_198,word,ä½“ã®éƒ¨åˆ†,body_parts,ã‘ãŒ,Kega,Injury,,,
+G16,item_199,word,ä½“ã®éƒ¨åˆ†,body_parts,ã—ã£ã½,Shippo,Tail,,,
+G17,item_200,word,ä½“ã®éƒ¨åˆ†,body_parts,èƒŒä¸­,Senaka,Back,,,
+G18,item_201,word,ä½“ã®éƒ¨åˆ†,body_parts,ã¤ã‚,Tsume,Nail,,,
+G19,item_202,word,ä½“ã®éƒ¨åˆ†,body_parts,æ‰‹,Te,Hand,,,
+G20,item_203,word,ä½“ã®éƒ¨åˆ†,body_parts,æ­¯,Ha,Tooth,,,
+G21,item_204,word,ä½“ã®éƒ¨åˆ†,body_parts,é¼»,Hana,Nose,,,
+G22,item_205,word,ä½“ã®éƒ¨åˆ†,body_parts,èˆŒï¼ˆã¹ã‚ï¼‰,Shita_bero,Tongue,,,
+G23,item_206,word,ä½“ã®éƒ¨åˆ†,body_parts,ã»ã£ãº,Hoppe,Cheek,,,
+G24,item_207,word,ä½“ã®éƒ¨åˆ†,body_parts,ã¾ã‚†ãƒ»ã¾ã‚†æ¯›,Mayu_mayuge,Eyebrow,,,
+G25,item_208,word,ä½“ã®éƒ¨åˆ†,body_parts,è€³,Mimi,Ear,,,
+G26,item_209,word,ä½“ã®éƒ¨åˆ†,body_parts,ç›®,Me,Eye,,,
+G27,item_210,word,ä½“ã®éƒ¨åˆ†,body_parts,æŒ‡,Yubi,Finger,,,
+H1,item_211,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã„ã™,Isu,Chair,,,
+H2,item_212,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã‚¨ã‚¢ã‚³ãƒ³,Eakon,Air_conditioner,,,
+H3,item_213,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãŠã—ã„ã‚Œ,Oshiire,Closet,,,
+H4,item_214,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãŠãµã‚ï¼ˆé¢¨å‘‚å ´ï¼‰,Ofuro,Bath,,,
+H5,item_215,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãŠã¾ã‚‹,Omaru,Potty,,,
+H6,item_216,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã‚«ãƒ¼ãƒ†ãƒ³,Kaaten,Curtain,,,
+H7,item_217,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,éšæ®µ,Kaidan,Stairs,,,
+H8,item_218,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã’ãŸã°ã“ï¼ˆã’ãŸç®±ï¼‰,Getabako,Shoes_rack,,,
+H9,item_219,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ç„é–¢,Genkan,Entrance,,,
+H10,item_220,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã“ãŸã¤,Kotatsu,Kotatsu,,,
+H11,item_221,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã‚·ãƒ£ãƒ¯ãƒ¼,Syawaa,Shower,,,
+H12,item_222,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,æ°´é“,Suidou,Water_crew,,,
+H13,item_223,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã‚¹ãƒˆãƒ¼ãƒ–,Sutoobu,Stove,,,
+H14,item_224,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,æ‰‡é¢¨æ©Ÿ,Senpuuki,Fan,,,
+H15,item_225,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,å°æ‰€,Daidokoro,Kitchen,,,
+H16,item_226,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãŸãŸã¿,Tatami,Tatami,,,
+H17,item_227,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã‚¿ãƒ³ã‚¹,Tansu,Wardrobe,,,
+H18,item_228,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,é§è»Šå ´,Cyuushajou,Parking_Lot,,,
+H19,item_229,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,æœº,Tsukue,Desk,,,
+H20,item_230,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒ†ãƒ¼ãƒ–ãƒ«,Teeburu,Table,,,
+H21,item_231,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒ†ãƒ¬ãƒ“,Terebi,Television,,,
+H22,item_232,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,é›»æ°—,Denki,Light,,,
+H23,item_233,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒ‰ã‚¢,Doa,Door,,,
+H24,item_234,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒˆã‚¤ãƒ¬,Toire,Toilet,,,
+H25,item_235,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒ‰ãƒ©ã‚¤ãƒ¤ãƒ¼,Doraiyaa,Hairdryer,,,
+H26,item_236,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒ”ã‚¢ãƒ,Piano,Piano,,,
+H27,item_237,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ã²ãã ã—,Hikidashi,Drawer,,,
+H28,item_238,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒ“ãƒ‡ã‚ª,Bideo,Video,,,
+H29,item_239,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒ™ãƒƒãƒ‰,Beddo,Bed,,,
+H30,item_240,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,éƒ¨å±‹,Heya,Room,,,
+H31,item_241,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,çª“,Mado,Window,,,
+H32,item_242,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,å†·è”µåº«,Reizouko,Refrigerator,,,
+H33,item_243,word,å®¶å…·ã¨éƒ¨å±‹,furniture_rooms,ãƒ¬ãƒ³ã‚¸,Renji,Range,,,
+I1,item_244,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚¢ã‚¤ãƒ­ãƒ³,Airon,Iron,,,
+I2,item_245,word,å°ã•ãªå®¶åº­ç”¨å“,household,çµµ,E,Picture,,,
+I3,item_246,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãŠé‡‘,Okane,Money,,,
+I4,item_247,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãŠçš¿,Osara,Dish,,,
+I5,item_248,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‹ãï¼ˆéµï¼‰,Kagi,Key,,,
+I6,item_249,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‹ã”,Kago,Basket,,,
+I7,item_250,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‹ã•ï¼ˆå‚˜ï¼‰,Kasa,Umbrella,,,
+I8,item_251,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‹ã°ã‚“,Kaban,Bag,,,
+I9,item_252,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‹ã¿ï¼ˆç´™ï¼‰,Kami,Paper,,,
+I10,item_253,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚«ãƒ¡ãƒ©,Kamera,Camera,,,
+I11,item_254,word,å°ã•ãªå®¶åº­ç”¨å“,household,ç¼¶,Kan,Can,,,
+I12,item_255,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãã,Kugi,Nail,,,
+I13,item_256,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãã—,Kushi,Comb,,,
+I14,item_257,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãã™ã‚Š,Kusuri,Medicine,,,
+I15,item_258,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚³ãƒƒãƒ—,Koppu,Cup,,,
+I16,item_259,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã”ã¿ç®±,Gomibako,Trash_box,,,
+I17,item_260,word,å°ã•ãªå®¶åº­ç”¨å“,household,è²¡å¸ƒ,Saifu,Wallet,,,
+I18,item_261,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚·ãƒ£ãƒ³ãƒ—ãƒ¼,Syanpuu,Shampoo,,,
+I19,item_262,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚¹ãƒˆãƒ­ãƒ¼,Sutoroo,Straw,,,
+I20,item_263,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚¹ãƒ—ãƒ¼ãƒ³,Supuun,Spoon,,,
+I21,item_264,word,å°ã•ãªå®¶åº­ç”¨å“,household,çŸ³é¹¸,Sekken,Soap,,,
+I22,item_265,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãã†ãã‚“,Zoukin,Rag,,,
+I23,item_266,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãã†ã˜æ©Ÿ,Soujiki,Vacuum_cleaner,,,
+I24,item_267,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚¿ã‚ªãƒ«,Taoru,Towel,,,
+I25,item_268,word,å°ã•ãªå®¶åº­ç”¨å“,household,èŒ¶ã‚ã‚“,Chawan,Bowl,,,
+I26,item_269,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒ†ã‚£ãƒƒã‚·ãƒ¥,Tissyu,Tissue,,,
+I27,item_270,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒ†ãƒ¼ãƒ—,Teepu,Tape,,,
+I28,item_271,word,å°ã•ãªå®¶åº­ç”¨å“,household,é›»æ± ,Denchi,Battery,,,
+I29,item_272,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã§ã‚“ã‚ï¼ˆé›»è©±ï¼‰,Denwa,Phone,,,
+I30,item_273,word,å°ã•ãªå®¶åº­ç”¨å“,household,æ™‚è¨ˆ,Tokei,Clock,,,
+I31,item_274,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒŠã‚¤ãƒ•,Naifu,Knife,,,
+I32,item_275,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãªã¹,Nabe,Pan,,,
+I33,item_276,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒã‚±ãƒ„,Baketsu,Bucket,,,
+I34,item_277,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã¯ã“ï¼ˆç®±ï¼‰,Hako,Box,,,
+I35,item_278,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã¯ã•ã¿,Hasami,Scissors,,,
+I36,item_279,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã¯ã—ï¼ˆç®¸ï¼‰,Hashi,Chopsticks,,,
+I37,item_280,word,å°ã•ãªå®¶åº­ç”¨å“,household,æ­¯ãƒ–ãƒ©ã‚·,Haburashi,Toothbrush,,,
+I38,item_281,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒãƒ³ã‚«ãƒ,Hankachi,Handkerchief,,,
+I39,item_282,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã³ã‚“,Bin,Bottle,,,
+I40,item_283,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒ•ã‚©ãƒ¼ã‚¯,Fwooku,Fork,,,
+I41,item_284,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãµã¨ã‚“,Futon,Futon,,,
+I42,item_285,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒ•ãƒ©ã‚¤ãƒ‘ãƒ³,Furaipan,Frying_pan,,,
+I43,item_286,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã»ã†ã,Houki,Broom,,,
+I44,item_287,word,å°ã•ãªå®¶åº­ç”¨å“,household,åŒ…ä¸,Houchou,Kitchen_knife,,,
+I45,item_288,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒãƒƒãƒˆ,Potto,Pot,,,
+I46,item_289,word,å°ã•ãªå®¶åº­ç”¨å“,household,ãƒã‚¤ã‚¯,Maiku,Microphone,,,
+I47,item_290,word,å°ã•ãªå®¶åº­ç”¨å“,household,æ•,Makura,Pillow,,,
+I48,item_291,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚ãŒã­,Megane,Glasses,,,
+I49,item_292,word,å°ã•ãªå®¶åº­ç”¨å“,household,ã‚ã–ã¾ã—,Mezamashi,Alarm_clock,,,
+I50,item_293,word,å°ã•ãªå®¶åº­ç”¨å“,household,æ¯›å¸ƒ,Moufu,Blanket,,,
+J1,item_294,word,æˆ¸å¤–ã®ã‚‚ã®,outside,é›¨,Ame,Rain,,,
+J2,item_295,word,æˆ¸å¤–ã®ã‚‚ã®,outside,çŸ³,Ishi,Stone,,,
+J3,item_296,word,æˆ¸å¤–ã®ã‚‚ã®,outside,å²©,Iwa,Rock,,,
+J4,item_297,word,æˆ¸å¤–ã®ã‚‚ã®,outside,æ,Eda,Branch,,,
+J5,item_298,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ãŠæœˆã•ã‚“,Otsukisan,Moon,,,
+J6,item_299,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ãŠå¤©æ°—,Otenki,Weather,,,
+J7,item_300,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ãŠã²ã•ã¾,Ohisama,Sun,,,
+J8,item_301,word,æˆ¸å¤–ã®ã‚‚ã®,outside,é¢¨,Kaze,Wind,,,
+J9,item_302,word,æˆ¸å¤–ã®ã‚‚ã®,outside,å·,Kawa,River,,,
+J10,item_303,word,æˆ¸å¤–ã®ã‚‚ã®,outside,æœ¨,Ki,Tree,,,
+J11,item_304,word,æˆ¸å¤–ã®ã‚‚ã®,outside,è‰,Kusa,Grass,,,
+J12,item_305,word,æˆ¸å¤–ã®ã‚‚ã®,outside,é›²,Kumo,Cloud,,,
+J13,item_306,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ã‚¹ã‚³ãƒƒãƒ—,Sukoppu,Scoop,,,
+J14,item_307,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ç ‚å ´,Sunaba,Sandpit,,,
+J15,item_308,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ã™ã¹ã‚Šå°,Suberidai,Slide,,,
+J16,item_309,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ç©º,Sora,Sky,,,
+J17,item_310,word,æˆ¸å¤–ã®ã‚‚ã®,outside,åº­,Niwa,Garden,,,
+J18,item_311,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ã¯ã—ã”,Hashigo,Ladder,,,
+J19,item_312,word,æˆ¸å¤–ã®ã‚‚ã®,outside,æ——,Hata,Flag,,,
+J20,item_313,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ã¯ã£ã±,Happa,Leaf,,,
+J21,item_314,word,æˆ¸å¤–ã®ã‚‚ã®,outside,èŠ±,Hana,Flower,,,
+J22,item_315,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ãƒ—ãƒ¼ãƒ«,Puuru,Pool,,,
+J23,item_316,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ãƒ–ãƒ©ãƒ³ã‚³,Buranko,Swing,,,
+J24,item_317,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ãƒ™ãƒ©ãƒ³ãƒ€,Beranda,Veranda,,,
+J25,item_318,word,æˆ¸å¤–ã®ã‚‚ã®,outside,ãƒ›ãƒ¼ã‚¹,Hoosu,Hose,,,
+J26,item_319,word,æˆ¸å¤–ã®ã‚‚ã®,outside,æ˜Ÿ,Hoshi,Star,,,
+J27,item_320,word,æˆ¸å¤–ã®ã‚‚ã®,outside,æ°´ã¾ã,Mizumaki,Watering,,,
+J28,item_321,word,æˆ¸å¤–ã®ã‚‚ã®,outside,é“,Michi,Road,,,
+J29,item_322,word,æˆ¸å¤–ã®ã‚‚ã®,outside,å±‹æ ¹,Yane,Roof,,,
+J30,item_323,word,æˆ¸å¤–ã®ã‚‚ã®,outside,é›ª,Yuki,Snow,,,
+J31,item_324,word,æˆ¸å¤–ã®ã‚‚ã®,outside,é›ªã ã‚‹ã¾,Yukidaruma,Snowman,,,
+K1,item_325,word,ãŠã§ã‹ã‘,places,ã„ãˆï¼ˆå®¶ï¼‰,Ie,House,,,
+K2,item_326,word,ãŠã§ã‹ã‘,places,æµ·,Umi,Sea,,,
+K3,item_327,word,ãŠã§ã‹ã‘,places,æ˜ ç”»,Eiga,Movies,,,
+K4,item_328,word,ãŠã§ã‹ã‘,places,ãŠã†ã¡,Ouchi,House,,,
+K5,item_329,word,ãŠã§ã‹ã‘,places,ãŠä»•äº‹,Oshigoto,Job,,,
+K6,item_330,word,ãŠã§ã‹ã‘,places,ãŠãã¨,Osoto,Outside,,,
+K7,item_331,word,ãŠã§ã‹ã‘,places,ãŠåº—,Omise,Shop,,,
+K8,item_332,word,ãŠã§ã‹ã‘,places,ä¼šç¤¾,Kaisya,Company,,,
+K9,item_333,word,ãŠã§ã‹ã‘,places,ã‚¬ã‚½ãƒªãƒ³ã‚¹ã‚¿ãƒ³ãƒ‰,Gasorinsutando,Gas_station,,,
+K10,item_334,word,ãŠã§ã‹ã‘,places,å­¦æ ¡,Gakkou,School,,,
+K11,item_335,word,ãŠã§ã‹ã‘,places,ã‚­ãƒ£ãƒ³ãƒ—,Kyanpu,Camp,,,
+K12,item_336,word,ãŠã§ã‹ã‘,places,å…¬åœ’,Kouen,Park,,,
+K13,item_337,word,ãŠã§ã‹ã‘,places,ã‚µãƒ¼ã‚«ã‚¹,Saakasu,Circus,,,
+K14,item_338,word,ãŠã§ã‹ã‘,places,ã‚¹ãƒ¼ãƒ‘ãƒ¼,Suupaa,Supermarket,,,
+K15,item_339,word,ãŠã§ã‹ã‘,places,ãƒ‡ãƒ‘ãƒ¼ãƒˆ,Depaato,Department_store,,,
+K16,item_340,word,ãŠã§ã‹ã‘,places,å‹•ç‰©åœ’,Doubutsuen,Zoo,,,
+K17,item_341,word,ãŠã§ã‹ã‘,places,ãƒ”ã‚¯ãƒ‹ãƒƒã‚¯,Pikunikku,Picnic,,,
+K18,item_342,word,ãŠã§ã‹ã‘,places,ä¿è‚²æ‰€,Hoikujyo,Nursery_school,,,
+K19,item_343,word,ãŠã§ã‹ã‘,places,æ£®,Mori,Woods,,,
+K20,item_344,word,ãŠã§ã‹ã‘,places,å±±,Yama,Mountain,,,
+K21,item_345,word,ãŠã§ã‹ã‘,places,å¹¼ç¨šåœ’,Youchien,Kindergarten,,,
+K22,item_346,word,ãŠã§ã‹ã‘,places,ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³,Resutoran,Restaurant,,,
+L1,item_347,word,äººã€…,people,èµ¤ã¡ã‚ƒã‚“,Akachan,Baby,,,
+L2,item_348,word,äººã€…,people,é‹è»¢æ‰‹,Untensyu,Driver,,,
+L3,item_349,word,äººã€…,people,ãŠåŒ»è€…ã•ã‚“,Oishasan,Doctor,,,
+L4,item_350,word,äººã€…,people,ç‹æ§˜,Oosama,King,,,
+L5,item_351,word,äººã€…,people,ãŠæ¯ã•ã‚“,Okaasan,Mother,,,
+L6,item_352,word,äººã€…,people,ãŠã˜ã„ã•ã‚“,Ojiisan,Grandfather,,,
+L7,item_353,word,äººã€…,people,ãŠã˜ã•ã‚“,Ojisan,Uncle,,,
+L8,item_354,word,äººã€…,people,ãŠç›¸æ’²ã•ã‚“,Osumousan,Sumo_wrestler,,,
+L9,item_355,word,äººã€…,people,ãŠçˆ¶ã•ã‚“,Otousan,Father,,,
+L10,item_356,word,äººã€…,people,ãŠã¨ã‚‚ã ã¡,Otomodachi,Friend,,,
+L11,item_357,word,äººã€…,people,ãŠå…„ã•ã‚“,Oniisan,Older_brother,,,
+L12,item_358,word,äººã€…,people,ãŠå§‰ã•ã‚“,Oneesan,Older_sister,,,
+L13,item_359,word,äººã€…,people,ãŠã°ã‚ã•ã‚“,Obaasan,Grandmother,,,
+L14,item_360,word,äººã€…,people,ãŠã°ã•ã‚“,Obasan,Aunt,,,
+L15,item_361,word,äººã€…,people,ãŠå§«æ§˜,Ohimesama,Princess,,,
+L16,item_362,word,äººã€…,people,ãŠã¾ã‚ã‚Šã•ã‚“,Omawarisan,Policeman,,,
+L17,item_363,word,äººã€…,people,çœ‹è­·å©¦ã•ã‚“,Kangofusan,Nurse,,,
+L18,item_364,word,äººã€…,people,ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®åå‰ï¼ˆã‚¢ãƒ³ãƒ‘ãƒ³ãƒãƒ³ç­‰ï¼‰,Particular_character_name,Particular_character_name,,,
+L19,item_365,word,äººã€…,people,ãã‚‡ã†ã ã„ã®åå‰,Particular_sibling_name,Particular_sibling_name,,,
+L20,item_366,word,äººã€…,people,ã“ã©ã‚‚ï¼ˆå­ã©ã‚‚ï¼‰,Kodomo,Child,,,
+L21,item_367,word,äººã€…,people,è‡ªåˆ†ã®åå‰,Own_name,Own_name,,,
+L22,item_368,word,äººã€…,people,ã›ã‚“ã›ã„ï¼ˆå…ˆç”Ÿï¼‰,Sensei,Teacher,,,
+L23,item_369,word,äººã€…,people,å…ˆç”Ÿã®åå‰,Particular_teacher_name,Particular_teacher_name,,,
+L24,item_370,word,äººã€…,people,å‹ã ã¡ã®åå‰,Particular_friend_name,Particular_friend_name,,,
+L25,item_371,word,äººã€…,people,ãƒ‘ãƒ‘,Papa,Daddy,,,
+L26,item_372,word,äººã€…,people,äºº,Hito,People,,,
+L27,item_373,word,äººã€…,people,ãƒšãƒƒãƒˆã®åå‰,Particular_pet_name,Particular_pet_name,,,
+L28,item_374,word,äººã€…,people,ãƒãƒ,Mama,Mom,,,
+L29,item_375,word,äººã€…,people,éƒµä¾¿å±‹ã•ã‚“,Yuubinyasan,Postman,,,
+M1,item_376,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã‚ã‚ŠãŒã¨ã†,Arigatou,Thank_you,,,
+M2,item_377,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã„ãŸã ãã¾ã™,Itadakimasu,Letâ€™s_eat,,,
+M3,item_378,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã„ã£ã¦ã‚‰ã£ã—ã‚ƒã„,Itterassyai,Have_a_good_day,,,
+M4,item_379,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ï¼ˆã‚¤ãƒŠã‚¤ã‚¤ãƒŠã‚¤ï¼‰ãƒãƒ¼,Inaiinaibaa,Peekaboo,,,
+M5,item_380,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã†ã‚“ã¡,Unchi,Poop,,,
+M6,item_381,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãŠã†ãŸï¼ˆãŠæ­Œï¼‰,Outa,Song,,,
+M7,item_382,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãŠè²·ã„ã‚‚ã®,Okaimono,Shopping,,,
+M8,item_383,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãŠã—ã£ã“,Oshikko,Pee,,,
+M9,item_384,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãŠã—ã¾ã„,Oshimai,End,,,
+M10,item_385,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãŠã¯ã‚ˆã†,Ohayou,Good_morning,,,
+M11,item_386,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãŠãµã‚ï¼ˆå…¥æµ´ï¼‰,Ofuro,Bath,,,
+M12,item_387,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãŠã‚„ã™ã¿,Oyasumi,Good_night,,,
+M13,item_388,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãŠã‚„ã¤,Oyatsu,Snack,,,
+M14,item_389,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã”ã¡ãã†ã•ã¾,Gochisousama,Thank_you_for_the_meal,,,
+M15,item_390,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã”ã¯ã‚“ï¼ˆé£Ÿäº‹ï¼‰,Gohan,Meal,,,
+M16,item_391,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã”ã‚ã‚“ãªã•ã„,Gomennasai,Sorry,,,
+M17,item_392,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã“ã‚“ã«ã¡ã¯,Konnichiwa,Hello,,,
+M18,item_393,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã‚·ãƒ¼ï¼ˆé™ã‹ã«ï¼‰,Shii,Shush,,,
+M19,item_394,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã˜ã‚ƒã‚“ã‘ã‚“ã½ã‚“,Jankenpon,Rock_paper_scissors,,,
+M20,item_395,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã ã‚,Dame,No_good,,,
+M21,item_396,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã¡ã‚‡ã†ã ã„,Choudai,Give_me,,,
+M22,item_397,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã©ã†ã,Douzo,Here_you_are,,,
+M23,item_398,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã¯ã„,Hai,Yes,,,
+M24,item_399,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ãƒã‚¤ãƒã‚¤,BaiBai,Bye_bye,,,
+M25,item_400,word,æ—¥èª²ã¨ã‚ã„ã•ã¤,games_routines,ã¯ã¿ãŒãï¼ˆæ­¯ç£¨ãï¼‰,Hamigaki,Teethbrushing,,,
+N1,item_401,word,å‹•ä½œèª,action_words,ã‚ãŒã‚‹,Agaru,Go_up ,,,
+N2,item_402,word,å‹•ä½œèª,action_words,ã‚ã‘ã‚‹ï¼ˆé–‹ã‘ã‚‹ï¼‰,Akeru,Open,,,
+N3,item_403,word,å‹•ä½œèª,action_words,ã‚ã’ã‚‹,Ageru,Rise,,,
+N4,item_404,word,å‹•ä½œèª,action_words,ã‚ãã¶ï¼ˆéŠã¶ï¼‰,Asobu,Play,,,
+N5,item_405,word,å‹•ä½œèª,action_words,ã‚ã‚‰ã†ï¼ˆæ´—ã†ï¼‰,Arau,Wash,,,
+N6,item_406,word,å‹•ä½œèª,action_words,ã‚ã‚‹,Aru,Exist,,,
+N7,item_407,word,å‹•ä½œèª,action_words,ã‚ã‚‹ãï¼ˆæ­©ãï¼‰,Aruku,Walk,,,
+N8,item_408,word,å‹•ä½œèª,action_words,ã„ã†ï¼ˆè¨€ã†ï¼‰,Iu,Say,,,
+N9,item_409,word,å‹•ä½œèª,action_words,è¡Œã,Iku,Go,,,
+N10,item_410,word,å‹•ä½œèª,action_words,ã„ã‚‹ï¼ˆè¦ã‚‹ï¼‰,Iru,Need,,,
+N11,item_411,word,å‹•ä½œèª,action_words,ã„ã‚‹ï¼ˆå±…ã‚‹ï¼‰,Iru,Be_there,,,
+N12,item_412,word,å‹•ä½œèª,action_words,ã„ã‚Œã‚‹ï¼ˆå…¥ã‚Œã‚‹ï¼‰,Ireru,Put_in,,,
+N13,item_413,word,å‹•ä½œèª,action_words,ã†ãŸã†ï¼ˆæ­Œã†ï¼‰,Utau,Sing,,,
+N14,item_414,word,å‹•ä½œèª,action_words,ãŠãã‚‹ï¼ˆèµ·ãã‚‹ï¼‰,Okiru,Get_up,,,
+N15,item_415,word,å‹•ä½œèª,action_words,ãŠãï¼ˆç½®ãï¼‰,Oku,Put,,,
+N16,item_416,word,å‹•ä½œèª,action_words,ãŠã“ã‚‹ï¼ˆæ€’ã‚‹ï¼‰,Okoru,Get_angry,,,
+N17,item_417,word,å‹•ä½œèª,action_words,ãŠã™ï¼ˆæŠ¼ã™ï¼‰,Osu,Push,,,
+N18,item_418,word,å‹•ä½œèª,action_words,ãŠã¡ã‚‹ï¼ˆè½ã¡ã‚‹ï¼‰,Ochiru,Fall,,,
+N19,item_419,word,å‹•ä½œèª,action_words,ãŠã©ã‚‹,Odoru,Dance,,,
+N20,item_420,word,å‹•ä½œèª,action_words,ãŠã¶ã†,Obuu,To_piggyback,,,
+N21,item_421,word,å‹•ä½œèª,action_words,ãŠã‚ˆãï¼ˆæ³³ãï¼‰,Oyogu,Swim,,,
+N22,item_422,word,å‹•ä½œèª,action_words,ãŠã‚Šã‚‹ï¼ˆé™ã‚Šã‚‹ï¼‰,Oriru,Get_off,,,
+N23,item_423,word,å‹•ä½œèª,action_words,ãŠã‚ã‚‹ï¼ˆçµ‚ã‚ã‚‹ï¼‰,Owaru,End,,,
+N24,item_424,word,å‹•ä½œèª,action_words,è²·ã†,Kau,Buy,,,
+N25,item_425,word,å‹•ä½œèª,action_words,ã‹ãˆã‚‹ï¼ˆå¸°ã‚‹ï¼‰,Kaeru,Go_home,,,
+N26,item_426,word,å‹•ä½œèª,action_words,ã‹ãï¼ˆæ›¸ãï¼‰,Kaku,Write,,,
+N27,item_427,word,å‹•ä½œèª,action_words,ã‹ãã™ï¼ˆéš ã™ï¼‰,Kakusu,Hide,,,
+N28,item_428,word,å‹•ä½œèª,action_words,ã‹ã‘ã‚‹,Kakeru,Hang,,,
+N29,item_429,word,å‹•ä½œèª,action_words,ã‹ã™ï¼ˆè²¸ã™ï¼‰,Kasu,Lend,,,
+N30,item_430,word,å‹•ä½œèª,action_words,ã‹ãŸã¥ã‘ã‚‹,Katazukeru,Clean_up,,,
+N31,item_431,word,å‹•ä½œèª,action_words,ã‹ã¶ã‚‹,Kaburu,Put_on,,,
+N32,item_432,word,å‹•ä½œèª,action_words,æ¶ˆãˆã‚‹,Kieru,Disappear,,,
+N33,item_433,word,å‹•ä½œèª,action_words,ããï¼ˆèãï¼‰,Kiku,Listen,,,
+N34,item_434,word,å‹•ä½œèª,action_words,èã“ãˆã‚‹,Kikoeru,Hear,,,
+N35,item_435,word,å‹•ä½œèª,action_words,ç€ã‚‹,Kiru,Wear,,,
+N36,item_436,word,å‹•ä½œèª,action_words,åˆ‡ã‚‹,Kiru,Cut,,,
+N37,item_437,word,å‹•ä½œèª,action_words,ãã£ã¤ã‘ã‚‹,Kuttsukeru,Stick,,,
+N38,item_438,word,å‹•ä½œèª,action_words,ãã‚‹ï¼ˆæ¥ã‚‹ï¼‰,Kuru,Come,,,
+N39,item_439,word,å‹•ä½œèª,action_words,ã‘ã‚‹ï¼ˆè¹´ã‚‹ï¼‰,Keru,Kick,,,
+N40,item_440,word,å‹•ä½œèª,action_words,ã“ã¼ã™,Kobosu,Spill,,,
+N41,item_441,word,å‹•ä½œèª,action_words,ã“ã‚ã¶,Korobu,Fall,,,
+N42,item_442,word,å‹•ä½œèª,action_words,ã“ã‚ã™ï¼ˆå£Šã™ï¼‰,Kowasu,Break_down,,,
+N43,item_443,word,å‹•ä½œèª,action_words,ã•ã‚ã‚‹ï¼ˆè§¦ã‚‹ï¼‰,Sawaru,Touch,,,
+N44,item_444,word,å‹•ä½œèª,action_words,ã—ã‚ã‚‹ï¼ˆé–‰ã‚ã‚‹ï¼‰,Shimeru,Close,,,
+N45,item_445,word,å‹•ä½œèª,action_words,ã—ã‚‹ï¼ˆçŸ¥ã‚‹ï¼‰,Shiru,Know,,,
+N46,item_446,word,å‹•ä½œèª,action_words,ã™ãï¼ˆå¥½ãï¼‰,Suki,Like,,,
+N47,item_447,word,å‹•ä½œèª,action_words,æ¨ã¦ã‚‹,Suteru,Throw_away,,,
+N48,item_448,word,å‹•ä½œèª,action_words,ã™ã‚‹,Suru,Do,,,
+N49,item_449,word,å‹•ä½œèª,action_words,ã™ã‚ã‚‹,Suwaru,Sit,,,
+N50,item_450,word,å‹•ä½œèª,action_words,ã ãï¼ˆæŠ±ãï¼‰,Daku,Hug,,,
+N51,item_451,word,å‹•ä½œèª,action_words,ã ã™ï¼ˆå‡ºã™ï¼‰,Dasu,Put_out,,,
+N52,item_452,word,å‹•ä½œèª,action_words,ãŸã™ã‘ã‚‹ï¼ˆåŠ©ã‘ã‚‹ï¼‰,Tasukeru,Help,,,
+N53,item_453,word,å‹•ä½œèª,action_words,ãŸãŸã,Tataku,Hit,,,
+N54,item_454,word,å‹•ä½œèª,action_words,ãŸã¤ï¼ˆç«‹ã¤ï¼‰,Tatsu,Stand,,,
+N55,item_455,word,å‹•ä½œèª,action_words,ãŸã¹ã‚‹ï¼ˆé£Ÿã¹ã‚‹ï¼‰,Taberu,Eat,,,
+N56,item_456,word,å‹•ä½œèª,action_words,ã¤ã‹ã¾ãˆã‚‹,Tsukamaeru,Catch,,,
+N57,item_457,word,å‹•ä½œèª,action_words,ã¤ãï¼ˆç€ãï¼‰,Tsuku,Reach,,,
+N58,item_458,word,å‹•ä½œèª,action_words,ã¤ãã‚‹ï¼ˆä½œã‚‹ï¼‰,Tsukuru,Create,,,
+N59,item_459,word,å‹•ä½œèª,action_words,ã¤ã‘ã‚‹ï¼ˆä»˜ã‘ã‚‹ï¼‰,Tsukeru,Attach,,,
+N60,item_460,word,å‹•ä½œèª,action_words,ã§ãã‚‹ï¼ˆå‡ºæ¥ã‚‹ï¼‰,Dekiru,Can_do,,,
+N61,item_461,word,å‹•ä½œèª,action_words,ã§ã‚‹ï¼ˆå‡ºã‚‹ï¼‰,Deru,Get_out,,,
+N62,item_462,word,å‹•ä½œèª,action_words,ã¨ã¶ï¼ˆé£›ã¶ï¼‰,Tobu,Jump,,,
+N63,item_463,word,å‹•ä½œèª,action_words,ã¨ã¾ã‚‹,Tomaru,Stop,,,
+N64,item_464,word,å‹•ä½œèª,action_words,ã¨ã‚‹ï¼ˆå–ã‚‹ï¼‰,Toru,Take,,,
+N65,item_465,word,å‹•ä½œèª,action_words,ãªãŠã™,Naosu,Fix,,,
+N66,item_466,word,å‹•ä½œèª,action_words,ãªãï¼ˆæ³£ãï¼‰,Naku,Cry,,,
+N67,item_467,word,å‹•ä½œèª,action_words,ãªã’ã‚‹ï¼ˆæŠ•ã’ã‚‹ï¼‰,Nageru,Throw,,,
+N68,item_468,word,å‹•ä½œèª,action_words,ãªã‚ã‚‹,Nameru,Lick,,,
+N69,item_469,word,å‹•ä½œèª,action_words,ãªã‚‹ï¼ˆâ€¦ãªã‚‹ï¼‰,Naru,Become,,,
+N70,item_470,word,å‹•ä½œèª,action_words,ã«ã’ã‚‹ï¼ˆé€ƒã’ã‚‹ï¼‰,Nigeru,Escape,,,
+N71,item_471,word,å‹•ä½œèª,action_words,ã¬ãï¼ˆè„±ãï¼‰,Nugu,Take_off,,,
+N72,item_472,word,å‹•ä½œèª,action_words,ã¬ã‚‹ï¼ˆå¡—ã‚‹ï¼‰,Nuru,Paint,,,
+N73,item_473,word,å‹•ä½œèª,action_words,ã­ã‚‹ï¼ˆå¯ã‚‹ï¼‰,Neru,Sleep,,,
+N74,item_474,word,å‹•ä½œèª,action_words,ã®ã¼ã‚‹ï¼ˆç™»ã‚‹ï¼‰,Noboru,Climb,,,
+N75,item_475,word,å‹•ä½œèª,action_words,ã®ã‚€ï¼ˆé£²ã‚€ï¼‰,Nomu,Drink,,,
+N76,item_476,word,å‹•ä½œèª,action_words,ã®ã‚‹ï¼ˆä¹—ã‚‹ï¼‰,Noru,Get_on,,,
+N77,item_477,word,å‹•ä½œèª,action_words,ã¯ã„ã‚‹ï¼ˆå…¥ã‚‹ï¼‰,Hairu,Enter,,,
+N78,item_478,word,å‹•ä½œèª,action_words,ã¯ãï¼ˆå±¥ãï¼‰,Haku,Wear,,,
+N79,item_479,word,å‹•ä½œèª,action_words,ã¯ã“ã¶ï¼ˆé‹ã¶ï¼‰,Hakobu,Carry,,,
+N80,item_480,word,å‹•ä½œèª,action_words,ã¯ã—ã‚‹ï¼ˆèµ°ã‚‹ï¼‰,Hashiru,Run,,,
+N81,item_481,word,å‹•ä½œèª,action_words,ã²ã£ã±ã‚‹ï¼ˆå¼•ã£ã±ã‚‹ï¼‰,Hipparu,Pull,,,
+N82,item_482,word,å‹•ä½œèª,action_words,ã²ã‚ã†ï¼ˆæ‹¾ã†ï¼‰,Hirou,Pick_up,,,
+N83,item_483,word,å‹•ä½œèª,action_words,ãµãï¼ˆæ‹­ãï¼‰,Fuku,Wipe,,,
+N84,item_484,word,å‹•ä½œèª,action_words,ãµãï¼ˆå¹ãï¼‰,Fuku,Blow,,,
+N85,item_485,word,å‹•ä½œèª,action_words,ã¶ã¤ã‹ã‚‹,Butsukaru,Collide,,,
+N86,item_486,word,å‹•ä½œèª,action_words,ã»ã—ã„ï¼ˆæ¬²ã—ã„ï¼‰,Hoshii,Want,,,
+N87,item_487,word,å‹•ä½œèª,action_words,ã¾ã¤ï¼ˆå¾…ã¤ï¼‰,Matsu,Wait,,,
+N88,item_488,word,å‹•ä½œèª,action_words,ã¾ã‚ã‚‹,Mawaru,Turn_around,,,
+N89,item_489,word,å‹•ä½œèª,action_words,ã¿ãˆã‚‹,Mieru,Appear,,,
+N90,item_490,word,å‹•ä½œèª,action_words,ã¿ã›ã‚‹,Miseru,Show,,,
+N91,item_491,word,å‹•ä½œèª,action_words,ã¿ã‚‹ï¼ˆè¦‹ã‚‹ï¼‰,Miru,Look,,,
+N92,item_492,word,å‹•ä½œèª,action_words,ã‚€ãï¼ˆçš®ãªã©ï¼‰,Muku,Peel,,,
+N93,item_493,word,å‹•ä½œèª,action_words,ã‚‚ã¤ï¼ˆæŒã¤ï¼‰,Motsu,Have,,,
+N94,item_494,word,å‹•ä½œèª,action_words,æŒã£ã¦ãã‚‹,Mottekuru,Bring_up,,,
+N95,item_495,word,å‹•ä½œèª,action_words,ã‚‚ã‚‰ã†,Morau,Get,,,
+N96,item_496,word,å‹•ä½œèª,action_words,ã‚„ã¶ã‚‹ï¼ˆç ´ã‚‹ï¼‰,Yaburu,Break,,,
+N97,item_497,word,å‹•ä½œèª,action_words,ã‚„ã‚ã‚‹,Yameru,Stop,,,
+N98,item_498,word,å‹•ä½œèª,action_words,ã‚„ã‚‹,Yaru,Do,,,
+N99,item_499,word,å‹•ä½œèª,action_words,ã‚ˆã”ã™ï¼ˆæ±šã™ï¼‰,Yogosu,Defile,,,
+N100,item_500,word,å‹•ä½œèª,action_words,ã‚ˆã¶ï¼ˆå‘¼ã¶ï¼‰,Yobu,Call,,,
+N101,item_501,word,å‹•ä½œèª,action_words,ã‚ˆã‚€ï¼ˆèª­ã‚€ï¼‰,Yomu,Read,,,
+N102,item_502,word,å‹•ä½œèª,action_words,ã‚ã‹ã‚‹,Wakaru,Understand,,,
+N103,item_503,word,å‹•ä½œèª,action_words,ã‚ã‚‰ã†ï¼ˆç¬‘ã†ï¼‰,Warau,Laugh,,,
+O1,item_504,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ã‚ã•ï¼ˆæœï¼‰,Asa,Morning,,,
+O2,item_505,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ã‚ã—ãŸï¼ˆæ˜æ—¥ï¼‰,Ashita,Tomorrow,,,
+O3,item_506,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ã‚ã¨ã§,Atode,Later,,,
+O4,item_507,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ã„ã¾ï¼ˆä»Šï¼‰,Ima,Now,,,
+O5,item_508,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ãã®ã†ï¼ˆæ˜¨æ—¥ï¼‰,Kinou,Yesterday,,,
+O6,item_509,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ãã‚‡ã†ï¼ˆä»Šæ—¥ï¼‰,Kyou,Today,,,
+O7,item_510,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ã•ã£ã,Sakki,A_moment_ago,,,
+O8,item_511,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,æ™‚é–“,Jikan,Time,,,
+O9,item_512,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ã²ã‚‹ï¼ˆæ˜¼ï¼‰,Hiru,Daytime,,,
+O10,item_513,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ã¾ã ,Mada,Yet,,,
+O11,item_514,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,å¤•æ–¹,Yuugata,Evening,,,
+O12,item_515,word,æ™‚é–“ã«ã¤ã„ã¦ã®ã“ã¨ã°,time_words,ã‚ˆã‚‹ï¼ˆå¤œï¼‰,Yoru,Night,,,
+P1,item_516,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,é’ã„,Aoi,Blue,,,
+P2,item_517,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,èµ¤ã„,Akai,Red,,,
+P3,item_518,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,æ˜ã‚‹ã„,Akarui,Bright,,,
+P4,item_519,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‚ãŸã‚‰ã—ã„,Atarashii,New,,,
+P5,item_520,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‚ã¤ã„ï¼ˆç†±ã„ãƒ»æš‘ã„ï¼‰,Atsui,Hot,,,
+P6,item_521,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‚ã¾ã„,Amai,Sweet,,,
+P7,item_522,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã„ã„,Ii,Good,,,
+P8,item_523,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã„ã˜ã‚ã‚‹,Ijiwaru,Mean,,,
+P9,item_524,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã„ãŸã„ï¼ˆç—›ã„ï¼‰,Itai,Painful,,,
+P10,item_525,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã†ã¾ã„,Umai,Good,,,
+P11,item_526,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã†ã‚‹ã•ã„,Urusai,Noisy,,,
+P12,item_527,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã†ã‚Œã—ã„,Ureshii,Glad,,,
+P13,item_528,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãŠã„ã—ã„,Oishii,Delicious,,,
+P14,item_529,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,å¤§ãã„,Ookii,Large,,,
+P15,item_530,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãŠã‹ã—ã„,Okashii,Funny,,,
+P16,item_531,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,é…ã„,Osoi,Slow,,,
+P17,item_532,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,é‡ã„,Omoi,Heavy,,,
+P18,item_533,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãŠã‚Šã“ã†,Orikou,Clever,,,
+P19,item_534,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‹ãŸã„ï¼ˆå›ºã„ï¼‰,Katai,Hard,,,
+P20,item_535,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‹ã‚†ã„,Kayui,Itchy,,,
+P21,item_536,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‹ã‚‰ã„,Karai,Spicy,,,
+P22,item_537,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‹ã‚‰ã£ã½,Karappo,Empty,,,
+P23,item_538,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‹ã‚ã„ã„,Kawaii,Cute,,,
+P24,item_539,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‹ã‚ã„ãã†,Kawaisou,Pity,,,
+P25,item_540,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‹ã‚ã„ãŸ,Kawaita,Dried,,,
+P26,item_541,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ããŸãªã„,Kitanai,Dirty,,,
+P27,item_542,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãã‚‰ã„ï¼ˆå«Œã„ï¼‰,Kirai,Dislike,,,
+P28,item_543,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãã‚Œã„,Kirei,Clean,,,
+P29,item_544,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãã•ã„ï¼ˆè‡­ã„ï¼‰,Kusai,Odor,,,
+P30,item_545,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãã‚‰ã„ï¼ˆæš—ã„ï¼‰,Kurai,Dark,,,
+P31,item_546,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,é»’ã„,Kuroi,Black,,,
+P32,item_547,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,å…ƒæ°—,Genki,Energy,,,
+P33,item_548,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã“ã‚ã„,Kowai,Scary,,,
+P34,item_549,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,å¯’ã„,Samui,Cold,,,
+P35,item_550,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,å››è§’ã„,Shikakui,Square,,,
+P36,item_551,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã—ãšã‹ï¼ˆé™ã‹ï¼‰,Shizuka,Quiet,,,
+P37,item_552,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã˜ã‚‡ã†ãš,Jyouzu,Good,,,
+P38,item_553,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ç™½ã„,Shiroi,White,,,
+P39,item_554,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã™ã”ã„,Sugoi,Great,,,
+P40,item_555,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã™ã£ã±ã„,Suppai,Sour,,,
+P41,item_556,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã ã„ã˜ï¼ˆå¤§äº‹ï¼‰,Daiji,Important,,,
+P42,item_557,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,å¤§ä¸ˆå¤«,Daijoubu,All_right,,,
+P43,item_558,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãŸã‹ã„ï¼ˆé«˜ã„ï¼‰,Takai,High,,,
+P44,item_559,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãŸã®ã—ã„ï¼ˆæ¥½ã—ã„ï¼‰,Tanoshii,Pleasant,,,
+P45,item_560,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,å°ã•ã„,Chiisai,Small,,,
+P46,item_561,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã¡ãŒã†,Chigau,Wrong,,,
+P47,item_562,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ç–²ã‚ŒãŸ,Tsukareta,Exhausted,,,
+P48,item_563,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã¤ã‚ãŸã„ï¼ˆå†·ãŸã„ï¼‰,Tsumetai,Cold,,,
+P49,item_564,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ãªã„,Nai,None,,,
+P50,item_565,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,é•·ã„,Nagai,Long,,,
+P51,item_566,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã¬ã‚ŒãŸï¼ˆæ¿¡ã‚ŒãŸï¼‰,Nureta,Wet,,,
+P52,item_567,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã­ã‚€ã„,Nemui,Sleepy,,,
+P53,item_568,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã¯ã‚„ã„,Hayai,Fast,,,
+P54,item_569,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ç—…æ°—,Byouki,Sick,,,
+P55,item_570,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã¸ã‚“ï¼ˆå¤‰ï¼‰,Hen,Strange,,,
+P56,item_571,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã¾ãšã„,Mazui,Bad_taste,,,
+P57,item_572,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã¾ã‚‹ã„ï¼ˆä¸¸ã„ï¼‰,Marui,Round,,,
+P58,item_573,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã¿ã©ã‚Šï¼ˆç·‘ï¼‰,Midori,Green,,,
+P59,item_574,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‚€ãšã‹ã—ã„,Muzukashii,Difficult,,,
+P60,item_575,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‚„ã•ã—ã„,Yasashii,Easy,,,
+P61,item_576,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‚„ã‚ã‚‰ã‹ã„ï¼ˆæŸ”ã‚‰ã‹ã„ï¼‰,Yawarakai,Soft,,,
+P62,item_577,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,ã‚†ã£ãã‚Š,Yukkuri,Slowly,,,
+P63,item_578,word,ã‚ˆã†ã™ãƒ»æ€§è³ª,descriptive_words,æ‚ªã„,Warui,Bad,,,
+Q1,item_579,word,ä»£åè©,pronouns,ã‚ãã“,Asoko,Overthere,,,
+Q2,item_580,word,ä»£åè©,pronouns,ã‚ã£ã¡,Acchi,Overthere,,,
+Q3,item_581,word,ä»£åè©,pronouns,ã‚ã®,Ano,That,,,
+Q4,item_582,word,ä»£åè©,pronouns,ã‚ã‚Œ,Are,That,,,
+Q5,item_583,word,ä»£åè©,pronouns,ã‚ã‚“ãŸ,Anta,You,,,
+Q6,item_584,word,ä»£åè©,pronouns,ã‚ã‚“ãª,Anna,Such,,,
+Q7,item_585,word,ä»£åè©,pronouns,ã“ã†,Kou,Like_this,,,
+Q8,item_586,word,ä»£åè©,pronouns,ã“ã“,Koko,Here,,,
+Q9,item_587,word,ä»£åè©,pronouns,ã“ã£ã¡,Kocchi,Here,,,
+Q10,item_588,word,ä»£åè©,pronouns,ã“ã®,Kono,This,,,
+Q11,item_589,word,ä»£åè©,pronouns,ã“ã‚Œ,Kore,This,,,
+Q12,item_590,word,ä»£åè©,pronouns,ã“ã‚“ãª,Konna,Such,,,
+Q13,item_591,word,ä»£åè©,pronouns,ãã†,Sou,So,,,
+Q14,item_592,word,ä»£åè©,pronouns,ãã“,Soko,There,,,
+Q15,item_593,word,ä»£åè©,pronouns,ãã£ã¡,Socchi,Over_there,,,
+Q16,item_594,word,ä»£åè©,pronouns,ãã®,Sono,That,,,
+Q17,item_595,word,ä»£åè©,pronouns,ãã‚Œ,Sore,It,,,
+Q18,item_596,word,ä»£åè©,pronouns,ãã‚“ãª,Sonna,Such,,,
+Q19,item_597,word,ä»£åè©,pronouns,ã¼ã,Boku,I,,,
+Q20,item_598,word,ä»£åè©,pronouns,ã¼ãã®,Bokuno,My,,,
+Q21,item_599,word,ä»£åè©,pronouns,ã‚ãŸã—,Watashi,I,,,
+Q22,item_600,word,ä»£åè©,pronouns,ã‚ãŸã—ã®,Watashino,My,,,
+R1,item_601,word,è³ªå•ã®ã“ã¨ã°,question_words,ã„ã¤,Itsu,When,,,
+R2,item_602,word,è³ªå•ã®ã“ã¨ã°,question_words,ã ã‚Œ,Dare,Who,,,
+R3,item_603,word,è³ªå•ã®ã“ã¨ã°,question_words,ã©ã†,Dou,How,,,
+R4,item_604,word,è³ªå•ã®ã“ã¨ã°,question_words,ã©ã†ã—ã¦,Doushite,Why,,,
+R5,item_605,word,è³ªå•ã®ã“ã¨ã°,question_words,ã©ã“,Doko,Where,,,
+R6,item_606,word,è³ªå•ã®ã“ã¨ã°,question_words,ã©ã£ã¡,Docchi,Which,,,
+R7,item_607,word,è³ªå•ã®ã“ã¨ã°,question_words,ã©ã‚Œ,Dore,Which_one,,,
+R8,item_608,word,è³ªå•ã®ã“ã¨ã°,question_words,ãªãœ,Naze,Why,,,
+R9,item_609,word,è³ªå•ã®ã“ã¨ã°,question_words,ãªã«,Nani,What,,,
+R10,item_610,word,è³ªå•ã®ã“ã¨ã°,question_words,ãªã‚“ã§,Nande,Why,,,
+S1,item_611,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã‚ã„ã ,Aida,Between,,,
+S2,item_612,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã†ãˆï¼ˆä¸Šï¼‰,Ue,Up,,,
+S3,item_613,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã†ã—ã‚ï¼ˆå¾Œã‚ï¼‰,Ushiro,Behind,,,
+S4,item_614,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã†ã¡ï¼ˆå†…ï¼‰,Uchi,Inside,,,
+S5,item_615,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã‹ã©ï¼ˆè§’ï¼‰,Kado,Horn,,,
+S6,item_616,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã—ãŸï¼ˆä¸‹ï¼‰,Shita,Under,,,
+S7,item_617,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã™ã¿ï¼ˆéš…ï¼‰,Sumi,Corner,,,
+S8,item_618,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ãã¨ï¼ˆå¤–ï¼‰,Soto,Outside,,,
+S9,item_619,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ãã°,Soba,By_the_side,,,
+S10,item_620,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,è¿‘ã,Chikaku,Near,,,
+S11,item_621,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã¤ãï¼ˆæ¬¡ï¼‰,Tsugi,Next,,,
+S12,item_622,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,é ã,Tooku,Far,,,
+S13,item_623,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã¨ã“ã‚ãƒ»ã¨ã“,Tokoro_toko,Place,,,
+S14,item_624,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã¨ãªã‚Šï¼ˆéš£ã‚Šï¼‰,Tonari,Next_to,,,
+S15,item_625,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ãªã‹ï¼ˆä¸­ï¼‰,Naka,Center,,,
+S16,item_626,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã¯ã—ï¼ˆç«¯ï¼‰,Hashi,End,,,
+S17,item_627,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,åå¯¾,Hantai,Opposite,,,
+S18,item_628,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,å·¦,Hidari,Left,,,
+S19,item_629,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ãµã¡ï¼ˆç¸ï¼‰,Fuchi,Edge,,,
+S20,item_630,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã¾ãˆï¼ˆå‰ï¼‰,Mae,Before,,,
+S21,item_631,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã¾ã‚ã‚Š,Mawari,Around,,,
+S22,item_632,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã¾ã‚“ä¸­,Mannaka,Middle,,,
+S23,item_633,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,å³,Migi,Right,,,
+S24,item_634,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã‚€ã“ã†ï¼ˆå‘ã“ã†ï¼‰,Mukou,Over_there,,,
+S25,item_635,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã‚ˆã“ï¼ˆæ¨ªï¼‰,Yoko,Beside,,,
+S26,item_636,word,ä½ç½®ã¨å ´æ‰€ã«ã¤ã„ã¦ã®ã“ã¨ã°,locations,ã‚ã,Waki,Side,,,
+T1,item_637,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã„ã¡,Ichi,One,,,
+T2,item_638,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã„ã¡ã°ã‚“ï¼ˆä¸€ç•ªï¼‰,Ichiban,First,,,
+T3,item_639,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã„ã£ã‹ã„ï¼ˆä¸€å›ï¼‰,Ikkai,Once,,,
+T4,item_640,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã„ã£ã—ã‚‡ï¼ˆä¸€ç·’ï¼‰,Issho,Together,,,
+T5,item_641,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã„ã£ã±ã„,Ippai,Full,,,
+T6,item_642,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,åŒã˜,Onaji,Same,,,
+T7,item_643,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ãœã‚“ã¶ï¼ˆå…¨éƒ¨ï¼‰,Zenbu,All,,,
+T8,item_644,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ãŸãã•ã‚“,Takusan,Lots,,,
+T9,item_645,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã¡ã‚‡ã£ã¨,Chotto,A_little,,,
+T10,item_646,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ãªã—,Nashi,None,,,
+T11,item_647,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,åŠåˆ†,Hanbun,Half,,,
+T12,item_648,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã²ã¨ã¤,Hitotsu,One,,,
+T13,item_649,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã»ã‹ã®,Hokano,Other,,,
+T14,item_650,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã¿ã‚“ãª,Minna,Everyone,,,
+T15,item_651,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã‚‚ã†ã„ã£ã‹ã„,Mouikkai,Again,,,
+T16,item_652,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã‚‚ã†ã²ã¨ã¤ãƒ»ã‚‚ã²ã¨ã¤,Mouhitotsu_mohitotsu,Another,,,
+T17,item_653,word,æ•°é‡ã‚’ã‚ã‚‰ã‚ã™ã“ã¨ã°,quantifiers,ã‚‚ã£ã¨,Motto,More,,,
+U1,item_654,word,æ¥ç¶šèª,connecting_words,ãã—ã¦,Soshite,And,,,
+U2,item_655,word,æ¥ç¶šèª,connecting_words,ã ã‹ã‚‰,Dakara,So,,,
+U3,item_656,word,æ¥ç¶šèª,connecting_words,ã ã‘ã©,Dakedo,However,,,
+U4,item_657,word,æ¥ç¶šèª,connecting_words,ã ã£ã¦,Datte,Because,,,
+U5,item_658,word,æ¥ç¶šèª,connecting_words,ã§ã‚‚,Demo,But,,,
+U6,item_659,word,æ¥ç¶šèª,connecting_words,ã‚‚ã—ã‚‚,Moshimo,If,,,
+V1,item_660,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã‚¨ãƒ³ã‚¨ãƒ³ï¼ˆæ³£ãï¼‰,Enen,Cry,,,
+V2,item_661,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãŠã¦ã¦ï¼ˆãŠæ‰‹ã€…ï¼‰,Otete,Hand,,,
+V3,item_662,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãŠã‚“ã¶,Onbu,Piggyback_ride,,,
+V4,item_663,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã‚«ãƒ¼ã‚«ãƒ¼ï¼ˆã‚«ãƒ©ã‚¹ï¼‰,Kaakaa,Caw_caw,,,
+V5,item_664,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãã‚Œã„ãã‚Œã„,Kireikirei,Clean_up,,,
+V6,item_665,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã‚¯ãƒƒã‚¯ï¼ˆé´ï¼‰,Kukku,Shoes,,,
+V7,item_666,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãã‚‹ãã‚‹,Guruguru,Spin,,,
+V8,item_667,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã”ã£ã¤ã‚“,Gottsun,Hit_head,,,
+V9,item_668,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã‚¸ãƒ£ãƒ¼ï¼ˆæ°´ãªã©ã“ã¼ã™æ™‚ï¼‰,Jaa,Spill_water,,,
+V10,item_669,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã‚¸ãƒ¼ã‚¸ãƒ»ã‚¸ã‚¸ï¼ˆç¥–çˆ¶ï¼‰,Jiiji_Jiji,Grandfather,,,
+V11,item_670,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã‚¸ãƒ¼ã‚¸ï¼ˆå­—ï¼‰,Jiiji,Writing,,,
+V12,item_671,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã‚·ãƒ¼ã‚·ï¼ˆãŠã—ã£ã“ï¼‰,Shiishi,Pee,,,
+V13,item_672,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã‚¿ã‚¤ã‚¿ã‚¤ãƒ»ãŠã¨ã¨ï¼ˆé­šï¼‰,Taitai_ototo,Fish,,,
+V14,item_673,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã ã£ã“,Dakko,Hold_me,,,
+V15,item_674,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã¡ã‚ƒã‚“ã“ï¼ˆãŠã™ã‚ã‚Šï¼‰,Chanko,Sitting,,,
+V16,item_675,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒãƒ¥ãƒ¼ãƒãƒ¥ãƒ¼ï¼ˆã­ãšã¿ï¼‰,Cyuucyuu,Squeak,,,
+V17,item_676,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒãƒ¥ãƒ³ãƒãƒ¥ãƒ³ï¼ˆé³¥ï¼‰,Cyuncyun,Little_bird,,,
+V18,item_677,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒãƒ§ã‚­ãƒãƒ§ã‚­ï¼ˆã¯ã•ã¿ï¼‰,Chokichoki,Scissors,,,
+V19,item_678,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãªã„ãªã„ï¼ˆç‰‡ã¥ã‘ï¼‰,Nainai,Clean_up,,,
+V20,item_679,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒãƒ³ãƒ,Nenne,Sleep,,,
+V21,item_680,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒãƒ¼ãƒãƒ»ãƒãƒï¼ˆç¥–æ¯ï¼‰,Baaba_baba,Grandmother,,,
+V22,item_681,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒ‘ã‚«ãƒ‘ã‚«ï¼ˆé¦¬ï¼‰,Pakapaka,Horse,,,
+V23,item_682,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒ‘ã‚¯ãƒ‘ã‚¯ï¼ˆé£Ÿã¹ã‚‹æ™‚ï¼‰,Pakupaku,Eat,,,
+V24,item_683,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ã´ã‚ˆã´ã‚ˆï¼ˆã²ã‚ˆã“ï¼‰,Piyopiyo,Chirp,,,
+V25,item_684,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒ–ãƒ¼ãƒ–ãƒ¼ï¼ˆè±šï¼‰,Buubuu,Oink,,,
+V26,item_685,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒ–ãƒ¼ãƒ³ï¼ˆé£›è¡Œæ©Ÿï¼‰,Buun,Airplane,,,
+V27,item_686,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒãƒ¼ãƒ³ï¼ˆæŠ•ã’ã‚‹ï¼‰,Poon,Throw,,,
+V28,item_687,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒãƒ³ãƒãƒ³ï¼ˆãŠãªã‹ï¼‰,Ponpon,Stomach,,,
+V29,item_688,word,å¹¼å…èªï¼ˆãã®ï¼’ï¼‰,sounds2,ãƒãƒ³ãƒï¼ˆé£Ÿã¹ç‰©ï¼‰,Manma,Food,,,
+W1,item_689,word,ä¼šè©±èª,conversations,ã‚ã£,At,Ah,,,
+W2,item_690,word,ä¼šè©±èª,conversations,ã‚ã®ã­,Anone,Well,,,
+W3,item_691,word,ä¼šè©±èª,conversations,ã‚ã‚Œã£ãƒ»ã‚ã‚‰,Aret_Ara,What?,,,
+W4,item_692,word,ä¼šè©±èª,conversations,ã„ã„ã‚ˆ,Iiyo,OK,,,
+W5,item_693,word,ä¼šè©±èª,conversations,ã„ã‚„,Iya,Disagreeable,,,
+W6,item_694,word,ä¼šè©±èª,conversations,ã†ã†ã‚“ï¼ˆæ‰“ã¡æ¶ˆã—ï¼‰,Uun,No,,,
+W7,item_695,word,ä¼šè©±èª,conversations,ã†ã‚“ï¼ˆè¿”äº‹ã¨ã—ã¦ï¼‰,Un,Yup,,,
+W8,item_696,word,ä¼šè©±èª,conversations,ãˆã£ã¨ãƒ»ãˆãˆã¨,Etto_eeto,Um,,,
+W9,item_697,word,ä¼šè©±èª,conversations,ãã†ãã†,Sousou,Oh_yeah,,,
+W10,item_698,word,ä¼šè©±èª,conversations,ã­ãˆ,Nee,Hey,,,
+W11,item_699,word,ä¼šè©±èª,conversations,ã»ã‚‰,Hora,You_see,,,
+W12,item_700,word,ä¼šè©±èª,conversations,ã‚‚ã—ã‚‚ã—,Moshimoshi,Hello,,,
+W13,item_701,word,ä¼šè©±èª,conversations,ã‚„ã ãƒ»ã„ã‚„ã ,Yada_Iyada,No,,,
+W14,item_702,word,ä¼šè©±èª,conversations,ã‚“ï¼ˆé–“ã‚’ã¨ã‚‹ã®ã«ï¼‰,N,Hmm,,,
+X1,item_703,word,ãã®ä»–,others,ã‚ã£ãŸï¼ˆè¦‹ã¤ã‘ãŸæ™‚ã«ï¼‰,Atta,Found_it,,,
+X2,item_704,word,ãã®ä»–,others,ãŠã„ã§,Oide,Come_here,,,
+X3,item_705,word,ãã®ä»–,others,ã‚«ãƒ³ãƒ‘ãƒ¼ã‚¤ï¼ˆä¹¾æ¯ï¼‰,Kanpaai,Cheers,,,
+X4,item_706,word,ãã®ä»–,others,ã“ã‚“ã©,Kondo,Next_time,,,
+X5,item_707,word,ãã®ä»–,others,ã—ã¾ã†,Shimau,Store,,,
+X6,item_708,word,ãã®ä»–,others,ã¾ãŸ,Mata,Also,,,
+X7,item_709,word,ãã®ä»–,others,ã‚‚ã†,Mou,Already,,,
+X8,item_710,word,ãã®ä»–,others,ã‚ˆã„ã—ã‚‡,Yoisho,Heave_ho,,,
+X9,item_711,word,ãã®ä»–,others,ã‚ˆã—ã‚ˆã—,Yoshiyoshi,There_there,,,
+q2_1,item_712,how_use_words,NA,NA,ãŠå­ã•ã‚“ã¯ãã®å ´ã«ã„ãªã„äººã®æŒã¡ç‰©ã‚’ã•ã‚ã£ãŸã‚Šã€æŒ‡ã•ã—ã—ã¦ã€ãã®äººã®åå‰ã‚’è¨€ã„ã¾ã™ã‹ã€‚ãŸã¨ãˆã°ã€â€ãƒ‘ãƒ‘â€ã¨ã‹â€ãƒˆãƒ¼ãƒãƒ£ãƒ³â€ã¨è¨€ã„ã¾ã™ã‹ã€‚,,does your child ever pick up or point to an object and name an absent person to whom the object belongs?,,,
+q2_2,item_713,how_use_words,NA,NA,ãŠå­ã•ã‚“ã¯ç›®ã®å‰ã«ãªã„ç‰©ã«ã¤ã„ã¦ãŸãšã­ã‚‰ã‚ŒãŸæ™‚ã€ã‚ã‹ã‚Šã¾ã™ã‹ã€‚ãŸã¨ãˆã°ã€ã‚ãªãŸãŒâ€ã©ã“ã«ã‚¯ãƒã•ã‚“ã‚ã‚‹ã‹ãªï¼Ÿã€â€ã¨ãŸãšã­ãŸæ™‚ã€ã‚ªãƒ¢ãƒãƒ£ã®ã¬ã„ãã‚‹ã¿ã‚’å–ã‚Šã«ã€ã„ã¤ã‚‚ãŠã„ã¦ã‚ã‚‹éƒ¨å±‹ã¸è¡Œãã¾ã™ã‹ã€‚,,does your child understand if you ask for something that is not in the room?,,,
+q2_3,item_714,how_use_words,NA,NA,ãŠå­ã•ã‚“ã¯è¦‹ã¤ã‹ã‚‰ãªã„ã‚ªãƒ¢ãƒãƒ£ã‚„ã€ãªã„ã‚ªãƒ¢ãƒãƒ£ã«ã¤ã„ã¦ãŸãšã­ãŸã‚Šã€ã„ãªã„äººã«ã¤ã„ã¦ãŸãšã­ãŸã‚Šã€ç›®ã®å‰ã«ãªã„ã‚‚ã®ã«ã¤ã„ã¦è©±ã—ã¾ã™ã‹ã€‚,,does your child talk a bout objects that are not present?,,,
+q2_4,item_715,how_use_words,NA,NA,ãŠå­ã•ã‚“ã¯ã“ã‚Œã‹ã‚‰èµ·ã“ã‚‹ã“ã¨ã«ã¤ã„ã¦è©±ã—ã¾ã™ã‹ã€‚ãŸã¨ãˆã°ã€ãŠçˆ¶ã•ã‚“ãŒæ—…è¡Œã¸å‡ºã‹ã‘ã‚‹å‰ã«â€æ±½è»Šã½ã£ã½â€ã¨ã‹â€é£›è¡Œæ©Ÿâ€ã¨è¨€ã£ãŸã‚Šã€ãŠå­ã•ã‚“ã‚’å…¬åœ’ã«ã¤ã‚Œã¦è¡Œã“ã†ã¨ã™ã‚‹æ™‚ã«â€ãƒ–ãƒ©ãƒ³ã‚³â€ã¨è¨€ã£ãŸã‚Šã—ã¾ã™ã‹ã€‚,,does your child ever talk about something that's going to happen in the future?,,,
+q2_5,item_716,how_use_words,NA,NA,ãŠå­ã•ã‚“ã¯éå»ã«çµŒé¨“ã—ãŸã“ã¨ã«ã¤ã„ã¦è©±ã—ã¾ã™ã‹ã€‚ãŸã¨ãˆã°ã€ä»¥å‰ã«å‹•ç‰©åœ’ã§ãã†ã‚’ã¿ãŸçµŒé¨“ãŒã‚ã£ãŸã‚‰ã€ãã‚Œã‚’æ€ã„å‡ºã—ã¦ã€â€ãã†ã•ã‚“â€ã¨ã‹â€å‹•ç‰©åœ’â€ã¨è¨€ã£ãŸã‚Šã—ã¾ã™ã‹ã€‚,,does your child ever talk about past events or people who are not present?,,,
+qA_1,item_717,function_words,NA,NA,ç‰©ã®æŒã¡ä¸»ã‚„ã€ç‰©ã®ä»˜å±ã™ã‚‹ä¸»ä½“ã‚’è¨€ã„è¡¨ã—ãŸã„æ™‚ã€å¤§äººã¯ã€åŠ©è©ã®ã€Œã®ã€ã‚’ååˆºã«ãã£ã¤ã‘ã¦è¡¨ç¾ã—ã¾ã™ã€‚ãŸã¨ãˆã°ã€ã€ŒãŠçˆ¶ã•ã‚“ã®ã€ã€ã€Œã‚ãŸã—ã®ã€ã€ã€Œè‡ªå‹•è»Šã®ã€ã€ã€Œå¹¼ç¨šåœ’ã®ã€ãªã©ã€ã‚ãªãŸã®ãŠå­ã•ã‚“ã¯ã€ã€Œã®ã€ã‚’ãã£ã¤ã‘ã¦è©±ã™ã“ã¨ãŒã§ãã¾ã™ã‹ã€‚,,,,,
+qA_2,item_718,function_words,NA,NA,é€²è¡Œä¸­ã®å‡ºæ¥äº‹ã‚„ç‰©äº‹ã®çŠ¶æ…‹ã‚’è¨€ã„è¡¨ã—ãŸã„æ™‚ã€å¤§äººã¯ã€åŠ©å‹•è©ã€Œï½ã¦ã„ã‚‹ã€ã‚’å‹•è©ã«ãã£ã¤ã‘ã¦è¡¨ç¾ã—ã¾ã™ã€‚ãŸã¨ãˆã°ã€ã€Œèµ°ã£ã¦ã„ã‚‹ã€ã€ã€Œé™ã£ã¦ã„ã‚‹ã€ã€ã€ŒæŒã£ã¦ã„ã‚‹ã€ãªã©ã€ã‚ãªãŸã®ãŠå­ã•ã‚“ã¯ã€ã€Œï½ã¦ã„ã‚‹ã€ã‚’ãã£ã¤ã‘ã¦è©±ã™ã“ã¨ãŒã§ãã¾ã™ã‹ã€‚,,,,,
+qA_3,item_719,function_words,NA,NA,å‡ºæ¥äº‹ã‚„å‹•è©ã‚’æ‰“ã¡æ¶ˆã—ï¼ˆå¦å®šã—ï¼‰ãŸã„æ™‚ã€å¤§äººã¯ã€åŠ©å‹•è©ã€Œï½ãªã„ã€ã‚’å‹•è©ã«ãã£ã¤ã‘ã¦è¡¨ç¾ã—ã¾ã™ã€‚ãŸã¨ãˆã°ã€ã€Œè¡Œã‹ãªã„ã€ã€ã€ŒæŒã£ã¦ã„ãªã„ã€ã€ã€Œé£Ÿã¹ãªã„ã€ãªã©ã€ã‚ãªãŸã®ãŠå­ã•ã‚“ã¯ã€ã€Œï½ãªã„ã€ã‚’ãã£ã¤ã‘ã¦è©±ã™ã“ã¨ãŒã§ãã¾ã™ã‹ã€‚,,,,,
+qA_4,item_720,function_words,NA,NA,ã¦ã„ã­ã„ã«è¡¨ç¾ã—ãŸã„æ™‚ã€å¤§äººã¯ã€åŠ©å‹•è©ã€Œï½ã¾ã™ã€ã‚’å‹•è©ã®ã†ã—ã‚ã«ãã£ã¤ã‘ã¦è¡¨ç¾ã—ã¾ã™ã€‚ãŸã¨ãˆã°ã€ã€Œé£Ÿã¹ã¾ã™ã€ã€ã€Œè¡Œãã¾ã™ã€ãªã©ã®ã‚ˆã†ã«è¨€ã„ã¾ã™ã€‚ã‚ãªãŸã®ãŠå­ã•ã‚“ã¯ã€Œï½ã¾ã™ã€ã‚’ãã£ã¤ã‘ã¦è©±ã™ã“ã¨ãŒã§ãã¾ã™ã‹ã€‚,,,,,
+qB_1,item_721,case_markers,NA,NA,ãŒï¼ˆãŠæ¯ã•ã‚“ãŒï¼‰,Ga,,,,
+qB_2,item_722,case_markers,NA,NA,ã®ï¼ˆãƒ‘ãƒ‘ã®ï¼‰,No,,,,
+qB_3,item_723,case_markers,NA,NA,ã«ï¼ˆãŠå¤–ã«ï¼‰,Ni,,,,
+qB_4,item_724,case_markers,NA,NA,ã‚’ï¼ˆãƒ‘ãƒ³ã‚’ï¼‰,Wo,,,,
+qB_5,item_725,case_markers,NA,NA,ã§ï¼ˆé‰›ç­†ã§ï¼‰,De,,,,
+qB_6,item_726,case_markers,NA,NA,ã¸ï¼ˆå…¬åœ’ã¸ï¼‰,He,,,,
+qB_7,item_727,case_markers,NA,NA,ã¨ï¼ˆãŠæ¯ã•ã‚“ã¨ï¼‰,To,,,,
+qB_8,item_728,case_markers,NA,NA,ã‹ã‚‰ï¼ˆä¼šç¤¾ã‹ã‚‰ï¼‰,Kara,,,,
+qB_9,item_729,case_markers,NA,NA,ã£ã¦ï¼ˆã‚¬ãƒãƒ£ãƒ³ã£ã¦ï¼‰,Tte,,,,
+qB_10,item_730,case_markers,NA,NA,ã¯ï¼ˆãƒ‘ãƒ‘ã¯ï¼‰,Wa_ha,,,,
+qB_11,item_731,case_markers,NA,NA,ã‚‚ï¼ˆãƒãƒã‚‚ï¼‰,Mo,,,,
+qB_12,item_732,case_markers,NA,NA,ã ã‘ï¼ˆã”ã¯ã‚“ã ã‘ï¼‰,Dake,,,,
+qB_13,item_733,case_markers,NA,NA,ã—ã‹ï¼ˆãƒ‘ãƒ³ã—ã‹ï¼‰,Shika,,,,
+qB_14,item_734,case_markers,NA,NA,ã‚„ï¼ˆã‚Šã‚“ã”ã‚„ï¼‰,Ya,,,,
+qB_15,item_735,case_markers,NA,NA,ãŸã‚‰ï¼ˆé£Ÿã¹ãŸã‚‰ï¼‰,Tara,,,,
+qB_16,item_736,case_markers,NA,NA,ã¦ï¼ˆå–ã£ã¦ï¼‰,Te,,,,
+qB_17,item_737,case_markers,NA,NA,ã‹ã‚‰ï¼ˆé£Ÿã¹ã¦ã‹ã‚‰ï¼‰,Kara,,,,
+qB_18,item_738,case_markers,NA,NA,ã®ã§ï¼ˆè½ã¡ãŸã®ã§ï¼‰,Node,,,,
+qB_19,item_739,case_markers,NA,NA,ã®ã«ï¼ˆå…¥ã‚ŒãŸã®ã«ï¼‰,Noni,,,,
+qB_20,item_740,case_markers,NA,NA,ã­ï¼ˆãã‚Œã„ã­ï¼‰,Ne,,,,
+qB_21,item_741,case_markers,NA,NA,ã‚ˆï¼ˆç†±ã„ã‚ˆï¼‰,Yo,,,,
+qB_22,item_742,case_markers,NA,NA,ã®ï¼ˆã‚‚ã‚‰ã£ãŸã®ï¼‰,No,,,,
+qB_23,item_743,case_markers,NA,NA,ã‚ï¼ˆã‹ã‚ã„ã„ã‚ï¼‰,Wa,,,,
+qB_24,item_744,case_markers,NA,NA,ã‹ï¼ˆé£Ÿã¹ã‚ˆã†ã‹ï¼‰,Ka,,,,
+qB_25,item_745,case_markers,NA,NA,ã‹ãªï¼ˆè¡Œã“ã†ã‹ãªï¼‰,Kana,,,,
+qC_1,item_746,auxiliary_verbs,NA,NA,?ã¾ã™ï¼ˆé£Ÿã¹ã¾ã™ï¼‰,Masu,,,,
+qC_2,item_747,auxiliary_verbs,NA,NA,?ã¾ã—ãŸï¼ˆé£Ÿã¹ã¾ã—ãŸï¼‰,Mashita,,,,
+qC_3,item_748,auxiliary_verbs,NA,NA,?ã¾ã—ã‚‡ã†ï¼ˆé£Ÿã¹ã¾ã—ã‚‡ã†ï¼‰,Mashou,,,,
+qC_4,item_749,auxiliary_verbs,NA,NA,?ã¾ã›ã‚“ï¼ˆé£Ÿã¹ã¾ã›ã‚“ï¼‰,Masen,,,,
+qC_5,item_750,auxiliary_verbs,NA,NA,?ã‚‹ï¼ˆé£Ÿã¹ã‚‹ï¼‰,Ru,,,,
+qC_6,item_751,auxiliary_verbs,NA,NA,?ãŸï¼ˆé£Ÿã¹ãŸï¼‰,Ta,,,,
+qC_7,item_752,auxiliary_verbs,NA,NA,?ã•ã›ã‚‹ï¼ˆé£Ÿã¹ã•ã›ã‚‹ï¼‰,Saseru,,,,
+qC_8,item_753,auxiliary_verbs,NA,NA,?ã•ã›ãŸï¼ˆé£Ÿã¹ã•ã›ãŸï¼‰,Saseta,,,,
+qC_9,item_754,auxiliary_verbs,NA,NA,?ã•ã›ãªã„ï¼ˆé£Ÿã¹ã•ã›ãªã„ï¼‰,Sasenai,,,,
+qC_10,item_755,auxiliary_verbs,NA,NA,?ã›ã‚‹ï¼ˆé£²ã¾ã›ã‚‹ï¼‰,Seru,,,,
+qC_11,item_756,auxiliary_verbs,NA,NA,?ã›ãŸï¼ˆé£²ã¾ã›ãŸï¼‰,Seta,,,,
+qC_12,item_757,auxiliary_verbs,NA,NA,?ã›ãªã„ï¼ˆé£²ã¾ã›ãªã„ï¼‰,Senai,,,,
+qC_13,item_758,auxiliary_verbs,NA,NA,?ãªã„ï¼ˆé£Ÿã¹ãªã„ï¼‰,Nai,,,,
+qC_14,item_759,auxiliary_verbs,NA,NA,?ã‚“ï¼ˆé£Ÿã¹ã‚“ï¼‰,N,,,,
+qC_15,item_760,auxiliary_verbs,NA,NA,?ãªã‹ã£ãŸï¼ˆé£Ÿã¹ãªã‹ã£ãŸï¼‰,Nakatta,,,,
+qC_16,item_761,auxiliary_verbs,NA,NA,?ã‚ˆã†ï¼ˆé£Ÿã¹ã‚ˆã†ï¼‰,You,,,,
+qC_17,item_762,auxiliary_verbs,NA,NA,?ã†ï¼ˆé£²ã‚‚ã†ï¼‰,U,,,,
+qC_18,item_763,auxiliary_verbs,NA,NA,?ãŸã„ï¼ˆé£Ÿã¹ãŸã„ï¼‰,Tai,,,,
+qC_19,item_764,auxiliary_verbs,NA,NA,?ãŸã‹ã£ãŸï¼ˆé£Ÿã¹ãŸã‹ã£ãŸï¼‰,Takatta,,,,
+qC_20,item_765,auxiliary_verbs,NA,NA,?ãŸããªã„ï¼ˆé£Ÿã¹ãŸããªã„ï¼‰,Takunai,,,,
+qC_21,item_766,auxiliary_verbs,NA,NA,?ã‚‰ã‚Œã‚‹ï¼ˆé£Ÿã¹ã‚‰ã‚Œã‚‹ï¼‰,Rareru,,,,
+qC_22,item_767,auxiliary_verbs,NA,NA,?ã‚‰ã‚ŒãŸï¼ˆé£Ÿã¹ã‚‰ã‚ŒãŸï¼‰,Rareta,,,,
+qC_23,item_768,auxiliary_verbs,NA,NA,?ã‚‰ã‚Œãªã„ï¼ˆé£Ÿã¹ã‚‰ã‚Œãªã„ï¼‰,Rarenai,,,,
+qC_24,item_769,auxiliary_verbs,NA,NA,?ã‚Œã‚‹ï¼ˆé£Ÿã¹ã‚Œã‚‹ï¼‰,Reru,,,,
+qC_25,item_770,auxiliary_verbs,NA,NA,?ã‚ŒãŸï¼ˆé£Ÿã¹ã‚ŒãŸï¼‰,Reta,,,,
+qC_26,item_771,auxiliary_verbs,NA,NA,?ã‚Œãªã„ï¼ˆé£Ÿã¹ã‚Œãªã„ï¼‰,Renai,,,,
+qC_27,item_772,auxiliary_verbs,NA,NA,?ã§ã—ã‚‡ã†ï¼ˆé£Ÿã¹ã‚Œã‚‹ã§ã—ã‚‡ã†ï¼‰,Deshou,,,,
+qC_28,item_773,auxiliary_verbs,NA,NA,?ã§ã™ï¼ˆãƒ‘ãƒ³ã§ã™ï¼‰,Desu,,,,
+qC_29,item_774,auxiliary_verbs,NA,NA,?ã ï¼ˆãƒ‘ãƒ³ã ï¼‰,Da,,,,
+qC_30,item_775,auxiliary_verbs,NA,NA,?ã˜ã‚ƒãªã„ï¼ˆãƒ‘ãƒ³ã˜ã‚ƒãªã„ï¼‰,Jyanai,,,,
+qD,item_776,combine,NA,NA,ãŠå­ã•ã‚“ã¯ã€ã‚‚ã†ã€äºŒèªæ–‡ãŒè©±ã›ã¾ã™ã‹ã€‚ãŸã¨ãˆã°ã€ã€ŒãŠæ¯ã¡ã‚ƒã‚“ ã ã£ã“ã€ã€Œãƒãƒ³ãƒ ã™ã‚‹ã€ã€Œãƒ–ãƒ¼ãƒ–ãƒ¼ ä¹—ã£ãŸã€ãªã©ã§ã™ã€‚,,has your child begun to combine word yet?,,,
+qE_1,item_777,max_length,NA,NA,ã‚ãŸãªã®ãŠå­ã•ã‚“ãŒæœ€è¿‘è©±ã•ã‚ŒãŸã“ã¨ã°ã®ä¸­ã§ã€æ–‡ã®é•·ã•ãŒä¸€ç•ªé•·ã‹ã£ãŸæ–‡ã‚’ï¼“ã¤ã»ã©æ€ã„å‡ºã—ã¦è¨˜å…¥ã—ã¦ãã ã•ã„ã€‚,,,,,
+qE_2,item_778,max_length,NA,NA,ã‚ãŸãªã®ãŠå­ã•ã‚“ãŒæœ€è¿‘è©±ã•ã‚ŒãŸã“ã¨ã°ã®ä¸­ã§ã€æ–‡ã®é•·ã•ãŒä¸€ç•ªé•·ã‹ã£ãŸæ–‡ã‚’ï¼“ã¤ã»ã©æ€ã„å‡ºã—ã¦è¨˜å…¥ã—ã¦ãã ã•ã„ã€‚,,,,,
+qE_3,item_779,max_length,NA,NA,ã‚ãŸãªã®ãŠå­ã•ã‚“ãŒæœ€è¿‘è©±ã•ã‚ŒãŸã“ã¨ã°ã®ä¸­ã§ã€æ–‡ã®é•·ã•ãŒä¸€ç•ªé•·ã‹ã£ãŸæ–‡ã‚’ï¼“ã¤ã»ã©æ€ã„å‡ºã—ã¦è¨˜å…¥ã—ã¦ãã ã•ã„ã€‚,,,,,
+qF_1,item_780,complexity,NA,NA,ãƒ‘ãƒ‘ ã‚ºãƒœãƒ³ / ãƒ‘ãƒ‘ã® ã‚ºãƒœãƒ³,Papa_no_zubon_(target_No),,,,
+qF_2,item_781,complexity,NA,NA,â—‹â—‹ã¡ã‚ƒã‚“ ã™ã‚‹ / â—‹â—‹ã¡ã‚ƒã‚“ãŒ ã™ã‚‹,XXchan_ga_suru_(target_Ga),,,,
+qF_3,item_782,complexity,NA,NA,ãƒã‚¹ ä¹—ã£ãŸ / ãƒã‚¹ã« ä¹—ã£ãŸ,Basu_ni_notta_(target_Ni),,,,
+qF_4,item_783,complexity,NA,NA,ãã¤ ã‚ã£ãŸ / ãã¤ãŒ ã‚ã£ãŸ,Kutsu_ga_atta_(target_Ga),,,,
+qF_5,item_784,complexity,NA,NA,ã“ã‚Œ éŠã¶ / ã“ã‚Œã§ éŠã¶,Kore_de_asobu_(target_De),,,,
+qF_6,item_785,complexity,NA,NA,ãŠæ¯ã•ã‚“ è¡Œã£ãŸ / ãŠæ¯ã•ã‚“ã¨ è¡Œã£ãŸ,Okaasan_to_itta_(target_To),,,,
+qF_7,item_786,complexity,NA,NA,æœ¬ ã¿ã‚‹ / æœ¬ã‚’ ã¿ã‚‹,Hon_o_miru_(target_Wo),,,,
+qF_8,item_787,complexity,NA,NA,ãƒ‘ãƒ‘ ä¼šç¤¾ / ãƒ‘ãƒ‘ã¯ ä¼šç¤¾,Papa_wa_kaisha_(target_Wa),,,,
+qF_9,item_788,complexity,NA,NA,ã“ã‚Œ å¥½ã / ã“ã‚ŒãŒ å¥½ã,Kore_ga_suki_(target_Ga),,,,
+qF_10,item_789,complexity,NA,NA,ãŠã°ã‚ã¡ã‚ƒã‚“ ã‚‚ã‚‰ã£ãŸ / ãŠã°ã‚ã¡ã‚ƒã‚“ã« ã‚‚ã‚‰ã£ãŸ,Obaachan_ni_moratta_(target_Ni),,,,
+qF_11,item_790,complexity,NA,NA,ã„ã¡ã”  ãƒãƒŠãƒŠ / ã„ã¡ã”ã¨ ãƒãƒŠãƒŠ,Ichigo_to_banana_(target_To),,,,
+qF_12,item_791,complexity,NA,NA,â—‹â—‹ã¡ã‚ƒã‚“ é£Ÿã¹ã‚‹ / â—‹â—‹ã¡ã‚ƒã‚“ã‚‚ é£Ÿã¹ã‚‹,XXchan_mo_taberu_(target_Mo),,,,
+qF_13,item_792,complexity,NA,NA,ãŠã„ã—ã„ / ãŠã„ã—ã„ã­,Oishii_ne_(target_Ne),,,,
+qF_14,item_793,complexity,NA,NA,ç—›ã„ / ç—›ã„ã®,Itai_no_(target_No),,,,
+qF_15,item_794,complexity,NA,NA,é£Ÿã¹ãŸ / é£Ÿã¹ãŸã‚ˆ,Tabeta_yo_(target_Yo),,,,
+qF_16,item_795,complexity,NA,NA,ãƒãƒ³ãƒ / ãƒãƒ³ãƒ ã™ã‚‹,Nenne_suru_(target_Suru),,,,
+qF_17,item_796,complexity,NA,NA,ãã‚Œã„ ãªã„ / ãã‚Œã„ã˜ã‚ƒãªã„,Kirei_ja_nai_(target_Ja),,,,
+qF_18,item_797,complexity,NA,NA,å–ã£ã¦ / å–ã£ã¦ ã¡ã‚‡ã†ã ã„,totte_choudai_(target_Choudai),,,,
+qF_19,item_798,complexity,NA,NA,é£Ÿã¹ã‚‹ ã ã‚ / é£Ÿã¹ãŸã‚‰ ã ã‚,Tabeta_ra_dame_(target_Ra),,,,
+qF_20,item_799,complexity,NA,NA,å¤§ãã„ ãªã„ / å¤§ãããªã„,Ookiku_nai_(target_Ku),,,,
+qF_21,item_800,complexity,NA,NA,ãã‚Œã„ èŠ± / ãã‚Œã„ãª èŠ±,Kirei_na_hana_(target_Na),,,,
+qF_22,item_801,complexity,NA,NA,èµ¤ã¡ã‚ƒã‚“ æ³£ã / èµ¤ã¡ã‚ƒã‚“ æ³£ã„ã¦ã‚‹,Akachan_nai_teru_(target_Teru),,,,
+qF_23,item_802,complexity,NA,NA,ãŠå¤– è¡Œã / ãŠå¤– è¡Œã“ã†,Osoto_i_kou_(target_Kou),,,,
+qF_24,item_803,complexity,NA,NA,ãƒ†ãƒ¬ãƒ“ ã¿ã‚‹ / ãƒ†ãƒ¬ãƒ“ ã¿ãŸã„,Terebi_mi_tai_(target_Tai),,,,
+qF_25,item_804,complexity,NA,NA,é£Ÿã¹ãŸ / é£Ÿã¹ã¾ã—ãŸ,Tabe_mashita_(target_Mashita),,,,
+qF_26,item_805,complexity,NA,NA,ãã‚Œã„ ãªã£ãŸ / ãã‚Œã„ã« ãªã£ãŸ,Kirei_ni_natta_(target_Ni),,,,
+qF_27,item_806,complexity,NA,NA,ã©ã“ï¼Ÿ / ãŠã‚‚ã¡ã‚ƒ ã©ã“ï¼Ÿ,Omocha_doko_(target_Doko),,,,
+qF_28,item_807,complexity,NA,NA,é£Ÿã¹ã‚‹ / ã¾ã  é£Ÿã¹ã‚‹,Mada_taberu_(target_Mada),,,,
+qF_29,item_808,complexity,NA,NA,è¦ã‚‰ã‚“ / ã‚‚ã† è¦ã‚‰ã‚“,Mou_Iran_(target_Mou),,,,
+qF_30,item_809,complexity,NA,NA,ãƒ–ãƒ¼ãƒ–ãƒ¼ / ãƒ–ãƒ¼ãƒ–ãƒ¼ è‡ªå‹•è»Š,Buubuu_jidousha_(target_Jidousha),,,,
+qF_31,item_810,complexity,NA,NA,ãŠæ¯ã•ã‚“ ãŠã„ã§ / ãŠæ¯ã•ã‚“ ã“ã£ã¡ ãŠã„ã§,Okaasan_kocchi_oide_(target_Kocchi),,,,
+qF_32,item_811,complexity,NA,NA,ãã¤ ã¡ã£ã¡ã‚ƒã„ / ã“ã® ãã¤ ã¡ã£ã¡ã‚ƒã„,Kono_kutsu_chicchai_(target_Kono),,,,
+qF_33,item_812,complexity,NA,NA,é¼» é•·ã„ / ãã†ã•ã‚“ é¼» é•·ã„,Zousan_hana_nagai_(target_Zousan),,,,
+qF_34,item_813,complexity,NA,NA,äººå½¢ ã‚ã‚‹ / èµ¤ã¡ã‚ƒã‚“ äººå½¢ ã‚ã‚‹,Akachan_ningyou _aru_(target_Akachan),,,,
+qF_35,item_814,complexity,NA,NA,ãƒ‘ãƒ‘ è¡Œã£ãŸ / ãƒ‘ãƒ‘ ä¼šç¤¾ è¡Œã£ãŸ,Papa_kaisha _itta_(target_Kaisha),,,,
+qF_36,item_815,complexity,NA,NA,ã„ã£ã±ã„ ã‚ã‚‹ / ãã‚‹ã¾ ã„ã£ã±ã„ ã‚ã‚‹,Kuruma_ippai_aru_(target_Kuruma),,,,
+qF_37,item_816,complexity,NA,NA,ã“ã‚Œ ãƒŠã‚¤ãƒŠã‚¤ / ã“ã‚Œ ãƒŠã‚¤ãƒŠã‚¤ ã™ã‚‹,Kore_nainai_suru_(target_Suru),,,,
