@@ -1,15 +1,23 @@
 require(tidyverse)
 require(readxl)
 
+# load instruments
+wg <- read_xlsx("forms/wordsandgestures.xlsx") %>% # 548
+  filter(type=="word") # 448
+ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
+  filter(type=="word") # 711
+
+
 # import Sho's WG data
-sho_d <- read_csv("data/Sho/data_wordsandgestures_2023-08-10-16-53-17.csv") %>%
-  select(-`Birthday.(yyyy/mm/dd)`)
-# warning: has birthdays
-sum(sho_d$ID!=sho_d$id)
+sho_wg_d <- read_csv("data/Sho/data_wordsandgestures_2023-09-25-17-01-25.csv") %>%
+  filter(type=="word") %>%
+  select(-`AgeD.(days)`)
+
+sum(sho_wg_d$ID!=sho_wg_d$id)
 # id and ID are same
 
 # response:
-table(sho_d$value)
+table(sho_wg_d$value)
 #           ERROR          no     not_yet       often    produces   sometimes understands         yes
 # 408          42         855         148          82          40          45         882         208
 # blank = No?
@@ -20,13 +28,18 @@ table(sho_d$value)
 # "yes", "often", "sometimes", or "produces" -> 1;
 # "ERROR" -> NA
 
-sho_proc <- sho_d %>%
+sho_proc <- sho_wg_d %>%
   rename(age = agemonths,
          category = category_en) %>%
   mutate(sex = ifelse(`Sex.(f/m)`=="m", "Male",
                       ifelse(`Sex.(f/m)`=="f", "Female", NA))) %>%
   select(id, age, sex, item_id, type, category, definition_en,
          definition_ja1, definition_ja2) # ja1 is kanji/hiragana; ja2 is Latin alphabet
+
+
+
+# import Sho's WS data
+sho_ws_d <- read_csv("data_wordsandsentences_2023-09-25-15-56-16.csv")
 
 
 # import Hiromichi's data
@@ -86,14 +99,6 @@ yas_demo <- yas_demo %>%
   select(-`...1`) %>%
   mutate(ID = ifelse(sex=="Male", paste0("m",ID), paste0("f",ID))) # unique-ify the IDs
 
-# issues reading the unicode from the CSVs..
-# wg <- read_csv("forms/wordsandgestures.csv")
-# ws <- read_csv("forms/wordsandsentences.csv")
-
-wg <- read_xlsx("forms/wordsandgestures.xlsx") %>% # 548
-  filter(type=="word") # 448
-ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
-  filter(type=="word") # 711
 
 
 hiro_words1 = hiro1_header[1,7:ncol(hiro1_header)]
