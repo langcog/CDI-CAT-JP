@@ -11,35 +11,84 @@ ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
 # import Sho's WG data
 sho_wg_d <- read_csv("data/Sho/data_wordsandgestures_2023-09-25-17-01-25.csv") %>%
   filter(type=="word") %>%
-  select(-`AgeD.(days)`)
+  select(-`AgeD.(days)`) %>%
+  mutate(produces = ifelse(value=="produces", 1, 0),
+         produces = ifelse(is.na(value), 0, produces))
 
 sum(sho_wg_d$ID!=sho_wg_d$id)
 # id and ID are same
 
-# response:
-table(sho_wg_d$value)
-#           ERROR          no     not_yet       often    produces   sometimes understands         yes
-# 408          42         855         148          82          40          45         882         208
-# blank = No?
-# what is "yes"? produces?
 
 # proposed recoding:
-# "", "no", "not_yet", and "understands" -> 0;
-# "yes", "often", "sometimes", or "produces" -> 1;
-# "ERROR" -> NA
+# "", NA, "understands" -> 0;
+# "produces" -> 1;
 
 sho_proc <- sho_wg_d %>%
-  rename(age = agemonths,
+  rename(age = `AgeM.(months)`,
          category = category_en) %>%
   mutate(sex = ifelse(`Sex.(f/m)`=="m", "Male",
                       ifelse(`Sex.(f/m)`=="f", "Female", NA))) %>%
-  select(id, age, sex, item_id, type, category, definition_en,
+  select(id, age, sex, item_id, type, category, definition_en, produces,
          definition_ja1, definition_ja2) # ja1 is kanji/hiragana; ja2 is Latin alphabet
+
+# tail(sort(table(sho_wg_items$definition_ja1)))
+# duplicate definition: "さかな"
+
+# some longitudinal data
+sho_wg_wide <- sho_proc %>% select(id, age, sex, item_id, produces) %>% # definition_ja1
+  pivot_wider(id_cols = c(id,age,sex), names_from=item_id, values_from=produces) %>% # item_id if trouble with unicode
+  arrange(id,age)
+
+# 448 - same as wg
+sho_wg_items <- sho_wg_d %>% distinct(item_id, category_ja, category_en, definition_ja1, definition_ja2, definition_en)
+sum(sho_wg_items$item_id != wg$item_id)
+
+# N=101
+sho_wg_demo <- sho_wg_wide %>% select(id, age, sex) %>%
+  mutate(source = "Sho")
+sho_wg_demo$production = rowSums(sho_wg_wide[,4:451])
+
+sho_wg_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
+  geom_point() + theme_classic() +
+  xlab("Age (months)") + ylab("Total Words Produced")
+
+# sho_wg_demo and sho_wg_wide ready to merge
 
 
 
 # import Sho's WS data
-sho_ws_d <- read_csv("data_wordsandsentences_2023-09-25-15-56-16.csv")
+sho_ws_d <- read_csv("data/Sho/data_wordsandsentences_2023-09-25-15-56-16.csv") %>%
+  filter(type=="word") %>%
+  select(-`AgeD.(days)`) %>%
+  mutate(produces = ifelse(value=="produces", 1, 0),
+         produces = ifelse(is.na(value), 0, produces))
+
+sho_ws_proc <- sho_ws_d %>%
+  rename(age = `AgeM.(months)`,
+         category = category_en) %>%
+  mutate(sex = ifelse(`Sex.(f/m)`=="m", "Male",
+                      ifelse(`Sex.(f/m)`=="f", "Female", NA))) %>%
+  select(id, age, sex, item_id, type, category, definition_en, produces,
+         definition_ja1, definition_ja2) # ja1 is kanji/hiragana; ja2 is Latin alphabet
+
+
+
+sho_ws_wide <- sho_ws_proc %>% select(id, age, sex, item_id, produces) %>% # definition_ja1
+  pivot_wider(id_cols = c(id,age,sex), names_from=item_id, values_from=produces) %>% # item_id if trouble with unicode
+  arrange(id,age)
+
+# 711 - same as ws
+sho_ws_items <- sho_ws_d %>% distinct(item_id, category_ja, category_en, definition_ja1, definition_ja2, definition_en)
+sum(sho_ws_items$item_id != ws$item_id)
+
+# N=240
+sho_ws_demo <- sho_ws_wide %>% select(id, age, sex) %>%
+  mutate(source = "Sho")
+sho_ws_demo$production = rowSums(sho_ws_wide[,4:714])
+
+sho_ws_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
+  geom_point() + theme_classic() +
+  xlab("Age (months)") + ylab("Total Words Produced")
 
 
 # import Hiromichi's data
@@ -97,8 +146,9 @@ yas_demo <- yas_demo %>%
   rename(age = `Age(month)`) %>%
   mutate(sex = ifelse(`...1`=="Boy", "Male", "Female")) %>%
   select(-`...1`) %>%
-  mutate(ID = ifelse(sex=="Male", paste0("m",ID), paste0("f",ID))) # unique-ify the IDs
-
+  mutate(ID = ifelse(sex=="Male", paste0("m",ID), paste0("f",ID))) %>% # unique-ify the IDs
+  mutate(source = "Yasuyo")
+# age range is 36-42 months..a little old?
 
 
 hiro_words1 = hiro1_header[1,7:ncol(hiro1_header)]
