@@ -172,15 +172,6 @@ hiro_wide <- hiro_long %>%
 
 hiro_demo$production = rowSums(hiro_wide %>% select(-id, -sex, -age))
 
-all_ws_demo <- sho_ws_demo %>% bind_rows(hiro_demo)
-
-all_ws_wide <- sho_ws_wide %>% bind_rows(hiro_wide)
-
-
-all_ws_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
-  geom_point() + theme_classic() +
-  xlab("Age (months)") + ylab("Total Words Produced")
-
 
 
 # import Yasuyo's data, which are split by sex and each child's data is in a column
@@ -192,26 +183,56 @@ yas_m <- read_xlsx("data/Yasuyo/①日本語CDI語と文法2019BoysPilot.xlsx") 
 # Part 2 Grammar B to C: Say ⇒ "1", Do not say ⇒ "0"
 # Part 2 Grammar D: I speak quite often ⇒ 2, I speak occasionally ⇒ 1, I can't speak yet ⇒ 0
 # Part 2 Grammar F: Lower selection ⇒ "1" Upper selection ⇒ "0"
-yas_m_proc <- yas_m[10:nrow(yas_m),1:63] # final column is all NA
+yas_m_proc <- yas_m[10:720,1:63] # final column is all NA
 names(yas_m_proc) = c("category","word_id","definition",paste0("m",1:61))
 
 yas_f <- read_xlsx("data/Yasuyo/①日本語CDI語と文法2019GirlsPilot.xlsx") # 847 x 63
 # similar to yas_m: data starts on row 10
-yas_f_proc <- yas_f[10:nrow(yas_f),]
+yas_f_proc <- yas_f[10:720,]
 names(yas_f_proc) = c("category","word_id","definition",paste0("f",1:20))
 # ToDo: look at categories, fill in (does order of definitions match Sho's forms?)
+
 
 yas_demo <- read_xlsx("data/Yasuyo/AgeBoys&Girls.xlsx") # 80
 yas_demo <- yas_demo %>%
   rename(age = `Age(month)`) %>%
   mutate(sex = ifelse(`...1`=="Boy", "Male", "Female")) %>%
   select(-`...1`) %>%
-  mutate(ID = ifelse(sex=="Male", paste0("m",ID), paste0("f",ID))) %>% # unique-ify the IDs
-  mutate(source = "Yasuyo")
+  mutate(id = ifelse(sex=="Male", paste0("m",ID), paste0("f",ID))) %>% # unique-ify the IDs
+  mutate(source = "Yasuyo",
+         form = "WS") %>% arrange(id, age)
 # age range is 36-42 months..a little old?
 
+# got all 711 WS items!
+length(intersect(yas_f_proc$word_id, ws$questionnaire_id))
+
+yas_f_long <- yas_f_proc %>% pivot_longer(cols=4:23, names_to = "id", values_to = "produces") %>%
+  select(-category) %>% filter(is.element(word_id, ws$questionnaire_id))
+yas_m_long <- yas_m_proc %>% pivot_longer(cols=4:63, names_to = "id", values_to = "produces") %>%
+  select(-category) %>% filter(is.element(word_id, ws$questionnaire_id))
+
+yas_long <- yas_f_long %>% bind_rows(yas_m_long) %>%
+  left_join(yas_demo %>% select(-ID))
+
+yas_long <- yas_long %>%
+  mutate(produces = ifelse(produces=="0", 0, 1)) %>%
+  left_join(ws, by=c("word_id"="questionnaire_id"))
+
+yas_wide <- yas_long %>%
+  pivot_wider(id_cols = c(id, age, sex), names_from = word_id, values_from = produces) %>%
+  arrange(id, age)
+
+yas_demo$production = rowSums(yas_wide %>% select(-id, -sex, -age))
 
 
-# matching Sho items to WG/WS:
-length(intersect(wg$item_id, sho_proc$item_id)) # 448
-length(intersect(ws$item_id, sho_proc$item_id)) # 547
+d_demo <- sho_ws_demo %>% bind_rows(hiro_demo, yas_demo)
+d_mat <- sho_ws_wide %>% bind_rows(hiro_wide, yas_wide) %>% select(-age, -sex)
+#row.names(d_mat) = d_demo$id
+save(d_demo, d_mat, file="Japanese-CDI-WS-data.Rdata")
+
+d_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
+  geom_point(alpha=.5) + theme_classic() + geom_smooth(method = "lm", formula = y ~ 0 + x + I(x^2)) +
+  xlab("Age (months)") + ylab("Total Words Produced")
+
+table(d_demo$age)
+table(d_demo$sex)
