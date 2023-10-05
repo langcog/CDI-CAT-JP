@@ -45,7 +45,8 @@ sum(sho_wg_items$item_id != wg$item_id)
 
 # N=101
 sho_wg_demo <- sho_wg_wide %>% select(id, age, sex) %>%
-  mutate(source = "Sho")
+  mutate(source = "Sho",
+         form = "WG")
 sho_wg_demo$production = rowSums(sho_wg_wide[,4:451])
 
 sho_wg_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
@@ -83,7 +84,8 @@ sum(sho_ws_items$item_id != ws$item_id)
 
 # N=240
 sho_ws_demo <- sho_ws_wide %>% select(id, age, sex) %>%
-  mutate(source = "Sho")
+  mutate(source = "Sho",
+         form = "WS")
 sho_ws_demo$production = rowSums(sho_ws_wide[,4:714])
 
 sho_ws_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
@@ -92,11 +94,12 @@ sho_ws_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
 
 
 # import Hiromichi's data
-hiro1 <- read_xlsx("data/Hiromichi/仛se_20200619.xlsx", sheet="data")
-# hiro2 <- read_xlsx("data/Hiromichi/仛sp1st_2nd.xlsx") # GK formatted and re-saved
-hiro2 <- read_xlsx("data/Hiromichi/sp1st_2nd_GKformatted.xlsx")
+hiro1 <- read_xlsx("data/Hiromichi/★se_20200619.xlsx", sheet="data")
+hiro2_1 <- read_xlsx("data/Hiromichi/★sp1st_2nd.xlsx", sheet="sp1st")
+hiro2_2 <- read_xlsx("data/Hiromichi/★sp1st_2nd.xlsx", sheet="sp2nd")
+hiro2 <- hiro2_1 %>% bind_rows(hiro2_2[4:19,])
 
-hiro1_header = hiro1[1:2,]
+hiro1_header = hiro1[1:3,]
 # cols 1:5 -> demo: seq, ID, gender, ageM, ageD
 # first row is category
 # 6: "A幼児語" -> infant language
@@ -114,14 +117,71 @@ hiro2_header = hiro2[1:3,]
 # ...
 # 787: "Ⅴ結合後発話"
 
-hiro1_proc <- hiro1[3:(nrow(hiro1)-1),1:801] # last row is a header
-names(hiro1_proc) = hiro1_header[2,1:801] # seq, ID, .., A1, A2, etc. - use row 1 for Hiragana
+hiro1_proc <- hiro1[4:nrow(hiro1),]
+names(hiro1_proc) = c(hiro1_header[3,1:5],
+                      hiro1_header[2,6:ncol(hiro1)]) # seq, ID, .., A1, A2, etc. - use row 1 for Hiragana
+
+hiro1_proc <- hiro1_proc %>%
+  rename(age = ageM,
+         sex = gender) %>%
+  mutate(sex = ifelse(sex=="m", "Male", "Female")) %>%
+  select(-starts_with("pg"), # remove these (pg1 - pg11)
+         -seq, -ageD,
+         -starts_with("q", ignore.case=F))
+
 
 hiro2_proc <- hiro2[4:nrow(hiro2),]
-names(hiro2_proc) = hiro2_header[2,]
+names(hiro2_proc) = c(hiro2_header[3,1:5],
+                      hiro2_header[2,6:ncol(hiro1)])
 
-hiro1_proc <- hiro1_proc %>% select(-starts_with("pg")) # remove these (pg1 - pg11)
-hiro2_proc <- hiro2_proc %>% select(-starts_with("pg")) # remove these (pg1 - pg9)
+hiro2_proc <- hiro2_proc %>%
+  rename(age = ageM,
+         sex = gender) %>%
+  mutate(sex = ifelse(sex=="m", "Male", "Female")) %>%
+  select(-starts_with("pg"), # remove these (pg1 - pg9)
+         -starts_with("q", ignore.case=F),
+         -seq, -ageD)
+
+length(intersect(names(hiro1_proc), names(hiro2_proc))) # all match: 714/714 - length of WS + 3 demo columns
+length(intersect(names(hiro1_proc), ws$questionnaire_id)) # confirm we have all 711 WS items
+length(intersect(names(hiro2_proc), ws$questionnaire_id)) # confirm we have all WS items
+
+# combine data
+intersect(hiro1_proc$ID, hiro2_proc$ID) # no overlapping IDs
+
+hiro_long <- hiro1_proc %>% bind_rows(hiro2_proc) %>%
+  pivot_longer(cols = 4:714) %>%
+  mutate(produces = ifelse(value=="1", 1, 0),
+         age = as.numeric(age)) %>%
+  rename(questionnaire_id = name) %>% select(-value) %>%
+  left_join(ws)
+
+nrow(hiro2_proc) # 101
+nrow(hiro2_proc %>% distinct(ID, sex, age)) # 101
+
+# several longitudinal subjects
+sort(table(hiro2_proc$ID))
+
+hiro_demo <- hiro_long %>% distinct(ID, sex, age) %>%
+  rename(id = ID) %>% arrange(id, age) %>%
+  mutate(source="Hiromichi", form="WS")
+
+hiro_wide <- hiro_long %>%
+  pivot_wider(id_cols = c(ID, sex, age), names_from = item_id, values_from = produces) %>%
+  rename(id = ID) %>% arrange(id, age)
+
+hiro_demo$production = rowSums(hiro_wide %>% select(-id, -sex, -age))
+
+all_ws_demo <- sho_ws_demo %>% bind_rows(hiro_demo)
+
+all_ws_wide <- sho_ws_wide %>% bind_rows(hiro_wide)
+
+
+all_ws_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
+  geom_point() + theme_classic() +
+  xlab("Age (months)") + ylab("Total Words Produced")
+
+
 
 # import Yasuyo's data, which are split by sex and each child's data is in a column
 yas_m <- read_xlsx("data/Yasuyo/①日本語CDI語と文法2019BoysPilot.xlsx") #  847 x 64
@@ -151,22 +211,6 @@ yas_demo <- yas_demo %>%
 # age range is 36-42 months..a little old?
 
 
-hiro_words1 = hiro1_header[1,7:ncol(hiro1_header)]
-hiro_words2 = hiro2_header[1,7:ncol(hiro2_header)]
-length(intersect(unlist(hiro_words1[1:779]), unlist(hiro_words2[1:780]))) # 766 out of 780
-setdiff(unlist(hiro_words1[1:779]), unlist(hiro_words2[1:780])) # none
-setdiff(unlist(hiro_words2[1:780]), unlist(hiro_words1[1:779])) # none...
-
-
-# matching Hiro items to WG/WS:
-length(intersect(wg$definition_ja1, unlist(hiro_words1[1:779]))) # WG and hiro1: 318 (of 448)
-length(intersect(ws$definition_ja1, unlist(hiro_words1[1:779]))) # WS and hiro1: 539 (of 711)
-
-length(intersect(wg$definition_ja1, unlist(hiro_words2[1:780]))) # WG and hiro1: 318 (of 448)
-length(intersect(ws$definition_ja1, unlist(hiro_words2[1:780]))) # WS and hiro1: 539 (of 711)
-
-intersect(wg$definition_ja1, unlist(hiro_words1[1:779]))
-intersect(ws$definition_ja1, unlist(hiro_words1[1:779]))
 
 # matching Sho items to WG/WS:
 length(intersect(wg$item_id, sho_proc$item_id)) # 448
