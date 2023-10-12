@@ -3,9 +3,37 @@ require(readxl)
 
 # load instruments
 wg <- read_xlsx("forms/wordsandgestures.xlsx") %>% # 548
-  filter(type=="word") # 448
+  filter(type=="word") %>%  # 448
+  mutate(definition_ja2 = tolower(definition_ja2),
+         definition_en = tolower(definition_en))
 ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
-  filter(type=="word") # 711
+  filter(type=="word") %>% # 711
+  mutate(definition_ja2 = tolower(definition_ja2),
+         definition_en = tolower(definition_en))
+
+length(unique(ws$definition_ja1)) # 710 / 711 unique
+length(unique(ws$definition_ja2)) # 697
+length(unique(ws$definition_en)) # 662
+
+wg_items <- table(wg$definition_en)
+wg_items[which(wg_items>1)]
+# some items appear 2 or even 3 times:
+# airplane, bath, clean_up, cold, cry, do, eat, fall, fish, good, grandfather
+# many of these appear under sounds and a noun category (e.g., grandfather/grandmother, airplane.)
+# there
+
+intersect(wg$definition_ja1, ws$definition_ja1) # 399 / 448 WG items
+intersect(wg$definition_ja2, ws$definition_ja2) # 440 / 448 WG items
+intersect(wg$definition_en, ws$definition_en) # 415
+
+
+
+setdiff(wg$definition_ja2, ws$definition_ja2)
+# "Meemee" "Gyuunyuu" "Baibai" "kore" "Taitai_Ototo" "Aret_ara" "Yada_iyada"
+
+length(unique(wg$definition_ja2)) # 440
+length(unique(wg$definition_en)) # 416
+
 
 
 # import Sho's WG data
@@ -219,14 +247,14 @@ yas_long <- yas_long %>%
   left_join(ws, by=c("word_id"="questionnaire_id"))
 
 yas_wide <- yas_long %>%
-  pivot_wider(id_cols = c(id, age, sex), names_from = word_id, values_from = produces) %>%
+  pivot_wider(id_cols = c(id, age, sex), names_from = item_id, values_from = produces) %>% # word_id has form A1, A2, .. B1, ..
   arrange(id, age)
 
 yas_demo$production = rowSums(yas_wide %>% select(-id, -sex, -age))
 
 
 d_demo <- sho_ws_demo %>% bind_rows(hiro_demo, yas_demo)
-d_mat <- sho_ws_wide %>% bind_rows(hiro_wide, yas_wide) %>% select(-age, -sex)
+d_wide <- sho_ws_wide %>% bind_rows(hiro_wide, yas_wide) %>% select(-age, -sex)
 #row.names(d_mat) = d_demo$id
 save(d_demo, d_mat, file="Japanese-CDI-WS-data.Rdata")
 
