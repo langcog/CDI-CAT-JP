@@ -11,6 +11,57 @@ ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
   mutate(definition_ja2 = tolower(definition_ja2),
          definition_en = tolower(definition_en))
 
+# some EN definitions have duplicates/triplicates, need disambiguating:
+en_dupes = names(which(sort(table(wg$definition_en))>1))
+#View(subset(wg, is.element(definition_en, en_dupes)))
+
+# only fish
+ja1_dupes = names(which(sort(table(wg$definition_ja1))>1))
+#View(subset(wg, is.element(definition_ja1, ja1_dupes)))
+
+# 14 dupes
+ja2_dupes = names(which(sort(table(wg$definition_ja2))>1))
+#View(subset(wg, is.element(definition_ja2, ja2_dupes)))
+
+subset(wg, definition_en=="shose")
+# クック（靴）translates on Google as "cook (shoes)" (kukku, sounds2) - a shoe noise?
+
+# sounds2 has a lot of the duplicate definitions...let's disambiguate by appending "(sound)"
+length(unique(wg$definition_en))
+# 416 unique EN defs -> 430 (of 448)
+wg <- wg %>% mutate(definition_en = ifelse(category_en=="sounds2", paste(definition_en, "(sound)"), definition_en))
+# 662 unique EN defs -> 677 (of 711)
+ws <- ws %>% mutate(definition_en = ifelse(category_en=="sounds2", paste(definition_en, "(sound)"), definition_en))
+
+wg[which(wg$definition_en=="shose"),]$definition_en = "shoes"
+
+# update WG form 'fish'...
+wg[which(wg$definition_en=="fish" & wg$category_en=="animals"),]$definition_en = "fish (animal)"
+wg[which(wg$definition_en=="fish (animal)"),]$definition_ja2 = "sakana (animal)"
+wg[which(wg$definition_en=="fish (animal)"),]$definition_ja2 = "さかな (animal)"
+wg[which(wg$definition_en=="fish" & wg$category_en=="food_drink"),]$definition_en = "fish (food)"
+wg[which(wg$definition_en=="fish (food)"),]$definition_ja2 = "sakana (food)"
+wg[which(wg$definition_en=="fish (food)"),]$definition_ja1 = "さかな (food)"
+# update WS form 'fish'..
+ws[which(ws$definition_en=="fish" & ws$category_en=="animals"),]$definition_en = "fish (animal)"
+ws[which(ws$definition_en=="fish (animal)"),]$definition_ja2 = "sakana (animal)"
+ws[which(ws$definition_en=="fish (animal)"),]$definition_ja2 = "さかな (animal)"
+ws[which(ws$definition_en=="fish" & ws$category_en=="food_drink"),]$definition_en = "fish (food)"
+ws[which(ws$definition_en=="fish (food)"),]$definition_ja2 = "sakana (food)"
+ws[which(ws$definition_en=="fish (food)"),]$definition_ja1 = "さかな (food)"
+
+# instead of updating definitions in WG and WS data, we'll just match on item_id from forms
+
+wg[which(wg$definition_ja1=="いえ（家）"),]$definition_en = "no (house)" # trans: no (house) ... not home?
+wg[which(wg$definition_ja2=="moshimoshi"),]$definition_en = "hello (phone)"
+wg[which(wg$definition_en=="bath" & wg$category_en=="furniture_rooms"),]$definition_en = "bath (object)"
+
+# ...
+
+#subset(wg, definition_en=="house")
+subset(ws, definition_en=="fish")
+
+
 # ToDo: save instruments in wordbank format, e.g.
 # https://github.com/langcog/wordbank/blob/master/raw_data/Mandarin_Beijing_TC/%5BMandarin_Beijing_TC%5D.csv
 # itemID	definition	item	category	type	choices	gloss	uni_lemma
@@ -20,14 +71,8 @@ ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
 
 length(unique(ws$definition_ja1)) # 710 / 711 unique
 length(unique(ws$definition_ja2)) # 697
-length(unique(ws$definition_en)) # 662
+length(unique(ws$definition_en)) # 677
 
-wg_items <- table(wg$definition_en)
-wg_items[which(wg_items>1)]
-# some items appear 2 or even 3 times:
-# airplane, bath, clean_up, cold, cry, do, eat, fall, fish, good, grandfather
-# many of these appear under sounds and a noun category (e.g., grandfather/grandmother, airplane.)
-# there
 
 # first 18 are the same
 ws$definition_en[1:18] == wg$definition_en[1:18]
@@ -37,17 +82,16 @@ ws$definition_ja2[1:18] == wg$definition_ja2[1:18]
 wg$definition_ja1[1:18] = ws$definition_ja1[1:18]
 
 
-intersect(wg$definition_ja1, ws$definition_ja1) # 411 / 448 WG items
-intersect(wg$definition_en, ws$definition_en) # 415 / 448 WG items
-intersect(wg$definition_ja2, ws$definition_ja2) # 440 / 448 WG items
+intersect(wg$definition_ja1, ws$definition_ja1) # 412 / 448 WG items
+intersect(wg$definition_en, ws$definition_en) # 430 / 448 WG items
+intersect(wg$definition_ja2, ws$definition_ja2) # 441 / 448 WG items
 # match with definition_ja2?
 
-setdiff(wg$definition_ja2, ws$definition_ja2)
-# "Meemee" "Gyuunyuu" "Baibai" "kore" "Taitai_Ototo" "Aret_ara" "Yada_iyada"
+setdiff(wg$definition_ja2, ws$definition_ja2) # none
 
 # on WG, not on WS -- but should have a match
 to_match <- setdiff(wg$definition_ja1, ws$definition_ja1)
-# 48 items, many with parentheticals:
+# 36 items, many with parentheticals:
 # [1] "あーあっ（よくないこと）" "アイタ（いたい）"         "オイチィ（美味しい）"     "ガーガー（アヒル）"
 # it's actually the parentheses that are different, in some cases:
 #subset(ws, definition_ja1=="あーあっ (よくないこと)")
@@ -55,8 +99,8 @@ to_match <- setdiff(wg$definition_ja1, ws$definition_ja1)
 
 #View(subset(wg, is.element(definition_ja1, to_match)))
 
-length(unique(wg$definition_ja2)) # 440
-length(unique(wg$definition_en)) # 416
+length(unique(wg$definition_ja2)) # 441
+length(unique(wg$definition_en)) # 433
 
 wg %>% filter(definition_ja1=="だいじょうぶ（大丈夫）") # car, kuruma
 wg %>% filter(definition_ja1=="きる（着る）")
@@ -123,40 +167,17 @@ sum(sho_wg_d$ID!=sho_wg_d$id)
 # "", NA, "understands" -> 0;
 # "produces" -> 1;
 
-sho_proc <- sho_wg_d %>%
+sho_wg_long <- sho_wg_d %>%
   rename(age = `AgeM.(months)`,
          category = category_en) %>%
   mutate(sex = ifelse(`Sex.(f/m)`=="m", "Male",
-                      ifelse(`Sex.(f/m)`=="f", "Female", NA))) %>%
-  select(id, age, sex, item_id, type, category, definition_en, produces,
-         definition_ja1, definition_ja2) # ja1 is kanji/hiragana; ja2 is Latin alphabet
+                      ifelse(`Sex.(f/m)`=="f", "Female", NA)),
+         form = "WG") %>%
+  select(form, id, age, sex, item_id, category, produces) %>%
+  left_join(wg)
+         # definition_en, definition_ja1, definition_ja2) # get these from instrument
+# ja1 is kanji/hiragana; ja2 is Latin alphabet
 
-# tail(sort(table(sho_wg_items$definition_ja1)))
-# duplicate definition: "さかな"
-
-# some longitudinal data
-sho_wg_wide <- sho_proc %>% select(id, age, sex, item_id, produces) %>% # definition_ja1
-  pivot_wider(id_cols = c(id,age,sex), names_from=item_id, values_from=produces) %>% # item_id if trouble with unicode
-  arrange(id,age)
-
-# 448 - same as wg
-sho_wg_items <- sho_wg_d %>% distinct(item_id, category_ja, category_en, definition_ja1, definition_ja2, definition_en)
-sum(sho_wg_items$item_id != wg$item_id)
-
-# N=101
-sho_wg_demo <- sho_wg_wide %>% select(id, age, sex) %>%
-  mutate(source = "Sho",
-         form = "WG")
-sho_wg_demo$production = rowSums(sho_wg_wide[,4:451])
-
-sho_wg_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
-  geom_point() + theme_classic() +
-  xlab("Age (months)") + ylab("Total Words Produced")
-
-# sho_wg_demo and sho_wg_wide ready to merge
-
-#sho_wg_long <- sho_wg_wide %>% pivot_longer(id, age, sex)
-# make WG and WS long, append, then widen (with which item identifier? definition_ja1?)
 
 # import Sho's WS data
 sho_ws_d <- read_csv("data/Sho/data_wordsandsentences_2023-09-25-15-56-16.csv") %>%
@@ -165,33 +186,31 @@ sho_ws_d <- read_csv("data/Sho/data_wordsandsentences_2023-09-25-15-56-16.csv") 
   mutate(produces = ifelse(value=="produces", 1, 0),
          produces = ifelse(is.na(value), 0, produces))
 
-sho_ws_proc <- sho_ws_d %>%
+sho_ws_long <- sho_ws_d %>%
   rename(age = `AgeM.(months)`,
          category = category_en) %>%
   mutate(sex = ifelse(`Sex.(f/m)`=="m", "Male",
-                      ifelse(`Sex.(f/m)`=="f", "Female", NA))) %>%
-  select(id, age, sex, item_id, type, category, definition_en, produces,
-         definition_ja1, definition_ja2) # ja1 is kanji/hiragana; ja2 is Latin alphabet
+                      ifelse(`Sex.(f/m)`=="f", "Female", NA)),
+         form = "WS") %>%
+  select(form, id, age, sex, item_id, type, category, produces) %>%
+  left_join(ws)
+         # definition_en, definition_ja1, definition_ja2) # ja1 is kanji/hiragana; ja2 is Latin alphabet
 
-
-
-sho_ws_wide <- sho_ws_proc %>% select(id, age, sex, item_id, produces) %>% # definition_ja1
-  pivot_wider(id_cols = c(id,age,sex), names_from=item_id, values_from=produces) %>% # item_id if trouble with unicode
+sho_ws_wg_wide <- sho_wg_long %>%
+  bind_rows(sho_ws_long) %>%
+  select(form, id, age, sex, definition_ja1, produces) %>%
+  pivot_wider(id_cols = c(form,id,age,sex), names_from=definition_ja1, values_from=produces) %>%
   arrange(id,age)
 
-# 711 - same as ws
-sho_ws_items <- sho_ws_d %>% distinct(item_id, category_ja, category_en, definition_ja1, definition_ja2, definition_en)
-sum(sho_ws_items$item_id != ws$item_id)
+sho_ws_wg_demo <- sho_ws_wg_wide %>% select(form, id, age, sex) %>%
+  mutate(source = "Sho")
 
-# N=240
-sho_ws_demo <- sho_ws_wide %>% select(id, age, sex) %>%
-  mutate(source = "Sho",
-         form = "WS")
-sho_ws_demo$production = rowSums(sho_ws_wide[,4:714])
+sho_ws_wg_demo$production = rowSums(sho_ws_wg_wide[,5:714], na.rm=T)
 
-sho_ws_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
+sho_ws_wg_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
   geom_point() + theme_classic() +
   xlab("Age (months)") + ylab("Total Words Produced")
+
 
 
 # import Hiromichi's data
@@ -326,10 +345,10 @@ yas_wide <- yas_long %>%
 yas_demo$production = rowSums(yas_wide %>% select(-id, -sex, -age))
 
 
-d_demo <- sho_ws_demo %>% bind_rows(hiro_demo, yas_demo)
-d_wide <- sho_ws_wide %>% bind_rows(hiro_wide, yas_wide) %>% select(-age, -sex)
+d_demo <- sho_ws_wg_demo %>% bind_rows(hiro_demo, yas_demo)
+d_wide <- sho_ws_wg_wide %>% bind_rows(hiro_wide, yas_wide) %>% select(-form, -age, -sex)
 #row.names(d_mat) = d_demo$id
-save(d_demo, d_mat, file="Japanese-CDI-WS-data.Rdata")
+save(d_demo, d_wide, file="Japanese-CDI-WS-data.Rdata")
 
 d_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
   geom_point(alpha=.5) + theme_classic() + geom_smooth(method = "lm", formula = y ~ 0 + x + I(x^2)) +
