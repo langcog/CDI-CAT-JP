@@ -11,6 +11,13 @@ ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
   mutate(definition_ja2 = tolower(definition_ja2),
          definition_en = tolower(definition_en))
 
+# ToDo: save instruments in wordbank format, e.g.
+# https://github.com/langcog/wordbank/blob/master/raw_data/Mandarin_Beijing_TC/%5BMandarin_Beijing_TC%5D.csv
+# itemID	definition	item	category	type	choices	gloss	uni_lemma
+# item_1	白菜	bai2cai4	food_drink	word	produces	cabbage	cabbage
+# (and see also _data _fields and _values CSVs)
+
+
 length(unique(ws$definition_ja1)) # 710 / 711 unique
 length(unique(ws$definition_ja2)) # 697
 length(unique(ws$definition_en)) # 662
@@ -22,19 +29,84 @@ wg_items[which(wg_items>1)]
 # many of these appear under sounds and a noun category (e.g., grandfather/grandmother, airplane.)
 # there
 
-intersect(wg$definition_ja1, ws$definition_ja1) # 399 / 448 WG items
+# first 18 are the same
+ws$definition_en[1:18] == wg$definition_en[1:18]
+ws$definition_ja2[1:18] == wg$definition_ja2[1:18]
+
+# so let's copy over from WS:
+wg$definition_ja1[1:18] = ws$definition_ja1[1:18]
+
+
+intersect(wg$definition_ja1, ws$definition_ja1) # 411 / 448 WG items
+intersect(wg$definition_en, ws$definition_en) # 415 / 448 WG items
 intersect(wg$definition_ja2, ws$definition_ja2) # 440 / 448 WG items
-intersect(wg$definition_en, ws$definition_en) # 415
-
-
+# match with definition_ja2?
 
 setdiff(wg$definition_ja2, ws$definition_ja2)
 # "Meemee" "Gyuunyuu" "Baibai" "kore" "Taitai_Ototo" "Aret_ara" "Yada_iyada"
 
+# on WG, not on WS -- but should have a match
+to_match <- setdiff(wg$definition_ja1, ws$definition_ja1)
+# 48 items, many with parentheticals:
+# [1] "あーあっ（よくないこと）" "アイタ（いたい）"         "オイチィ（美味しい）"     "ガーガー（アヒル）"
+# it's actually the parentheses that are different, in some cases:
+#subset(ws, definition_ja1=="あーあっ (よくないこと)")
+#subset(ws, definition_ja1=="アイタ (いたい)")
+
+#View(subset(wg, is.element(definition_ja1, to_match)))
+
 length(unique(wg$definition_ja2)) # 440
 length(unique(wg$definition_en)) # 416
 
+wg %>% filter(definition_ja1=="だいじょうぶ（大丈夫）") # car, kuruma
+wg %>% filter(definition_ja1=="きる（着る）")
+ws %>% filter(definition_en=="all_right")
 
+
+# we'll change the WG definition_ja1 to match the WS ones
+wg <- wg %>%
+  mutate(definition_ja1 = case_when(
+    definition_ja1=="車（自動車）" ~ "車 (自動車)",
+    definition_ja1=="りす" ~ "リス", # WS has katakana, not hiragana
+    definition_ja1=="きる（着る）" ~ "着る", # WG has better disambiguation
+    definition_ja1=="だいじょうぶ（大丈夫）" ~ "大丈夫",
+    definition_ja1=="かさ" ~ "かさ（傘）",
+    definition_ja1=="でんわ" ~ "でんわ（電話）",
+    definition_ja1=="はこ" ~ "はこ（箱）",
+    definition_ja1=="はし" ~ "はし（箸）",
+    definition_ja1=="家" ~ "いえ（家）", # house; 'ie' -- ouchi is also house
+    definition_ja1=="こども" ~ "こども（子ども）", # kodomo / child
+    definition_ja1=="せんせい" ~ "せんせい（先生）",
+    definition_ja1=="ほしい" ~ "ほしい（欲しい）",
+    definition_ja1=="あさ" ~ "あさ（朝）",
+    definition_ja1=="いま" ~ "いま（今）",
+    definition_ja1=="きょう" ~ "きょう（今日）",
+    definition_ja1=="ひる" ~ "ひる（昼）",
+    definition_ja1=="よる" ~ "よる（夜）",
+    definition_ja1=="あつい（暑い、熱い）" ~ "あつい（熱い・暑い）",
+    definition_ja1=="いたい" ~ "いたい（痛い）",
+    definition_ja1=="きらい" ~ "きらい（嫌い）",
+    definition_ja1=="くさい" ~ "くさい（臭い）", # odor (uni_lemma = smell (desc))
+    definition_ja1=="しずか" ~ "しずか（静か）",
+    definition_ja1=="だいじ" ~ "だいじ（大事）",
+    definition_ja1=="高い" ~ "たかい（高い）",
+    definition_ja1=="つめたい" ~ "つめたい（冷たい）", # cold -- but there is a second WS cold (samui; 寒い)
+    definition_ja1=="ぬれた" ~ "ぬれた（濡れた）",
+    definition_ja1=="丸い" ~ "まるい（丸い）",
+    definition_ja1=="うえ" ~ "うえ（上）",
+    definition_ja1=="うしろ" ~ "うしろ（後ろ）",
+    definition_ja1=="した" ~ "した（下）",
+    definition_ja1=="そと" ~ "そと（外）",
+    definition_ja1=="なか" ~ "なか（中）",
+    definition_ja1=="まえ" ~ "まえ（前）", # before (location) - uni: "in front" ?
+    definition_ja1=="むこう" ~ "むこう（向こう）",
+    definition_ja1=="よこ" ~ "よこ（横）",
+    definition_ja1=="いっしょ" ~ "いっしょ（一緒）",
+    TRUE ~ definition_ja1
+  ))
+
+
+#wswg <- ws %>% left_join(wg, by=c(definition_ja1==))
 
 # import Sho's WG data
 sho_wg_d <- read_csv("data/Sho/data_wordsandgestures_2023-09-25-17-01-25.csv") %>%
@@ -83,7 +155,8 @@ sho_wg_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
 
 # sho_wg_demo and sho_wg_wide ready to merge
 
-
+#sho_wg_long <- sho_wg_wide %>% pivot_longer(id, age, sex)
+# make WG and WS long, append, then widen (with which item identifier? definition_ja1?)
 
 # import Sho's WS data
 sho_ws_d <- read_csv("data/Sho/data_wordsandsentences_2023-09-25-15-56-16.csv") %>%
