@@ -243,7 +243,8 @@ names(hiro1_proc) = c(hiro1_header[3,1:5],
 
 hiro1_proc <- hiro1_proc %>%
   rename(age = ageM,
-         sex = gender) %>%
+         sex = gender,
+         id = ID) %>%
   mutate(sex = ifelse(sex=="m", "Male", "Female")) %>%
   select(-starts_with("pg"), # remove these (pg1 - pg11)
          -seq, -ageD,
@@ -256,7 +257,8 @@ names(hiro2_proc) = c(hiro2_header[3,1:5],
 
 hiro2_proc <- hiro2_proc %>%
   rename(age = ageM,
-         sex = gender) %>%
+         sex = gender,
+         id = ID) %>%
   mutate(sex = ifelse(sex=="m", "Male", "Female")) %>%
   select(-starts_with("pg"), # remove these (pg1 - pg9)
          -starts_with("q", ignore.case=F),
@@ -277,18 +279,18 @@ hiro_long <- hiro1_proc %>% bind_rows(hiro2_proc) %>%
   left_join(ws)
 
 nrow(hiro2_proc) # 101
-nrow(hiro2_proc %>% distinct(ID, sex, age)) # 101
+nrow(hiro2_proc %>% distinct(id, sex, age)) # 101
 
 # several longitudinal subjects
 sort(table(hiro2_proc$ID))
 
-hiro_demo <- hiro_long %>% distinct(ID, sex, age) %>%
-  rename(id = ID) %>% arrange(id, age) %>%
+hiro_demo <- hiro_long %>% distinct(id, sex, age) %>%
+  arrange(id, age) %>%
   mutate(source="Hiromichi", form="WS")
 
 hiro_wide <- hiro_long %>%
-  pivot_wider(id_cols = c(ID, sex, age), names_from = item_id, values_from = produces) %>%
-  rename(id = ID) %>% arrange(id, age)
+  pivot_wider(id_cols = c(id, sex, age), names_from = item_id, values_from = produces) %>%
+  arrange(id, age)
 
 hiro_demo$production = rowSums(hiro_wide %>% select(-id, -sex, -age))
 
@@ -356,3 +358,55 @@ d_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
 
 table(d_demo$age)
 table(d_demo$sex)
+
+
+unique(yas_long$category_en)
+
+all_long <- sho_ws_long %>%
+  bind_rows(sho_wg_long) %>%
+  bind_rows(yas_long) %>%
+  bind_rows(hiro_long)
+
+
+# action + descriptive
+noun_cats = c("body_parts","furniture_rooms","places","people","outside","locations") # "locations"? "others"?
+predicate_cats = c("action_words","descriptive_words")
+dd <- all_long %>%
+  mutate(group = ifelse(is.element(category_en, noun_cats), "nouns",
+                        ifelse(is.element(category_en, predicate_cats), "predicates", NA))) %>%
+  group_by(form, id, age, group) %>%
+    summarise(total = sum(produces)) %>%
+  pivot_wider(id_cols =c(form,id,age), names_from=group, values_from=total)
+
+dd %>%
+  ggplot(aes(x=nouns+predicates, y=predicates)) +
+  geom_point() + geom_abline(intercept = 0, slope = .5) +
+  theme_classic()
+
+
+
+dd <- all_long %>%
+  mutate(group = ifelse(is.element(category_en, noun_cats), "nouns",
+                        ifelse(category_en=="action_words", "verbs", NA))) %>%
+  group_by(form, id, age, group) %>%
+  summarise(total = sum(produces)) %>%
+  pivot_wider(id_cols =c(form,id,age), names_from=group, values_from=total)
+
+dd %>%
+  ggplot(aes(x=nouns+verbs, y=verbs)) +
+  geom_point() + geom_abline(intercept = 0, slope = .5) +
+  theme_classic()
+
+
+
+# predicates vs. all other (what slope tho?)
+dd <- all_long %>%
+  mutate(group = ifelse(is.element(category_en, predicate_cats), "predicates", "other")) %>%
+  group_by(form, id, group) %>%
+  summarise(total = sum(produces)) %>%
+  pivot_wider(id_cols =c(form,id), names_from=group, values_from=total)
+
+dd %>%
+  ggplot(aes(x=predicates+other, y=predicates)) +
+  geom_point() + geom_abline(intercept = 0, slope = .5) +
+  theme_classic()
