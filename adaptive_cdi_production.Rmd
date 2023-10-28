@@ -1,5 +1,5 @@
 ---
-title: "French Production CDI-CAT"
+title: "Japanese Production CDI-CAT"
 author: "George"
 date: "`r Sys.Date()`"
 output: html_document
@@ -39,7 +39,7 @@ We provide recommendations for CAT algorithms and stopping rules to be passed on
 
 ```{r, load-data, echo=F}
 # see 00-preprocessing.R for merging WG + WS datasets 
-base::load("Japanese-CDI-WS-data.Rdata")
+base::load("data/Japanese-CDI-WS-WG-combined-data.Rdata")
 
 d_mat <- d_wide %>% 
   data.frame %>%
@@ -68,7 +68,6 @@ rownames(d_mat) = d_demo$id # data_ids
 
 #d_demo$production = rowSums(d_mat[,2:ncol(d_mat)], na.rm=T) 
 #table(rowSums(d_mat, na.rm=T) == d_demo$production)
-# 26 kids where the total production doesn't match (1579 where it does) -- investigate why?
 
 table(d_demo$age_mos) %>% kable(col.names=c("Age","N"))
 ```
@@ -96,7 +95,7 @@ mod_1pl <- mirt(d_mat, 1, itemtype='Rasch', verbose=TRUE, technical=list(NCYCLES
 coefs_1pl <- as_tibble(coef(mod_1pl, simplify = TRUE)$items) %>%
   mutate(definition = rownames(coef(mod_1pl, simplify = TRUE)$items))
 fscores_1pl <- tibble(data_id = rownames(d_mat), 
-                      ability = fscores(mod_1pl, method = "MAP")[,1]) # why do we end up with full sample (1782 kids) here, instead of 1605 in the correct age range (size of d_mat)?
+                      ability = fscores(mod_1pl, method = "MAP")[,1]) 
 save(file = here("data/jp_ws_wg_mod_1pl.Rds"), "mod_1pl", "fscores_1pl", "coefs_1pl")
 ```
 
@@ -117,7 +116,7 @@ coefs_2pl <- as_tibble(coef(mod_2pl, simplify = TRUE)$items) %>%
   mutate(definition = rownames(coef(mod_2pl, simplify = TRUE)$items))
 fscores_2pl <- tibble(data_id = rownames(d_mat), 
                              ability = fscores(mod_2pl, method = "MAP")[,1])
-# The following factor score estimates failed to converge successfully: 771,1187,1407
+# The following factor score estimates failed to converge successfully: 24,418,534
 save(file = here("data/jp_ws_wg_mod_2pl_prior.Rds"), "mod_2pl","fscores_2pl", "coefs_2pl")
 ```
 
@@ -129,7 +128,7 @@ coefs_2pl <- as_tibble(coef(mod_2pl, simplify = TRUE)$items) %>%
   mutate(definition = rownames(coef(mod_2pl, simplify = TRUE)$items))
 fscores_2pl <- tibble(data_id = rownames(d_mat), 
                              ability = fscores(mod_2pl, method = "MAP")[,1])
-# The following factor score estimates failed to converge successfully:   789,1103,1177,1401,1502
+# The following factor score estimates failed to converge successfully:  15,242,446
 save(file = here("data/jp_ws_wg_mod_2pl.Rds"), "mod_2pl","fscores_2pl", "coefs_2pl")
 ```
 
@@ -142,7 +141,7 @@ coefs_3pl <- as_tibble(coef(mod_3pl, simplify = TRUE)$items) %>%
 fscores_3pl <- tibble(data_id = rownames(d_mat), 
                              ability = fscores(mod_3pl, method = "MAP")[,1])
 # The following factor score estimates failed to converge successfully:
-#   544,1247
+#   
 
 save(file = here("data/jp_ws_wg_mod_3pl.Rds"), "mod_3pl","fscores_3pl", "coefs_3pl")
 ```
@@ -161,28 +160,23 @@ load(here("data/jp_ws_wg_mod_2pl.Rds"))
 old_coefs <- coefs_2pl
 old_fscores <- fscores_2pl
 summary(mod_2pl)
-# prop var: 0.66
+# prop var: 0.669
 
 # prior on d ~ norm(0,3) - 
 load(here("data/jp_ws_wg_mod_2pl_prior.Rds"))
 new_coefs <- coefs_2pl
 new_fscores <- fscores_2pl
 summary(mod_2pl) 
-# prop var: .81
-
-# prior on d ~ norm(0,3) and a ~ norm(0.2, 2)
-#load(here("data/jp_ws_wg_mod_2pl_prior2.Rds"))
-#summary(mod_2pl)
-# prop var: .784
+# prop var: .831
 
 
 
 plot(old_fscores$ability, new_fscores$ability)
-cor(old_fscores$ability, new_fscores$ability) # .998
+cor(old_fscores$ability, new_fscores$ability) # .997
 plot(d_demo$production, old_fscores$ability) # 
-cor.test(d_demo$production, old_fscores$ability) # .89
+cor.test(d_demo$production, old_fscores$ability) # .94
 
-d_demo <- d_demo %>% left_join(old_fscores %>% mutate(data_id = as.numeric(data_id)))
+d_demo <- d_demo %>% left_join(old_fscores %>% mutate(id = data_id))
 
 ggplot(d_demo, aes(x = age, y = ability, color=source_name)) + # color=sex
   stat_smooth(method = "lm", formula = y ~ x + I(x^2), size = 1) +
@@ -192,7 +186,7 @@ ggplot(d_demo, aes(x = age, y = ability, color=source_name)) + # color=sex
 plot(old_coefs$d, new_coefs$d)
 cor(old_coefs$d, new_coefs$d) # .97
 plot(old_coefs$a1, new_coefs$a1)  
-cor(old_coefs$a1, new_coefs$a1) # .99
+cor(old_coefs$a1, new_coefs$a1) # .997
 ```
 
 
@@ -249,22 +243,21 @@ load(here("data/LD.Rds"))
 # no association = abs(V) < .1 no association, .3 is moderate, and .5+ is strong
 
 hiLDvio = get_LD_violations(res, assoc_str=.5)
-hiLDvio_words = coefs_2pl[which(hiLDvio>10),]$definition # only 3 -- was 400+!
-# "attends" "veux"    "dedans"
+hiLDvio_words = coefs_2pl[which(hiLDvio>10),]$definition # 0 words
+# 
 
-very_hiLDvio_words = coefs_2pl[which(hiLDvio>300),]$definition # 2 words
 
 modLDvio = get_LD_violations(res)
-modLDvio_words = coefs_2pl[which(modLDvio>10),]$definition # 4 words have moderate LD  
+modLDvio_words = coefs_2pl[which(modLDvio>10),]$definition # 13 words have moderate LD  
 
-# ToDo: try just removing the few items with many violations (e.g., 1 item has 33..),
+# ToDo: try just removing the few items with many violations (e.g., 1 item has 2 -- not bad!),
 # and then re-fit the model
 
-#kable(matrix(coefs_2pl[which(modLDvio>10),]$definition, ncol=2)) %>% 
-#  html_table_width(rep(150, 2))
+kable(matrix(coefs_2pl[which(modLDvio>10),]$definition, ncol=2)) %>% 
+  html_table_width(rep(150, 2))
 ```
 
-We examined each item for pairwise linear dependencies (LD) with other items using $\chi^{2}$ (Chen & Thissen, 1997), and found that `r length(hiLDvio_words)` items show strong LD (Cramer's $V \geq 0.5$): "attends", "veux", and "dedans". 
+We examined each item for pairwise linear dependencies (LD) with other items using $\chi^{2}$ (Chen & Thissen, 1997), and found that `r length(hiLDvio_words)` items show strong LD (Cramer's $V \geq 0.5$). 
 
 ## Ill-fitting items
 
@@ -283,10 +276,8 @@ save(file=here("data/jp_ws_wg_2pl_itemfits.Rds"), "itfit2pl") #  "itfit2pl_x2"
 
 ```{r, echo=F}
 load(here("data/jp_ws_wg_2pl_itemfits.Rds"))
-#bad_items2pl = which(itfit2pl$p.X2 < .01) # 108
-bad_items2pl = which(itfit2pl$p.X2 < .001) # 0
-#bad_items2pl_x2 = which(itfit2pl_x2$p.X2_star_scaled < .001) # 223 with p<.01, 142 with p<.001
-#print(itfit1)
+bad_items2pl = which(itfit2pl$p.X2 < .01) # 0
+
 #med_rmsea = median(itfit2pl_x2$RMSEA.X2_star_scaled, na.rm=T) # .01
 #length(which(itfit2pl$RMSEA.X2_star_scaled > .02))
 
@@ -294,7 +285,7 @@ bad_items2pl = which(itfit2pl$p.X2 < .001) # 0
 bad_ld_fit = intersect(which(hiLDvio > 0), bad_items2pl)
 ```
 
-`r length(bad_items2pl)` items did not fit well in the full 2PL model, and these items are shown below. 
+`r length(bad_items2pl)` items did not fit well in the full 2PL model <!-- , and these items are shown below. -->
 
 ```{r, echo=F}
 kable(matrix(itfit2pl$item[bad_items2pl], ncol=4)) %>% 
@@ -302,8 +293,8 @@ kable(matrix(itfit2pl$item[bad_items2pl], ncol=4)) %>%
 ```
 
 
-Now we re-fit the 2PL model without the 200 items showing strong LD *and* poor fit removed.
-(Note: should look removed/remaining items by category, difficulty, discrimination, and RMSEA.)
+<!-- Now we re-fit the 2PL model without the XXX items showing strong LD *and* poor fit removed.
+(Note: should look removed/remaining items by category, difficulty, discrimination, and RMSEA.) -->
 
 ```{r, refit-pruned-2pl, echo=F, eval=RUN_MODELS}
 #mod_2pl <- mirt(d_mat[,-bad_ld_fit], 1, itemtype='2PL',
@@ -337,7 +328,8 @@ write.csv(coefs_2pl_irt, file="JP_production_2PL_params.csv", row.names = F)
 #anova(mod_2pl, mod_3pl)
 ```
 
-```{r, echo=F}
+```{r, echo=F, eval=F}
+# NOT EVALUATED FOR JAPANESE SINCE NO PRUNING NEEDED
 load(here("data/jp_ws_wg_mod_2pl_nobad.Rds"))
 ```
 
@@ -366,7 +358,7 @@ save(file=here("data/jp_pruned_LD_and_itemfit.Rds"), "res", "itfit2pl")
 ### Plot Item Parameters
 
 Next, we examine the coefficients of the 2PL model. 
-Items that are estimated to be very easy (e.g., maman, papan) or very difficult (au sujet de, au sommet de) are highlighted, as well as those at the extremes of discrimination (a1).
+Items that are estimated to be very easy or very difficult are highlighted, as well as those at the extremes of discrimination (a1).
 
 ```{r, fig.width=8, fig.height=6, echo=F, warning=F}
 ggplot(coefs_2pl, 

@@ -289,10 +289,11 @@ hiro_demo <- hiro_long %>% distinct(id, sex, age) %>%
   mutate(source="Hiromichi", form="WS")
 
 hiro_wide <- hiro_long %>%
-  pivot_wider(id_cols = c(id, sex, age), names_from = item_id, values_from = produces) %>%
+  pivot_wider(id_cols = c(id, sex, age), names_from = definition_ja1, values_from = produces) %>%
+  mutate(form = "WS") %>%
   arrange(id, age)
 
-hiro_demo$production = rowSums(hiro_wide %>% select(-id, -sex, -age))
+hiro_demo$production = rowSums(hiro_wide %>% select(-id, -form, -sex, -age))
 
 
 
@@ -341,16 +342,18 @@ yas_long <- yas_long %>%
   left_join(ws, by=c("word_id"="questionnaire_id"))
 
 yas_wide <- yas_long %>%
-  pivot_wider(id_cols = c(id, age, sex), names_from = item_id, values_from = produces) %>% # word_id has form A1, A2, .. B1, ..
+  pivot_wider(id_cols = c(id, age, sex), names_from = definition_ja1, values_from = produces) %>% # word_id has form A1, A2, .. B1, ..
+  mutate(form = "WS") %>%
   arrange(id, age)
 
-yas_demo$production = rowSums(yas_wide %>% select(-id, -sex, -age))
+yas_demo$production = rowSums(yas_wide %>% select(-id, -form, -sex, -age))
+
 
 
 d_demo <- sho_ws_wg_demo %>% bind_rows(hiro_demo, yas_demo)
 d_wide <- sho_ws_wg_wide %>% bind_rows(hiro_wide, yas_wide) %>% select(-form, -age, -sex)
 #row.names(d_mat) = d_demo$id
-save(d_demo, d_wide, file="Japanese-CDI-WS-data.Rdata")
+save(d_demo, d_wide, file="data/Japanese-CDI-WS-WG-combined-data.Rdata")
 
 d_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
   geom_point(alpha=.5) + theme_classic() + geom_smooth(method = "lm", formula = y ~ 0 + x + I(x^2)) +

@@ -1,0 +1,496 @@
+---
+title: "CDI-CAT-JP Norms Tables"
+author: "George Kachergis"
+date: "2023-10-27"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=F}
+knitr::opts_chunk$set(echo = TRUE)
+require(here)
+require(gamlss)
+require(tidyverse)
+require(kableExtra)
+require(ggarrange)
+
+html_table_width <- function(kable_output, width){
+  width_html <- paste0(paste0('<col width="', width, '">'), collapse = "\n")
+  sub("<table>", paste0("<table>\n", width_html), kable_output)
+} 
+
+```
+
+Our goal is to produce estimated WG and WS raw scores for each ability level, so that we can produce norms tables for the CDI-CAT that are equivalent norms tables for the full WG and WS forms.
+
+
+```{r load-data, echo=F}
+base::load(here("data/Japanese-CDI-WS-WG-combined-data.Rdata"))
+
+wg_ages = 12:18
+ws_ages = 16:30
+pctiles = c(seq(5,95,5),99)
+
+d_mat <- d_wide %>% 
+  data.frame %>%
+  dplyr::select(-id) %>% #  -age, -sex
+  data.matrix
+
+too_young <- which(d_demo$age < 12) # 121 children too young to be producing words...
+# should also remove >30 mos
+
+to_remove = too_young
+
+d_demo = d_demo[-to_remove,] # 
+d_mat = d_mat[-to_remove,]
+d_demo <- d_demo %>% 
+  mutate(age_mos = round(age))
+
+admins = table(d_demo$form)
+
+rownames(d_mat) = d_demo$id # data_ids
+```
+
+These norms are based on all available Wordbank data, combined with data from Sho's lab: `r admins["WG"]` WG administrations and `r admins["WS"]` WS administrations. (The same data we used to fit the IRT model.)
+For the by-sex norms, note that there are `r sum(is.na(d_demo$sex))` administrations with missing sex information, so the N per (month) age bin by sex is sometimes quite low.
+
+# WG Raw Score Norms
+
+
+## Both Sexes
+
+```{r, echo=F, message=F}
+wg_cols = which(!is.na(d_mat[4,])) # look at a WG subject
+
+d_demo$WGprod = rowSums(d_mat[,wg_cols], na.rm=T)
+#d_demo$WSprod = rowSums(d_mat, na.rm=T) # occasionally 1 less here because we removed 1 word
+
+# GAMLSS graph of WG production - both sexes combined
+wg_prod <- d_demo %>%
+  filter(is.element(age_mos, wg_ages)) %>%
+  mutate(prop_produced = WGprod / length(wg_cols),
+        #momedlev_weights = weights(wg_raked_trimmed),
+        age = as.numeric(age)) %>% # age continuous or in mos?
+  mutate(prop_produced = case_when(prop_produced == 0 ~ 0.001,
+                             prop_produced == 1 ~ 0.999,
+                             TRUE ~ prop_produced))
+# can't have 0s or 1s, so change extreme scores to 0.001 and .999 so we can keep all kids
+```
+
+
+```{r fit-wg-models, echo=F, message=F, include=F}
+gam_wg_prod <- gamlss(prop_produced ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = BE, data = wg_prod %>% dplyr::select(age, prop_produced))
+
+wg_m_d <- wg_prod %>% filter(sex=="Male")
+
+gam_wg_m_prod <- gamlss(prop_produced ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = BE, 
+                      data = wg_m_d %>% 
+                        dplyr::select(age, sex, prop_produced))
+
+wg_f_d <- wg_prod %>% filter(sex=="Female")
+
+gam_wg_f_prod <- gamlss(prop_produced ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = BE, 
+                      data = wg_f_d %>% 
+                        dplyr::select(age, sex, prop_produced))
+```
+
+
+```{r, echo=F}
+# centiles for plot - both sexes combined
+cents_wg_prod <- centiles.pred(gam_wg_prod, 
+                               cent = c(90, 75, 50, 25, 10),
+                               xname="age", xvalues=wg_ages)  %>%
+  tibble() %>%
+  pivot_longer(2:6, names_to="percentile", values_to="pred")
+
+# also plot for each sex with ggarrange?
+ggplot(cents_wg_prod, aes(x = age, y = percentile)) +
+  geom_line(data = cents_wg_prod, linewidth = 1.1, 
+            aes(x = x, y = pred * length(wg_cols), linetype = percentile)) +
+  theme(legend.position = "right") + theme_bw() +
+  scale_linetype_manual(values = c("twodash","dotdash","solid", "dashed", "dotted"),
+                        breaks = c(90, 75, 50, 25, 10), 
+                        labels = c("90th", "75th", "50th", "25th", "10th")) +
+  scale_x_continuous(breaks=wg_ages) +
+  scale_y_continuous(limits = c(0, length(wg_cols)), breaks = seq(0,length(wg_cols),50)) +
+  coord_cartesian(ylim = c(0, length(wg_cols))) +
+  labs(x="Age (months)", y="Fitted number of words produced", linetype="Percentile") +
+  theme(text = element_text(size = 16))
+```
+
+```{r, echo=F}
+# full percentiles - both sexes combined
+percentiles_wg_prod <- centiles.pred(gam_wg_prod, xname = "age", xvalues = wg_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(.*length(wg_cols)))) 
+write.csv(as.data.frame(t(percentiles_wg_prod)), "wg_prod_percentiles_both_sexes.csv")
+
+percentiles_wg_prod$N = table(subset(d_demo, is.element(age_mos, wg_ages))$age_mos)
+
+percentiles_wg_prod %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+
+## Males
+
+```{r, echo=F}
+wg_m_prod <- centiles.pred(gam_wg_m_prod, xname = "age", xvalues = wg_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(.*length(wg_cols)))) 
+write.csv(as.data.frame(t(wg_m_prod)), "wg_prod_percentiles_male.csv")
+
+wg_m_prod$N = table(wg_m_d$age_mos)
+wg_m_prod %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+## Females
+
+```{r, echo=F}
+wg_f_prod <- centiles.pred(gam_wg_f_prod, xname = "age", xvalues = wg_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(.*length(wg_cols)))) 
+write.csv(as.data.frame(t(wg_f_prod)), "wg_prod_percentiles_female.csv")
+
+wg_f_prod$N = table(wg_f_d$age_mos)
+wg_f_prod %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+
+# WS Raw Score Norms
+
+## Both Sexes
+
+```{r, echo=F, message=F}
+# GAMLSS graph of WS production - both sexes combined
+ws_prod <- d_demo %>%
+  filter(form=="WS", is.element(age_mos, ws_ages)) %>%
+  mutate(prop_produced = production / ncol(d_mat),
+        #momedlev_weights = weights(wg_raked_trimmed),
+        age = as.numeric(age)) %>% # age continuous or in mos?
+  mutate(prop_produced = case_when(prop_produced == 0 ~ 0.001,
+                             prop_produced == 1 ~ 0.999,
+                             TRUE ~ prop_produced))
+# can't have 0s or 1s, so change extreme scores to 0.001 and .999 so we can keep all kids
+```
+
+
+```{r fit-ws-prod-models, echo=F, message=F, include=F}
+gam_ws_prod <- gamlss(prop_produced ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = BE, data = ws_prod %>% dplyr::select(age, prop_produced))
+
+ws_m_d <- ws_prod %>% filter(sex=="Male")
+
+gam_ws_m_prod <- gamlss(prop_produced ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = BE, 
+                      data = ws_m_d %>% 
+                        dplyr::select(age, sex, prop_produced))
+
+ws_f_d <- ws_prod %>% filter(sex=="Female")
+
+gam_ws_f_prod <- gamlss(prop_produced ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = BE, 
+                      data = ws_f_d %>% 
+                        dplyr::select(age, sex, prop_produced))
+```
+
+
+```{r save-gamlss-models, eval=F}
+save(gam_wg_prod, #gam_wg_m_prod, gam_wg_f_prod, 
+     gam_ws_prod, #gam_ws_m_prod, gam_ws_f_prod,
+     wg_prod, ws_prod,
+     file="models/JP_WG_WS_production_norms_models.Rdata")
+```
+
+
+```{r, echo=F}
+# centiles for plot - both sexes combined
+cents_ws_prod <- centiles.pred(gam_ws_prod, 
+                               cent = c(90, 75, 50, 25, 10),
+                               xname="age", xvalues=ws_ages)  %>%
+  tibble() %>%
+  pivot_longer(2:6, names_to="percentile", values_to="pred")
+
+ggplot(cents_ws_prod, aes(x = age, y = percentile)) +
+  geom_line(data = cents_ws_prod, linewidth = 1.1, 
+            aes(x = x, y = pred * ncol(d_mat), linetype = percentile)) +
+  theme(legend.position = "right") +
+  theme_bw() +
+  scale_linetype_manual(values = c("twodash","dotdash","solid", "dashed", "dotted"),
+                        breaks = c(90, 75, 50, 25, 10), 
+                        labels = c("90th", "75th", "50th", "25th", "10th")) +
+  scale_x_continuous(breaks=ws_ages) +
+  scale_y_continuous(limits = c(0, ncol(d_mat)), breaks = seq(0,ncol(d_mat),50)) +
+  coord_cartesian(ylim = c(0, ncol(d_mat))) +
+  labs(x="Age (months)", y="Fitted number of words produced", linetype="Percentile") +
+  theme(text = element_text(size = 16))
+```
+
+
+```{r, echo=F, message=F}
+# full percentiles - both sexes combined
+percentiles_ws_prod <- centiles.pred(gam_ws_prod, xname = "age", xvalues = ws_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(.*ncol(d_mat)))) 
+write.csv(as.data.frame(t(percentiles_ws_prod)), "ws_prod_percentiles_both_sexes.csv")
+
+percentiles_ws_prod$N = table(subset(d_demo, is.element(age_mos, ws_ages))$age_mos)
+
+percentiles_ws_prod %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+
+## Males
+
+```{r, echo=F}
+ws_m_prod <- centiles.pred(gam_ws_m_prod, xname = "age", xvalues = ws_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(.*ncol(d_mat)))) 
+write.csv(as.data.frame(t(ws_m_prod)), "ws_prod_percentiles_male.csv")
+
+ws_m_prod$N = table(ws_m_d$age_mos)
+ws_m_prod %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+## Females
+
+```{r, echo=F}
+ws_f_prod <- centiles.pred(gam_ws_f_prod, xname = "age", xvalues = ws_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(.*ncol(d_mat)))) 
+write.csv(as.data.frame(t(ws_f_prod)), "ws_prod_percentiles_female.csv")
+
+ws_f_prod$N = table(ws_f_d$age_mos)
+ws_f_prod %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+
+```
+
+# Ability Norms
+
+```{r echo=F, message=F}
+#load("data/jp_preferredCAT.Rds")
+#dim(min25_max50_MAP_age$parms)
+
+load(here("data/jp_ws_wg_mod_2pl_nobad.Rds"))
+
+d_demo <- d_demo %>% left_join(fscores_2pl %>% mutate(id = as.numeric(id))) 
+
+off_chart = which(is.na(d_demo$ability) & d_demo$production==0)
+# min(d_demo$ability, na.rm=T) # -2.53
+d_demo[off_chart,]$ability = -3
+```
+
+Replacing `r length(off_chart)` inestimable abilities with -3.
+(Lowest ability in dataset otherwise is -2.53, producing 1-4 words.)
+
+## WG: Both Sexes
+
+```{r, echo=F, message=F}
+#wg_ab <- data.frame()
+#for(a in wg_ages) {
+#  dd <- subset(d_demo, age_mos == a)
+#  qd <- round(quantile(dd$ability, probs=pctiles/100, na.rm=T), 2) # or put in v low ability for 0 prod?
+#  wg_ab = bind_rows(wg_ab, qd)
+#}
+#row.names(wg_ab) = wg_ages
+
+wg_prod <- wg_prod %>% left_join(d_demo)
+
+gam_wg_ab <- gamlss(ability ~ pbm(age, lambda = 10000), # pbm = monotonic P-splines (using SVD)
+                      sigma.formula = ~ pbm(age, lambda = 10000), 
+                      family = NO, data = wg_prod %>% dplyr::select(age, ability)) 
+# family was 'BE' (Beta), changed to Normal ('NO')
+
+# centiles for plot - both sexes combined
+cents_wg_ab <- centiles.pred(gam_wg_ab, 
+                               cent = c(90, 75, 50, 25, 10),
+                               xname="age", xvalues=wg_ages)  %>%
+  tibble() %>%
+  pivot_longer(2:6, names_to="percentile", values_to="pred")
+
+ggplot(cents_wg_ab, aes(x = age, y = percentile)) +
+  geom_line(data = cents_wg_ab, linewidth = 1.1, 
+            aes(x = x, y = pred, linetype = percentile)) +
+  theme(legend.position = "right") + theme_bw() +
+  scale_linetype_manual(values = c("twodash","dotdash","solid", "dashed", "dotted"),
+                        breaks = c(90, 75, 50, 25, 10), 
+                        labels = c("90th", "75th", "50th", "25th", "10th")) +
+  scale_x_continuous(breaks=wg_ages) +
+  labs(x="Age (months)", y="Fitted ability", linetype="Percentile") +
+  theme(text = element_text(size = 16))
+```
+
+```{r, echo=F}
+# full percentiles - both sexes combined
+percentiles_wg_ab <- centiles.pred(gam_wg_ab, xname = "age", xvalues = wg_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(., 2))) 
+write.csv(as.data.frame(t(percentiles_wg_ab)), "wg_ability_percentiles_both_sexes.csv")
+
+percentiles_wg_ab$N = table(subset(d_demo, is.element(age_mos, wg_ages))$age_mos)
+
+percentiles_wg_ab %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+## WG: Males
+
+```{r, echo=F}
+wg_m_d <- wg_prod %>% filter(sex=="Male")
+
+gam_wg_m_ab <- gamlss(ability ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = NO, 
+                      data = wg_m_d %>% 
+                        dplyr::select(age, sex, ability))
+
+wg_m_ab <- centiles.pred(gam_wg_m_ab, xname = "age", xvalues = wg_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(., 2))) 
+write.csv(as.data.frame(t(wg_m_ab)), "wg_ability_percentiles_male.csv")
+
+wg_m_ab$N = table(wg_m_d$age_mos)
+wg_m_ab %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+## WG: Females
+
+```{r, echo=F}
+wg_f_d <- wg_prod %>% filter(sex=="Female")
+
+gam_wg_f_ab <- gamlss(ability ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = NO, 
+                      data = wg_f_d %>% 
+                        dplyr::select(age, sex, ability))
+
+wg_f_ab <- centiles.pred(gam_wg_f_ab, xname = "age", xvalues = wg_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(., 2))) 
+write.csv(as.data.frame(t(wg_f_ab)), "wg_ability_percentiles_female.csv")
+
+wg_f_ab$N = table(wg_f_d$age_mos)
+wg_f_ab %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+# WS: Both Sexes
+
+```{r fit-ws-ability-models, echo=F, message=F, include=F}
+# GAMLSS graph of WS production - both sexes combined
+ws_prod <- ws_prod %>% left_join(d_demo) 
+
+gam_ws_ab <- gamlss(ability ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = NO, data = ws_prod %>% dplyr::select(age, ability))
+
+ws_m_d <- ws_prod %>% filter(sex=="Male")
+
+gam_ws_m_ab <- gamlss(ability ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = NO, 
+                      data = ws_m_d %>% 
+                        dplyr::select(age, sex, ability))
+
+ws_f_d <- ws_prod %>% filter(sex=="Female")
+
+gam_ws_f_ab <- gamlss(ability ~ pbm(age, lambda = 10000),
+                      sigma.formula = ~ pbm(age, lambda = 10000),
+                      family = NO, 
+                      data = ws_f_d %>% 
+                        dplyr::select(age, sex, ability))
+```
+
+```{r, echo=F}
+# centiles for plot - both sexes combined
+cents_ws_ab <- centiles.pred(gam_ws_ab, 
+                               cent = c(90, 75, 50, 25, 10),
+                               xname="age", xvalues=ws_ages)  %>%
+  tibble() %>%
+  pivot_longer(2:6, names_to="percentile", values_to="pred")
+
+ggplot(cents_ws_ab, aes(x = age, y = percentile)) +
+  geom_line(data = cents_ws_ab, linewidth = 1.3, 
+            aes(x = x, y = pred, linetype = percentile)) +
+  theme(legend.position = "right") + theme_bw() +
+  scale_linetype_manual(values = c("twodash","dotdash","solid", "dashed", "dotted"),
+                        breaks = c(90, 75, 50, 25, 10), 
+                        labels = c("90th", "75th", "50th", "25th", "10th")) +
+  scale_x_continuous(breaks=ws_ages) +
+  labs(x="Age (months)", y="Fitted ability", linetype="Percentile") +
+  theme(text = element_text(size = 16))
+```
+
+```{r, echo=F}
+# full percentiles - both sexes combined
+percentiles_ws_ab <- centiles.pred(gam_ws_ab, xname = "age", xvalues = ws_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(., 2))) 
+write.csv(as.data.frame(t(percentiles_ws_ab)), "ws_ability_percentiles_both_sexes.csv")
+
+percentiles_ws_ab$N = table(subset(d_demo, is.element(age_mos, ws_ages))$age_mos)
+
+percentiles_ws_ab %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+# WS: Males
+
+```{r, echo=F}
+ws_m_ab <- centiles.pred(gam_ws_m_ab, xname = "age", xvalues = ws_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(., 2))) 
+write.csv(as.data.frame(t(ws_m_ab)), "ws_ability_percentiles_male.csv")
+
+ws_m_ab$N = table(ws_m_d$age_mos)
+ws_m_ab %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+# WS: Females
+
+```{r, echo=F}
+ws_f_ab <- centiles.pred(gam_ws_f_ab, xname = "age", xvalues = ws_ages,
+                                     cent=pctiles) %>%
+  dplyr::tibble() %>%
+  dplyr::rename(age = x) %>%
+  dplyr::mutate(across(`5`:`99`, ~ round(., 2))) 
+write.csv(as.data.frame(t(ws_f_ab)), "ws_ability_percentiles_female.csv")
+
+ws_f_ab$N = table(ws_f_d$age_mos)
+ws_f_ab %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
+```
+
+
+```{r save-ability-gamlss-models, eval=F}
+save(gam_wg_ab, #gam_wg_m_ab, gam_wg_f_ab, 
+     gam_ws_ab, #gam_ws_m_ab, gam_ws_f_ab,
+     wg_prod, ws_prod,
+     file="models/JP_WG_WS_ability_norms_models.Rdata")
+```
+
