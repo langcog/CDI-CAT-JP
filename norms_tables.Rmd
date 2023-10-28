@@ -290,9 +290,9 @@ ws_f_prod %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
 #load("data/jp_preferredCAT.Rds")
 #dim(min25_max50_MAP_age$parms)
 
-load(here("data/jp_ws_wg_mod_2pl_nobad.Rds"))
+load(here("data/jp_ws_wg_mod_2pl.Rds"))
 
-d_demo <- d_demo %>% left_join(fscores_2pl %>% mutate(id = as.numeric(id))) 
+d_demo <- d_demo %>% left_join(fscores_2pl) 
 
 off_chart = which(is.na(d_demo$ability) & d_demo$production==0)
 # min(d_demo$ability, na.rm=T) # -2.53

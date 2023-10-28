@@ -46,9 +46,9 @@ d_mat <- d_wide %>%
   select(-id) %>% #  -age, -sex
   data.matrix
 
-too_young <- which(d_demo$age < 12) # children too young to be producing words...
+too_young <- which(d_demo$age < 12) # 55 children too young to be producing words...
 
-no_words <- which(d_demo$production==0 & d_demo$age>=12) # 3 additional not producing
+no_words <- which(d_demo$production==0 & d_demo$age>=12) # 12 additional not producing
 
 to_remove = unique(c(too_young, no_words))
 ```
@@ -511,7 +511,7 @@ First we'll do it using the MI start item, and then we'll try choosing an age-ba
 
 ```{r, age-based-starting-item, echo=F}
 # mean theta per age (mos)
-d_demo$data_id = as.character(d_demo$data_id)
+#d_demo$data_id = as.character(d_demo$data_id)
 age_startits <- d_demo %>% #left_join(fscores_2pl, by='data_id') %>%
   mutate(ability = fscores_2pl$ability) %>%
   group_by(age_mos) %>%
