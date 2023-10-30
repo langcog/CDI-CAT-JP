@@ -22,7 +22,7 @@ RUN_MODELS = FALSE # set TRUE to re-run IRT models (a few hours); otherwise load
 source("IRT_helpers.R")
 
 language = "Japanese"
-form = "WS"
+form = "WS" # and WG
 ```
 
 
@@ -62,9 +62,10 @@ The production sumscores by age for the remaining children are shown below.
 d_demo = d_demo[-to_remove,] # 
 d_mat = d_mat[-to_remove,]
 d_demo <- d_demo %>% 
-  mutate(age_mos = round(age))
+  mutate(age_mos = round(age),
+         data_id = paste0(id,"-",age_mos)) # unique-ify ID (some longitudinal data)
 
-rownames(d_mat) = d_demo$id # data_ids
+rownames(d_mat) = d_demo$data_id
 
 #d_demo$production = rowSums(d_mat[,2:ncol(d_mat)], na.rm=T) 
 #table(rowSums(d_mat, na.rm=T) == d_demo$production)
@@ -141,7 +142,7 @@ coefs_3pl <- as_tibble(coef(mod_3pl, simplify = TRUE)$items) %>%
 fscores_3pl <- tibble(data_id = rownames(d_mat), 
                              ability = fscores(mod_3pl, method = "MAP")[,1])
 # The following factor score estimates failed to converge successfully:
-#   
+#   15,139,222,336,515,523
 
 save(file = here("data/jp_ws_wg_mod_3pl.Rds"), "mod_3pl","fscores_3pl", "coefs_3pl")
 ```
@@ -176,11 +177,11 @@ cor(old_fscores$ability, new_fscores$ability) # .997
 plot(d_demo$production, old_fscores$ability) # 
 cor.test(d_demo$production, old_fscores$ability) # .94
 
-d_demo <- d_demo %>% left_join(old_fscores %>% mutate(id = data_id))
+d_demo <- d_demo %>% left_join(old_fscores)
 
-ggplot(d_demo, aes(x = age, y = ability, color=source_name)) + # color=sex
+d_demo %>% ggplot(aes(x = age, y = ability, color=source)) + # color=sex
   stat_smooth(method = "lm", formula = y ~ x + I(x^2), size = 1) +
-#  geom_smooth(method = "lm", formula = y ~ poly(x, 2)) +
+  #geom_smooth(method = "lm", formula = y ~ poly(x, 2)) +
   geom_jitter(alpha = .2) + theme_bw() + xlab("Age (months)") + ylab("Ability")
 
 plot(old_coefs$d, new_coefs$d)

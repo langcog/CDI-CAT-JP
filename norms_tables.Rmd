@@ -43,11 +43,12 @@ to_remove = too_young
 d_demo = d_demo[-to_remove,] # 
 d_mat = d_mat[-to_remove,]
 d_demo <- d_demo %>% 
-  mutate(age_mos = round(age))
+  mutate(age_mos = round(age),
+         data_id = paste0(id,"-",age_mos)) # uniquify (longitudinal data)
 
 admins = table(d_demo$form)
 
-rownames(d_mat) = d_demo$id # data_ids
+rownames(d_mat) = d_demo$data_id # data_ids
 ```
 
 These norms are based on all available Wordbank data, combined with data from Sho's lab: `r admins["WG"]` WG administrations and `r admins["WS"]` WS administrations. (The same data we used to fit the IRT model.)
