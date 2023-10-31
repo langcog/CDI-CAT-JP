@@ -11,6 +11,9 @@ ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
   mutate(definition_ja2 = tolower(definition_ja2),
          definition_en = tolower(definition_en))
 
+ws_wg <- ws %>% rename(WS = item_id) %>% left_join(wg %>% rename(WG = item_id))
+ws_wg %>% write_csv("WS_WG_items_combined.csv")
+
 # some EN definitions have duplicates/triplicates, need disambiguating:
 en_dupes = names(which(sort(table(wg$definition_en))>1))
 #View(subset(wg, is.element(definition_en, en_dupes)))

@@ -28,7 +28,7 @@ form = "WS" # and WG
 
 # Introduction
 
-Our goal is to develop and test via simulation a bank of CDI items and IRT parameters that can be used for a CDI-CAT in `r language``.
+Our goal is to develop and test via simulation a bank of CDI items and IRT parameters that can be used for a CDI-CAT in `r language`.
 Our approach is as follows:
 We first fit basic IRT models (1-parameter logistic (1PL; i.e. Rasch), 2PL, and 3PL) to CDI data and perform a model comparison.
 For the favored model, we then identify candidate items for removal based on low total item information, and then use the (full) item bank in a variety of computerized adaptive test (CAT) simulations on wordbank data.

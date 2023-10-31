@@ -60,7 +60,7 @@ For the by-sex norms, note that there are `r sum(is.na(d_demo$sex))` administrat
 ## Both Sexes
 
 ```{r, echo=F, message=F}
-wg_cols = which(!is.na(d_mat[4,])) # look at a WG subject
+wg_cols = which(!is.na(d_mat[125,])) # look at a WG subject
 
 d_demo$WGprod = rowSums(d_mat[,wg_cols], na.rm=T)
 #d_demo$WSprod = rowSums(d_mat, na.rm=T) # occasionally 1 less here because we removed 1 word
