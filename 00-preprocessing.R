@@ -2,27 +2,36 @@ require(tidyverse)
 require(readxl)
 
 # load instruments
-wg <- read_xlsx("forms/wordsandgestures.xlsx") %>% # 548
+#wg <- read_xlsx("forms/wordsandgestures.xlsx") %>% # 548
+#  filter(type=="word") %>%  # 448
+#  mutate(definition_ja2 = tolower(definition_ja2),
+#         definition_en = tolower(definition_en))
+#ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
+#  filter(type=="word") %>% # 711
+#  mutate(definition_ja2 = tolower(definition_ja2),
+#         definition_en = tolower(definition_en))
+
+wg <- read_xlsx("forms/Disambiguation/wordsandgestures.xlsx") %>% # 548
   filter(type=="word") %>%  # 448
-  mutate(definition_ja2 = tolower(definition_ja2),
-         definition_en = tolower(definition_en))
-ws <- read_xlsx("forms/wordsandsentences.xlsx") %>% # 816
+  mutate(definition_ja2 = tolower(trimws(definition_ja2)),
+         definition_en = tolower(trimws(definition_en)))
+ws <- read_xlsx("forms/Disambiguation/wordsandsentences.xlsx") %>% # 816
   filter(type=="word") %>% # 711
-  mutate(definition_ja2 = tolower(definition_ja2),
-         definition_en = tolower(definition_en))
+  mutate(definition_ja2 = tolower(trimws(definition_ja2)),
+         definition_en = tolower(trimws(definition_en)))
 
 ws_wg <- ws %>% rename(WS = item_id) %>% left_join(wg %>% rename(WG = item_id))
 ws_wg %>% write_csv("WS_WG_items_combined.csv")
 
-# some EN definitions have duplicates/triplicates, need disambiguating:
+# 29 EN definitions have duplicates/triplicates, need disambiguating:
 en_dupes = names(which(sort(table(wg$definition_en))>1))
 #View(subset(wg, is.element(definition_en, en_dupes)))
 
-# only fish
+# only fish ("さかな")
 ja1_dupes = names(which(sort(table(wg$definition_ja1))>1))
 #View(subset(wg, is.element(definition_ja1, ja1_dupes)))
 
-# 14 dupes
+# 8 dupes: "ame"    "buubuu" "gohan"  "hana"   "kaeru"  "kami"   "ofuro"  "sakana"
 ja2_dupes = names(which(sort(table(wg$definition_ja2))>1))
 #View(subset(wg, is.element(definition_ja2, ja2_dupes)))
 
@@ -33,6 +42,8 @@ subset(wg, definition_en=="shose")
 length(unique(wg$definition_en))
 # 416 unique EN defs -> 430 (of 448)
 wg <- wg %>% mutate(definition_en = ifelse(category_en=="sounds2", paste(definition_en, "(sound)"), definition_en))
+
+length(unique(ws$definition_en))
 # 662 unique EN defs -> 677 (of 711)
 ws <- ws %>% mutate(definition_en = ifelse(category_en=="sounds2", paste(definition_en, "(sound)"), definition_en))
 
@@ -72,9 +83,9 @@ subset(ws, definition_en=="fish")
 # (and see also _data _fields and _values CSVs)
 
 
-length(unique(ws$definition_ja1)) # 710 / 711 unique
-length(unique(ws$definition_ja2)) # 697
-length(unique(ws$definition_en)) # 677
+length(unique(ws$definition_ja1)) # 711 / 711 unique
+length(unique(ws$definition_ja2)) # 698
+length(unique(ws$definition_en)) # 678
 
 
 # first 18 are the same
@@ -105,9 +116,9 @@ to_match <- setdiff(wg$definition_ja1, ws$definition_ja1)
 length(unique(wg$definition_ja2)) # 441
 length(unique(wg$definition_en)) # 433
 
-wg %>% filter(definition_ja1=="だいじょうぶ（大丈夫）") # car, kuruma
-wg %>% filter(definition_ja1=="きる（着る）")
-ws %>% filter(definition_en=="all_right")
+wg %>% filter(definition_ja1=="だいじょうぶ（大丈夫）") # car, kuruma #all_right"
+wg %>% filter(definition_ja1=="きる（着る）") # "wear"
+ws %>% filter(definition_en=="all_right") # daijoubu
 
 
 # we'll change the WG definition_ja1 to match the WS ones
@@ -156,46 +167,86 @@ wg <- wg %>%
 #wswg <- ws %>% left_join(wg, by=c(definition_ja1==))
 
 # import Sho's WG data
-sho_wg_d <- read_csv("data/Sho/data_wordsandgestures_2023-09-25-17-01-25.csv") %>%
+# sho_wg_d <- read_csv("data/Sho/data_wordsandgestures_2023-09-25-17-01-25.csv") %>%
+#   filter(type=="word") %>%
+#   select(-`AgeD.(days)`) %>%
+#   mutate(produces = ifelse(value=="produces", 1, 0),
+#          produces = ifelse(is.na(value), 0, produces))
+# 79 Ss
+
+# 79 Ss - 101 age x ID combos
+sho_wg_d <- read_csv("data/Sho/data_wordsandgestures_batch1.csv") %>%
   filter(type=="word") %>%
   select(-`AgeD.(days)`) %>%
   mutate(produces = ifelse(value=="produces", 1, 0),
-         produces = ifelse(is.na(value), 0, produces))
+         produces = ifelse(is.na(value), 0, produces),
+         uniqueID = paste0(id,'-',`AgeM.(months)`))
 
-sum(sho_wg_d$ID!=sho_wg_d$id)
-# id and ID are same
+# 244 Ss - 378 age x ID combos
+sho_wg_d2 <- read_csv("data/Sho/data_wordsandgestures_batch2.csv") %>%
+  filter(type=="word") %>%
+  select(-`AgeD.(days)`) %>%
+  mutate(produces = ifelse(value=="produces", 1, 0),
+         produces = ifelse(is.na(value), 0, produces),
+         uniqueID = paste0(id,'-',`AgeM.(months)`))
+# 5 duplicated subjects:
+dupeSs <- c("S0513","S0577","S0617","S0655","S0833")
+#View(sho_wg_d2[which(is.element(sho_wg_d2$id, dupeSs)),])
 
+sho_wg_d2[which(is.element(sho_wg_d2$id, dupeSs)),] %>% distinct(id, filename) %>%
+  arrange(id)
+
+# let' just remove all the JW_ files
+sho_wg_d2 <- sho_wg_d2 %>% filter(!(is.element(id, dupeSs) & startsWith(filename,"JW_")))
+
+intersect(sho_wg_d$uniqueID, sho_wg_d2$uniqueID)
+# no overlapping age x ID
+
+sho_wg_all <- rbind(sho_wg_d, sho_wg_d2)
 
 # proposed recoding:
 # "", NA, "understands" -> 0;
 # "produces" -> 1;
 
-sho_wg_long <- sho_wg_d %>%
+sho_wg_long <- sho_wg_all %>%
   rename(age = `AgeM.(months)`,
          category = category_en) %>%
   mutate(sex = ifelse(`Sex.(f/m)`=="m", "Male",
                       ifelse(`Sex.(f/m)`=="f", "Female", NA)),
          form = "WG") %>%
-  select(form, id, age, sex, item_id, category, produces) %>%
+  select(form, id, uniqueID, age, sex, item_id, category, produces) %>%
   left_join(wg)
          # definition_en, definition_ja1, definition_ja2) # get these from instrument
 # ja1 is kanji/hiragana; ja2 is Latin alphabet
 
 
-# import Sho's WS data
-sho_ws_d <- read_csv("data/Sho/data_wordsandsentences_2023-09-25-15-56-16.csv") %>%
+# import Sho's WS data (188 Ss, 240 unique age x ID combos)
+sho_ws_d <- read_csv("data/Sho/data_wordsandsentences_batch1.csv") %>%
   filter(type=="word") %>%
   select(-`AgeD.(days)`) %>%
   mutate(produces = ifelse(value=="produces", 1, 0),
-         produces = ifelse(is.na(value), 0, produces))
+         produces = ifelse(is.na(value), 0, produces),
+         uniqueID = paste0(id,'-',`AgeM.(months)`))
 
-sho_ws_long <- sho_ws_d %>%
+# 172 Ss
+sho_ws_d2 <- read_csv("data/Sho/data_wordsandsentences_batch2.csv") %>%
+  filter(type=="word") %>%
+  select(-`AgeD.(days)`) %>%
+  mutate(produces = ifelse(value=="produces", 1, 0),
+         produces = ifelse(is.na(value), 0, produces),
+         uniqueID = paste0(id,'-',`AgeM.(months)`))
+
+intersect(sho_ws_d$uniqueID, sho_ws_d2$uniqueID)
+
+sho_ws_all <- sho_ws_d %>% bind_rows(sho_ws_d2)
+
+sho_ws_long <- sho_ws_all %>%
   rename(age = `AgeM.(months)`,
          category = category_en) %>%
   mutate(sex = ifelse(`Sex.(f/m)`=="m", "Male",
                       ifelse(`Sex.(f/m)`=="f", "Female", NA)),
          form = "WS") %>%
-  select(form, id, age, sex, item_id, type, category, produces) %>%
+  select(form, id, age, uniqueID, sex, item_id, type, category, produces) %>%
   left_join(ws)
          # definition_en, definition_ja1, definition_ja2) # ja1 is kanji/hiragana; ja2 is Latin alphabet
 
@@ -204,6 +255,16 @@ sho_ws_wg_wide <- sho_wg_long %>%
   select(form, id, age, sex, definition_ja1, produces) %>%
   pivot_wider(id_cols = c(form,id,age,sex), names_from=definition_ja1, values_from=produces) %>%
   arrange(id,age)
+
+# duplicates <- sho_wg_long %>%
+#   bind_rows(sho_ws_long) %>%
+#   select(form, uniqueID, age, sex, definition_ja1, produces) %>%
+#   dplyr::group_by(form, uniqueID, age, sex, definition_ja1) %>%
+#   dplyr::summarise(n = dplyr::n(), .groups = "drop") %>%
+#   dplyr::filter(n > 1L) %>%
+#   distinct(uniqueID, age, sex)
+
+
 
 sho_ws_wg_demo <- sho_ws_wg_wide %>% select(form, id, age, sex) %>%
   mutate(source = "Sho")
@@ -285,7 +346,7 @@ nrow(hiro2_proc) # 101
 nrow(hiro2_proc %>% distinct(id, sex, age)) # 101
 
 # several longitudinal subjects
-sort(table(hiro2_proc$ID))
+sort(table(hiro2_proc$id))
 
 hiro_demo <- hiro_long %>% distinct(id, sex, age) %>%
   arrange(id, age) %>%
@@ -363,7 +424,7 @@ d_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
   xlab("Age (months)") + ylab("Total Words Produced")
 
 table(d_demo$age)
-table(d_demo$sex)
+table(d_demo$sex) # 582 F, 578 M
 
 
 unique(yas_long$category_en)
@@ -386,7 +447,7 @@ dd <- all_long %>%
 
 dd %>%
   ggplot(aes(x=nouns+predicates, y=predicates)) +
-  geom_point() + geom_abline(intercept = 0, slope = .5) +
+  geom_point(alpha=.7) + geom_abline(intercept = 0, slope = .5) +
   theme_classic()
 
 

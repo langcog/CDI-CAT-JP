@@ -1,7 +1,7 @@
 ---
 title: "CDI-CAT-JP Norms Tables"
 author: "George Kachergis"
-date: "2023-10-27"
+date: "2024-01-22"
 output: html_document
 ---
 
@@ -35,7 +35,7 @@ d_mat <- d_wide %>%
   dplyr::select(-id) %>% #  -age, -sex
   data.matrix
 
-too_young <- which(d_demo$age < 12) # 121 children too young to be producing words...
+too_young <- which(d_demo$age < 12) # 72 children too young to be producing words...
 # should also remove >30 mos
 
 to_remove = too_young
