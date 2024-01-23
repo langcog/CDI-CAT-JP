@@ -46,9 +46,9 @@ d_mat <- d_wide %>%
   select(-id) %>% #  -age, -sex
   data.matrix
 
-too_young <- which(d_demo$age < 12) # 55 children too young to be producing words...
+too_young <- which(d_demo$age < 12) # 72 children too young to be producing words...
 
-no_words <- which(d_demo$production==0 & d_demo$age>=12) # 12 additional not producing
+no_words <- which(d_demo$production==0 & d_demo$age>=12) # 110 additional not producing
 
 to_remove = unique(c(too_young, no_words))
 ```
@@ -91,7 +91,7 @@ We fit each type of basic IRT model (Rasch, 2PL, and 3PL) using the `mirt` packa
 ```{r psycho-models_1pl, echo=F, eval = RUN_MODELS}
 set.seed(1234)
 # problem with item 1 (aïe) - just remove it
-mod_1pl <- mirt(d_mat, 1, itemtype='Rasch', verbose=TRUE, technical=list(NCYCLES=1000))
+mod_1pl <- mirt(d_mat, 1, itemtype='Rasch', verbose=TRUE, technical=list(NCYCLES=4000)) 
 # Log-likelihood was decreasing near the ML solution. EM method may be unstable
 coefs_1pl <- as_tibble(coef(mod_1pl, simplify = TRUE)$items) %>%
   mutate(definition = rownames(coef(mod_1pl, simplify = TRUE)$items))
@@ -117,7 +117,7 @@ coefs_2pl <- as_tibble(coef(mod_2pl, simplify = TRUE)$items) %>%
   mutate(definition = rownames(coef(mod_2pl, simplify = TRUE)$items))
 fscores_2pl <- tibble(data_id = rownames(d_mat), 
                              ability = fscores(mod_2pl, method = "MAP")[,1])
-# The following factor score estimates failed to converge successfully: 24,418,534
+# The following factor score estimates failed to converge successfully: 27,66,323,693
 save(file = here("data/jp_ws_wg_mod_2pl_prior.Rds"), "mod_2pl","fscores_2pl", "coefs_2pl")
 ```
 
@@ -142,7 +142,7 @@ coefs_3pl <- as_tibble(coef(mod_3pl, simplify = TRUE)$items) %>%
 fscores_3pl <- tibble(data_id = rownames(d_mat), 
                              ability = fscores(mod_3pl, method = "MAP")[,1])
 # The following factor score estimates failed to converge successfully:
-#   15,139,222,336,515,523
+#   8,282,365,824
 
 save(file = here("data/jp_ws_wg_mod_3pl.Rds"), "mod_3pl","fscores_3pl", "coefs_3pl")
 ```
@@ -161,21 +161,21 @@ load(here("data/jp_ws_wg_mod_2pl.Rds"))
 old_coefs <- coefs_2pl
 old_fscores <- fscores_2pl
 summary(mod_2pl)
-# prop var: 0.669
+# prop var: 0.727
 
 # prior on d ~ norm(0,3) - 
 load(here("data/jp_ws_wg_mod_2pl_prior.Rds"))
 new_coefs <- coefs_2pl
 new_fscores <- fscores_2pl
 summary(mod_2pl) 
-# prop var: .831
+# prop var: .896
 
 
 
 plot(old_fscores$ability, new_fscores$ability)
-cor(old_fscores$ability, new_fscores$ability) # .997
-plot(d_demo$production, old_fscores$ability) # 
-cor.test(d_demo$production, old_fscores$ability) # .94
+cor(old_fscores$ability, new_fscores$ability) # .995
+plot(d_demo$production, old_fscores$ability) 
+cor.test(d_demo$production, old_fscores$ability) # .91
 
 d_demo <- d_demo %>% left_join(old_fscores)
 
@@ -244,17 +244,17 @@ load(here("data/LD.Rds"))
 # no association = abs(V) < .1 no association, .3 is moderate, and .5+ is strong
 
 hiLDvio = get_LD_violations(res, assoc_str=.5)
-hiLDvio_words = coefs_2pl[which(hiLDvio>10),]$definition # 0 words
-# 
-
+hiLDvio_words = coefs_2pl[which(hiLDvio>10),]$definition # 8 words
+# "アイタ..いたい."  "オイチィ..おいしい."  "ニャンニャン..ネコ." "ブーブー..車."  "ワンワン..犬."      
+# "クック.靴."   "ないない.片づけ."  "ネンネ"  
 
 modLDvio = get_LD_violations(res)
-modLDvio_words = coefs_2pl[which(modLDvio>10),]$definition # 13 words have moderate LD  
+modLDvio_words = coefs_2pl[which(modLDvio>10),]$definition # 695 words have moderate LD (!)
 
 # ToDo: try just removing the few items with many violations (e.g., 1 item has 2 -- not bad!),
 # and then re-fit the model
 
-kable(matrix(coefs_2pl[which(modLDvio>10),]$definition, ncol=2)) %>% 
+kable(matrix(coefs_2pl[which(hiLDvio>10),]$definition, ncol=2)) %>% 
   html_table_width(rep(150, 2))
 ```
 
@@ -292,7 +292,6 @@ bad_ld_fit = intersect(which(hiLDvio > 0), bad_items2pl)
 kable(matrix(itfit2pl$item[bad_items2pl], ncol=4)) %>% 
   html_table_width(rep(150, 4))
 ```
-
 
 <!-- Now we re-fit the 2PL model without the XXX items showing strong LD *and* poor fit removed.
 (Note: should look removed/remaining items by category, difficulty, discrimination, and RMSEA.) -->
@@ -340,16 +339,15 @@ load(here("data/jp_ws_wg_mod_2pl_nobad.Rds"))
 
 itfit2pl <- itemfit(mod_2pl, fit_stats = "X2") 
 
-itfit2pl[which(itfit2pl$p.X2<.001),] # 18
+itfit2pl[which(itfit2pl$p.X2<.001),] 
 
 res = residuals(mod_2pl, type = 'LD') 
 # hist(unlist(res[upper.tri(res)]))
 #hist(res[1,])
 hiLDvio = get_LD_violations(res, assoc_str=.5)
-hiLDvio_words = coefs_2pl[which(hiLDvio>10),]$definition # 3
+hiLDvio_words = coefs_2pl[which(hiLDvio>10),]$definition 
 
-#intersect(which(hiLDvio>0), bad_items2pl) # 10 items
-# 52  65  87 135 229 239 264 312 327 340
+#intersect(which(hiLDvio>0), bad_items2pl) 
 
 save(file=here("data/jp_pruned_LD_and_itemfit.Rds"), "res", "itfit2pl")
 ```

@@ -51,7 +51,7 @@ admins = table(d_demo$form)
 rownames(d_mat) = d_demo$data_id # data_ids
 ```
 
-These norms are based on all available Wordbank data, combined with data from Sho's lab: `r admins["WG"]` WG administrations and `r admins["WS"]` WS administrations. (The same data we used to fit the IRT model.)
+These norms are based on all available data contributed by Sho, Hiromichi, and Yasuyo: `r admins["WG"]` WG administrations and `r admins["WS"]` WS administrations. (The same data we used to fit the IRT model.)
 For the by-sex norms, note that there are `r sum(is.na(d_demo$sex))` administrations with missing sex information, so the N per (month) age bin by sex is sometimes quite low.
 
 # WG Raw Score Norms
@@ -291,7 +291,7 @@ ws_f_prod %>% kable() %>% html_table_width(rep(70, length(pctiles)+2))
 #load("data/jp_preferredCAT.Rds")
 #dim(min25_max50_MAP_age$parms)
 
-load(here("data/jp_ws_wg_mod_2pl.Rds"))
+load(here("data/jp_ws_wg_mod_2pl_prior.Rds"))
 
 d_demo <- d_demo %>% left_join(fscores_2pl) 
 
