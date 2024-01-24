@@ -360,13 +360,15 @@ Next, we examine the coefficients of the 2PL model.
 Items that are estimated to be very easy or very difficult are highlighted, as well as those at the extremes of discrimination (a1).
 
 ```{r, fig.width=8, fig.height=6, echo=F, warning=F}
+
 ggplot(coefs_2pl, 
        aes(x = a1, y = d)) + 
   geom_point(alpha=.7) + 
   ggrepel::geom_label_repel(data = filter(coefs_2pl, 
                                           a1 < 2.0 | d > 5.0 | 
                                           a1 > 5.0 | d < -3.0), 
-                            aes(label = definition)) + theme_bw()
+                            aes(label = definition), family = "HiraKakuProN-W3") + 
+  theme_bw()
 ```
 
 
