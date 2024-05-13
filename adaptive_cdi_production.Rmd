@@ -39,7 +39,7 @@ We provide recommendations for CAT algorithms and stopping rules to be passed on
 
 ```{r, load-data, echo=F}
 # see 00-preprocessing.R for merging WG + WS datasets 
-base::load("data/Japanese-CDI-WS-WG-combined-data.Rdata")
+base::load("data/Japanese-CDI-WS-WG-combined-data-disambig.Rdata")
 
 d_mat <- d_wide %>% 
   data.frame %>%
@@ -47,19 +47,20 @@ d_mat <- d_wide %>%
   data.matrix
 
 too_young <- which(d_demo$age < 12) # 72 children too young to be producing words...
-
+too_old <- which(d_demo$age > 36) # 65 older than the target age range of the test
 no_words <- which(d_demo$production==0 & d_demo$age>=12) # 110 additional not producing
 
-to_remove = unique(c(too_young, no_words))
+to_remove = unique(c(too_young, no_words, too_old))
 ```
 
 We use the combined production data from `r nrow(d_demo)` participants. 
 From this data we remove `r length(too_young)` children <12 months of age, who should not be producing any words yet. 
 We also remove an additional `r length(no_words)` children 12+ months of age who are not yet producing any words, as these children cannot be used to fit the IRT models.
+Finally, we remove `r length(too_old)` children >36 months of age, as they are beyond the targeted age range of the CDI:WS, and the proposed CAT.
 The production sumscores by age for the remaining children are shown below.
 
 ```{r, echo=F}
-d_demo = d_demo[-to_remove,] # 
+d_demo = d_demo[-to_remove,] # 1160 down to 913
 d_mat = d_mat[-to_remove,]
 d_demo <- d_demo %>% 
   mutate(age_mos = round(age),
@@ -161,19 +162,19 @@ load(here("data/jp_ws_wg_mod_2pl.Rds"))
 old_coefs <- coefs_2pl
 old_fscores <- fscores_2pl
 summary(mod_2pl)
-# prop var: 0.727
+# prop var: .734 
 
 # prior on d ~ norm(0,3) - 
 load(here("data/jp_ws_wg_mod_2pl_prior.Rds"))
 new_coefs <- coefs_2pl
 new_fscores <- fscores_2pl
 summary(mod_2pl) 
-# prop var: .896
+# prop var: .896 
 
 
 
 plot(old_fscores$ability, new_fscores$ability)
-cor(old_fscores$ability, new_fscores$ability) # .995
+cor(old_fscores$ability, new_fscores$ability) # .997
 plot(d_demo$production, old_fscores$ability) 
 cor.test(d_demo$production, old_fscores$ability) # .91
 
@@ -185,9 +186,9 @@ d_demo %>% ggplot(aes(x = age, y = ability, color=source)) + # color=sex
   geom_jitter(alpha = .2) + theme_bw() + xlab("Age (months)") + ylab("Ability")
 
 plot(old_coefs$d, new_coefs$d)
-cor(old_coefs$d, new_coefs$d) # .97
+cor(old_coefs$d, new_coefs$d) # .96
 plot(old_coefs$a1, new_coefs$a1)  
-cor(old_coefs$a1, new_coefs$a1) # .997
+cor(old_coefs$a1, new_coefs$a1) # .995
 ```
 
 
@@ -242,14 +243,15 @@ save(file=here("data/LD.Rds"), "res")
 load(here("data/LD.Rds"))
 
 # no association = abs(V) < .1 no association, .3 is moderate, and .5+ is strong
+#hiLDvio = get_LD_violations(res, assoc_str=.6) 3 words: item_3, item_8, item_12
 
 hiLDvio = get_LD_violations(res, assoc_str=.5)
-hiLDvio_words = coefs_2pl[which(hiLDvio>10),]$definition # 8 words
+hiLDvio_words = coefs_2pl[which(hiLDvio>10),]$definition # 404 words... (was 8)
 # "アイタ..いたい."  "オイチィ..おいしい."  "ニャンニャン..ネコ." "ブーブー..車."  "ワンワン..犬."      
 # "クック.靴."   "ないない.片づけ."  "ネンネ"  
 
 modLDvio = get_LD_violations(res)
-modLDvio_words = coefs_2pl[which(modLDvio>10),]$definition # 695 words have moderate LD (!)
+modLDvio_words = coefs_2pl[which(modLDvio>10),]$definition # 700 words have moderate LD (!)
 
 # ToDo: try just removing the few items with many violations (e.g., 1 item has 2 -- not bad!),
 # and then re-fit the model
@@ -269,8 +271,8 @@ Our next goal is to determine if all items should be included in the item bank. 
 itfit2pl <- itemfit(mod_2pl, fit_stats = "X2") # need to use MAP estimates?
 # had to switch from S_X2 because it can't handle missing data (all WG subjects)
 
-itfit2pl_x2 <- itemfit(mod_2pl, fit_stats = 'X2*_df', Theta=fscores_2pl) # 
-# 'X2*_df' : Stone's (2000) fit statistics that require parametric bootstrapping to obtain scaled versions of the X2* and degrees of freedom
+itfit2pl_x2 <- itemfit(mod_2pl, fit_stats = 'X2*', Theta=fscores_2pl, return.tables = F) # 
+# 'X2*' : Stone's (2000) fit statistics that require parametric bootstrapping
 # 'PV_Q1*' : Chalmers and Ng's (2017) plausible-value variant of the Q1 statistic that uses parametric bootstrapping to obtain a suitable empirical distribution
 save(file=here("data/jp_ws_wg_2pl_itemfits.Rds"), "itfit2pl") #  "itfit2pl_x2"
 ```
@@ -316,13 +318,21 @@ fscores_2pl <- tibble(data_id = rownames(d_mat),
 save(file = here("data/jp_ws_wg_mod_2pl_nobad.Rds"), "mod_2pl","fscores_2pl", "coefs_2pl")
 # ToDo: should look at itemfits again and see if new items are bad
 
+# load WS and merge by item_id
+items <- read_csv("WS_WG_items_combined.csv")
+
+coefs_2pl <- coefs_2pl %>% rename(item_id = definition) %>%
+  left_join(items %>% rename(item_id = WS, definition = definition_ja3) %>% select(item_id, definition, definition_en, category_en)) 
+
 # output parameters for catsim (MIRT uses slope-intercept, does catsim need other format?)
 # discrimination, difficulty, guessing, upper asymptote?
 write.csv(coefs_2pl, file="JP_production_2PL_params_slopeint.csv", row.names = F)
 # ?mirt::coef 
 
 coefs_2pl_irt <- as_tibble(coef(mod_2pl, simplify = TRUE, IRTpars=TRUE)$items) %>%
-  mutate(definition = rownames(coef(mod_2pl, simplify = TRUE)$items))
+  mutate(WS = rownames(coef(mod_2pl, simplify = TRUE)$items)) %>%
+  left_join(items %>% select(WS, definition_ja3)) %>% 
+  rename(item_id = WS, definition = definition_ja3)
 write.csv(coefs_2pl_irt, file="JP_production_2PL_params.csv", row.names = F)
 
 #anova(mod_2pl, mod_3pl)
@@ -360,6 +370,11 @@ Next, we examine the coefficients of the 2PL model.
 Items that are estimated to be very easy or very difficult are highlighted, as well as those at the extremes of discrimination (a1).
 
 ```{r, fig.width=8, fig.height=6, echo=F, warning=F}
+# load WS and merge by item_id
+items <- read_csv("WS_WG_items_combined.csv")
+
+coefs_2pl <- coefs_2pl %>% rename(item_id = definition) %>%
+  left_join(items %>% rename(item_id = WS, definition = definition_ja3) %>% select(item_id, definition, definition_en, category_en)) 
 
 ggplot(coefs_2pl, 
        aes(x = a1, y = d)) + 
@@ -383,7 +398,6 @@ Overall, `r round(100*sum(is.na(d_mat))/length(d_mat),1)`% of the data was missi
 set.seed(123)
 fs <- fscores(mod_2pl)
 d_mat_imp = imputeMissing(mod_2pl, Theta=fs) # fscores_2pl has just ability, not discrim
-# Imputing too much data can lead to very conservative results. Use with caution.
 ```
 
 
@@ -704,7 +718,7 @@ cat_freq$bin = cut(cat_freq$prop, breaks=seq(0,1,.1))
 #  summarise(produces = mean(produces, na.rm=T)) %>%
 #  select(definition, lexical_class, category, produces)
 
-pop_items = subset(cat_freq, test==50 & prop>.5) # 327, 50, 207, 259, 345
+pop_items = subset(cat_freq, test==50 & prop>.5) # item_159, item_294, item_234, item_382
 pop_items$item = as.numeric(as.character(pop_items$item))
 pop_items$definition = colnames(d_mat_imp)[pop_items$item]
 #wcat[as.vector(pop_items$item),] # no longer indexed correctly due to pruning
@@ -755,7 +769,7 @@ kable(matrix(colnames(d_mat_imp)[as.numeric(names(all_items[1:50]))], ncol=5)) %
 ```
 
 
-These are predominantly nouns, including several body parts.
+These are predominantly...
 
 
 ## Example CAT

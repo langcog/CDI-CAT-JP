@@ -23,6 +23,9 @@ ws <- read_xlsx("forms/Disambiguation/wordsandsentences.xlsx") %>% # 816
 ws_wg <- ws %>% rename(WS = item_id) %>% left_join(wg %>% rename(WG = item_id))
 ws_wg %>% write_csv("WS_WG_items_combined.csv")
 
+# "definition_ja3". This is the final column for word items after disambiguation.
+# length(intersect(wg$definition_ja3, ws$definition_ja3))
+
 # 29 EN definitions have duplicates/triplicates, need disambiguating:
 en_dupes = names(which(sort(table(wg$definition_en))>1))
 #View(subset(wg, is.element(definition_en, en_dupes)))
@@ -34,6 +37,9 @@ ja1_dupes = names(which(sort(table(wg$definition_ja1))>1))
 # 8 dupes: "ame"    "buubuu" "gohan"  "hana"   "kaeru"  "kami"   "ofuro"  "sakana"
 ja2_dupes = names(which(sort(table(wg$definition_ja2))>1))
 #View(subset(wg, is.element(definition_ja2, ja2_dupes)))
+
+ja3_dupes = names(which(sort(table(wg$definition_ja3))>1)) # 0
+ja3_dupes = names(which(sort(table(ws$definition_ja3))>1)) # 0
 
 subset(wg, definition_en=="shose")
 # クック（靴）translates on Google as "cook (shoes)" (kukku, sounds2) - a shoe noise?
@@ -85,6 +91,7 @@ subset(ws, definition_en=="fish")
 
 length(unique(ws$definition_ja1)) # 711 / 711 unique
 length(unique(ws$definition_ja2)) # 698
+length(unique(ws$definition_ja3)) # 711 / 711 unique
 length(unique(ws$definition_en)) # 678
 
 
@@ -215,7 +222,10 @@ sho_wg_long <- sho_wg_all %>%
                       ifelse(`Sex.(f/m)`=="f", "Female", NA)),
          form = "WG") %>%
   select(form, id, uniqueID, age, sex, item_id, category, produces) %>%
-  left_join(wg)
+  left_join(wg) %>%
+  select(-item_id, -definition_ja1, -definition_ja2) %>% left_join(ws_wg, by="definition_ja3") %>%
+  mutate(item_id = WS)
+  #left_join(ws_wg, by = "definition_ja1")
          # definition_en, definition_ja1, definition_ja2) # get these from instrument
 # ja1 is kanji/hiragana; ja2 is Latin alphabet
 
@@ -250,26 +260,29 @@ sho_ws_long <- sho_ws_all %>%
   left_join(ws)
          # definition_en, definition_ja1, definition_ja2) # ja1 is kanji/hiragana; ja2 is Latin alphabet
 
+# some subject ids duplicated across WS and WG:
+intersect(sho_wg_long$id, sho_ws_long$id)
+
 sho_ws_wg_wide <- sho_wg_long %>%
-  bind_rows(sho_ws_long) %>%
-  select(form, id, age, sex, definition_ja1, produces) %>%
-  pivot_wider(id_cols = c(form,id,age,sex), names_from=definition_ja1, values_from=produces) %>%
+  mutate(id = paste0("WG-",id)) %>%
+  bind_rows(sho_ws_long %>% mutate(id = paste0("WS-",id))) %>%
+  select(form, id, age, sex, item_id, produces) %>%
+  pivot_wider(id_cols = c(form,id,age,sex), names_from = item_id, values_from=produces) %>%
   arrange(id,age)
 
-# duplicates <- sho_wg_long %>%
-#   bind_rows(sho_ws_long) %>%
-#   select(form, uniqueID, age, sex, definition_ja1, produces) %>%
-#   dplyr::group_by(form, uniqueID, age, sex, definition_ja1) %>%
-#   dplyr::summarise(n = dplyr::n(), .groups = "drop") %>%
-#   dplyr::filter(n > 1L) %>%
-#   distinct(uniqueID, age, sex)
 
-
+duplicates <- sho_wg_long %>%
+  bind_rows(sho_ws_long) %>%
+  select(form, uniqueID, age, sex, item_id, produces) %>%
+  dplyr::group_by(form, id, age, sex, item_id) %>%
+  dplyr::summarise(n = dplyr::n(), .groups = "drop") %>%
+  dplyr::filter(n > 1L) %>%
+  distinct(id, age, sex)
 
 sho_ws_wg_demo <- sho_ws_wg_wide %>% select(form, id, age, sex) %>%
   mutate(source = "Sho")
 
-sho_ws_wg_demo$production = rowSums(sho_ws_wg_wide[,5:714], na.rm=T)
+sho_ws_wg_demo$production = rowSums(sho_ws_wg_wide[,5:715], na.rm=T)
 
 sho_ws_wg_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
   geom_point() + theme_classic() +
@@ -353,7 +366,7 @@ hiro_demo <- hiro_long %>% distinct(id, sex, age) %>%
   mutate(source="Hiromichi", form="WS")
 
 hiro_wide <- hiro_long %>%
-  pivot_wider(id_cols = c(id, sex, age), names_from = definition_ja1, values_from = produces) %>%
+  pivot_wider(id_cols = c(id, sex, age), names_from = item_id, values_from = produces) %>%
   mutate(form = "WS") %>%
   arrange(id, age)
 
@@ -406,7 +419,7 @@ yas_long <- yas_long %>%
   left_join(ws, by=c("word_id"="questionnaire_id"))
 
 yas_wide <- yas_long %>%
-  pivot_wider(id_cols = c(id, age, sex), names_from = definition_ja1, values_from = produces) %>% # word_id has form A1, A2, .. B1, ..
+  pivot_wider(id_cols = c(id, age, sex), names_from = item_id, values_from = produces) %>% # word_id has form A1, A2, .. B1, ..
   mutate(form = "WS") %>%
   arrange(id, age)
 
@@ -417,7 +430,13 @@ yas_demo$production = rowSums(yas_wide %>% select(-id, -form, -sex, -age))
 d_demo <- sho_ws_wg_demo %>% bind_rows(hiro_demo, yas_demo)
 d_wide <- sho_ws_wg_wide %>% bind_rows(hiro_wide, yas_wide) %>% select(-form, -age, -sex)
 #row.names(d_mat) = d_demo$id
-save(d_demo, d_wide, file="data/Japanese-CDI-WS-WG-combined-data.Rdata")
+save(d_demo, d_wide, file="data/Japanese-CDI-WS-WG-combined-data-disambig.Rdata")
+
+# load("data/Japanese-CDI-WS-WG-combined-data.Rdata")
+# sum(d_demo$production!=new_d_demo$production)
+# sum(d_demo$age!=new_d_demo$age)
+# sum(d_demo$id!=new_d_demo$id)
+length(intersect(names(d_wide)[2:712], ws$item_id )) # all 711
 
 d_demo %>% ggplot(aes(x=jitter(age), y=production, color=sex)) +
   geom_point(alpha=.5) + theme_classic() + geom_smooth(method = "lm", formula = y ~ 0 + x + I(x^2)) +
