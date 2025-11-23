@@ -573,7 +573,7 @@ We select a starting item with a difficulty just below the average ability (thet
 The mean theta per age is shown below, along with the selected starting item.
 
 ```{r, age-based-starting-items-table, echo=F}
-kable(age_startits, digits=2) %>%
+kable(age_startits, digits=2) |>
   html_table_width(c(80,100,100,100, 120, 90, 100))
 ```
 
@@ -600,7 +600,7 @@ ggplot(aes(x=MAPtheta, y=MLtheta), data=ml_vs_map) + geom_point(alpha=.1) + them
 #  geom_point(alpha=.2) + theme_minimal() + xlab("Mean Theta") + ylab("MAP theta - ML theta")
 
 
-kable(pref_tab, digits=3, caption="CAT simulations with min=25, max=50, stopping at SE=0.15.") %>%
+kable(pref_tab, digits=3, caption="CAT simulations with min=25, max=50, stopping at SE=0.1.") %>%
   html_table_width(c(200,190,190,190, 150, 150, 200))
 ```
 
@@ -657,9 +657,15 @@ kable(age_tabp, digits=3, caption="Correlation between the preferred CAT's abili
 
 Below we show the distribution of ability (theta) from the 2PL model by age.
 
+```{r}
+d_demo |> filter(is.na(age_group))
+```
+
+
 ```{r, theta-by-age, echo=F, fig.width=6, fig.height=4}
 # Overlaid histograms
-ggplot(d_demo, aes(x=ability, fill=age_group)) +
+d_demo |> filter(!is.na(age_group)) |>
+  ggplot(d_demo, aes(x=ability, fill=age_group)) +
     geom_histogram(binwidth=.5, alpha=.5, position="identity") + theme_classic() +
   xlab("Ability (Theta) Estimates from 2PL") +
   labs(fill="Age Group") + ylab("Number of Participants")
@@ -813,7 +819,7 @@ write.csv(seq1, file="jp_CAT_test_theta1_construire.csv", row.names = F) # Theta
 ```
 
 
-We now show an example CAT for two simulated participants, one with ability (theta) = 0, and one with theta = 1. The CAT gives a minimum of 25 questions and terminates either when SEM=0.15 or when 50 items is reached.
+We now show an example CAT for two simulated participants, one with ability (theta) = 0, and one with theta = 1. The CAT gives a minimum of 25 questions and terminates either when SEM=0.1 or when 50 items is reached.
 The theta estimates over the test for each participant is shown below, with selected item indices on the x axis. The theta=0 participant (left) answered `r length(res0$items_answered)` questions, and the theta=1 participant (right) answered `r length(res1$items_answered)`. The final estimated theta for the theta=0 participant was `r round(as.vector(res0$thetas),3)`, and for the theta=1 participant was `r round(as.vector(res1$thetas),3)`. The package `mirtCAT` can be directly used to simply generate a web interface (Shiny app) that allows such CATs to be run on real participants, as well as the simulations we have conducted here.
 
 
