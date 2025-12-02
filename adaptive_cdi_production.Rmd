@@ -256,8 +256,8 @@ modLDvio_words = coefs_2pl[which(modLDvio>10),]$definition # 700 words have mode
 # ToDo: try just removing the few items with many violations (e.g., 1 item has 2 -- not bad!),
 # and then re-fit the model
 
-kable(matrix(coefs_2pl[which(hiLDvio>10),]$definition, ncol=2)) %>% 
-  html_table_width(rep(150, 2))
+#kable(matrix(coefs_2pl[which(hiLDvio>10),]$definition, ncol=2)) |> 
+#  html_table_width(rep(150, 2))
 ```
 
 We examined each item for pairwise linear dependencies (LD) with other items using $\chi^{2}$ (Chen & Thissen, 1997), and found that `r length(hiLDvio_words)` items show strong LD (Cramer's $V \geq 0.5$). 
@@ -338,6 +338,20 @@ write.csv(coefs_2pl_irt, file="JP_production_2PL_params.csv", row.names = F)
 #anova(mod_2pl, mod_3pl)
 ```
 
+
+```{r, item-difficulty-histograms, include=F}
+irt_parms <- read_csv("JP_production_2PL_params.csv")
+irt_parms |> ggplot(aes(x=b)) + geom_histogram() + theme_classic()
+irt_parms[which(irt_parms$b==min(irt_parms$b)),] # item_379 - peekaboo
+irt_parms[which(irt_parms$b==max(irt_parms$b)),] # item_382 - shopping
+
+si_parms <- read_csv("JP_production_2PL_params_slopeint.csv")
+si_parms |> ggplot(aes(x=-d)) + geom_histogram() + theme_classic() + xlab("Item difficulty")
+si_parms[which(si_parms$d==min(si_parms$d)),] # item_617 - corner (location)
+si_parms[which(si_parms$d==max(si_parms$d)),] # item_159 - shoes
+```
+
+
 ```{r, echo=F, eval=F}
 # NOT EVALUATED FOR JAPANESE SINCE NO PRUNING NEEDED
 load(here("data/jp_ws_wg_mod_2pl_nobad.Rds"))
@@ -380,9 +394,9 @@ ggplot(coefs_2pl,
        aes(x = a1, y = d)) + 
   geom_point(alpha=.7) + 
   ggrepel::geom_label_repel(data = filter(coefs_2pl, 
-                                          a1 < 2.0 | d > 5.0 | 
-                                          a1 > 5.0 | d < -3.0), 
-                            aes(label = definition), family = "HiraKakuProN-W3") + 
+                                          a1 < 1.8 | d > 3 | 
+                                          a1 > 9.5 | d < -4.5), 
+                            aes(label = definition), family = "HiraKakuProN-W3", max.overlaps = 50) + 
   theme_bw()
 ```
 
@@ -657,15 +671,11 @@ kable(age_tabp, digits=3, caption="Correlation between the preferred CAT's abili
 
 Below we show the distribution of ability (theta) from the 2PL model by age.
 
-```{r}
-d_demo |> filter(is.na(age_group))
-```
-
 
 ```{r, theta-by-age, echo=F, fig.width=6, fig.height=4}
 # Overlaid histograms
 d_demo |> filter(!is.na(age_group)) |>
-  ggplot(d_demo, aes(x=ability, fill=age_group)) +
+  ggplot(aes(x=ability, fill=age_group)) +
     geom_histogram(binwidth=.5, alpha=.5, position="identity") + theme_classic() +
   xlab("Ability (Theta) Estimates from 2PL") +
   labs(fill="Age Group") + ylab("Number of Participants")
@@ -797,12 +807,12 @@ preferred_design = list(min_items = 25,
                         min_SEM = 0.10)
 
 # start_item = 'MI',
-# index 14 = au.revoir (start item for 12-14 mos)
-res0 <- mirtCAT(df, mod_2pl, local_pattern=pattern0, criteria = 'MI', start_item = 14, method = 'ML', 
+# index 245 = (イナイイナイ) バー (item_379) (start item for 12-13 mos)
+res0 <- mirtCAT(df, mod_2pl, local_pattern=pattern0, criteria = 'MI', start_item = 245, method = 'ML', 
                design = preferred_design) 
 
-# index 616 = construire (start item for 24 mos)
-res1 <- mirtCAT(df, mod_2pl, local_pattern=pattern1, criteria = 'MI', start_item = 616, method = 'ML', 
+# index 616 = 足 (あし) (item_185) (start item for 24-25 mos)
+res1 <- mirtCAT(df, mod_2pl, local_pattern=pattern1, criteria = 'MI', start_item = 115, method = 'ML', 
                design = preferred_design) 
 
 seq0 = tibble(item = coefs_2pl[res0$items_answered,]$definition,
@@ -813,9 +823,8 @@ seq1 = tibble(item = coefs_2pl[res1$items_answered,]$definition,
          response = res1$scored_responses[res1$items_answered],
          theta = res1$thetas_history[-1])
 
-# FixMe
-write.csv(seq0, file="jp_CAT_test_theta0_au.revoir.csv", row.names = F) # Theta_1 = 0.01
-write.csv(seq1, file="jp_CAT_test_theta1_construire.csv", row.names = F) # Theta_1 = 1.20 
+write.csv(seq0, file="jp_CAT_test_theta0_12-13mo_start.csv", row.names = F) # Theta_1 = 0.01
+write.csv(seq1, file="jp_CAT_test_theta1_24-26mo_start.csv", row.names = F) # Theta_1 = 1.20 
 ```
 
 
@@ -828,14 +837,6 @@ The theta estimates over the test for each participant is shown below, with sele
 grid.arrange(plot(res0), plot(res1), nrow=1)
 ```
 
-
-```{r, include=F}
-#CATdesign <- mirtCAT(df, mod_2pl, criteria = 'MI', design_elements = TRUE)
-#findNextItem(CATdesign)
-#CATdesign2 <- updateDesign(CATdesign, items = c(592), responses = c(0))
-#findNextItem(CATdesign2)
-
-```
 
 
 ### References
