@@ -96,6 +96,12 @@ set.seed(1234)
 # problem with item 1 (aïe) - just remove it
 mod_1pl <- mirt(d_mat, 1, itemtype='Rasch', verbose=TRUE, technical=list(NCYCLES=4000), TOL=1e-8) 
 # Log-likelihood was decreasing near the ML solution. EM method may be unstable
+
+mod_1pl <- mirt(d_mat, 1, itemtype='Rasch', verbose=TRUE,
+                   technical=list(NCYCLES=4000),
+                   prior=list(d = 'norm(0, 4)')) 
+
+
 coefs_1pl <- as_tibble(coef(mod_1pl, simplify = TRUE)$items) %>%
   mutate(definition = rownames(coef(mod_1pl, simplify = TRUE)$items))
 fscores_1pl <- tibble(data_id = rownames(d_mat), 
@@ -530,7 +536,8 @@ kable(fcat_tab, digits=3, caption="Fixed-length CAT simulations with 2PL model c
 ```
 
 ```{r, echo=F}
-d_demo$age_group = cut(d_demo$age, breaks=seq(11,38,3), right=F, include.lowest = T)
+d_demo$age_group = cut(d_demo$age, breaks=seq(12,39,3), right=F, include.lowest = T,
+                       labels = paste(c("12-14", "15-17", "18-20", "21-23", "24-26", "27-29", "30-32", "33-35", "36-38"), "mos"))
 n_age = table(d_demo$age_group)
 ```
 
@@ -676,12 +683,14 @@ Below we show the distribution of ability (theta) from the 2PL model by age.
 
 ```{r, theta-by-age, echo=F, fig.width=6, fig.height=4}
 # Overlaid histograms
+ggsave("theta_by_age_group.pdf", width=6, height=4)
 d_demo |> filter(!is.na(age_group)) |>
+  left_join(fscores_2pl) |> 
   ggplot(aes(x=ability, fill=age_group)) +
     geom_histogram(binwidth=.5, alpha=.5, position="identity") + theme_classic() +
   xlab("Ability (Theta) Estimates from 2PL") +
   labs(fill="Age Group") + ylab("Number of Participants")
-
+dev.off()
 # Density plots with semi-transparent fill
 #ggplot(d_demo, aes(x=ability, fill=age_group)) + geom_density(alpha=.3) + theme_classic()
 ```
