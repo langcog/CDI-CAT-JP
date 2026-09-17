@@ -1,0 +1,248 @@
+---
+title: "Toward a Multidimensional CDI-CAT: Noun/Predicate Lexical Category Bias"
+author: "George Kachergis"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(here)
+library(tidyverse)
+library(mirt)
+library(kableExtra)
+```
+
+# Motivation
+
+The existing Japanese CDI-CAT (`adaptive_cdi_production.Rmd`) estimates a single, unidimensional
+production-vocabulary ability. A collaborator (Hiromichi Hagihara, Osaka University) is interested
+in a companion measure of **lexical category bias**: whether a child's vocabulary leans toward nouns
+or toward predicates (verbs and adjectives), relative to what would be expected from their overall
+vocabulary size. This is motivated by Hagihara, Tan, & Frank's submitted cross-linguistic paper
+("Lexical category biases in children's early vocabulary"), which finds systematic, cross-linguistically
+variable noun/verb/adjective biases, and specifically notes that many resources (including, by default,
+Wordbank's own `lexical_category` coding) collapse verbs and adjectives into a single "predicates"
+class for languages -- Japanese among them -- where adjectives conjugate like verbs.
+
+This document summarizes the pipeline built to support a **multidimensional CAT** that adaptively
+estimates general vocabulary ability *and* a noun-vs-predicate bias score, from data prep through a
+first CAT simulation. Scripts referenced below live in `multidim/01` through `multidim/05`; this
+document does not refit any models -- it loads their saved output.
+
+```{r load-data}
+items <- read_csv(here("multidim/item_lexical_categories.csv"), show_col_types = FALSE)
+efa_loadings <- read_csv(here("multidim/efa2_loadings.csv"), show_col_types = FALSE)
+bifactor_items <- read_csv(here("multidim/bifactor_item_params.csv"), show_col_types = FALSE)
+bifactor_scores <- read_csv(here("multidim/bifactor_scores.csv"), show_col_types = FALSE)
+cat_summary_wrule <- read_csv(here("multidim/cat_simulation_summary.csv"), show_col_types = FALSE) %>%
+  mutate(criteria = "Wrule")
+criteria_comparison <- read_csv(here("multidim/criteria_comparison_full_sample.csv"), show_col_types = FALSE)
+resp_data <- readRDS(here("multidim/noun_predicate_response_data.Rds"))
+sim_results_drule <- readRDS(here("multidim/cat_simulation_results_drule.Rds"))
+```
+
+# 1. Item classification
+
+All 711 production-vocabulary items are classified into `nouns`, `verbs`, `adjectives`,
+`function_words`, or `other` from their CDI semantic category (`category_en`), following the
+same category &rarr; class mapping Wordbank uses for Japanese (verified directly against
+`wordbankr::get_item_data(language = "Japanese", form = "WS")$lexical_category`, which folds verbs
+and adjectives into "predicates"). The `pos2` column collapses verbs+adjectives into `predicate`,
+which is the 2-dimensional split used for the CAT below.
+
+```{r item-counts}
+items %>%
+  count(lexical_class, pos2) %>%
+  arrange(pos2) %>%
+  kable(col.names = c("Lexical class", "CAT dimension (pos2)", "N items"),
+        caption = "Item counts by lexical class and by the 2-dimensional CAT grouping.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The item bank used for the multidimensional model is the **478 noun + predicate items**
+(312 nouns, 166 predicates = 103 verbs + 63 adjectives); function words and the residual "other"
+category (233 items) are excluded, since neither should carry a noun/predicate-specific signal.
+
+# 2. Sample
+
+The response data are the same combined WG+WS production dataset and exclusion criteria used for
+the existing unidimensional CAT (`adaptive_cdi_production.Rmd`): administrations from children
+<12 or >38 months, non-producers &ge;12 months, and children at ceiling are dropped, leaving
+**`r nrow(resp_data$d_demo)`** administrations (**`r sum(resp_data$d_demo$form == "WS")`** WS,
+**`r sum(resp_data$d_demo$form == "WG")`** WG). `r round(100*mean(is.na(resp_data$d_mat_content)),1)`%
+of noun/predicate item responses were missing (mostly WS-only items on WG-form administrations) and
+were imputed from each child's fitted bifactor scores (`mirt::imputeMissing()`) before running the CAT
+simulation.
+
+# 3. Exploratory factor check
+
+Before committing to a confirmatory structure, an exploratory 2-factor IRT model (`mirt`, oblimin
+rotation) was fit to the 478-item noun+predicate matrix, as a check on whether the a priori
+noun/predicate split is empirically recoverable.
+
+```{r efa-plot, fig.width=6, fig.height=5}
+ggplot(efa_loadings, aes(x = F1, y = F2, color = pos2)) +
+  geom_point(alpha = 0.5) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  labs(x = "F1 (general)", y = "F2 (noun vs. predicate)", color = "Item type",
+       title = "Exploratory 2-factor loadings") +
+  theme_bw()
+```
+
+```{r efa-summary}
+efa_loadings %>%
+  filter(pos2 %in% c("noun", "predicate")) %>%
+  group_by(pos2) %>%
+  summarise(mean_F1 = mean(F1), mean_F2 = mean(F2), n = n()) %>%
+  kable(digits = 3, caption = "Mean rotated loadings by item type.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+**Every item's dominant loading is on F1** (range 0.55-0.96) -- a general vocabulary factor, exactly
+as expected given raw noun/predicate production proportions correlate r=.94 with each other and
+r > .97 with total vocabulary size (the "availability problem" the source paper explicitly
+warns about: raw category proportions are mostly just overall vocabulary size in disguise).
+F2 is a real but much smaller factor: predicate items load positively (mean `r round(mean(efa_loadings$F2[efa_loadings$pos2=="predicate"]),3)`)
+and noun items negatively (mean `r round(mean(efa_loadings$F2[efa_loadings$pos2=="noun"]),3)`), a highly
+reliable separation (Welch t = -32.8, p < .0001), and F1/F2 came out nearly orthogonal after rotation
+(r = -0.015) without being constrained to be. This is exactly the signature of a **bifactor**
+structure -- one dominant general factor plus a much smaller, genuinely separable specific factor --
+so that was fit next as the confirmatory model.
+
+# 4. Confirmatory bifactor model
+
+`mirt::bfactor()` was fit with every item loading on a general factor (G) plus one of two orthogonal
+specific factors: S1 (nouns only) or S2 (predicates only). The bias measure of interest is
+**S1 - S2** per child.
+
+```{r bifactor-loadings}
+bifactor_items %>%
+  mutate(own_specific = if_else(pos2 == "noun", S1_noun, S2_predicate)) %>%
+  group_by(pos2) %>%
+  summarise(mean_G = mean(G), mean_own_specific = mean(own_specific), n = n()) %>%
+  kable(digits = 2, caption = "Mean general (G) and own-specific-factor loadings by item type.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+```{r bifactor-reliability}
+rel <- empirical_rxx(bifactor_scores %>% select(G, S1_noun, S2_predicate, SE_G, SE_S1_noun, SE_S2_predicate) %>%
+                        as.matrix())
+tibble(dimension = names(rel), empirical_rxx = rel) %>%
+  kable(digits = 2, caption = "Empirical reliability of full-item-bank (non-adaptive) factor scores.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The key validation: does the bias score actually separate from general vocabulary size, unlike the raw
+proportions?
+
+```{r bias-vs-production, fig.width=6, fig.height=4.5}
+bifactor_scores <- bifactor_scores %>% mutate(noun_predicate_bias = S1_noun - S2_predicate)
+
+ggplot(bifactor_scores, aes(x = production, y = noun_predicate_bias)) +
+  geom_point(alpha = 0.15) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(x = "Total production (sum score)", y = "Noun/predicate bias (S1 - S2)",
+       title = sprintf("r = %.2f", cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias))) +
+  theme_bw()
+```
+
+Raw noun/predicate proportions correlated r &approx; .94-.99 with total vocabulary size; the bifactor
+bias score correlates only **r = `r round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias),2)`**
+with production and **r = `r round(cor(bifactor_scores$age_mos, bifactor_scores$noun_predicate_bias),2)`**
+with age -- confirming the specific factor is capturing a residual tilt, not just vocabulary size in
+disguise.
+
+One caveat: although S1 and S2 are constrained to be latently orthogonal in the model, their *EAP score
+estimates* still correlate
+r = `r round(cor(bifactor_scores$S1_noun, bifactor_scores$S2_predicate),2)` --
+a known bifactor artifact (shared estimation noise across items), which means the practical precision
+of the bias *difference* score is worse than either specific factor's own reliability suggests.
+
+# 5. CAT simulation
+
+## 5.1 Item selection criterion: Drule vs. Wrule
+
+Two multidimensional item-selection criteria were compared: `Drule` (maximizes the determinant of the
+full 3-D information matrix) and `Wrule` with weights `c(0,1,1)` (explicitly down-weights G, on the
+hypothesis that the specific factors would otherwise be starved of items since G's loadings are
+3-5x larger). That hypothesis turned out to be wrong:
+
+```{r criteria-comparison}
+criteria_comparison %>%
+  kable(digits = 3, caption = "Drule vs. Wrule, full N=939 sample, matched max_items ceilings.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+Drule reaches comparable-or-better specific-factor precision using noticeably **fewer items on
+average** than Wrule at the same ceiling -- once G is well-estimated, conditioning on it is what
+actually helps resolve S1/S2, so items chosen for general informativeness end up serving the bias
+dimensions better than items chosen to deliberately avoid G. **Drule is used from here on.**
+
+## 5.2 Achievable precision ceiling
+
+Even a full, non-adaptive 478-item administration only reaches a fairly modest specific-factor
+precision (Section 4's reliability table: SE &approx; 0.5 for S1/S2, vs. &approx; 0.17 for G) --
+substantially worse than can be reached for general ability, and worse than the min_SEM = 0.3 target
+used for G in the existing unidimensional CAT. The CAT simulation below uses `min_SEM = c(0.3, 0.5, 0.5)`,
+grounded in that ceiling, rather than an arbitrary tighter target the bias dimensions could never reach.
+
+## 5.3 Simulation results (Drule, full N = `r nrow(resp_data$d_demo)` sample)
+
+```{r cat-sim-table}
+criteria_comparison %>%
+  filter(criteria == "Drule") %>%
+  bind_rows(cat_summary_wrule %>% filter(max_items == 50) %>%
+              transmute(criteria, max_items, mean_n_items, mean_SE_G = mean_SE_G,
+                        mean_SE_S1 = mean_SE_S1, mean_SE_S2 = mean_SE_S2,
+                        r_bias_vs_full = r_bias_vs_full, r_G_vs_full = r_G_vs_full)) %>%
+  arrange(max_items) %>%
+  kable(digits = 3,
+        caption = "CAT simulation results: item budget vs. recovered precision and agreement with the full-item-bank estimate.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+```{r cat-recovery-plot, fig.width=6, fig.height=4.5}
+d_demo <- resp_data$d_demo
+p100 <- sim_results_drule[["100"]]$parms
+p100$data_id <- d_demo$data_id
+p100 <- left_join(p100, bifactor_scores %>% select(data_id, bias_full = noun_predicate_bias), by = "data_id")
+
+ggplot(p100, aes(x = bias_full, y = bias_cat)) +
+  geom_point(alpha = 0.15) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "Full-item-bank bias (S1 - S2)", y = "CAT-estimated bias (max 100 items, Drule)",
+       title = sprintf("r = %.2f, mean %.0f items administered", cor(p100$bias_cat, p100$bias_full), mean(p100$n_items))) +
+  theme_bw()
+```
+
+With a **100-item ceiling**, Drule administers 75 items on average and recovers the bias score at
+**r = .93** against the full 478-item estimate; extending the ceiling to 200 items (131 administered
+on average) reaches **r = .95**. For comparison, the existing unidimensional production CAT gets away
+with ~25-50 items total because it only has to resolve one dimension -- the bias dimension is
+intrinsically harder to measure precisely, so a noun/predicate-bias CAT will need a substantially
+larger item budget than the existing vocabulary-size CAT to reach comparable fidelity.
+
+# 6. Summary and open questions
+
+- **Item bank**: 478 items (312 noun, 166 predicate) reliably classified from existing CDI category
+  metadata -- no new item coding was needed.
+- **Model**: a bifactor structure (general vocabulary factor + orthogonal noun-specific and
+  predicate-specific factors) is empirically supported (the EFA check found a dominant general factor
+  plus a small, real, near-orthogonal secondary noun/predicate split) and successfully decouples the
+  bias score from vocabulary size/age (r &approx; -.16, down from r &approx; .94-.99 for raw proportions).
+- **CAT**: `Drule` item selection with `min_SEM = c(0.3, 0.5, 0.5)`; a ~100-item budget recovers the
+  bias estimate at r = .93 vs. the full item bank, ~200 items reaches r = .95.
+
+Open questions worth settling with Hiromichi before further development:
+
+1. **Deployment stopping rule**: fixed item count (~100-150) vs. adaptive SE-based stopping -- the
+   latter is principled but a meaningful fraction of children will still hit the item ceiling given the
+   precision ceiling in Section 5.2.
+2. **3-way split**: whether to pursue nouns/verbs/adjectives as three specific factors instead of the
+   2-way noun/predicate collapse used here (the source paper's own adjective bias was the noisiest and
+   least typologically predictable of the three categories, so a 3-way model may need more items per
+   dimension than are available, but it would match the paper's own finer-grained distinction).
+3. Whether a shorter, purpose-built noun/predicate-only CAT (this document) should be a standalone
+   instrument, or whether it's preferable to fold these dimensions into a single administration
+   alongside the existing production CAT (sharing items, one longer adaptive session instead of two).
