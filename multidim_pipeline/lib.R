@@ -244,10 +244,17 @@ doCAT_multidim <- function(dat, mod, criteria = "Drule", weights = c(0, 1, 1),
 ## (see bifactor_scores.csv's SE_S1_noun/SE_S2_predicate), not copied from
 ## another language -- reusing Japanese's min_SEM=0.5 for Cantonese caused
 ## premature stopping and badly hurt recovery (r=.82 vs .97 once fixed).
+## `min_items` may be a single value (applied to every length) or a vector
+## the same length as `lengths` -- every language tried so far needed a
+## substantial floor (150-250 items) to avoid the SE criterion stopping the
+## test before the bias dimensions were actually resolved, so pass a vector
+## scaled to each length's ceiling (e.g. ~75% of max_items) rather than
+## rediscovering that with a follow-up "forced" run each time.
 run_cat_pipeline <- function(mod, d_mat_content, d_demo, out_dir,
                               lengths = c(50, 100, 200),
                               min_items = 20, min_SEM = c(0.3, 0.5, 0.5),
                               n_cores = min(10, detectCores() - 1), seed = 123) {
+  min_items_vec <- rep_len(min_items, length(lengths))
   set.seed(seed)
   fs_full <- fscores(mod)
   d_mat_imp <- imputeMissing(mod, Theta = fs_full)
@@ -259,11 +266,15 @@ run_cat_pipeline <- function(mod, d_mat_content, d_demo, out_dir,
   sub_idx <- sample(nrow(d_mat_imp), min(100, nrow(d_mat_imp)))
   dat_sub <- d_mat_imp[sub_idx, ]
 
+  # comparison step always caps at max_items=100 regardless of `lengths`, so
+  # use a scalar min_items here even when the caller passed a per-length vector
+  cmp_min_items <- min(min_items_vec[1], 100)
+
   cl <- makeCluster(n_cores)
-  cmp_drule <- doCAT_multidim(dat_sub, mod, criteria = "Drule", min_items = min_items,
+  cmp_drule <- doCAT_multidim(dat_sub, mod, criteria = "Drule", min_items = cmp_min_items,
                                max_items = 100, min_SEM = min_SEM, cl = cl)
   cmp_wrule <- doCAT_multidim(dat_sub, mod, criteria = "Wrule", weights = c(0, 1, 1),
-                               min_items = min_items, max_items = 100, min_SEM = min_SEM, cl = cl)
+                               min_items = cmp_min_items, max_items = 100, min_SEM = min_SEM, cl = cl)
   stopCluster(cl)
   cat("Drule mean SEs:\n"); print(colMeans(cmp_drule$parms[, c("SE_G", "SE_S1_noun", "SE_S2_predicate")]))
   cat("Wrule mean SEs:\n"); print(colMeans(cmp_wrule$parms[, c("SE_G", "SE_S1_noun", "SE_S2_predicate")]))
@@ -274,13 +285,15 @@ run_cat_pipeline <- function(mod, d_mat_content, d_demo, out_dir,
 
   cl <- makeCluster(n_cores)
   sim_results <- list()
-  for (L in lengths) {
+  for (i in seq_along(lengths)) {
+    L <- lengths[i]
     t0 <- Sys.time()
     sim_results[[as.character(L)]] <- doCAT_multidim(
       d_mat_imp, mod, criteria = chosen, weights = c(0, 1, 1),
-      min_items = min_items, max_items = L, min_SEM = min_SEM, cl = cl
+      min_items = min_items_vec[i], max_items = L, min_SEM = min_SEM, cl = cl
     )
-    cat("max_items =", L, "-", round(difftime(Sys.time(), t0, units = "mins"), 1), "min\n")
+    cat("max_items =", L, "(min_items =", min_items_vec[i], ") -",
+        round(difftime(Sys.time(), t0, units = "mins"), 1), "min\n")
   }
   stopCluster(cl)
   saveRDS(sim_results, file.path(out_dir, "cat_simulation_results.Rds"))
