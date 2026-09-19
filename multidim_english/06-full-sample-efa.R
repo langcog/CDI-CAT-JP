@@ -1,0 +1,12 @@
+## American English exploratory 2-factor IRT model on the FULL sample
+## (N=8998), not the n=1500 subsample used in 02-subsample-and-efa.R.
+## Output goes to multidim_english/fullsample/ so the original subsampled
+## results (02/03/04) stay untouched and both remain available.
+
+source("multidim_pipeline/lib.R")
+
+dir.create("multidim_english/fullsample", showWarnings = FALSE)
+d <- readRDS("multidim_english/noun_predicate_response_data.Rds")
+cat("Full sample N =", nrow(d$d_mat_content), "\n")
+
+fit_exploratory_efa(d$d_mat_content, d$items_content, out_dir = "multidim_english/fullsample")

@@ -115,7 +115,7 @@ ggplot(bifactor_scores, aes(x = production, y = noun_predicate_bias)) +
 
 The bias score decouples from vocabulary size more cleanly here than in any other language:
 r = `r round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias),3)` with production
-(Japanese: -.16, Cantonese: -.11, English: -.06) and r =
+(Japanese: -.16, Cantonese: -.11, English: .04) and r =
 `r round(cor(bifactor_scores$age, bifactor_scores$noun_predicate_bias),2)` with age. The S1/S2 EAP
 score correlation is `r round(cor(bifactor_scores$S1_noun, bifactor_scores$S2_predicate),2)`.
 
@@ -145,16 +145,16 @@ tibble(
   n_for_modeling = c(nrow(jp_bifactor_scores), nrow(can_bifactor_scores), nrow(en_bifactor_scores), nrow(bifactor_scores)),
   n_available = c(nrow(jp_bifactor_scores), nrow(can_resp_data$d_demo), nrow(en_resp_data$d_demo), nrow(resp_data$d_demo)),
   n_content_items = c(478, 572, 478, 478),
-  full_bank_reliability_S1 = c(0.71, 0.86, 0.80, 0.89),
-  full_bank_reliability_S2 = c(0.64, 0.80, 0.74, 0.85),
+  full_bank_reliability_S1 = c(0.71, 0.86, 0.81, 0.89),
+  full_bank_reliability_S2 = c(0.64, 0.80, 0.75, 0.85),
   bias_vs_production_r = c(
     round(cor(jp_bifactor_scores$production, jp_bifactor_scores$S1_noun - jp_bifactor_scores$S2_predicate), 2),
     round(cor(can_bifactor_scores$production, can_bifactor_scores$noun_predicate_bias), 2),
-    round(cor(en_bifactor_scores$production, en_bifactor_scores$noun_predicate_bias), 2),
+    round(cor(en_bifactor_scores$production, en_bifactor_scores$noun_predicate_bias), 3),
     round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias), 3)
   ),
   best_cat_recovery_r = c(0.95, 0.97, 0.98, 0.99),
-  items_for_best_recovery = c(131, 192, 245, 259)
+  items_for_best_recovery = c(131, 192, 257, 259)
 ) %>%
   kable(digits = 2, caption = "Japanese vs. Cantonese vs. English vs. Spanish: key numbers side by side.") %>%
   kable_styling(full_width = FALSE)
