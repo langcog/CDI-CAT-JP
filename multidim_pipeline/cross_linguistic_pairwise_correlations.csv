@@ -1,0 +1,13 @@
+lang1,lang2,pos2,n_shared,r
+multidim,multidim_cantonese,noun,192,0.6129574010185126
+multidim,multidim_cantonese,predicate,99,0.14731907529671764
+multidim,multidim_english,noun,193,0.7311301872468077
+multidim,multidim_english,predicate,87,0.18761127629087213
+multidim,multidim_spanish,noun,191,-0.4627716558219977
+multidim,multidim_spanish,predicate,80,0.28479769049088677
+multidim_cantonese,multidim_english,noun,199,0.753157100442689
+multidim_cantonese,multidim_english,predicate,121,0.7102293428238076
+multidim_cantonese,multidim_spanish,noun,192,-0.4961997078691809
+multidim_cantonese,multidim_spanish,predicate,108,-0.4367610794246874
+multidim_english,multidim_spanish,noun,241,-0.45462260582727604
+multidim_english,multidim_spanish,predicate,111,-0.3245387026667623

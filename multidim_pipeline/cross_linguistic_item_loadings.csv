@@ -1,0 +1,1963 @@
+language,item_id,uni_lemma,pos2,own_specific_loading,english_gloss
+multidim,item_13,duck,noun,1.7356860625361563,duck
+multidim,item_14,ant,noun,1.730433229660134,ant
+multidim,item_15,dog,noun,1.3308670793073587,dog
+multidim,item_16,rabbit,noun,2.2426281249351887,rabbit
+multidim,item_17,cow,noun,1.9934849954663167,cow
+multidim,item_18,horse,noun,2.0950925969303036,horse
+multidim,item_21,frog,noun,2.406731073336096,frog
+multidim,item_22,crab,noun,2.1988119285016494,crab
+multidim,item_23,hippopotamus,noun,1.9576802681915448,hippopotamus
+multidim,item_24,turtle,noun,2.514664840526033,turtle
+multidim,item_25,crow,noun,1.7832436798465656,crow
+multidim,item_27,giraffe,noun,2.3165779725092612,giraffe
+multidim,item_29,bear,noun,2.075479546692034,bear
+multidim,item_30,koala,noun,1.8564868834706816,koala
+multidim,item_32,fish (animal),noun,2.421113389220273,fish
+multidim,item_33,monkey,noun,2.0889448157038446,monkey
+multidim,item_34,zebra,noun,1.6833045068566097,zebra
+multidim,item_35,elephant,noun,1.870625634244541,elephant
+multidim,item_37,butterfly,noun,1.4881570409455402,butterfly
+multidim,item_38,animal,noun,1.497989874796835,animal
+multidim,item_39,tiger,noun,2.526173346324705,tiger
+multidim,item_40,bird,noun,2.3951323074208326,bird
+multidim,item_41,chicken,noun,2.1504891449308903,chicken
+multidim,item_42,cat,noun,1.4071295792227834,cat
+multidim,item_43,mouse,noun,2.0675864213550263,mouse
+multidim,item_44,bee,noun,1.860612984145936,bee
+multidim,item_45,pigeon,noun,1.518287499478998,pigeon
+multidim,item_46,panda,noun,2.0710012100825663,panda
+multidim,item_48,chick,noun,2.1795274863769993,chick
+multidim,item_49,pig,noun,2.0154646116952857,pig
+multidim,item_50,snake,noun,1.9603561038069783,snake
+multidim,item_51,penguin,noun,2.245008417584461,penguin
+multidim,item_52,bug,noun,1.1379702012362838,insect
+multidim,item_53,lion,noun,2.2724212116476585,lion
+multidim,item_54,squirrel,noun,2.0516169640500337,squirrel
+multidim,item_55,crocodile,noun,1.930735077473196,crocodile
+multidim,item_56,car,noun,0.8913372233084278,locomotive
+multidim,item_57,car,noun,1.368582877860162,car
+multidim,item_59,bicycle,noun,1.4021902717818733,bicycle
+multidim,item_62,train,noun,1.8447128695456425,train
+multidim,item_63,truck,noun,1.467923398093438,truck
+multidim,item_65,bus,noun,1.4846404984716737,bus
+multidim,item_66,police car,noun,1.2548683486311605,police_car
+multidim,item_67,airplane,noun,1.7854714814235362,airplane
+multidim,item_68,ship,noun,1.701795897548597,ship
+multidim,item_70,book,noun,1.4047058852034384,picture_book
+multidim,item_71,pencil,noun,1.0579743174952367,pencil
+multidim,item_72,toy (object),noun,1.101517110717166,toy
+multidim,item_77,blocks,noun,1.3153536628027316,building_blocks
+multidim,item_78,doll,noun,0.9056373556138654,doll
+multidim,item_83,balloon,noun,1.312491746584675,balloon
+multidim,item_86,ball,noun,1.1896469055539507,ball
+multidim,item_87,book,noun,0.7533475656800114,book
+multidim,item_88,ice cream,noun,0.5892481012342642,ice_cream
+multidim,item_89,candy,noun,0.4616837130578065,candy
+multidim,item_90,strawberry,noun,1.798742906837554,strawberry
+multidim,item_91,noodles,noun,0.9883971279961764,udon
+multidim,item_97,tea,noun,0.4083023145262746,tea
+multidim,item_102,milk,noun,1.011135984453811,milk
+multidim,item_105,cake,noun,0.8332422468890491,cake
+multidim,item_109,rice,noun,1.1669327159098513,rice
+multidim,item_110,fish (food),noun,1.8647132756616636,fish
+multidim,item_113,juice,noun,0.5449531000374308,juice
+multidim,item_115,watermelon,noun,1.4439503988339395,watermelon
+multidim,item_121,egg,noun,1.696252640872735,egg
+multidim,item_122,cheese,noun,0.9376815401823896,cheese
+multidim,item_124,tofu,noun,1.1932129782856598,tofu
+multidim,item_126,tomato,noun,2.1973444696043183,tomato
+multidim,item_130,meat,noun,1.8644161854743977,meat
+multidim,item_131,carrot,noun,1.9537768646044364,carrot
+multidim,item_134,banana,noun,1.3273031753156834,banana
+multidim,item_135,bread,noun,1.2211468327727175,bread
+multidim,item_139,grapes,noun,1.5868231493286946,grape
+multidim,item_140,pudding,noun,0.7998341222925416,pudding
+multidim,item_145,beans,noun,1.0897396121810807,bean
+multidim,item_146,orange (food),noun,1.5264427784426733,orange
+multidim,item_147,water (beverage),noun,1.004076133230847,water
+multidim,item_148,soup,noun,1.038820460052183,miso_soup
+multidim,item_149,milk,noun,0.9223455143168116,milk
+multidim,item_151,peach,noun,1.387082367839865,peach
+multidim,item_155,apple,noun,1.6719770130630862,apple
+multidim,item_156,apron,noun,0.7292046647618035,apron
+multidim,item_157,coat,noun,0.10706672651267518,overcoat
+multidim,item_158,diaper,noun,1.2292613969330768,diaper
+multidim,item_159,shoe,noun,1.095833377945964,shoes
+multidim,item_160,sock,noun,0.7726469719196317,socks
+multidim,item_161,jeans,noun,0.4270362475138943,jeans
+multidim,item_162,shirt,noun,0.4905165332430911,shirt
+multidim,item_163,jacket,noun,0.7142076297968653,jacket
+multidim,item_164,skirt,noun,1.0700444000318723,skirt
+multidim,item_166,pants,noun,1.4613380133817864,pants
+multidim,item_172,gloves,noun,1.5371995053608218,gloves
+multidim,item_173,boots,noun,1.0124076930462815,boots
+multidim,item_176,pajamas,noun,1.154693899025116,pajama
+multidim,item_177,shorts,noun,0.6360352722554526,shorts
+multidim,item_178,belt,noun,1.0830475586290635,belt
+multidim,item_179,hat,noun,0.9140039393831264,hat
+multidim,item_180,button,noun,1.4141262891276396,button
+multidim,item_182,clothes,noun,0.8763450173437266,clothes
+multidim,item_183,ribbon,noun,0.8869406328613727,ribbon
+multidim,item_185,leg,noun,0.823678558133093,leg
+multidim,item_186,head,noun,1.0179346144226962,head
+multidim,item_187,buttocks,noun,0.7885398114023779,buttocks
+multidim,item_188,penis,noun,-0.01292822053223689,penis
+multidim,item_189,breast,noun,0.24810935088034825,breasts
+multidim,item_191,tummy,noun,0.8412768787403248,stomach
+multidim,item_192,belly button,noun,0.9753880306231242,navel
+multidim,item_193,face,noun,1.0952992350013373,face
+multidim,item_195,hair,noun,0.5738489551048197,hair
+multidim,item_196,mouth,noun,1.026344532243297,mouth
+multidim,item_199,tail,noun,1.218915677779186,tail
+multidim,item_201,nail (finger),noun,1.1096069142257907,nail
+multidim,item_202,hand,noun,0.6555088866787304,hand
+multidim,item_203,tooth,noun,0.5780413038346474,tooth
+multidim,item_204,nose,noun,0.8379123996357903,nose
+multidim,item_205,tongue,noun,0.8452763814087195,tongue
+multidim,item_206,cheek,noun,0.902258783792336,cheek
+multidim,item_208,ear,noun,0.7794564180269321,ear
+multidim,item_209,eye,noun,0.7904071463734031,eye
+multidim,item_210,finger,noun,0.9431233235697848,finger
+multidim,item_211,chair,noun,0.795384367124508,chair
+multidim,item_214,bath,noun,1.054885340931401,bath
+multidim,item_215,potty,noun,0.20682963587427827,potty
+multidim,item_216,curtain,noun,1.2383492187188516,curtain
+multidim,item_217,stairs,noun,1.4906344034995678,stairs
+multidim,item_221,shower,noun,1.031891681833924,shower
+multidim,item_223,stove,noun,0.6563066456565252,stove
+multidim,item_224,fan,noun,1.0664024884590468,fan
+multidim,item_225,kitchen,noun,0.8858731317556292,kitchen
+multidim,item_227,closet,noun,0.7922892026482496,wardrobe
+multidim,item_229,table,noun,1.0015675570346338,desk
+multidim,item_230,table,noun,1.0302809667194368,table
+multidim,item_231,tv,noun,1.2375721793390633,television
+multidim,item_232,light,noun,0.8842721795326897,light
+multidim,item_233,door,noun,0.8827983021037471,door
+multidim,item_234,toilet,noun,1.6247707925386552,toilet
+multidim,item_236,piano,noun,0.9659442592884208,piano
+multidim,item_237,drawer,noun,0.9574100075905956,drawer
+multidim,item_238,video,noun,0.8007798398386551,video
+multidim,item_239,bed,noun,0.8585526064096509,bed
+multidim,item_240,room,noun,1.396384527941865,room
+multidim,item_241,window,noun,1.3860058025928157,window
+multidim,item_242,refrigerator,noun,1.006237913630941,refrigerator
+multidim,item_245,picture,noun,0.8923008013941758,picture
+multidim,item_246,money,noun,0.6516877406685105,money
+multidim,item_247,dish,noun,1.0257902981621387,dish
+multidim,item_248,key,noun,0.7173086781321164,key
+multidim,item_250,umbrella,noun,0.9802846287868728,umbrella
+multidim,item_251,bag,noun,0.963653309714532,bag
+multidim,item_252,paper,noun,1.2474008492631576,paper
+multidim,item_253,camera,noun,0.9842165737918354,camera
+multidim,item_256,comb (object),noun,0.48836274806908114,comb
+multidim,item_257,medicine,noun,0.99343830389135,medicine
+multidim,item_258,cup,noun,0.7704305383948922,cup
+multidim,item_259,trash can,noun,1.4213293668915694,trash_box
+multidim,item_260,wallet,noun,0.9009532283083568,wallet
+multidim,item_261,shampoo,noun,0.927621368862206,shampoo
+multidim,item_263,spoon,noun,0.8218897854425596,spoon
+multidim,item_167,slipper,noun,0.8796880992794167,slippers
+multidim,item_264,soap,noun,1.1787156136556447,soap
+multidim,item_266,vacuum cleaner,noun,0.9986692580635816,vacuum_cleaner
+multidim,item_267,towel,noun,0.8298568910782281,towel
+multidim,item_268,bowl,noun,0.7096710222026245,bowl
+multidim,item_269,tissue,noun,0.49862119960680346,tissue
+multidim,item_271,battery,noun,0.6014523375263287,battery
+multidim,item_272,telephone,noun,1.2029747621018752,phone
+multidim,item_273,clock,noun,1.245508012126712,clock
+multidim,item_276,bucket,noun,1.4051576229371987,bucket
+multidim,item_277,box,noun,1.3893571732037495,box
+multidim,item_278,scissors,noun,1.305440151547158,scissors
+multidim,item_279,chopstick,noun,0.8351806314094377,chopsticks
+multidim,item_281,handkerchief,noun,1.1907059440975891,handkerchief
+multidim,item_280,toothbrush,noun,1.0382709003009565,toothbrush
+multidim,item_283,fork,noun,1.1667722388232542,fork
+multidim,item_286,broom,noun,0.5150156966216459,broom
+multidim,item_290,pillow,noun,1.1761608345725572,pillow
+multidim,item_291,glasses,noun,1.1691685779260663,glasses
+multidim,item_293,blanket,noun,0.40682376286799854,blanket
+multidim,item_294,rain,noun,1.3368851446759815,rain
+multidim,item_298,moon,noun,1.5856324935683306,moon
+multidim,item_300,sun,noun,1.5078064035783771,sun
+multidim,item_302,river,noun,1.2142585002104274,river
+multidim,item_303,tree,noun,0.9806569145780528,tree
+multidim,item_306,shovel,noun,0.6407103875796601,scoop
+multidim,item_307,sandbox,noun,1.4059131239135088,sandpit
+multidim,item_308,slide (object),noun,1.2361674330263948,slide
+multidim,item_309,sky,noun,1.6782405572257495,sky
+multidim,item_310,garden,noun,0.823930931535546,garden
+multidim,item_313,leaf,noun,0.6678888048763459,leaf
+multidim,item_314,flower,noun,1.275708776693696,flower
+multidim,item_315,pool,noun,0.875402811811502,pool
+multidim,item_316,swing (object),noun,1.3370585345131345,swing
+multidim,item_319,star,noun,1.2252319359150383,star
+multidim,item_323,snow,noun,1.1735012954958246,snow
+multidim,item_401,go up,predicate,1.0018169798988426,go_up
+multidim,item_402,open (action),predicate,1.6147896995514155,open
+multidim,item_403,lift (action),predicate,1.26375535147734,rise
+multidim,item_404,play,predicate,2.5047299285661664,play
+multidim,item_405,wash,predicate,1.5412921069278724,wash
+multidim,item_406,be,predicate,1.3533686521020418,exist
+multidim,item_407,walk,predicate,1.8436518220330815,walk
+multidim,item_409,go,predicate,1.3968234567335402,go
+multidim,item_412,put in,predicate,1.793667898640137,put_in
+multidim,item_413,sing,predicate,2.072720960845829,sing
+multidim,item_414,get up,predicate,2.3979954558489176,get_up
+multidim,item_415,put,predicate,1.8756657486634216,put
+multidim,item_418,fall,predicate,1.6384938003235092,fall
+multidim,item_422,get off,predicate,1.806167801416007,get_off
+multidim,item_426,write,predicate,1.9694769657378528,write
+multidim,item_429,lend,predicate,1.88274437213574,lend
+multidim,item_430,clean (action),predicate,1.3906982437570816,clean_up
+multidim,item_435,wear,predicate,2.243785311097247,wear
+multidim,item_438,come,predicate,1.6346282033880786,come
+multidim,item_440,spill,predicate,1.9705749288514451,spill
+multidim,item_441,fall,predicate,2.1766115874557763,fall
+multidim,item_444,close,predicate,2.158064701004621,close
+multidim,item_446,like,predicate,1.2398782072248051,like
+multidim,item_448,do,predicate,1.3740629432034932,do
+multidim,item_449,sit,predicate,2.3307667003023047,sit
+multidim,item_450,hug,predicate,0.8398334473392307,hug
+multidim,item_453,hit,predicate,1.607647813435959,hit
+multidim,item_454,stand,predicate,1.4388724408806743,stand
+multidim,item_455,eat,predicate,2.2145284004596513,eat
+multidim,item_461,get out,predicate,1.7368526033356406,get_out
+multidim,item_464,take,predicate,2.0135475679295123,take
+multidim,item_466,cry,predicate,2.223622105649141,cry
+multidim,item_467,throw,predicate,2.2619372114468645,throw
+multidim,item_471,remove,predicate,2.1558568889091605,take_off
+multidim,item_473,sleep,predicate,1.9905421224080675,sleep
+multidim,item_475,drink (action),predicate,2.4716149066979973,drink
+multidim,item_476,get on,predicate,2.9291442446495783,get_on
+multidim,item_477,enter,predicate,1.83804540514061,enter
+multidim,item_478,wear,predicate,1.8082345988025503,wear
+multidim,item_483,wipe,predicate,2.0097208056085525,wipe
+multidim,item_486,want,predicate,1.8042139122450045,want
+multidim,item_487,wait,predicate,2.185360134444419,wait
+multidim,item_490,show,predicate,2.0659336663046637,show
+multidim,item_491,look,predicate,1.8484769539916075,look
+multidim,item_493,have,predicate,2.4560855570971056,have
+multidim,item_494,bring,predicate,1.9774574262399316,bring_up
+multidim,item_497,stop,predicate,1.8608931884912183,stop
+multidim,item_498,do,predicate,1.820702144088642,do
+multidim,item_501,read,predicate,2.4244298504461543,read
+multidim,item_503,laugh,predicate,1.496995447116717,laugh
+multidim,item_517,red,predicate,1.565307612652077,red
+multidim,item_520,hot,predicate,1.327297184094003,hot
+multidim,item_521,sweet,predicate,1.7778258097559274,sweet
+multidim,item_522,good,predicate,1.249159668463265,good
+multidim,item_524,painful,predicate,1.392344170034028,painful
+multidim,item_526,noisy,predicate,0.7778470928076675,noisy
+multidim,item_527,happy,predicate,1.1250817546374223,glad
+multidim,item_528,tasty,predicate,1.3984954859653258,delicious
+multidim,item_532,heavy,predicate,1.6262064105686591,heavy
+multidim,item_533,clever,predicate,0.5989409888280893,clever
+multidim,item_535,itchy,predicate,1.145215369052019,itchy
+multidim,item_536,spicy,predicate,0.8497412223563807,spicy
+multidim,item_537,empty,predicate,0.9298639698549988,empty
+multidim,item_538,cute,predicate,1.183943508724155,cute
+multidim,item_539,pitiful,predicate,1.3674788890287377,pity
+multidim,item_541,dirty,predicate,1.0813708805177125,dirty
+multidim,item_542,dislike,predicate,1.1832653274322624,dislike
+multidim,item_543,clean (description),predicate,1.3268054682173218,clean
+multidim,item_544,smelly,predicate,0.37310094572543623,odor
+multidim,item_545,dark,predicate,2.0400682988432353,dark
+multidim,item_548,scary,predicate,1.0885763659576595,scary
+multidim,item_549,cold,predicate,1.7021793522469522,cold
+multidim,item_551,quiet,predicate,1.9097980870709828,quiet
+multidim,item_552,good,predicate,1.3093470098829467,good
+multidim,item_555,sour,predicate,0.9169251908334004,sour
+multidim,item_558,high,predicate,1.9621909956755037,high
+multidim,item_560,small,predicate,2.230813173636328,small
+multidim,item_561,wrong,predicate,1.831250895567662,wrong
+multidim,item_563,cold,predicate,1.3101817792313966,cold
+multidim,item_564,none,predicate,1.2957278190995238,none
+multidim,item_566,wet,predicate,1.7708319379022477,wet
+multidim,item_567,sleepy,predicate,1.328919878640492,sleepy
+multidim,item_568,fast,predicate,2.056352730449478,fast
+multidim,item_572,round,predicate,2.113332128183373,round
+multidim,item_578,bad,predicate,1.6020087158064509,bad
+multidim,item_19,shrimp,noun,1.3444489679896148,shrimp
+multidim,item_20,wolf,noun,1.5684195481764438,wolf
+multidim,item_26,fox,noun,2.1211552620358902,fox
+multidim,item_28,whale,noun,1.7928151655753868,whale
+multidim,item_31,gorilla,noun,1.664771713741923,gorilla
+multidim,item_47,sheep,noun,2.4706686295965237,sheep
+multidim,item_58,tricycle,noun,0.9993162931712292,tricycle
+multidim,item_60,firetruck,noun,1.2242703970603483,fire_engine
+multidim,item_64,motorcycle,noun,1.0798305312809846,motorcycle
+multidim,item_69,helicopter,noun,1.6379039576001375,helicopter
+multidim,item_73,crayon,noun,1.695528678598039,crayon
+multidim,item_74,game,noun,0.7211096662065838,game
+multidim,item_75,bubbles,noun,1.4002515808070235,soap_bubble
+multidim,item_76,drum,noun,1.6413926753052248,drum
+multidim,item_79,clay,noun,1.0436220412261572,clay
+multidim,item_80,glue (object),noun,1.0281746230009396,paste
+multidim,item_81,puzzle,noun,1.1749954926296122,puzzle
+multidim,item_82,bat,noun,1.1160101613725075,bat
+multidim,item_84,present,noun,1.6231502882089417,present
+multidim,item_85,pen,noun,0.7257508965223192,pen
+multidim,item_92,sweet potato,noun,1.3402646868766384,sweet_potato
+multidim,item_93,sweets,noun,0.7162691617936214,sweets
+multidim,item_94,sugar,noun,1.193431305716437,sugar
+multidim,item_98,Persimmon,noun,1.4911950329052213,persimmon
+multidim,item_99,pumpkin,noun,1.7717309973561215,pumpkin
+multidim,item_100,gum,noun,0.15997474987837798,gum
+multidim,item_103,cucumber,noun,1.5453386098803714,cucumber
+multidim,item_104,cookie,noun,1.2058085465275037,cookie
+multidim,item_106,coffee,noun,0.6954885192182535,coffee
+multidim,item_107,ice,noun,0.6820172812833439,ice
+multidim,item_108,corn,noun,1.0333295268760083,corn
+multidim,item_111,sandwich,noun,1.7553614509668192,sandwich
+multidim,item_112,jam,noun,1.2173183778781458,jam
+multidim,item_114,soy sauce,noun,1.1123242757884948,soy_sauce
+multidim,item_116,soup,noun,1.2606584524159554,soup
+multidim,item_117,spaghetti,noun,1.1235156614525483,spaghetti
+multidim,item_118,jelly,noun,0.6752798161505978,jelly
+multidim,item_119,cracker,noun,1.2888830241680538,rice_crackers
+multidim,item_120,radish,noun,1.707080782231188,radish
+multidim,item_123,chocolate,noun,0.7822353498255749,chocolate
+multidim,item_125,donut,noun,1.651786707766666,donut
+multidim,item_127,pear,noun,1.3396583813516982,pear
+multidim,item_128,eggplant,noun,2.1934112326259565,eggplant
+multidim,item_133,butter,noun,1.3603334664252795,butter
+multidim,item_136,ham,noun,0.8564750807647459,ham
+multidim,item_137,hamburger,noun,1.6110205304340066,hamburger
+multidim,item_141,spinach,noun,1.9701543445621903,spinach
+multidim,item_143,pancake,noun,1.4206106979340436,pancake
+multidim,item_144,chips,noun,0.7247680165909095,potato_chips
+multidim,item_150,melon,noun,1.7237096492899289,melon
+multidim,item_152,vegetable,noun,1.5337020068443747,vegetable
+multidim,item_153,yogurt,noun,1.4495858599637996,yogurt
+multidim,item_154,noodles,noun,1.010642427635072,ramen
+multidim,item_165,sneaker,noun,0.37660414476926635,zuck
+multidim,item_168,sweater,noun,1.368348651830567,sweater
+multidim,item_169,sock,noun,0.6616160947219701,socks
+multidim,item_170,tights,noun,0.6632884173978305,tights
+multidim,item_171,zipper,noun,0.9476755592895538,zipper
+multidim,item_174,tie (object),noun,1.0792642475152252,tie
+multidim,item_175,necklace,noun,1.1481016042557664,necklace
+multidim,item_181,scarf,noun,1.34144192298612,scarf
+multidim,item_184,chin,noun,1.070365258288133,chin
+multidim,item_190,forehead,noun,1.2877705181001178,forehead
+multidim,item_194,shoulder,noun,1.433287370539326,shoulder
+multidim,item_197,neck,noun,1.3065331564504694,neck
+multidim,item_200,back,noun,1.5564566295560769,back
+multidim,item_207,eyebrow,noun,1.0340492504210788,eyebrow
+multidim,item_212,air conditioner,noun,1.1264070584996762,air_conditioner
+multidim,item_213,closet,noun,0.6329934543313158,closet
+multidim,item_228,parking lot,noun,0.8737373084486808,parking_lot
+multidim,item_235,hair dryer,noun,0.6172800715202557,hairdryer
+multidim,item_243,microwave,noun,0.6671229095415862,range
+multidim,item_244,iron (object),noun,0.5787502695342068,iron
+multidim,item_249,basket,noun,0.9178560049540344,basket
+multidim,item_254,can,noun,1.0214792725227395,can
+multidim,item_255,nail (object),noun,0.5526625217988914,nail
+multidim,item_262,straw,noun,1.002284294832805,straw
+multidim,item_265,rag,noun,0.7562139651861592,rag
+multidim,item_270,tape,noun,0.8258655888564116,tape
+multidim,item_274,knife,noun,0.8490352423210755,knife
+multidim,item_275,pan,noun,1.5854638189738786,pan
+multidim,item_282,bottle,noun,1.0548387855542685,bottle
+multidim,item_285,pan,noun,1.4857283893536692,frying_pan
+multidim,item_287,knife,noun,1.3535490787831237,kitchen_knife
+multidim,item_288,pot,noun,0.9767712995444424,pot
+multidim,item_289,microphone,noun,0.5885510949502717,microphone
+multidim,item_292,clock,noun,0.6820492404094827,alarm_clock
+multidim,item_295,stone,noun,1.4297838320415657,stone
+multidim,item_296,stone,noun,0.6396533536070542,rock
+multidim,item_297,branch,noun,1.056356188438372,branch
+multidim,item_301,wind,noun,1.5888123553668902,wind
+multidim,item_304,grass,noun,0.9587092098474626,grass
+multidim,item_305,cloud,noun,1.6528231545472774,cloud
+multidim,item_311,ladder,noun,0.8019475043989781,ladder
+multidim,item_312,flag,noun,0.964616199013364,flag
+multidim,item_318,hose,noun,1.0542449323990013,hose
+multidim,item_320,watering can,noun,0.4947633961716251,watering
+multidim,item_321,road,noun,1.5441292942486942,road
+multidim,item_322,roof,noun,1.4788294952262735,roof
+multidim,item_324,snowman,noun,1.2427944260765242,snowman
+multidim,item_408,say,predicate,1.6517747645913052,say
+multidim,item_410,need,predicate,0.9460479869694868,need
+multidim,item_417,push,predicate,1.5914662776411872,push
+multidim,item_419,dance,predicate,1.355244227862267,dance
+multidim,item_421,swim,predicate,1.8171849965968672,swim
+multidim,item_423,end,predicate,1.845694821691948,end
+multidim,item_424,buy,predicate,1.989345799240768,buy
+multidim,item_427,hide,predicate,2.113010873010031,hide
+multidim,item_428,hang,predicate,1.634380142917785,hang
+multidim,item_431,put on,predicate,1.800566473325413,put_on
+multidim,item_433,listen,predicate,1.783994663091581,listen
+multidim,item_434,hear,predicate,1.642339760966292,hear
+multidim,item_436,cut,predicate,1.988564391217068,cut
+multidim,item_437,stick,predicate,1.799897518334667,stick
+multidim,item_439,kick,predicate,1.662070831214814,kick
+multidim,item_442,break,predicate,2.097610723291166,break_down
+multidim,item_443,touch,predicate,2.013035390090398,touch
+multidim,item_445,know,predicate,2.354921300468191,know
+multidim,item_452,help,predicate,1.5571899861739231,help
+multidim,item_456,catch,predicate,2.1987488076659667,catch
+multidim,item_457,arrive,predicate,1.7751212546879285,reach
+multidim,item_458,make,predicate,2.52820855486791,create
+multidim,item_459,attach,predicate,1.9393709640461751,attach
+multidim,item_462,jump,predicate,1.8217589207216192,jump
+multidim,item_463,stop,predicate,2.489592176821722,stop
+multidim,item_465,fix,predicate,1.539342970429174,fix
+multidim,item_468,lick,predicate,2.18937854095259,lick
+multidim,item_469,become,predicate,2.30564992991303,become
+multidim,item_470,escape,predicate,1.7025668245720822,escape
+multidim,item_472,paint (action),predicate,2.1848154681282264,paint
+multidim,item_474,climb,predicate,2.2711464276310873,climb
+multidim,item_479,carry,predicate,2.130793261290331,carry
+multidim,item_480,run,predicate,2.1370114678129286,run
+multidim,item_481,pull,predicate,2.064946538006388,pull
+multidim,item_482,pick up,predicate,2.6653381996413783,pick_up
+multidim,item_484,blow,predicate,1.7478946447697803,blow
+multidim,item_485,bump,predicate,2.315881583518237,collide
+multidim,item_488,turn around,predicate,2.245466915293987,turn_around
+multidim,item_492,peel,predicate,1.5285063963190744,peel
+multidim,item_495,get,predicate,2.1624825478029517,get
+multidim,item_496,break,predicate,1.948123209175114,break
+multidim,item_499,dirty (action),predicate,2.048431718011562,defile
+multidim,item_500,call,predicate,1.9351194490226495,call
+multidim,item_502,understand,predicate,2.1378236262481787,understand
+multidim,item_516,blue,predicate,1.6418443482806373,blue
+multidim,item_518,bright,predicate,1.7035405136554918,bright
+multidim,item_519,new,predicate,1.4747343715517256,new
+multidim,item_523,mean,predicate,0.7325479959277593,mean
+multidim,item_525,good,predicate,0.6543696778394912,good
+multidim,item_529,large,predicate,2.029286140842387,large
+multidim,item_530,funny,predicate,1.0634348716099835,funny
+multidim,item_531,slow,predicate,1.875478571587199,slow
+multidim,item_534,hard,predicate,1.4993890289013845,hard
+multidim,item_540,dry (description),predicate,1.0743567651112498,dried
+multidim,item_546,black,predicate,1.845135589474884,black
+multidim,item_550,square,predicate,1.40033249240847,square
+multidim,item_553,white,predicate,1.9896086474159604,white
+multidim,item_554,good,predicate,1.6540499563945856,great
+multidim,item_559,fun,predicate,1.7616340767846792,pleasant
+multidim,item_562,tired,predicate,1.309729431757332,exhausted
+multidim,item_565,long,predicate,2.3071427436655454,long
+multidim,item_569,sick,predicate,1.2707502609904455,sick
+multidim,item_570,strange,predicate,1.232046097274802,strange
+multidim,item_571,yucky,predicate,0.9980496207991127,bad_taste
+multidim,item_573,green,predicate,2.1102072660292337,green
+multidim,item_574,difficult,predicate,1.6264788974341815,difficult
+multidim,item_575,easy,predicate,1.581078411263027,easy
+multidim,item_576,soft,predicate,2.0027224386910643,soft
+multidim,item_577,slowly,predicate,1.9083943235587728,slowly
+multidim_cantonese,item_53,water (beverage),noun,0.6485402309970111,NA
+multidim_cantonese,item_54,milk,noun,0.41961308294717936,NA
+multidim_cantonese,item_55,soup,noun,1.0254429832382457,NA
+multidim_cantonese,item_56,juice,noun,0.7771175241676836,NA
+multidim_cantonese,item_57,tea,noun,0.22505714020682285,NA
+multidim_cantonese,item_58,soda,noun,-6.967168105480502e-4,NA
+multidim_cantonese,item_59,coke,noun,-0.10945517625343706,NA
+multidim_cantonese,item_60,food,noun,0.5444743654022133,NA
+multidim_cantonese,item_61,egg,noun,1.1461545147413943,NA
+multidim_cantonese,item_62,rice,noun,0.9781750515529446,NA
+multidim_cantonese,item_63,rice,noun,0.6870788701551248,NA
+multidim_cantonese,item_65,noodles,noun,1.0107257670374956,NA
+multidim_cantonese,item_66,macaroni,noun,0.6794680489011521,NA
+multidim_cantonese,item_67,spaghetti,noun,1.3727479600261192,NA
+multidim_cantonese,item_70,dumpling,noun,0.6332984365007343,NA
+multidim_cantonese,item_72,bread,noun,0.5266484180533574,NA
+multidim_cantonese,item_73,bun,noun,0.8955190220258358,NA
+multidim_cantonese,item_74,hamburger,noun,1.0269803585899973,NA
+multidim_cantonese,item_75,biscuit,noun,0.6276402025469234,NA
+multidim_cantonese,item_76,cake,noun,1.1700928995854,NA
+multidim_cantonese,item_77,french fries,noun,0.28147658820621285,NA
+multidim_cantonese,item_78,chips,noun,0.23131088631928567,NA
+multidim_cantonese,item_79,meat,noun,0.7718254457465924,NA
+multidim_cantonese,item_80,chicken (food),noun,1.0535848287368912,NA
+multidim_cantonese,item_81,pork,noun,1.3514145668406852,NA
+multidim_cantonese,item_82,beef,noun,1.6787453055450936,NA
+multidim_cantonese,item_83,fish (food),noun,1.0749519442940494,NA
+multidim_cantonese,item_84,shrimp,noun,0.714757294706095,shrimp
+multidim_cantonese,item_85,crab,noun,1.0736595876542836,crab
+multidim_cantonese,item_87,chicken (food),noun,0.7077034991169471,chicken wing / chicken (food)
+multidim_cantonese,item_88,chicken (food),noun,1.3307131251923805,chicken thigh / chicken (food)
+multidim_cantonese,item_89,sausage,noun,0.15970904890557974,NA
+multidim_cantonese,item_90,ham,noun,0.5687771966836921,NA
+multidim_cantonese,item_92,vegetable,noun,0.8638332490798621,vegetable
+multidim_cantonese,item_93,cabbage,noun,0.9314896722335292,"cabbage / bok choy, chinese cabbage"
+multidim_cantonese,item_94,tomato,noun,1.7129648388151937,NA
+multidim_cantonese,item_95,corn,noun,1.901935689715172,corn
+multidim_cantonese,item_96,carrot,noun,1.5221827868924158,carrot / radish
+multidim_cantonese,item_97,melon,noun,0.6512559195434707,NA
+multidim_cantonese,item_98,mushroom,noun,0.730882481189421,NA
+multidim_cantonese,item_99,beans,noun,0.6620448640740112,NA
+multidim_cantonese,item_100,tofu,noun,1.0517236251937097,NA
+multidim_cantonese,item_101,nut,noun,0.5486350555903844,NA
+multidim_cantonese,item_102,fruit,noun,0.9754125188006364,NA
+multidim_cantonese,item_103,orange (food),noun,1.1516767547442737,NA
+multidim_cantonese,item_104,banana,noun,1.390873096513348,NA
+multidim_cantonese,item_105,apple,noun,1.731911055656383,NA
+multidim_cantonese,item_106,grapes,noun,1.2930421463201678,NA
+multidim_cantonese,item_107,watermelon,noun,1.171874052830398,NA
+multidim_cantonese,item_108,pear,noun,1.4134517455070483,NA
+multidim_cantonese,item_109,mango,noun,1.0926889886166644,NA
+multidim_cantonese,item_110,candy,noun,-0.01718533114672138,NA
+multidim_cantonese,item_111,chocolate,noun,0.3518001366324069,NA
+multidim_cantonese,item_112,ice cream,noun,0.6991188664692057,NA
+multidim_cantonese,item_113,jello,noun,0.23534271705564952,NA
+multidim_cantonese,item_114,soy sauce,noun,0.4604745874841092,NA
+multidim_cantonese,item_115,sauce,noun,0.6406488148349857,NA
+multidim_cantonese,item_116,onion,noun,0.8400748308064085,NA
+multidim_cantonese,item_117,ginger,noun,0.9388984397388636,NA
+multidim_cantonese,item_118,eat,predicate,0.9729845658382118,NA
+multidim_cantonese,item_119,drink (action),predicate,0.9360574852414052,NA
+multidim_cantonese,item_120,feed,predicate,0.8953578273910188,NA
+multidim_cantonese,item_121,bite,predicate,0.6269820013745137,NA
+multidim_cantonese,item_122,chew,predicate,0.6474445214469398,NA
+multidim_cantonese,item_123,suck,predicate,0.5452303509374716,NA
+multidim_cantonese,item_124,blow,predicate,0.8862489433938963,NA
+multidim_cantonese,item_125,swallow,predicate,1.0221943858803628,NA
+multidim_cantonese,item_126,spit,predicate,0.7455108931423238,NA
+multidim_cantonese,item_127,cough,predicate,0.5856192457776958,NA
+multidim_cantonese,item_128,hit,predicate,0.01408854149460826,NA
+multidim_cantonese,item_129,clap,predicate,0.9136229444513456,NA
+multidim_cantonese,item_130,hold,predicate,0.8543690729311554,drag / hold (hands)
+multidim_cantonese,item_131,shake,predicate,0.6508100232885383,NA
+multidim_cantonese,item_132,give,predicate,0.916447441397116,NA
+multidim_cantonese,item_133,take,predicate,1.0768580327817143,NA
+multidim_cantonese,item_134,carry,predicate,1.1187206505365024,carry / hold
+multidim_cantonese,item_135,hold,predicate,0.8026008126004169,NA
+multidim_cantonese,item_136,put,predicate,0.9997251099686902,NA
+multidim_cantonese,item_137,put,predicate,1.031940907389535,NA
+multidim_cantonese,item_138,kiss,predicate,0.6442260767528799,NA
+multidim_cantonese,item_139,hold,predicate,0.5826316903951845,NA
+multidim_cantonese,item_140,hug,predicate,1.0046826813276226,NA
+multidim_cantonese,item_141,carry,predicate,0.33174788470869604,carry / piggyback
+multidim_cantonese,item_142,hold,predicate,0.7809071157448786,hold on / help
+multidim_cantonese,item_143,sit,predicate,1.1484343697317545,NA
+multidim_cantonese,item_144,walk,predicate,1.0378768096625397,NA
+multidim_cantonese,item_145,leave,predicate,0.7864837191889569,NA
+multidim_cantonese,item_146,run,predicate,1.2961553095969949,NA
+multidim_cantonese,item_147,chase,predicate,0.8769061761336309,NA
+multidim_cantonese,item_148,stand,predicate,1.2694771839341887,NA
+multidim_cantonese,item_149,stop,predicate,1.4735603756682305,NA
+multidim_cantonese,item_150,go,predicate,0.9997049264122796,NA
+multidim_cantonese,item_151,go up,predicate,1.4730437568580297,NA
+multidim_cantonese,item_152,go down,predicate,1.3839925154921089,NA
+multidim_cantonese,item_153,go out,predicate,1.2259922720187757,NA
+multidim_cantonese,item_154,enter,predicate,1.3933881014404377,NA
+multidim_cantonese,item_155,play,predicate,1.076517174121503,NA
+multidim_cantonese,item_156,learn,predicate,1.2314507504296093,NA
+multidim_cantonese,item_157,sleep,predicate,0.7039880721884679,NA
+multidim_cantonese,item_158,get up,predicate,1.201893121331036,NA
+multidim_cantonese,item_159,awake,predicate,1.2032943697372689,NA
+multidim_cantonese,item_160,fall,predicate,0.5662586602971398,NA
+multidim_cantonese,item_161,kick,predicate,0.8237402294668232,NA
+multidim_cantonese,item_162,jump,predicate,1.1748949721352553,NA
+multidim_cantonese,item_163,dance,predicate,1.3074604511875827,NA
+multidim_cantonese,item_164,bounce,predicate,0.7562157906119185,NA
+multidim_cantonese,item_165,fly (action),predicate,1.1467232951863184,NA
+multidim_cantonese,item_166,swim,predicate,1.1511791673598244,NA
+multidim_cantonese,item_167,shake,predicate,1.1277420335093595,NA
+multidim_cantonese,item_168,spin,predicate,1.0642710041197436,NA
+multidim_cantonese,item_169,move,predicate,1.050462205350756,NA
+multidim_cantonese,item_170,hide,predicate,1.4474840981382875,NA
+multidim_cantonese,item_171,find,predicate,1.575645595461761,NA
+multidim_cantonese,item_172,catch,predicate,1.2453513235477067,NA
+multidim_cantonese,item_173,open (action),predicate,0.849604120601297,NA
+multidim_cantonese,item_174,turn off,predicate,1.0389859311253775,NA
+multidim_cantonese,item_175,close,predicate,0.8648790192360737,NA
+multidim_cantonese,item_176,knock,predicate,0.845748968785304,NA
+multidim_cantonese,item_177,want,predicate,0.7056655371707431,NA
+multidim_cantonese,item_178,like,predicate,1.6596584297343668,NA
+multidim_cantonese,item_179,have,predicate,1.40027444476745,NA
+multidim_cantonese,item_180,use,predicate,1.4228338029672192,NA
+multidim_cantonese,item_181,laugh,predicate,1.0292627013533775,NA
+multidim_cantonese,item_182,cry,predicate,0.8362458343321671,NA
+multidim_cantonese,item_183,scold,predicate,0.4158160377443153,NA
+multidim_cantonese,item_184,shout,predicate,0.9761106257938966,NA
+multidim_cantonese,item_185,say,predicate,1.468460406356879,NA
+multidim_cantonese,item_186,ask,predicate,1.9129753696314964,NA
+multidim_cantonese,item_187,count,predicate,1.7474085900148375,NA
+multidim_cantonese,item_188,sing,predicate,1.4206141663924108,NA
+multidim_cantonese,item_189,read,predicate,0.8953969161568166,NA
+multidim_cantonese,item_190,write,predicate,0.22716382126087317,NA
+multidim_cantonese,item_191,draw,predicate,1.074388094114192,NA
+multidim_cantonese,item_192,color (action),predicate,1.0767598457456575,NA
+multidim_cantonese,item_193,watch (action),predicate,1.4488244304136793,NA
+multidim_cantonese,item_194,look,predicate,1.201388557231862,NA
+multidim_cantonese,item_195,see,predicate,1.108990607401925,NA
+multidim_cantonese,item_196,blink,predicate,0.895402379571128,NA
+multidim_cantonese,item_197,listen,predicate,1.367934191235238,NA
+multidim_cantonese,item_198,smell,predicate,1.4203136762121886,NA
+multidim_cantonese,item_199,wipe,predicate,0.480041897541758,NA
+multidim_cantonese,item_200,wash,predicate,0.7296847542105837,NA
+multidim_cantonese,item_201,hang,predicate,1.0670637780736314,NA
+multidim_cantonese,item_202,clean (action),predicate,0.9049463230852366,NA
+multidim_cantonese,item_203,stack (action),predicate,0.9921371886715904,NA
+multidim_cantonese,item_204,move,predicate,1.053008373211311,NA
+multidim_cantonese,item_205,rinse,predicate,0.8351711876296413,NA
+multidim_cantonese,item_206,sweep,predicate,0.5500803148715291,NA
+multidim_cantonese,item_207,comb (action),predicate,0.7330097029370672,NA
+multidim_cantonese,item_208,brush (action),predicate,1.108977158904843,NA
+multidim_cantonese,item_209,buy,predicate,0.5175071450866195,NA
+multidim_cantonese,item_210,sell,predicate,0.8530874930356217,NA
+multidim_cantonese,item_211,cook,predicate,1.3379765757341888,NA
+multidim_cantonese,item_212,spread,predicate,0.31505695798474237,spread / smear
+multidim_cantonese,item_213,press,predicate,0.38900734268323506,NA
+multidim_cantonese,item_214,prick,predicate,0.28724380081083584,NA
+multidim_cantonese,item_215,point,predicate,0.9576862269934108,NA
+multidim_cantonese,item_216,poke,predicate,0.5207086812463854,NA
+multidim_cantonese,item_217,insert,predicate,0.639675168772401,NA
+multidim_cantonese,item_218,pinch,predicate,0.0949619302358873,NA
+multidim_cantonese,item_219,twist,predicate,0.7523171347583727,NA
+multidim_cantonese,item_220,twist,predicate,0.6917030580998399,NA
+multidim_cantonese,item_221,grasp,predicate,0.8059507365007704,grasp / squeeze
+multidim_cantonese,item_222,stir,predicate,0.7108563553868904,NA
+multidim_cantonese,item_223,squeeze,predicate,0.9498658066312642,NA
+multidim_cantonese,item_224,tickle,predicate,0.3131444376829834,NA
+multidim_cantonese,item_225,itch,predicate,-0.01496737342826264,NA
+multidim_cantonese,item_226,scratch,predicate,1.026896735495601,NA
+multidim_cantonese,item_227,touch,predicate,1.3869854388365002,NA
+multidim_cantonese,item_228,touch,predicate,0.7525648998182182,touch / stroke
+multidim_cantonese,item_229,touch,predicate,1.4776493439363678,NA
+multidim_cantonese,item_230,throw,predicate,0.9844488767192924,NA
+multidim_cantonese,item_231,throw,predicate,1.0370676840937705,NA
+multidim_cantonese,item_232,throw,predicate,0.5593761040750078,NA
+multidim_cantonese,item_233,pull,predicate,0.5508699460655786,NA
+multidim_cantonese,item_234,tear,predicate,0.8641258317497386,NA
+multidim_cantonese,item_235,peel,predicate,0.2842537673211267,NA
+multidim_cantonese,item_236,remove,predicate,0.9675395117348776,NA
+multidim_cantonese,item_237,put on,predicate,0.9904099596093217,NA
+multidim_cantonese,item_238,put on,predicate,0.8281880884566013,NA
+multidim_cantonese,item_239,know,predicate,0.8548696836910669,NA
+multidim_cantonese,item_240,understand,predicate,0.8537214924982309,NA
+multidim_cantonese,item_241,know,predicate,0.7522959497771384,NA
+multidim_cantonese,item_242,remember,predicate,1.075390309689741,NA
+multidim_cantonese,item_243,can (auxiliary),predicate,1.0237048863099292,can / will
+multidim_cantonese,item_244,think,predicate,1.5669658009974747,NA
+multidim_cantonese,item_245,dream,predicate,1.0774708089011154,NA
+multidim_cantonese,item_246,guess,predicate,1.3384172757657884,NA
+multidim_cantonese,item_247,try,predicate,1.3683455318479858,NA
+multidim_cantonese,item_248,pretend,predicate,1.4708750321588722,NA
+multidim_cantonese,item_249,fold,predicate,0.6602594840845318,NA
+multidim_cantonese,item_250,stick,predicate,0.9362664561243458,NA
+multidim_cantonese,item_251,build,predicate,0.9896044686060532,NA
+multidim_cantonese,item_252,chop,predicate,0.9486865802624362,NA
+multidim_cantonese,item_253,cut,predicate,0.7321491055635854,NA
+multidim_cantonese,item_254,tie (object),predicate,0.660212459153372,NA
+multidim_cantonese,item_255,crawl,predicate,0.9883583547675648,NA
+multidim_cantonese,item_256,roll (action),predicate,0.7106862452245818,NA
+multidim_cantonese,item_257,climb,predicate,0.4168090561094104,NA
+multidim_cantonese,item_259,squat,predicate,0.6967979950779061,NA
+multidim_cantonese,item_261,pour,predicate,0.7921338627413436,NA
+multidim_cantonese,item_262,pour,predicate,0.5295147282695001,NA
+multidim_cantonese,item_263,drip,predicate,0.7375728624846375,NA
+multidim_cantonese,item_264,sweep,predicate,0.9594703686672766,sweep / push aside
+multidim_cantonese,item_265,pull,predicate,1.0440694665850032,NA
+multidim_cantonese,item_266,push,predicate,0.9961084890491436,NA
+multidim_cantonese,item_267,bump,predicate,0.9166421025616024,bump / crash
+multidim_cantonese,item_268,step,predicate,0.7575176905497648,NA
+multidim_cantonese,item_269,ride,predicate,0.640614790718238,NA
+multidim_cantonese,item_270,follow,predicate,1.0674525867436433,NA
+multidim_cantonese,item_271,queue,predicate,1.5995490893394182,queue / line up
+multidim_cantonese,item_272,wait,predicate,1.188507324491587,NA
+multidim_cantonese,item_273,bring,predicate,0.9971297424735632,NA
+multidim_cantonese,item_274,send,predicate,1.7283615250148128,NA
+multidim_cantonese,item_275,catch,predicate,1.0198985347900142,meet / catch
+multidim_cantonese,item_276,hurry,predicate,0.9990405629696733,NA
+multidim_cantonese,item_277,help,predicate,1.7089433208536635,NA
+multidim_cantonese,item_278,bully,predicate,0.7970383030320158,NA
+multidim_cantonese,item_279,grab,predicate,0.6626233753013584,NA
+multidim_cantonese,item_280,borrow,predicate,0.7989480028545699,NA
+multidim_cantonese,item_281,exchange,predicate,1.1224828633239297,NA
+multidim_cantonese,item_282,cover (action),predicate,0.6848569254698195,NA
+multidim_cantonese,item_283,cover (action),predicate,1.2850729658607845,NA
+multidim_cantonese,item_284,uncover,predicate,1.085926553891887,NA
+multidim_cantonese,item_285,break,predicate,1.1828416831127868,NA
+multidim_cantonese,item_286,fix,predicate,1.2258235479848962,NA
+multidim_cantonese,item_287,fix,predicate,1.1055193401606245,NA
+multidim_cantonese,item_288,do,predicate,1.25067793116253,NA
+multidim_cantonese,item_289,finish,predicate,1.0816966147985214,NA
+multidim_cantonese,item_328,ball,noun,0.8716320864944116,NA
+multidim_cantonese,item_329,doll,noun,0.809612723307566,NA
+multidim_cantonese,item_330,book,noun,1.3986339486814507,NA
+multidim_cantonese,item_331,pen,noun,0.5822660944235214,NA
+multidim_cantonese,item_332,pencil,noun,0.8708160695686535,NA
+multidim_cantonese,item_333,crayon,noun,1.300653397948359,NA
+multidim_cantonese,item_334,glue (object),noun,0.9537937860992486,NA
+multidim_cantonese,item_335,sticker,noun,1.088565045780303,NA
+multidim_cantonese,item_336,song,noun,0.7246670843979018,NA
+multidim_cantonese,item_337,microphone,noun,0.7808320875261668,NA
+multidim_cantonese,item_338,gun,noun,0.3172516515865152,NA
+multidim_cantonese,item_339,blocks,noun,1.336870473043942,NA
+multidim_cantonese,item_340,wheel,noun,1.1843799395795176,NA
+multidim_cantonese,item_341,cook,noun,0.9790161816429964,NA
+multidim_cantonese,item_342,bell,noun,0.33038660767859634,NA
+multidim_cantonese,item_343,balloon,noun,1.597021564761386,NA
+multidim_cantonese,item_344,story,noun,1.615831350787115,NA
+multidim_cantonese,item_345,kite,noun,1.2370150698160176,NA
+multidim_cantonese,item_346,card,noun,-0.07619417675494934,NA
+multidim_cantonese,item_348,toy (object),noun,1.1489162750172262,NA
+multidim_cantonese,item_349,present,noun,1.6391775886181124,NA
+multidim_cantonese,item_350,all gone,predicate,-0.09852847427475492,all gone / none
+multidim_cantonese,item_351,naughty,predicate,0.24707140412295991,NA
+multidim_cantonese,item_352,good,predicate,0.9904833713151756,NA
+multidim_cantonese,item_353,good,predicate,1.2174437618095202,NA
+multidim_cantonese,item_354,bad,predicate,1.16585423916563,NA
+multidim_cantonese,item_355,pretty,predicate,0.5658374063087077,NA
+multidim_cantonese,item_356,cute,predicate,1.0528716049020663,NA
+multidim_cantonese,item_357,ugly,predicate,0.6523011819866379,NA
+multidim_cantonese,item_358,yucky,predicate,0.5154876346729603,NA
+multidim_cantonese,item_359,smart,predicate,0.7205603725293525,NA
+multidim_cantonese,item_360,dumb,predicate,0.627641049886254,dumb / stupid
+multidim_cantonese,item_361,hot,predicate,0.9291766418712064,NA
+multidim_cantonese,item_362,warm,predicate,1.1371094002809907,NA
+multidim_cantonese,item_363,cold,predicate,1.0943739617384425,NA
+multidim_cantonese,item_364,cool (description),predicate,0.8535242401159406,NA
+multidim_cantonese,item_365,fragrant,predicate,0.9738899742342074,NA
+multidim_cantonese,item_366,smelly,predicate,0.4641760599204543,NA
+multidim_cantonese,item_367,full,predicate,0.4279550608881319,NA
+multidim_cantonese,item_368,hungry,predicate,1.0167712976629586,NA
+multidim_cantonese,item_369,yummy,predicate,1.0616560818547092,NA
+multidim_cantonese,item_370,thirsty,predicate,1.052869999644135,NA
+multidim_cantonese,item_371,sweet,predicate,1.097789185549605,NA
+multidim_cantonese,item_372,sour,predicate,0.6621327570651412,NA
+multidim_cantonese,item_373,bitter,predicate,0.4623173309498314,NA
+multidim_cantonese,item_374,spicy,predicate,0.41730143653306945,NA
+multidim_cantonese,item_375,wet (description),predicate,0.4913026019353917,NA
+multidim_cantonese,item_376,soft,predicate,0.7318471570526619,NA
+multidim_cantonese,item_377,soft,predicate,1.3042114884745728,NA
+multidim_cantonese,item_378,hard,predicate,1.10683130662967,NA
+multidim_cantonese,item_379,sticky,predicate,0.4048092172884743,NA
+multidim_cantonese,item_380,smooth,predicate,0.8921808050681651,NA
+multidim_cantonese,item_381,slippery,predicate,0.7735481817874179,NA
+multidim_cantonese,item_382,scared,predicate,0.4187959987720087,NA
+multidim_cantonese,item_383,scared,predicate,0.18239990966020672,NA
+multidim_cantonese,item_384,angry,predicate,0.7163017797253117,NA
+multidim_cantonese,item_385,happy,predicate,1.6402014814683763,NA
+multidim_cantonese,item_386,sad,predicate,1.3653383495737796,NA
+multidim_cantonese,item_387,comfortable,predicate,1.2236779504115067,NA
+multidim_cantonese,item_388,dirty,predicate,0.27586514688705366,NA
+multidim_cantonese,item_389,clean (description),predicate,1.3460275005779998,NA
+multidim_cantonese,item_390,hurt (description),predicate,0.4432546113596661,NA
+multidim_cantonese,item_391,itchy,predicate,0.4578814352476048,NA
+multidim_cantonese,item_392,sick,predicate,1.1711257318783257,NA
+multidim_cantonese,item_393,tired,predicate,0.9840631213669596,NA
+multidim_cantonese,item_394,sleepy,predicate,1.0262244790528543,NA
+multidim_cantonese,item_395,asleep,predicate,1.3708777990120906,NA
+multidim_cantonese,item_396,awake,predicate,1.3993347661415148,NA
+multidim_cantonese,item_397,broken,predicate,1.099453108938374,NA
+multidim_cantonese,item_398,broken,predicate,1.0034185650519112,NA
+multidim_cantonese,item_399,finish,predicate,1.0239683794888763,NA
+multidim_cantonese,item_400,fast,predicate,1.0411576024496083,NA
+multidim_cantonese,item_401,slow,predicate,1.8614461252822736,NA
+multidim_cantonese,item_402,many,predicate,1.2714365687520752,NA
+multidim_cantonese,item_403,less,predicate,1.6548371760341158,NA
+multidim_cantonese,item_404,high,predicate,1.5153329813992624,NA
+multidim_cantonese,item_405,low,predicate,1.322483231200733,NA
+multidim_cantonese,item_406,short,predicate,1.388625054422122,NA
+multidim_cantonese,item_407,long,predicate,1.7102799407385152,NA
+multidim_cantonese,item_408,short,predicate,1.7997903654693157,NA
+multidim_cantonese,item_409,heavy,predicate,0.8835734259579416,NA
+multidim_cantonese,item_410,light (description),predicate,1.461804661093843,NA
+multidim_cantonese,item_411,big,predicate,1.7801689155128857,NA
+multidim_cantonese,item_412,small,predicate,1.6461331898171545,NA
+multidim_cantonese,item_413,enough,predicate,0.8879431303581325,NA
+multidim_cantonese,item_414,empty,predicate,0.7342701484333586,NA
+multidim_cantonese,item_415,full,predicate,0.9283342079996382,NA
+multidim_cantonese,item_416,bright,predicate,0.8385231038709324,NA
+multidim_cantonese,item_417,dark,predicate,0.6422731546406376,NA
+multidim_cantonese,item_418,sunny,predicate,0.7839722263180299,NA
+multidim_cantonese,item_419,mean,predicate,0.8205542911018284,NA
+multidim_cantonese,item_420,noisy,predicate,0.8630930610160599,NA
+multidim_cantonese,item_421,careful,predicate,1.1079613190914548,NA
+multidim_cantonese,item_422,clumsy,predicate,0.611293225651971,NA
+multidim_cantonese,item_423,miserable,predicate,1.022923209349106,NA
+multidim_cantonese,item_424,pitiful,predicate,0.9320189024162476,NA
+multidim_cantonese,item_425,black,predicate,2.37101761574739,NA
+multidim_cantonese,item_426,white,predicate,2.133603052487424,NA
+multidim_cantonese,item_427,orange (description),predicate,2.1436736298564685,NA
+multidim_cantonese,item_428,red,predicate,2.594676434473601,NA
+multidim_cantonese,item_429,green,predicate,2.508771906237956,NA
+multidim_cantonese,item_430,yellow,predicate,2.8146057743752912,NA
+multidim_cantonese,item_431,blue,predicate,2.581261182203769,NA
+multidim_cantonese,item_432,grey,predicate,2.1677794889152846,NA
+multidim_cantonese,item_433,brown,predicate,2.074200318670553,NA
+multidim_cantonese,item_434,cat,noun,0.9741779842444876,NA
+multidim_cantonese,item_435,dog,noun,0.7572583755337633,NA
+multidim_cantonese,item_436,bird,noun,1.4796714591479758,NA
+multidim_cantonese,item_437,chicken (animal),noun,1.252015949225504,NA
+multidim_cantonese,item_438,duck,noun,1.746045410072783,NA
+multidim_cantonese,item_439,pigeon,noun,1.226918017371692,NA
+multidim_cantonese,item_440,goose,noun,1.2866431198637056,NA
+multidim_cantonese,item_441,penguin,noun,2.7888668639315215,NA
+multidim_cantonese,item_442,owl,noun,2.96319653365379,NA
+multidim_cantonese,item_443,fish (animal),noun,1.1993741936967135,NA
+multidim_cantonese,item_444,dolphin,noun,2.1582403291164542,NA
+multidim_cantonese,item_445,turtle,noun,1.5476099572879496,NA
+multidim_cantonese,item_446,frog,noun,2.313650235743553,NA
+multidim_cantonese,item_447,snake,noun,1.32579128770237,NA
+multidim_cantonese,item_448,alligator,noun,2.6713366321154313,NA
+multidim_cantonese,item_449,pig,noun,1.9963665195781035,NA
+multidim_cantonese,item_450,cow,noun,1.8554623872483256,NA
+multidim_cantonese,item_451,sheep,noun,2.328176972532151,NA
+multidim_cantonese,item_452,horse,noun,1.5711055404130176,NA
+multidim_cantonese,item_453,zebra,noun,2.3718093703600944,NA
+multidim_cantonese,item_454,bear,noun,1.4440619209811214,NA
+multidim_cantonese,item_455,panda,noun,2.114004943123225,NA
+multidim_cantonese,item_456,elephant,noun,2.042853622415639,NA
+multidim_cantonese,item_457,lion,noun,2.6710740457679387,NA
+multidim_cantonese,item_458,tiger,noun,2.0419152197358885,NA
+multidim_cantonese,item_459,wolf,noun,1.826107119927021,NA
+multidim_cantonese,item_460,deer,noun,1.7663090659451202,NA
+multidim_cantonese,item_461,giraffe,noun,2.6910639756643753,NA
+multidim_cantonese,item_462,monkey,noun,2.014010760767893,NA
+multidim_cantonese,item_463,monkey,noun,1.0398898811433512,NA
+multidim_cantonese,item_464,bunny,noun,1.7989842866592047,NA
+multidim_cantonese,item_465,mouse,noun,1.4712544829277372,NA
+multidim_cantonese,item_466,bug,noun,0.8375347692100908,NA
+multidim_cantonese,item_467,butterfly,noun,2.005069012560021,NA
+multidim_cantonese,item_468,bee,noun,2.19351288588302,NA
+multidim_cantonese,item_469,dragonfly,noun,1.924814186825143,NA
+multidim_cantonese,item_470,mosquito,noun,0.49314027583768894,NA
+multidim_cantonese,item_471,fly (animal),noun,0.8073807559880415,NA
+multidim_cantonese,item_472,ant,noun,0.9797998668364052,NA
+multidim_cantonese,item_473,cockroach,noun,0.3908535434312406,NA
+multidim_cantonese,item_474,snail,noun,1.6151392633476491,NA
+multidim_cantonese,item_475,dinosaur,noun,1.4712804462025335,NA
+multidim_cantonese,item_476,dragon,noun,0.9925066826602116,NA
+multidim_cantonese,item_477,animal,noun,2.2386196576049846,NA
+multidim_cantonese,item_478,car,noun,0.7936465782621863,NA
+multidim_cantonese,item_479,airplane,noun,1.7468304065702278,NA
+multidim_cantonese,item_480,helicopter,noun,1.81290942283736,NA
+multidim_cantonese,item_481,boat,noun,1.550123395198599,NA
+multidim_cantonese,item_482,bicycle,noun,1.6449832758586047,NA
+multidim_cantonese,item_483,motorcycle,noun,1.5035908821156063,NA
+multidim_cantonese,item_484,car,noun,1.1476936433378022,NA
+multidim_cantonese,item_485,truck,noun,1.605578399449794,NA
+multidim_cantonese,item_486,bus,noun,1.3310165699498664,NA
+multidim_cantonese,item_487,minibus,noun,1.6922221960869297,NA
+multidim_cantonese,item_488,taxi,noun,1.3867543361164574,NA
+multidim_cantonese,item_489,train,noun,1.1119683846603337,NA
+multidim_cantonese,item_490,train,noun,1.045450897706372,NA
+multidim_cantonese,item_491,train,noun,1.345243384397954,NA
+multidim_cantonese,item_492,tram,noun,1.052935684134251,NA
+multidim_cantonese,item_493,police car,noun,0.7799633543149546,police car / car with siren
+multidim_cantonese,item_494,ambulance,noun,1.903858948960058,NA
+multidim_cantonese,item_495,firetruck,noun,1.955107763359605,NA
+multidim_cantonese,item_496,cup,noun,1.0447950360227816,NA
+multidim_cantonese,item_497,bowl,noun,0.7063753086243726,NA
+multidim_cantonese,item_498,plate,noun,0.9495968962406393,NA
+multidim_cantonese,item_499,bottle,noun,0.5703460926178783,NA
+multidim_cantonese,item_500,pacifier,noun,0.17291956460407096,NA
+multidim_cantonese,item_501,spoon,noun,0.8554529971805138,NA
+multidim_cantonese,item_502,chopstick,noun,0.9176363873272264,NA
+multidim_cantonese,item_503,fork,noun,1.1439886141229896,NA
+multidim_cantonese,item_504,knife,noun,1.1154158345318423,NA
+multidim_cantonese,item_505,pot,noun,0.6527430910577839,NA
+multidim_cantonese,item_508,teapot,noun,0.990235055391797,NA
+multidim_cantonese,item_509,light (object),noun,0.7758762668742244,NA
+multidim_cantonese,item_510,telephone,noun,0.8567849310376405,NA
+multidim_cantonese,item_511,watch (object),noun,0.5832416412660004,NA
+multidim_cantonese,item_512,clock,noun,1.0332728769253794,NA
+multidim_cantonese,item_513,camera,noun,0.9140745968135204,NA
+multidim_cantonese,item_514,battery,noun,0.5757666370445862,NA
+multidim_cantonese,item_515,radio,noun,0.5169433938635,NA
+multidim_cantonese,item_516,cd,noun,0.6974547703726365,NA
+multidim_cantonese,item_517,blanket,noun,0.6014417148026511,NA
+multidim_cantonese,item_518,pillow,noun,0.9640398780338748,NA
+multidim_cantonese,item_519,medicine,noun,0.587229903795793,NA
+multidim_cantonese,item_520,comb (object),noun,0.6601696256750694,NA
+multidim_cantonese,item_521,brush (object),noun,0.8095408465737632,NA
+multidim_cantonese,item_522,toothbrush,noun,1.4330992441059809,NA
+multidim_cantonese,item_523,toothpaste,noun,1.1813936743430489,NA
+multidim_cantonese,item_524,basin,noun,0.4370750276579719,NA
+multidim_cantonese,item_525,soap,noun,0.7245078878929504,NA
+multidim_cantonese,item_526,towel,noun,0.7555225310433793,NA
+multidim_cantonese,item_527,tissue,noun,0.7046292083582977,NA
+multidim_cantonese,item_528,paper,noun,0.43360034988742274,NA
+multidim_cantonese,item_529,scissors,noun,0.7563104002752703,NA
+multidim_cantonese,item_530,ruler,noun,0.43952734182824454,NA
+multidim_cantonese,item_531,eraser,noun,0.2865990816732628,NA
+multidim_cantonese,item_532,newspaper,noun,0.23112405577362544,NA
+multidim_cantonese,item_533,glasses,noun,1.1966464162741457,NA
+multidim_cantonese,item_534,picture,noun,1.3395803163773208,NA
+multidim_cantonese,item_535,hanger,noun,1.0356515928222672,NA
+multidim_cantonese,item_536,rope,noun,0.7858100096909689,NA
+multidim_cantonese,item_537,bag,noun,0.744665172635985,NA
+multidim_cantonese,item_539,wallet,noun,0.6018876801644277,NA
+multidim_cantonese,item_540,money,noun,0.31795356324951407,NA
+multidim_cantonese,item_541,key,noun,0.7213325188387719,NA
+multidim_cantonese,item_542,cloth,noun,0.6426841784129145,NA
+multidim_cantonese,item_543,box,noun,0.9252201885995518,NA
+multidim_cantonese,item_544,bucket,noun,0.45549860645543955,NA
+multidim_cantonese,item_545,basket,noun,1.077284385709517,NA
+multidim_cantonese,item_546,broom,noun,0.5249496996321359,NA
+multidim_cantonese,item_547,mop (object),noun,0.7284357136620975,NA
+multidim_cantonese,item_548,trash,noun,0.9199302679483142,NA
+multidim_cantonese,item_549,water (not beverage),noun,1.0029181461619896,NA
+multidim_cantonese,item_550,flower,noun,1.5363516677559304,NA
+multidim_cantonese,item_551,tree,noun,1.6090445594738794,NA
+multidim_cantonese,item_552,leaf,noun,1.6389263077319256,NA
+multidim_cantonese,item_553,grass,noun,1.402127604127014,NA
+multidim_cantonese,item_554,mud,noun,1.540001549622291,NA
+multidim_cantonese,item_555,sand,noun,1.080550284756902,NA
+multidim_cantonese,item_556,stone,noun,1.670122800984717,NA
+multidim_cantonese,item_557,rain,noun,0.6465371209373528,NA
+multidim_cantonese,item_558,umbrella,noun,0.7196857020438082,NA
+multidim_cantonese,item_559,wind,noun,1.1402833950297762,NA
+multidim_cantonese,item_560,thunder,noun,0.9634015237356768,NA
+multidim_cantonese,item_561,sky,noun,1.6282888285428267,NA
+multidim_cantonese,item_562,cloud,noun,2.0380567449814464,NA
+multidim_cantonese,item_563,mountain,noun,1.373736934562084,NA
+multidim_cantonese,item_564,sea,noun,1.3508824480275556,NA
+multidim_cantonese,item_565,carousel,noun,0.572310898794806,NA
+multidim_cantonese,item_566,swing (object),noun,1.0759300509640115,NA
+multidim_cantonese,item_567,slide (object),noun,1.3665786716660544,NA
+multidim_cantonese,item_568,ladder,noun,0.8418093740246361,NA
+multidim_cantonese,item_569,sun,noun,2.6248187571780894,NA
+multidim_cantonese,item_570,star,noun,1.9178539335376017,NA
+multidim_cantonese,item_571,moon,noun,2.2910795449963306,NA
+multidim_cantonese,item_572,street,noun,0.5227106442243302,NA
+multidim_cantonese,item_573,road,noun,1.561029275846456,NA
+multidim_cantonese,item_574,bridge,noun,1.4135567046599449,NA
+multidim_cantonese,item_575,tunnel,noun,1.362694316950788,NA
+multidim_cantonese,item_576,pool,noun,1.212190319140825,NA
+multidim_cantonese,item_577,fountain,noun,1.2516592398635629,NA
+multidim_cantonese,item_578,flag,noun,1.0050275155224204,NA
+multidim_cantonese,item_579,shoe,noun,0.9354130578041064,NA
+multidim_cantonese,item_580,slipper,noun,0.8697453721987425,NA
+multidim_cantonese,item_581,sneaker,noun,1.0169882100517635,NA
+multidim_cantonese,item_582,sock,noun,1.3938078891727443,NA
+multidim_cantonese,item_583,clothes,noun,0.8282718709679285,NA
+multidim_cantonese,item_584,pajamas,noun,1.1041533666243666,NA
+multidim_cantonese,item_585,vest,noun,1.1255544173978729,NA
+multidim_cantonese,item_586,coat,noun,0.872302958435644,NA
+multidim_cantonese,item_587,shirt,noun,0.9699111223837654,shirt / t shirt
+multidim_cantonese,item_588,sweater,noun,0.9688236948841064,NA
+multidim_cantonese,item_589,pants,noun,0.9951336750547508,NA
+multidim_cantonese,item_590,underpants,noun,0.9347917174173936,NA
+multidim_cantonese,item_591,jeans,noun,1.0508883418000137,NA
+multidim_cantonese,item_592,skirt,noun,0.4757573008637705,NA
+multidim_cantonese,item_593,diaper,noun,0.5010228451233899,NA
+multidim_cantonese,item_594,bib,noun,0.7247913641711973,NA
+multidim_cantonese,item_595,hat,noun,1.187286724948878,NA
+multidim_cantonese,item_596,scarf,noun,1.151972421491709,NA
+multidim_cantonese,item_597,tie (action),noun,0.7221653845309007,NA
+multidim_cantonese,item_598,belt,noun,0.4920631358220771,NA
+multidim_cantonese,item_599,glove,noun,0.888237601632455,NA
+multidim_cantonese,item_600,button,noun,0.8023016824615968,NA
+multidim_cantonese,item_601,zipper,noun,1.413320861092939,NA
+multidim_cantonese,item_602,necklace,noun,0.5119893632738105,NA
+multidim_cantonese,item_603,head,noun,1.229265452611375,NA
+multidim_cantonese,item_604,hair,noun,1.1531332253840276,NA
+multidim_cantonese,item_605,face,noun,0.9689023098085752,NA
+multidim_cantonese,item_606,cheek,noun,0.8312814432462869,NA
+multidim_cantonese,item_607,eye,noun,1.267560002421173,NA
+multidim_cantonese,item_608,eyebrow,noun,0.7348389392417332,NA
+multidim_cantonese,item_609,ear,noun,1.4378619311774383,NA
+multidim_cantonese,item_610,nose,noun,1.411809324645776,NA
+multidim_cantonese,item_611,mouth,noun,1.3329466995147143,NA
+multidim_cantonese,item_612,tooth,noun,0.9954385826099936,NA
+multidim_cantonese,item_613,tongue,noun,1.116976834501614,NA
+multidim_cantonese,item_614,chin,noun,1.1964701816604923,NA
+multidim_cantonese,item_615,neck,noun,1.092778582916459,NA
+multidim_cantonese,item_616,shoulder,noun,1.6370971636140563,NA
+multidim_cantonese,item_617,hand,noun,0.9064566589607168,NA
+multidim_cantonese,item_618,arm,noun,1.2849955782117919,NA
+multidim_cantonese,item_619,finger,noun,1.0979147053811988,NA
+multidim_cantonese,item_620,thumb,noun,1.0697071092588453,NA
+multidim_cantonese,item_621,leg,noun,0.9755480927670956,NA
+multidim_cantonese,item_622,toe,noun,1.2558624104702174,NA
+multidim_cantonese,item_623,nail (body part),noun,0.41531205313793823,"nails / finger nail, toe nail"
+multidim_cantonese,item_624,knee,noun,1.3153244942823994,NA
+multidim_cantonese,item_625,tummy,noun,0.8140534848557064,NA
+multidim_cantonese,item_626,belly button,noun,0.7598667625738236,NA
+multidim_cantonese,item_627,elbow,noun,1.22533118155216,NA
+multidim_cantonese,item_628,heel,noun,1.3046355884808036,NA
+multidim_cantonese,item_629,palm,noun,1.0288135015715232,NA
+multidim_cantonese,item_630,foot,noun,1.086080762054382,foot / sole
+multidim_cantonese,item_631,butt,noun,0.4550835596629492,NA
+multidim_cantonese,item_632,back (body part),noun,0.9508287626468792,NA
+multidim_cantonese,item_633,room,noun,0.8504007707572218,NA
+multidim_cantonese,item_634,kitchen,noun,1.5775863837077135,NA
+multidim_cantonese,item_635,bathroom,noun,1.3722932564651216,NA
+multidim_cantonese,item_636,living room,noun,1.1117661174425972,NA
+multidim_cantonese,item_637,door,noun,0.9847196954107764,NA
+multidim_cantonese,item_638,window,noun,1.1715656011672266,NA
+multidim_cantonese,item_639,bed,noun,1.0705510503031366,NA
+multidim_cantonese,item_640,table,noun,0.9183252701871366,NA
+multidim_cantonese,item_641,chair,noun,0.8897714213611307,NA
+multidim_cantonese,item_642,couch,noun,1.0426274913105509,NA
+multidim_cantonese,item_643,closet,noun,0.832280222829824,closet / cupboard
+multidim_cantonese,item_644,drawer,noun,0.910946523396984,NA
+multidim_cantonese,item_645,mirror,noun,0.6931196450619621,NA
+multidim_cantonese,item_646,tv,noun,0.5753362737531058,NA
+multidim_cantonese,item_647,computer,noun,0.9270109497751702,NA
+multidim_cantonese,item_648,piano,noun,0.6997279215446405,NA
+multidim_cantonese,item_649,refrigerator,noun,1.1056434786170477,NA
+multidim_cantonese,item_650,stove,noun,0.8380557025705274,NA
+multidim_cantonese,item_651,fan,noun,0.8731074180102759,NA
+multidim_cantonese,item_652,air conditioner,noun,0.9123558715137232,NA
+multidim_cantonese,item_653,washing machine,noun,1.2717985337790696,NA
+multidim_cantonese,item_654,bathtub,noun,1.3523285316104994,NA
+multidim_cantonese,item_655,faucet,noun,0.8769189889091809,NA
+multidim_cantonese,item_656,stroller,noun,0.9882411925737512,NA
+multidim_cantonese,item_657,crib,noun,0.8939681462185382,NA
+multidim_cantonese,item_658,potty,noun,0.4462955934721801,NA
+multidim_cantonese,item_659,floor,noun,0.7531672351445646,NA
+multidim_cantonese,item_660,ceiling,noun,1.4850747367245198,NA
+multidim_cantonese,item_661,stairs,noun,1.316188878834324,NA
+multidim_cantonese,item_662,elevator,noun,0.686456674972835,NA
+multidim_english,item_13,alligator,noun,1.896492763040917,alligator
+multidim_english,item_14,animal,noun,1.3567735232176974,animal
+multidim_english,item_15,ant,noun,1.069875192603664,ant
+multidim_english,item_16,bear,noun,1.689765787826581,bear
+multidim_english,item_17,bee,noun,1.526504073096267,bee
+multidim_english,item_18,bird,noun,1.6062136152669622,bird
+multidim_english,item_19,bug,noun,1.0353755206367263,bug
+multidim_english,item_20,bunny,noun,1.5389497359515514,bunny
+multidim_english,item_21,butterfly,noun,2.0392420831953166,butterfly
+multidim_english,item_22,cat,noun,1.1619773082324123,cat
+multidim_english,item_23,chicken (animal),noun,1.6557111995260505,chicken (animal)
+multidim_english,item_24,cow,noun,1.9348651657101923,cow
+multidim_english,item_25,deer,noun,1.4684682531883877,deer
+multidim_english,item_26,dog,noun,1.0497511388707257,dog
+multidim_english,item_27,donkey,noun,1.570823577716948,donkey
+multidim_english,item_28,duck,noun,1.7043695671988917,duck
+multidim_english,item_29,elephant,noun,2.2969062508398563,elephant
+multidim_english,item_30,fish (animal),noun,1.6691002220767102,fish (animal)
+multidim_english,item_31,frog,noun,2.3013114540953894,frog
+multidim_english,item_32,giraffe,noun,2.328197162805222,giraffe
+multidim_english,item_33,goose,noun,1.561874627516697,goose
+multidim_english,item_34,hen,noun,1.341416490378373,hen
+multidim_english,item_35,horse,noun,1.9693061929446976,horse
+multidim_english,item_36,kitty,noun,0.6343616858357218,kitty
+multidim_english,item_37,lamb,noun,1.434934508732787,lamb
+multidim_english,item_38,lion,noun,2.296909756527532,lion
+multidim_english,item_39,monkey,noun,2.0477342973049657,monkey
+multidim_english,item_40,moose,noun,1.6120390179102018,moose
+multidim_english,item_41,mouse,noun,1.902843931714609,mouse
+multidim_english,item_42,owl,noun,2.047998929716859,owl
+multidim_english,item_43,penguin,noun,1.9779539327056097,penguin
+multidim_english,item_44,pig,noun,2.131157201644397,pig
+multidim_english,item_45,pony,noun,0.9544849408997156,pony
+multidim_english,item_46,puppy,noun,0.7359733187033758,puppy
+multidim_english,item_47,rooster,noun,1.8098435479701556,rooster
+multidim_english,item_48,sheep,noun,2.3362558748755684,sheep
+multidim_english,item_49,squirrel,noun,1.7041515687061617,squirrel
+multidim_english,item_50,teddybear,noun,0.852124528302972,teddybear
+multidim_english,item_51,tiger,noun,1.9110974281607735,tiger
+multidim_english,item_52,turkey,noun,1.36039337774265,turkey
+multidim_english,item_53,turtle,noun,2.1965355488020015,turtle
+multidim_english,item_54,wolf,noun,1.4234952888842165,wolf
+multidim_english,item_55,zebra,noun,2.315544462398991,zebra
+multidim_english,item_56,airplane,noun,1.5174471470503008,airplane
+multidim_english,item_57,bicycle,noun,1.3169843666995011,bicycle
+multidim_english,item_58,boat,noun,1.8103059185650252,boat
+multidim_english,item_59,bus,noun,1.4362728849287716,bus
+multidim_english,item_60,car,noun,1.3178990404487163,car
+multidim_english,item_61,firetruck,noun,1.3859938438226167,firetruck
+multidim_english,item_62,helicopter,noun,1.4888362003178983,helicopter
+multidim_english,item_63,motorcycle,noun,1.2156926734340705,motorcycle
+multidim_english,item_64,sled,noun,1.1434204369635557,sled
+multidim_english,item_65,stroller,noun,0.8829872775493017,stroller
+multidim_english,item_66,tractor,noun,1.3886759887568232,tractor
+multidim_english,item_67,train,noun,1.665142868136655,train
+multidim_english,item_68,tricycle,noun,0.9122689499191704,tricycle
+multidim_english,item_69,truck,noun,1.4022044975016357,truck
+multidim_english,item_70,ball,noun,1.2420679133753,ball
+multidim_english,item_71,balloon,noun,1.2325155562118033,balloon
+multidim_english,item_72,bat (object),noun,0.6988330634511303,bat
+multidim_english,item_73,blocks,noun,1.3060551824758333,block
+multidim_english,item_74,book,noun,1.4359424394667055,book
+multidim_english,item_75,bubbles,noun,1.390456440398519,bubbles
+multidim_english,item_76,chalk,noun,1.1741465387608647,chalk
+multidim_english,item_77,crayon,noun,1.1726709252288787,crayon
+multidim_english,item_78,doll,noun,0.46707949402303767,doll
+multidim_english,item_79,game,noun,0.9856773000010736,game
+multidim_english,item_80,glue (object),noun,1.0135548727400212,glue
+multidim_english,item_81,pen,noun,0.6375124759977769,pen
+multidim_english,item_82,pencil,noun,0.801047073553983,pencil
+multidim_english,item_83,play dough,noun,1.1064617977900462,play dough
+multidim_english,item_84,present,noun,1.490469045729954,present
+multidim_english,item_85,puzzle,noun,1.5237250253729402,puzzle
+multidim_english,item_86,story,noun,1.1015591080540068,story
+multidim_english,item_87,toy (object),noun,0.77377854004745406,toy (object)
+multidim_english,item_88,apple,noun,1.5064678557488709,apple
+multidim_english,item_89,applesauce,noun,1.0102746918344228,applesauce
+multidim_english,item_90,banana,noun,1.129372999191357,banana
+multidim_english,item_91,beans,noun,1.059474967678964,beans
+multidim_english,item_92,bread,noun,1.2930342382261055,bread
+multidim_english,item_93,butter,noun,1.0631241127075646,butter
+multidim_english,item_94,cake,noun,1.1267756935730031,cake
+multidim_english,item_95,candy,noun,0.2862288306681166,candy
+multidim_english,item_96,carrot,noun,1.7671286456272874,carrots
+multidim_english,item_97,cereal,noun,0.7625372406975145,cereal
+multidim_english,item_98,cheerios,noun,0.7672925233850332,cheerios
+multidim_english,item_99,cheese,noun,1.244777722778684,cheese
+multidim_english,item_100,chicken (food),noun,1.2294202759959547,chicken (food)
+multidim_english,item_101,chocolate,noun,0.948657321512434,chocolate
+multidim_english,item_102,coffee,noun,1.122319277276509,coffee
+multidim_english,item_103,coke,noun,0.05067474328522798,coke
+multidim_english,item_104,cookie,noun,0.9021085515550978,cookie
+multidim_english,item_105,corn,noun,1.3768013679864246,corn
+multidim_english,item_106,cracker,noun,1.1142728501334775,cracker
+multidim_english,item_107,pastry,noun,0.6349797208285032,donut
+multidim_english,item_108,drink (beverage),noun,0.5545817129430703,drink (beverage)
+multidim_english,item_109,egg,noun,1.3628205137464422,egg
+multidim_english,item_110,fish (food),noun,0.8505008200211778,fish (food)
+multidim_english,item_111,food,noun,0.8141413884926508,food
+multidim_english,item_112,french fries,noun,0.6255001916305902,french fries
+multidim_english,item_113,grapes,noun,1.441442611224745,grapes
+multidim_english,item_114,green beans,noun,1.0825187974552897,green beans
+multidim_english,item_115,gum,noun,0.0462551462061687,gum
+multidim_english,item_116,hamburger,noun,0.824671021268608,hamburger
+multidim_english,item_117,ice,noun,0.7520637526123782,ice
+multidim_english,item_118,ice cream,noun,1.166066353199819,ice cream
+multidim_english,item_119,jello,noun,0.3723378674568644,jello
+multidim_english,item_120,jelly,noun,0.7888992249458654,jelly
+multidim_english,item_121,juice,noun,0.5521929043366567,juice
+multidim_english,item_122,lollipop,noun,0.525029077070867,lollipop
+multidim_english,item_123,meat,noun,0.8025922526443541,meat
+multidim_english,item_124,melon,noun,1.00935030529365,melon
+multidim_english,item_125,milk,noun,0.9978638454711748,milk
+multidim_english,item_126,muffin,noun,1.385437982708439,muffin
+multidim_english,item_127,pasta,noun,1.1477851226662792,noodles
+multidim_english,item_128,nut,noun,1.0785851594100089,nuts
+multidim_english,item_129,orange (food),noun,1.4743654799891888,orange (food)
+multidim_english,item_130,pancake,noun,1.206329271698808,pancake
+multidim_english,item_131,peas,noun,1.211546994465552,peas
+multidim_english,item_132,peanut butter,noun,1.1847826335027951,peanut butter
+multidim_english,item_133,pickle,noun,0.7781442197773452,pickle
+multidim_english,item_134,pizza,noun,1.0254029312900093,pizza
+multidim_english,item_135,popcorn,noun,0.5815718468765342,popcorn
+multidim_english,item_136,popsicle,noun,0.5716993086490272,popsicle
+multidim_english,item_137,chips,noun,0.6418829223817873,potato chip
+multidim_english,item_138,potato,noun,1.038921002802224,potato
+multidim_english,item_139,pretzel,noun,0.906090451980592,pretzel
+multidim_english,item_140,pudding,noun,0.6168067807264854,pudding
+multidim_english,item_141,pumpkin,noun,1.5032230101805937,pumpkin
+multidim_english,item_142,raisin,noun,0.9950883033775384,raisin
+multidim_english,item_143,salt,noun,0.8814983785090477,salt
+multidim_english,item_144,sandwich,noun,1.1396588012426845,sandwich
+multidim_english,item_145,sauce,noun,1.0641626867043583,sauce
+multidim_english,item_146,soda,noun,-0.02495454714563378,soda/pop
+multidim_english,item_147,soup,noun,1.0081210840429202,soup
+multidim_english,item_148,pasta,noun,0.7908265340652975,spaghetti
+multidim_english,item_149,strawberry,noun,1.6043384868231003,strawberry
+multidim_english,item_150,toast,noun,1.0496964176966783,toast
+multidim_english,item_151,tuna,noun,0.6866133794490729,tuna
+multidim_english,item_152,vanilla,noun,1.023093654623543,vanilla
+multidim_english,item_153,vitamin,noun,0.5569914233224428,vitamins
+multidim_english,item_154,water (beverage),noun,1.1066638591338287,water (beverage)
+multidim_english,item_155,yogurt,noun,1.2569092486387878,yogurt
+multidim_english,item_156,beads,noun,0.7139028179718716,beads
+multidim_english,item_157,belt,noun,0.6027555553054743,belt
+multidim_english,item_158,bib,noun,0.8961543439538984,bib
+multidim_english,item_159,boots,noun,1.0988223884468356,boots
+multidim_english,item_160,button,noun,1.233427652891414,button
+multidim_english,item_161,coat,noun,0.9250037716494202,coat
+multidim_english,item_162,diaper,noun,0.9221026851150972,diaper
+multidim_english,item_163,dress (object),noun,0.7281313624918874,dress (object)
+multidim_english,item_164,glove,noun,1.0733370931985646,gloves
+multidim_english,item_165,hat,noun,1.3445091250707168,hat
+multidim_english,item_166,jacket,noun,0.94575539687556,jacket
+multidim_english,item_167,jeans,noun,0.9342283893012296,jeans
+multidim_english,item_168,mitten,noun,1.178384447955984,mittens
+multidim_english,item_169,necklace,noun,0.9913506090352066,necklace
+multidim_english,item_170,pajamas,noun,1.1940728058969363,pajamas
+multidim_english,item_171,pants,noun,1.304371683516497,pants
+multidim_english,item_172,scarf,noun,1.2577666382646235,scarf
+multidim_english,item_173,shirt,noun,1.3605857105121313,shirt
+multidim_english,item_174,shoe,noun,0.9921889206905066,shoe
+multidim_english,item_175,shorts,noun,0.9604610957112324,shorts
+multidim_english,item_176,slipper,noun,0.8118628270427193,slipper
+multidim_english,item_177,sneaker,noun,0.5671732393421306,sneaker
+multidim_english,item_178,snowsuit,noun,0.8963699267101208,snowsuit
+multidim_english,item_179,sock,noun,0.5228511542998912,sock
+multidim_english,item_180,sweater,noun,0.932614232652762,sweater
+multidim_english,item_181,tights,noun,0.6748771697330647,tights
+multidim_english,item_182,underpants,noun,0.7526202431125116,underpants
+multidim_english,item_183,zipper,noun,1.3119784670710712,zipper
+multidim_english,item_184,ankle,noun,0.9917448634429558,ankle
+multidim_english,item_185,arm,noun,1.2592310195153174,arm
+multidim_english,item_186,belly button,noun,1.070129040685838,belly button
+multidim_english,item_187,butt,noun,0.925812459131944,buttocks/bottom*
+multidim_english,item_188,cheek,noun,1.190660068465318,cheek
+multidim_english,item_189,chin,noun,1.2611476196539602,chin
+multidim_english,item_190,ear,noun,1.2298854365256648,ear
+multidim_english,item_191,eye,noun,0.9881482720282708,eye
+multidim_english,item_192,face,noun,0.917108377178712,face
+multidim_english,item_193,finger,noun,1.362388778097962,finger
+multidim_english,item_194,foot,noun,0.918091368658714,foot
+multidim_english,item_195,hair,noun,1.2145507440058807,hair
+multidim_english,item_196,hand,noun,1.276808144324104,hand
+multidim_english,item_197,head,noun,1.1035106171019,head
+multidim_english,item_198,knee,noun,1.292148157465776,knee
+multidim_english,item_199,leg,noun,1.420187170833289,leg
+multidim_english,item_200,lip,noun,0.7563772830173329,lips
+multidim_english,item_201,mouth,noun,1.059990525768349,mouth
+multidim_english,item_202,nose,noun,1.088070692835549,nose
+multidim_english,item_203,owie,noun,0.5104236366661759,owie/boo boo
+multidim_english,item_204,penis,noun,0.5943023911420063,penis*
+multidim_english,item_205,shoulder,noun,1.282015675551064,shoulder
+multidim_english,item_206,toe,noun,1.0428835970142392,toe
+multidim_english,item_207,tongue,noun,1.0207880752276426,tongue
+multidim_english,item_208,tooth,noun,0.8801364033250791,tooth
+multidim_english,item_209,tummy,noun,0.9297500141882477,tummy
+multidim_english,item_210,vagina,noun,0.3565948983700663,vagina*
+multidim_english,item_211,basket,noun,1.1961083329380693,basket
+multidim_english,item_212,blanket,noun,0.9417812852210669,blanket
+multidim_english,item_213,bottle,noun,0.44751760626442944,bottle
+multidim_english,item_214,bowl,noun,1.07875485518289,bowl
+multidim_english,item_215,box,noun,1.1030935103225934,box
+multidim_english,item_216,broom,noun,0.7071602377862712,broom
+multidim_english,item_217,brush (object),noun,0.8997884689008486,brush
+multidim_english,item_218,bucket,noun,1.2406462111377163,bucket
+multidim_english,item_219,camera,noun,0.9059678600201116,camera
+multidim_english,item_220,can (object),noun,0.6037731263938647,can (object)
+multidim_english,item_221,clock,noun,1.0012201329047374,clock
+multidim_english,item_222,comb (object),noun,0.6986832916252155,comb
+multidim_english,item_223,cup,noun,0.8726421710191488,cup
+multidim_english,item_224,dish,noun,0.7392880818191662,dish
+multidim_english,item_225,fork,noun,1.4529411833729078,fork
+multidim_english,item_226,trash,noun,0.837216022019988,garbage
+multidim_english,item_227,glass,noun,0.6756683216518921,glass
+multidim_english,item_228,glasses,noun,1.0462756012983507,glasses
+multidim_english,item_229,hammer,noun,1.10457100122207,hammer
+multidim_english,item_230,jar,noun,0.6797834735895886,jar
+multidim_english,item_231,key,noun,0.3282537298180623,keys
+multidim_english,item_232,knife,noun,1.2515769603966749,knife
+multidim_english,item_233,lamp,noun,0.9171077590828982,lamp
+multidim_english,item_234,light (object),noun,0.9790629261102766,light
+multidim_english,item_235,medicine,noun,0.8560569853054327,medicine
+multidim_english,item_236,money,noun,0.3863974331853771,money
+multidim_english,item_237,mop (object),noun,0.3966713499294043,mop
+multidim_english,item_238,nail (object),noun,0.813753335189025,nail
+multidim_english,item_239,napkin,noun,0.8357942894493531,napkin
+multidim_english,item_240,paper,noun,1.1181398631305584,paper
+multidim_english,item_241,penny,noun,0.21004365094012503,penny
+multidim_english,item_242,picture,noun,1.2118171124034467,picture
+multidim_english,item_243,pillow,noun,1.1263714451865,pillow
+multidim_english,item_244,plant,noun,1.014795680937758,plant
+multidim_english,item_245,plate,noun,1.2373771487229042,plate
+multidim_english,item_246,purse,noun,0.5240178046485943,purse
+multidim_english,item_247,radio,noun,0.35188723433576363,radio
+multidim_english,item_248,scissors,noun,1.0618510982617988,scissors
+multidim_english,item_249,soap,noun,1.0814488730814724,soap
+multidim_english,item_250,spoon,noun,1.1658625991813956,spoon
+multidim_english,item_251,tape (object),noun,0.9774442488852434,tape
+multidim_english,item_252,telephone,noun,0.9802474117692528,telephone
+multidim_english,item_253,tissue,noun,0.8720991090065157,tissue/kleenex
+multidim_english,item_254,toothbrush,noun,1.127876567181116,toothbrush
+multidim_english,item_255,towel,noun,1.2281830570721473,towel
+multidim_english,item_256,trash,noun,0.42889947166630416,trash
+multidim_english,item_257,tray,noun,0.7828242502763517,tray
+multidim_english,item_258,vacuum,noun,0.896542068916661,vacuum
+multidim_english,item_259,walker,noun,0.23559054336882637,walker
+multidim_english,item_260,watch (object),noun,0.7515740688318371,watch (object)
+multidim_english,item_261,basement,noun,0.6662968601361743,basement
+multidim_english,item_262,bathroom,noun,0.9655016086043052,bathroom
+multidim_english,item_263,bathtub,noun,0.7723932471639993,bathtub
+multidim_english,item_264,bed,noun,0.9233399199975862,bed
+multidim_english,item_265,bedroom,noun,0.9154067581959136,bedroom
+multidim_english,item_266,bench,noun,1.136042194163768,bench
+multidim_english,item_267,chair,noun,1.2395842150220868,chair
+multidim_english,item_268,closet,noun,1.0641422188873229,closet
+multidim_english,item_269,couch,noun,0.9956356322527836,couch
+multidim_english,item_270,crib,noun,0.8011122890941369,crib
+multidim_english,item_271,door,noun,0.9380744255502792,door
+multidim_english,item_272,drawer,noun,0.8383021771869137,drawer
+multidim_english,item_273,dryer,noun,0.8447195007442682,dryer
+multidim_english,item_274,garage,noun,0.8596953067545589,garage
+multidim_english,item_275,high chair,noun,0.7295609429153126,high chair
+multidim_english,item_276,kitchen,noun,1.1324962011310369,kitchen
+multidim_english,item_277,living room,noun,0.7497188414621196,living room
+multidim_english,item_278,oven,noun,0.9573981595540436,oven
+multidim_english,item_279,play pen,noun,0.2246167300409768,play pen
+multidim_english,item_280,porch,noun,0.59925436093996,porch
+multidim_english,item_281,potty,noun,0.8280540965144091,potty
+multidim_english,item_282,rocking chair,noun,0.7450996400943192,rocking chair
+multidim_english,item_283,refrigerator,noun,0.8336071122400636,refrigerator
+multidim_english,item_284,room,noun,0.881205107010914,room
+multidim_english,item_285,shower,noun,1.0586002617535817,shower
+multidim_english,item_286,sink,noun,0.9934520309202488,sink
+multidim_english,item_287,couch,noun,0.3800321461816124,sofa
+multidim_english,item_288,stairs,noun,0.9705854990392276,stairs
+multidim_english,item_289,stove,noun,0.8494759453676304,stove
+multidim_english,item_290,table,noun,1.296329984616998,table
+multidim_english,item_291,tv,noun,0.532992271746006,TV
+multidim_english,item_292,window,noun,0.8572881694986244,window
+multidim_english,item_293,washing machine,noun,0.9588376593764912,washing machine
+multidim_english,item_294,yard,noun,0.6329991952868645,backyard
+multidim_english,item_295,cloud,noun,1.313356183324014,cloud
+multidim_english,item_296,flag,noun,1.0361621055624954,flag
+multidim_english,item_297,flower,noun,1.459101775528723,flower
+multidim_english,item_298,garden,noun,1.0882320155214218,garden
+multidim_english,item_299,grass,noun,1.1337506638374546,grass
+multidim_english,item_300,hose,noun,0.8005872386328169,hose
+multidim_english,item_301,ladder,noun,1.2752781563743507,ladder
+multidim_english,item_302,lawn mower,noun,0.8064857080998251,lawn mower
+multidim_english,item_303,moon,noun,1.409549867995387,moon
+multidim_english,item_304,pool,noun,0.6567100382084924,pool
+multidim_english,item_305,rain,noun,1.394133157506628,rain
+multidim_english,item_306,rock (object),noun,1.2284172527823034,rock
+multidim_english,item_307,roof,noun,1.066926840716384,roof
+multidim_english,item_308,sandbox,noun,0.891100456226664,sandbox
+multidim_english,item_309,shovel,noun,1.2652601446320002,shovel
+multidim_english,item_310,sidewalk,noun,1.1418472836053803,sidewalk
+multidim_english,item_311,sky,noun,0.944148518189398,sky
+multidim_english,item_312,slide (object),noun,1.1763790331920108,slide (object)
+multidim_english,item_313,snow,noun,1.1313813601215394,snow
+multidim_english,item_314,snowman,noun,1.293297706653486,snowman
+multidim_english,item_315,sprinkler,noun,0.77730208787037125,sprinkler
+multidim_english,item_316,star,noun,1.3631731996390106,star
+multidim_english,item_317,stick,noun,1.166297531349547,stick
+multidim_english,item_318,stone,noun,0.7281993538014251,stone
+multidim_english,item_319,street,noun,1.0696453812418525,street
+multidim_english,item_320,sun,noun,1.428361769653093,sun
+multidim_english,item_321,swing (object),noun,1.032748261730079,swing (object)
+multidim_english,item_322,tree,noun,1.4189849983422185,tree
+multidim_english,item_323,water (not beverage),noun,0.9661990305529484,water (not beverage)
+multidim_english,item_324,wind,noun,1.260755163538117,wind
+multidim_english,item_401,bite,predicate,0.682508440532489,bite
+multidim_english,item_402,blow,predicate,1.0561001899030542,blow
+multidim_english,item_403,break,predicate,1.1799314130292995,break
+multidim_english,item_404,bring,predicate,1.1234815280895925,bring
+multidim_english,item_405,build,predicate,1.4440361818312757,build
+multidim_english,item_406,bump,predicate,0.8945220588989272,bump
+multidim_english,item_407,buy,predicate,0.9599666943092688,buy
+multidim_english,item_408,carry,predicate,1.3005661999440834,carry
+multidim_english,item_409,catch,predicate,1.153714509313363,catch
+multidim_english,item_410,chase,predicate,1.1201748730245469,chase
+multidim_english,item_411,clap,predicate,1.0064156046363768,clap
+multidim_english,item_412,clean (action),predicate,1.4000693785706455,clean (action)
+multidim_english,item_413,climb,predicate,1.688661382777766,climb
+multidim_english,item_414,close,predicate,1.306512323450394,close
+multidim_english,item_415,cook,predicate,1.197702116184376,cook
+multidim_english,item_416,cover (action),predicate,1.0764821016113184,cover
+multidim_english,item_417,cry,predicate,1.2349399221104338,cry
+multidim_english,item_418,cut,predicate,1.1959570923957732,cut
+multidim_english,item_419,dance,predicate,1.1547365530211269,dance
+multidim_english,item_420,draw,predicate,1.3053537797474748,draw
+multidim_english,item_421,drink (action),predicate,0.8223535987582755,drink (action)
+multidim_english,item_422,drive,predicate,1.4449814666911562,drive
+multidim_english,item_423,drop,predicate,1.5146388776226758,drop
+multidim_english,item_424,dry (action),predicate,1.343789778371939,dry (action)
+multidim_english,item_425,dump,predicate,1.132254252729886,dump
+multidim_english,item_426,eat,predicate,0.9952820157225388,eat
+multidim_english,item_427,fall,predicate,1.503757906757221,fall
+multidim_english,item_428,feed,predicate,1.2157539163692272,feed
+multidim_english,item_429,find,predicate,1.9531572375808823,find
+multidim_english,item_430,finish,predicate,0.8794201137608355,finish
+multidim_english,item_431,fit,predicate,1.387374199168416,fit
+multidim_english,item_432,fix,predicate,1.4565610959453184,fix
+multidim_english,item_433,get,predicate,1.1875358910750464,get
+multidim_english,item_434,give,predicate,1.1565956723280206,give
+multidim_english,item_435,go,predicate,0.8775034451722232,go
+multidim_english,item_436,hate,predicate,0.6010305663282037,hate
+multidim_english,item_437,have,predicate,1.6719157981025,have
+multidim_english,item_438,hear,predicate,1.6806266230695266,hear
+multidim_english,item_439,help,predicate,1.4829494475820066,help
+multidim_english,item_440,hide,predicate,1.66948241970819,hide
+multidim_english,item_441,hit,predicate,1.185482452510256,hit
+multidim_english,item_442,hold,predicate,1.4500636555729147,hold
+multidim_english,item_443,hug,predicate,1.0932787367213022,hug
+multidim_english,item_444,hurry,predicate,0.9516739601580072,hurry
+multidim_english,item_445,jump,predicate,1.6910119219458195,jump
+multidim_english,item_446,kick,predicate,1.3566123655226858,kick
+multidim_english,item_447,kiss,predicate,0.8900549964885743,kiss
+multidim_english,item_448,knock,predicate,1.0672245443755397,knock
+multidim_english,item_449,lick,predicate,1.2056588368899217,lick
+multidim_english,item_450,like,predicate,1.6437529646306133,like
+multidim_english,item_451,listen,predicate,1.2544037458293569,listen
+multidim_english,item_452,look,predicate,0.9972020806528012,look
+multidim_english,item_453,love,predicate,0.863321756180638,love
+multidim_english,item_454,make,predicate,1.829100014822051,make
+multidim_english,item_455,open (action),predicate,1.314306174170459,open
+multidim_english,item_456,paint (action),predicate,1.3981778829847806,paint
+multidim_english,item_457,pick,predicate,1.463272777315482,pick
+multidim_english,item_458,play,predicate,1.5629984685727387,play
+multidim_english,item_459,pour,predicate,1.3099059747706263,pour
+multidim_english,item_460,pretend,predicate,1.371932266995477,pretend
+multidim_english,item_461,pull,predicate,1.321755080882524,pull
+multidim_english,item_462,push,predicate,1.304475673555813,push
+multidim_english,item_463,put,predicate,1.4844744735760802,put
+multidim_english,item_464,read,predicate,1.5640510464259316,read
+multidim_english,item_465,ride,predicate,1.46831977491249,ride
+multidim_english,item_466,rip,predicate,1.2135639392367852,rip
+multidim_english,item_467,run,predicate,1.8866122671265209,run
+multidim_english,item_468,say,predicate,1.3153087002910908,say
+multidim_english,item_469,see,predicate,1.041810297319433,see
+multidim_english,item_470,shake,predicate,1.4177361647695577,shake
+multidim_english,item_471,share,predicate,1.4894954280186357,share
+multidim_english,item_472,show,predicate,1.60308279729809,show
+multidim_english,item_473,sing,predicate,1.6184082727262497,sing
+multidim_english,item_474,sit,predicate,1.1816540116452474,sit
+multidim_english,item_475,skate (action),predicate,0.7534987084635629,skate
+multidim_english,item_476,sleep,predicate,1.7586558234193024,sleep
+multidim_english,item_477,slide (action),predicate,1.2646967491232968,slide (action)
+multidim_english,item_478,smile,predicate,1.2614872160594366,smile
+multidim_english,item_479,spill,predicate,1.5454364160621652,spill
+multidim_english,item_480,splash,predicate,1.4056779923512657,splash
+multidim_english,item_481,stand,predicate,1.745194711420522,stand
+multidim_english,item_482,stay,predicate,1.3397260097610788,stay
+multidim_english,item_483,stop,predicate,0.9931836055777856,stop
+multidim_english,item_484,sweep,predicate,1.074965055518521,sweep
+multidim_english,item_485,swim,predicate,1.2534656778685602,swim
+multidim_english,item_486,swing (action),predicate,1.027166101048527,swing (action)
+multidim_english,item_487,take,predicate,1.454058369281074,take
+multidim_english,item_488,talk,predicate,1.4716577429600088,talk
+multidim_english,item_489,taste,predicate,1.2563690184925171,taste
+multidim_english,item_490,tear,predicate,1.0688885996495938,tear
+multidim_english,item_491,think,predicate,1.3613144681775693,think
+multidim_english,item_492,throw,predicate,1.6661511802916094,throw
+multidim_english,item_493,tickle,predicate,1.0437292731506664,tickle
+multidim_english,item_494,touch,predicate,1.458032111954731,touch
+multidim_english,item_495,wait,predicate,1.1098996255040423,wait
+multidim_english,item_496,wake,predicate,1.5778335205549772,wake
+multidim_english,item_497,walk,predicate,1.387206377385427,walk
+multidim_english,item_498,wash,predicate,1.4636877511173192,wash
+multidim_english,item_499,watch (action),predicate,1.2368751759823648,watch (action)
+multidim_english,item_500,wipe,predicate,1.2312677201076516,wipe
+multidim_english,item_501,wish,predicate,1.1143063006292953,wish
+multidim_english,item_502,work (action),predicate,1.0002073783416277,work (action)
+multidim_english,item_503,write,predicate,0.732810036290455,write
+multidim_english,item_504,all gone,predicate,0.6849775362758294,all gone
+multidim_english,item_505,asleep,predicate,1.0661496429506303,asleep
+multidim_english,item_506,awake,predicate,1.4586495308348335,awake
+multidim_english,item_507,bad,predicate,0.512446457589515,bad
+multidim_english,item_508,better,predicate,1.145407323556101,better
+multidim_english,item_509,big,predicate,1.7123185627716446,big
+multidim_english,item_510,black,predicate,2.579924473503996,black
+multidim_english,item_511,blue,predicate,2.6018915821027084,blue
+multidim_english,item_512,broken,predicate,1.4061162176231412,broken
+multidim_english,item_513,brown,predicate,2.393920508627656,brown
+multidim_english,item_514,careful,predicate,1.3364728064870055,careful
+multidim_english,item_515,clean (description),predicate,1.57827209234516,clean (description)
+multidim_english,item_516,cold,predicate,1.3153176785021572,cold
+multidim_english,item_517,cute,predicate,0.9145635783651608,cute
+multidim_english,item_518,dark,predicate,1.5370017778543976,dark
+multidim_english,item_519,dirty,predicate,1.1859630541520776,dirty
+multidim_english,item_520,dry (description),predicate,1.4385710272869718,dry (description)
+multidim_english,item_521,empty,predicate,1.0831468911822837,empty
+multidim_english,item_522,fast,predicate,2.0505083085912643,fast
+multidim_english,item_523,fine,predicate,1.0428537710766057,fine
+multidim_english,item_524,first,predicate,1.2607604519163755,first
+multidim_english,item_525,full,predicate,1.3226632408196068,full
+multidim_english,item_526,gentle,predicate,1.1118542050406863,gentle
+multidim_english,item_527,good,predicate,0.8244350288129919,good
+multidim_english,item_528,green,predicate,3.0063182067577587,green
+multidim_english,item_529,happy,predicate,1.332631605054407,happy
+multidim_english,item_530,hard,predicate,1.8649596363171332,hard
+multidim_english,item_531,heavy,predicate,1.6800751512809415,heavy
+multidim_english,item_532,high,predicate,1.730716184271776,high
+multidim_english,item_533,hot,predicate,0.8238353734935236,hot
+multidim_english,item_534,hungry,predicate,1.0872453382453835,hungry
+multidim_english,item_535,hurt (description),predicate,1.165437305385571,hurt
+multidim_english,item_536,last,predicate,1.5380521250202632,last
+multidim_english,item_537,little (description),predicate,2.0127670539170657,little (description)
+multidim_english,item_538,long,predicate,1.94791736253654,long
+multidim_english,item_539,loud,predicate,1.8434270739090977,loud
+multidim_english,item_540,mad,predicate,1.0350977573516076,mad
+multidim_english,item_541,naughty,predicate,0.537360606746501,naughty
+multidim_english,item_542,new,predicate,1.598153745712496,new
+multidim_english,item_543,nice,predicate,0.8752766936837941,nice
+multidim_english,item_544,noisy,predicate,1.2174033919263083,noisy
+multidim_english,item_545,old,predicate,1.2762811816446549,old
+multidim_english,item_546,orange (description),predicate,2.1341985051621917,orange (description)
+multidim_english,item_547,poor,predicate,1.0059012198463375,poor
+multidim_english,item_548,pretty,predicate,0.6325950157781559,pretty
+multidim_english,item_549,quiet,predicate,1.4667231609508002,quiet
+multidim_english,item_550,red,predicate,2.687399471941411,red
+multidim_english,item_551,sad,predicate,1.839608898281358,sad
+multidim_english,item_552,scared,predicate,1.4481798428061654,scared
+multidim_english,item_553,sick,predicate,1.2175263340324332,sick
+multidim_english,item_554,sleepy,predicate,1.0056965759340102,sleepy
+multidim_english,item_555,slow,predicate,1.948088485584468,slow
+multidim_english,item_556,soft,predicate,1.3724748284204806,soft
+multidim_english,item_557,sticky,predicate,1.3056779504449851,sticky
+multidim_english,item_558,stuck,predicate,1.193221224814405,stuck
+multidim_english,item_559,thirsty,predicate,0.951959637887413,thirsty
+multidim_english,item_560,tiny,predicate,1.5286595285468336,tiny
+multidim_english,item_561,tired,predicate,1.4629141674264936,tired
+multidim_english,item_562,wet (description),predicate,1.350739651920882,wet
+multidim_english,item_563,white,predicate,2.6433584951651454,white
+multidim_english,item_564,windy,predicate,1.5993852452113533,windy
+multidim_english,item_565,yellow,predicate,2.6557233401644287,yellow
+multidim_english,item_566,yucky,predicate,0.6572451034543454,yucky
+multidim_spanish,item_13,snake,noun,1.196291176555976,viper
+multidim_spanish,item_14,deer,noun,1.155367984870101,deer
+multidim_spanish,item_15,cow,noun,0.5932586315821823,cow
+multidim_spanish,item_16,turtle,noun,0.47095013435322536,turtle
+multidim_spanish,item_17,tiger,noun,0.33321082099939187,tiger
+multidim_spanish,item_18,mouse,noun,1.352841713321446,mouse
+multidim_spanish,item_19,frog,noun,0.6884850314161007,frog
+multidim_spanish,item_20,pig,noun,1.2235061488388002,pig
+multidim_spanish,item_21,chick,noun,1.242566014504523,chick
+multidim_spanish,item_22,penguin,noun,0.18193581385341304,penguin
+multidim_spanish,item_23,fish (animal),noun,0.8931954542081825,fish
+multidim_spanish,item_24,dog,noun,0.8816007629137786,dog
+multidim_spanish,item_25,duck,noun,0.5823079185562898,duck
+multidim_spanish,item_26,bird,noun,0.9890876983880303,bird
+multidim_spanish,item_27,bear,noun,0.6555309302152215,bear
+multidim_spanish,item_28,mosquito,noun,1.469831720804738,mosquito
+multidim_spanish,item_29,fly (animal),noun,1.7243143382960977,fly
+multidim_spanish,item_30,monkey,noun,0.31138987252770634,monkey
+multidim_spanish,item_31,butterfly,noun,0.6443151857307339,butterfly
+multidim_spanish,item_32,wolf,noun,0.951198168669873,wolf
+multidim_spanish,item_33,lion,noun,0.5701789065141333,lion
+multidim_spanish,item_34,giraffe,noun,0.27050116506291527,giraffe
+multidim_spanish,item_35,ant,noun,1.0135416083029614,ant
+multidim_spanish,item_36,hippopotamus,noun,0.416808240636674,hippotmo
+multidim_spanish,item_37,turkey,noun,1.3738390066302646,turkey
+multidim_spanish,item_38,cat,noun,0.7841506738309315,cat
+multidim_spanish,item_39,goose,noun,1.096354439126037,goose
+multidim_spanish,item_40,hen,noun,1.195108583461387,hen
+multidim_spanish,item_41,seal (animal),noun,0.9089730564710128,seal
+multidim_spanish,item_42,elephant,noun,0.3608330556824157,elephant
+multidim_spanish,item_43,bunny,noun,1.0829372446366743,rabbit
+multidim_spanish,item_44,crocodile,noun,0.14908888717576757,crocodile
+multidim_spanish,item_45,zebra,noun,0.2758178780552846,zebra
+multidim_spanish,item_46,horse,noun,0.9818063775822254,horse
+multidim_spanish,item_47,donkey,noun,1.3105198286570847,donkey
+multidim_spanish,item_48,owl,noun,0.549771337534628,owl
+multidim_spanish,item_49,ox,noun,1.1831922356908977,ox
+multidim_spanish,item_50,lamb,noun,1.463995289196013,lamb
+multidim_spanish,item_51,bug,noun,0.7406117463599323,bug
+multidim_spanish,item_52,squirrel,noun,0.36718445546815515,squirrel
+multidim_spanish,item_53,spider,noun,1.0224623948036349,spider
+multidim_spanish,item_54,animal,noun,1.0263289747811704,animal
+multidim_spanish,item_55,bee,noun,0.6525134386286238,bee
+multidim_spanish,item_56,sled,noun,0.9968823194704484,sled
+multidim_spanish,item_57,tricycle,noun,1.154605104774595,tricycle
+multidim_spanish,item_58,train,noun,0.4929630822337291,train
+multidim_spanish,item_59,tractor,noun,0.4562392859700688,tractor
+multidim_spanish,item_60,motorcycle,noun,1.019060535996338,motorbike
+multidim_spanish,item_61,helicopter,noun,0.3816279669563806,helicopter
+multidim_spanish,item_62,car,noun,0.978287278473832,car
+multidim_spanish,item_63,stroller,noun,1.302767887791168,stroller
+multidim_spanish,item_64,truck,noun,0.6865329054847022,camion
+multidim_spanish,item_65,firetruck,noun,0.5548713413599218,firetruck
+multidim_spanish,item_66,bicycle,noun,1.019542518157737,bike
+multidim_spanish,item_67,boat,noun,0.6540258524041987,boat
+multidim_spanish,item_68,airplane,noun,0.3209633527639511,airplane
+multidim_spanish,item_69,bus,noun,0.46394958892088223,bus
+multidim_spanish,item_70,water (beverage),noun,0.9895185069326908,water
+multidim_spanish,item_71,rice,noun,0.7300606329891579,rice
+multidim_spanish,item_72,atole,noun,1.9712970892159776,porridge
+multidim_spanish,item_73,tuna,noun,1.4613607720567796,tuna fish
+multidim_spanish,item_74,sugar,noun,1.8589966024840088,sugar
+multidim_spanish,item_75,coffee,noun,0.8960294314844259,coffee
+multidim_spanish,item_76,pumpkin,noun,1.5665081672063046,pumpkin
+multidim_spanish,item_77,meat,noun,1.6462355617200355,meat
+multidim_spanish,item_78,cereal,noun,0.3659582153727387,cereal
+multidim_spanish,item_79,peas,noun,1.876635513638962,pea
+multidim_spanish,item_80,gum,noun,1.7267572706290868,chewing gum
+multidim_spanish,item_81,chili,noun,2.1352907125598506,chili
+multidim_spanish,item_82,chocolate,noun,1.221596193516446,chocolate
+multidim_spanish,item_83,food,noun,1.1536242477011591,food
+multidim_spanish,item_84,candy,noun,2.0763540696363223,sweet candy
+multidim_spanish,item_85,peach,noun,1.4733408619945436,peach
+multidim_spanish,item_86,beans,noun,1.642528222567692,green beans
+multidim_spanish,item_87,corn,noun,2.037655885512465,corncob
+multidim_spanish,item_88,pasta,noun,0.24098367302924703,spaghetti
+multidim_spanish,item_89,strawberry,noun,0.697387124584738,strawberry
+multidim_spanish,item_90,beans,noun,1.7030583373422268,beans
+multidim_spanish,item_91,cookie,noun,1.6308557299319268,cookie
+multidim_spanish,item_92,jelly,noun,2.1263403721395475,jelly
+multidim_spanish,item_93,hamburger,noun,0.7987623076789722,hamburger
+multidim_spanish,item_94,ice cream,noun,0.9624420564849846,ice cream
+multidim_spanish,item_95,ice,noun,0.9006986065509822,ice
+multidim_spanish,item_96,pancake,noun,0.6896178760615372,hotcakes
+multidim_spanish,item_97,egg,noun,1.3216729129828977,egg
+multidim_spanish,item_98,ham,noun,1.4975469306910492,ham
+multidim_spanish,item_99,juice,noun,0.681460518569503,juice
+multidim_spanish,item_100,milk,noun,1.0892229481940865,milk
+multidim_spanish,item_101,smoothie,noun,1.9279575644869265,smoothie
+multidim_spanish,item_102,lemonade,noun,0.9304096399905176,lemonade
+multidim_spanish,item_103,peanut,noun,1.4292123642149548,peanut
+multidim_spanish,item_104,butter,noun,0.6777698938716817,butter
+multidim_spanish,item_105,apple,noun,1.2296854088047808,apple
+multidim_spanish,item_106,melon,noun,1.519356860914857,melon
+multidim_spanish,item_107,jam,noun,1.5024960549551485,marmalade
+multidim_spanish,item_108,orange (food),noun,1.4973799765507352,orange (fruit)
+multidim_spanish,item_109,lollipop,noun,2.58384411754402,lollipop
+multidim_spanish,item_110,popcorn,noun,1.6362057584760894,popcorn
+multidim_spanish,item_111,bread,noun,1.2948181163254149,bread
+multidim_spanish,item_112,pastry,noun,1.446753721033592,sweet bread
+multidim_spanish,item_113,potato,noun,1.2448891541105604,potatoes
+multidim_spanish,item_114,chips,noun,0.9640244835228304,chips
+multidim_spanish,item_115,raisin,noun,0.9069023374926202,raisins
+multidim_spanish,item_116,cake,noun,2.070024542770594,cake
+multidim_spanish,item_117,peanut butter,noun,-0.3051049797129693,peanut butter
+multidim_spanish,item_118,fish (food),noun,1.2730011144883084,fish (food)
+multidim_spanish,item_119,banana,noun,0.8481555748876409,banana
+multidim_spanish,item_120,chicken (food),noun,1.3457413268471452,chicken
+multidim_spanish,item_121,quesadilla,noun,1.6518559710399368,quesadilla
+multidim_spanish,item_122,cheese,noun,1.2326376255497489,cheese
+multidim_spanish,item_123,salt,noun,2.000981263762797,salt
+multidim_spanish,item_124,hot dog,noun,1.3415739727838394,hot dog
+multidim_spanish,item_125,sauce,noun,1.125649822537301,salsa
+multidim_spanish,item_126,watermelon,noun,1.2365821660153775,watermelon
+multidim_spanish,item_127,soda,noun,1.6713703653384069,soda water
+multidim_spanish,item_128,soup,noun,1.562225044414217,soup
+multidim_spanish,item_129,taco,noun,2.063193963312524,taco
+multidim_spanish,item_130,tea,noun,0.989548583747115,tea
+multidim_spanish,item_131,sandwich,noun,1.293178213256936,lunch sub
+multidim_spanish,item_132,tortilla,noun,2.500821620113055,tortilla
+multidim_spanish,item_133,grapes,noun,0.4202617477276644,grapes
+multidim_spanish,item_134,vanilla,noun,1.3129781137986212,vanilla
+multidim_spanish,item_135,vitamin,noun,0.5818419137081081,vitamin
+multidim_spanish,item_136,yogurt,noun,0.4454759944207805,yogurt
+multidim_spanish,item_137,carrot,noun,1.3504124211121158,carrot
+multidim_spanish,item_138,button,noun,1.5587337927364702,button
+multidim_spanish,item_139,scarf,noun,1.566070432128546,scarf
+multidim_spanish,item_140,sock,noun,1.9224363790499877,sock
+multidim_spanish,item_141,underpants,noun,2.313363769567652,underwear
+multidim_spanish,item_142,shirt,noun,1.2012979132213466,shirt
+multidim_spanish,item_143,slipper,noun,1.6126292722645623,slipper
+multidim_spanish,item_144,zipper,noun,1.5575841795620546,zipper
+multidim_spanish,item_145,necklace,noun,1.4018116116721562,necklace
+multidim_spanish,item_146,skirt,noun,1.490152072553268,skirt
+multidim_spanish,item_147,hat,noun,1.6572130166178418,cap
+multidim_spanish,item_148,glove,noun,1.5660832736835348,gloves
+multidim_spanish,item_149,glasses,noun,1.5312534701059983,eyeglasses
+multidim_spanish,item_150,tights,noun,0.34232367251418633,tights
+multidim_spanish,item_151,diaper,noun,1.935853549208932,diaper
+multidim_spanish,item_152,pants,noun,1.5840624245297477,pants
+multidim_spanish,item_153,pajamas,noun,0.6170928217415954,pajamas
+multidim_spanish,item_154,t-shirt,noun,2.3752733458349784,t-shirt
+multidim_spanish,item_155,clothes,noun,1.4932480724349944,clothes
+multidim_spanish,item_156,shorts,noun,0.6698837963310298,shorts
+multidim_spanish,item_157,hat,noun,1.214473563135773,hat
+multidim_spanish,item_158,sweater,noun,2.3112676450221024,sweater
+multidim_spanish,item_159,dress (object),noun,1.5139706297818911,dress
+multidim_spanish,item_160,shoe,noun,1.0516724067481087,shoe
+multidim_spanish,item_161,beard,noun,1.3382666778141563,beard
+multidim_spanish,item_162,mustache,noun,1.8436291407434184,moustache
+multidim_spanish,item_163,mouth,noun,1.1847458847744496,mouth
+multidim_spanish,item_164,arm,noun,1.4086119580822305,arm
+multidim_spanish,item_165,head,noun,1.7136551582050312,head
+multidim_spanish,item_166,cheek,noun,1.7573338669163223,cachete
+multidim_spanish,item_167,face,noun,1.798765904037354,face
+multidim_spanish,item_168,breast,noun,1.11084504687675,breast
+multidim_spanish,item_169,finger,noun,1.651091006032478,finger
+multidim_spanish,item_170,tooth,noun,1.6087230045060363,teeth
+multidim_spanish,item_171,throat,noun,2.0359351514780384,throat
+multidim_spanish,item_172,shoulder,noun,1.3958481942616912,shoulder
+multidim_spanish,item_173,lip,noun,1.46003015292699,lips
+multidim_spanish,item_174,tongue,noun,1.2500618876890193,tongue
+multidim_spanish,item_175,hand,noun,1.275962078374372,hand
+multidim_spanish,item_176,butt,noun,1.1140878164990449,buttocks
+multidim_spanish,item_177,nose,noun,1.0024783420634935,nose
+multidim_spanish,item_178,eye,noun,1.1095817323195156,eyes
+multidim_spanish,item_179,belly button,noun,1.1484661002927261,belly button
+multidim_spanish,item_180,ear,noun,1.3990845322931134,ear
+multidim_spanish,item_181,tummy,noun,2.1013946098018024,belly
+multidim_spanish,item_182,hair,noun,1.7403133540440312,hair
+multidim_spanish,item_183,penis,noun,0.4577687042069291,penis
+multidim_spanish,item_184,leg,noun,1.5425743646168504,legs
+multidim_spanish,item_185,foot,noun,1.383840456257509,feet
+multidim_spanish,item_186,knee,noun,1.6430654313229778,knee
+multidim_spanish,item_187,vagina,noun,0.49816323821761654,vagina
+multidim_spanish,item_188,bat (object),noun,0.5433810728185943,bat
+multidim_spanish,item_189,bubbles,noun,0.5390955040755272,bubbles
+multidim_spanish,item_190,colors,noun,1.12655697986115,colors
+multidim_spanish,item_191,crayon,noun,0.7293493201920745,crayons
+multidim_spanish,item_192,balloon,noun,1.358796456579456,air balloon
+multidim_spanish,item_193,paper,noun,1.6807517210329572,paper
+multidim_spanish,item_194,toy (object),noun,1.7270967464749232,toy
+multidim_spanish,item_195,pen/pencil,noun,1.794228758255883,pencil
+multidim_spanish,item_196,book,noun,0.6923215535727703,book
+multidim_spanish,item_197,doll,noun,1.3294493495359037,baby doll
+multidim_spanish,item_198,teddybear,noun,1.1935011829366378,teddy bear
+multidim_spanish,item_199,skate (object),noun,1.663434540620345,roller skates
+multidim_spanish,item_200,ball,noun,2.0004967198517996,ball
+multidim_spanish,item_201,painting,noun,1.5001523423931968,painting
+multidim_spanish,item_202,clay,noun,1.0882700174145543,clay
+multidim_spanish,item_203,pen,noun,1.7000466528364917,pen
+multidim_spanish,item_204,drum (object),noun,1.0125215627131303,drum
+multidim_spanish,item_205,tricycle,noun,1.2646573097799727,tricycle (toy)
+multidim_spanish,item_206,boots,noun,1.154937965032736,boots
+multidim_spanish,item_207,purse,noun,1.896039634648441,purse
+multidim_spanish,item_208,bib,noun,1.7273436734114065,bib
+multidim_spanish,item_209,earring,noun,1.5511817824150245,earrings
+multidim_spanish,item_210,coat,noun,1.0000168135475922,coat
+multidim_spanish,item_211,pillow,noun,1.790091698175564,pillow
+multidim_spanish,item_212,vacuum,noun,0.6371489119001652,vacuum cleaner
+multidim_spanish,item_213,trash,noun,1.4246506538251544,garbage can
+multidim_spanish,item_214,bag,noun,2.633645338704113,bag
+multidim_spanish,item_215,bottle,noun,1.771062276809757,bottle
+multidim_spanish,item_216,box,noun,1.8480386883393112,box
+multidim_spanish,item_217,camera,noun,0.96728474815849,camera
+multidim_spanish,item_218,basket,noun,2.2072185611525432,basket
+multidim_spanish,item_219,tape (object),noun,2.2083584407249046,cassette
+multidim_spanish,item_220,toothbrush,noun,1.4438579769149735,toothbrush
+multidim_spanish,item_221,brush (object),noun,2.0292678831869937,brush
+multidim_spanish,item_222,matches,noun,3.1019145253194145,matches
+multidim_spanish,item_223,pacifier,noun,1.0154058474076344,pacifier
+multidim_spanish,item_224,cigarette,noun,1.6331913853723237,cigarettes
+multidim_spanish,item_225,nail (object),noun,1.999548910518748,nail
+multidim_spanish,item_226,blanket,noun,1.9698972955347327,blanket
+multidim_spanish,item_227,picture,noun,1.4061925149693066,picture
+multidim_spanish,item_228,tray,noun,3.4800409696797208,tray
+multidim_spanish,item_229,spoon,noun,1.5751371751806178,spoon
+multidim_spanish,item_230,knife,noun,1.7023537863648766,knife
+multidim_spanish,item_231,money,noun,2.6605881718688416,money
+multidim_spanish,item_232,broom,noun,2.5374569776276235,broom
+multidim_spanish,item_233,mirror,noun,2.4256032542455617,mirror
+multidim_spanish,item_234,photo,noun,1.6031940474680288,photos
+multidim_spanish,item_235,soap,noun,2.3489881862975324,soap
+multidim_spanish,item_236,lamp,noun,1.5005741382904718,lamp
+multidim_spanish,item_237,key,noun,1.8002852537941056,key
+multidim_spanish,item_238,light (object),noun,0.8645930552533793,light
+multidim_spanish,item_239,hammer,noun,1.5621050882737892,hammer
+multidim_spanish,item_240,medicine,noun,1.654426300118371,medicine
+multidim_spanish,item_241,pot,noun,1.6231772499544994,cooking pot
+multidim_spanish,item_242,tissue,noun,1.989398151336179,handkerchief
+multidim_spanish,item_243,paper,noun,1.8355968996959036,paper
+multidim_spanish,item_244,toothpaste,noun,1.5936732101646347,toothpaste
+multidim_spanish,item_245,comb (object),noun,2.2511533787943887,hair comb
+multidim_spanish,item_246,newspaper,noun,1.6732733364214156,newspaper
+multidim_spanish,item_247,iron (object),noun,2.6562417619369088,iron
+multidim_spanish,item_248,plate,noun,2.267198624435931,dish
+multidim_spanish,item_249,radio,noun,2.046422993385765,radio
+multidim_spanish,item_250,watch (object),noun,1.5466981113360307,watch
+multidim_spanish,item_251,napkin,noun,1.633720235039012,napkin
+multidim_spanish,item_252,rug,noun,1.6483602330345288,rug
+multidim_spanish,item_253,cup,noun,2.1956831938207375,cup
+multidim_spanish,item_254,telephone,noun,1.1349930568855506,phone
+multidim_spanish,item_255,fork,noun,1.343130927098146,fork
+multidim_spanish,item_256,scissors,noun,2.3682269552438333,pair of scissors
+multidim_spanish,item_257,towel,noun,1.8023942770260308,towel
+multidim_spanish,item_258,cloth,noun,2.079846588413455,cloth
+multidim_spanish,item_259,glass,noun,2.1440209771700394,glasses
+multidim_spanish,item_260,candle,noun,1.469679675979563,candle
+multidim_spanish,item_261,pool,noun,0.26871394790369024,pool
+multidim_spanish,item_262,tree,noun,1.1921771343606156,tree
+multidim_spanish,item_263,flag,noun,1.4235320650113168,flag
+multidim_spanish,item_264,sky,noun,1.309286810190323,sky
+multidim_spanish,item_265,drain (object),noun,2.195704671167828,drain
+multidim_spanish,item_266,swing (object),noun,1.4088434836807084,swing
+multidim_spanish,item_267,star,noun,0.7898822754346045,star
+multidim_spanish,item_268,flower,noun,0.983830438491238,flower
+multidim_spanish,item_269,fire,noun,1.2580953302194546,fire
+multidim_spanish,item_270,leaf,noun,1.52046368237124,leaves
+multidim_spanish,item_271,firewood,noun,1.723941838131287,firewood
+multidim_spanish,item_272,rain,noun,1.0256272839377607,rain
+multidim_spanish,item_273,moon,noun,0.6833801082733607,moon
+multidim_spanish,item_274,flower pot,noun,2.6222642681838813,flower pot
+multidim_spanish,item_275,hose,noun,2.04520528078507,hose
+multidim_spanish,item_276,snowman,noun,0.953114547310853,snowman
+multidim_spanish,item_277,snow,noun,1.0278328044408758,snow
+multidim_spanish,item_278,cloud,noun,1.2447852593620703,cloud
+multidim_spanish,item_279,shovel,noun,1.1255354280277814,shovel
+multidim_spanish,item_280,stick,noun,1.7983719779871372,stick
+multidim_spanish,item_281,grass,noun,1.6967374183922137,grass
+multidim_spanish,item_282,rock (object),noun,1.7187834001060287,stone
+multidim_spanish,item_283,plant,noun,1.4150309544759534,plant
+multidim_spanish,item_284,grill (object),noun,1.8648556944929764,grill
+multidim_spanish,item_285,slide (object),noun,1.745087859033427,slide
+multidim_spanish,item_286,sun,noun,1.068187056539134,sun
+multidim_spanish,item_288,roof,noun,1.6792545342006369,ceiling
+multidim_spanish,item_289,soil,noun,2.1692426408235472,earth
+multidim_spanish,item_290,doorbell,noun,1.6923652312449802,doorbell
+multidim_spanish,item_291,wind,noun,1.599863534956879,wind
+multidim_spanish,item_292,potty,noun,1.7082757726704698,potty
+multidim_spanish,item_293,bench,noun,1.203472013828598,bench
+multidim_spanish,item_294,bathroom,noun,1.4742111626656866,bath
+multidim_spanish,item_295,drawer,noun,1.940240794389544,drawer
+multidim_spanish,item_296,bed,noun,2.1232402398806065,bed
+multidim_spanish,item_297,shampoo,noun,1.606129062962138,shampoo
+multidim_spanish,item_298,garage,noun,0.5418852980610719,garage
+multidim_spanish,item_299,kitchen,noun,1.5750151639691294,kitchen room
+multidim_spanish,item_300,computer,noun,-0.07130339735564264,computer
+multidim_spanish,item_301,room,noun,1.4513991512066498,room
+multidim_spanish,item_302,crib,noun,1.4750921573292,crib
+multidim_spanish,item_303,stairs,noun,2.0631673870153153,stairs
+multidim_spanish,item_304,stove,noun,3.1410308945727583,stove
+multidim_spanish,item_305,oven,noun,1.4081271802571524,oven
+multidim_spanish,item_306,sink,noun,2.0125887502668207,sink
+multidim_spanish,item_307,washing machine,noun,2.077359797383655,washing machine
+multidim_spanish,item_308,bookshelf,noun,2.108829255187475,bookcase
+multidim_spanish,item_309,table,noun,1.9842550293919603,table top
+multidim_spanish,item_310,furniture,noun,1.4857331044245163,piece of furniture
+multidim_spanish,item_311,patio,noun,1.9848032370542783,patio
+multidim_spanish,item_312,door,noun,1.7612130138610118,gate
+multidim_spanish,item_313,bedroom,noun,1.952138704408704,bedroom
+multidim_spanish,item_314,refrigerator,noun,1.475462668733485,refrigerator
+multidim_spanish,item_315,shower,noun,1.857081337195811,watering can
+multidim_spanish,item_316,closet,noun,1.4759098242116695,closet
+multidim_spanish,item_317,living room,noun,1.6848568772580972,living room
+multidim_spanish,item_318,dryer,noun,1.2265396148513956,tumble dryer
+multidim_spanish,item_319,chair,noun,2.1499915652731154,chair
+multidim_spanish,item_320,couch,noun,2.047106933802113,lounge chair
+multidim_spanish,item_321,couch,noun,0.42720687194609186,sofa
+multidim_spanish,item_322,tv,noun,1.460417838920168,television
+multidim_spanish,item_323,bathtub,noun,1.8136435146016636,tub
+multidim_spanish,item_324,window,noun,2.0549829617234052,window
+multidim_spanish,item_401,go,predicate,0.8107262760560496,go to
+multidim_spanish,item_402,pull,predicate,2.4440171256410608,pull
+multidim_spanish,item_403,play,predicate,2.343176394058466,to play
+multidim_spanish,item_404,build,predicate,2.6413115268456626,put together
+multidim_spanish,item_405,hurt (action),predicate,2.103876292235205,to hurt
+multidim_spanish,item_406,wash,predicate,2.2979062849031373,wash
+multidim_spanish,item_407,read,predicate,1.056110211687901,read
+multidim_spanish,item_408,stand,predicate,2.4306688328203294,lift
+multidim_spanish,item_409,take,predicate,3.123727111959697,carry
+multidim_spanish,item_410,cry,predicate,2.448586069193993,mourn
+multidim_spanish,item_411,rain,predicate,1.7657606851196157,to rain
+multidim_spanish,item_412,put,predicate,2.814514406593161,get into
+multidim_spanish,item_413,look,predicate,1.0325215627331144,to see
+multidim_spanish,item_414,bite,predicate,2.7452024935986223,to bite
+multidim_spanish,item_415,swim,predicate,1.3152528526227258,to swim
+multidim_spanish,item_416,hear,predicate,1.4461584131213148,hear
+multidim_spanish,item_417,stand,predicate,2.6110712943511474,to stop
+multidim_spanish,item_418,kick,predicate,2.6107166570129343,to kick
+multidim_spanish,item_419,skate (action),predicate,1.4661862774102272,to skate
+multidim_spanish,item_420,hit,predicate,2.454754336006097,to hit
+multidim_spanish,item_421,comb (action),predicate,2.506352350741789,to comb
+multidim_spanish,item_422,think,predicate,1.6956529899596862,to think
+multidim_spanish,item_423,miss,predicate,2.53434808027696,to waste
+multidim_spanish,item_424,paint (action),predicate,1.4688074153389044,to paint
+multidim_spanish,item_425,talk,predicate,2.6269915314684384,talk
+multidim_spanish,item_426,can (auxiliary),predicate,1.8677222756289604,be able to
+multidim_spanish,item_427,put,predicate,1.7274331938975802,put on
+multidim_spanish,item_428,turn on,predicate,1.808968687424028,switch on
+multidim_spanish,item_429,stay,predicate,2.8781071601555244,stay
+multidim_spanish,item_430,burn,predicate,1.873997828577532,burn down
+multidim_spanish,item_431,want,predicate,1.118828062290245,want to
+multidim_spanish,item_432,remove,predicate,1.9232625768716416,take off
+multidim_spanish,item_433,give,predicate,2.136548687667272,give away
+multidim_spanish,item_434,break,predicate,1.861135247433167,to break
+multidim_spanish,item_435,know,predicate,2.0860143462264262,to know
+multidim_spanish,item_436,take,predicate,2.0232880951202135,put off
+multidim_spanish,item_437,leave,predicate,1.9786536698289432,going out
+multidim_spanish,item_438,jump,predicate,1.3236054579360876,to jump
+multidim_spanish,item_439,greet,predicate,2.0116684131933855,to greet
+multidim_spanish,item_440,sit,predicate,2.34825256204823,sit
+multidim_spanish,item_441,blow,predicate,1.6407140723204072,to blow
+multidim_spanish,item_442,climb,predicate,1.6264204242257343,to go up
+multidim_spanish,item_443,cover (action),predicate,2.163270004161974,to cover
+multidim_spanish,item_444,have,predicate,1.2962582164379406,to have
+multidim_spanish,item_445,finish,predicate,1.8769002883272221,to finish
+multidim_spanish,item_446,throw,predicate,2.5088544883668775,to throw
+multidim_spanish,item_447,touch,predicate,1.609525298394238,to touch
+multidim_spanish,item_448,take,predicate,1.7912846193489012,to take
+multidim_spanish,item_449,bring,predicate,2.3544098721117814,to bring
+multidim_spanish,item_450,come,predicate,1.0562554165423663,to come
+multidim_spanish,item_451,see,predicate,1.5865299228403211,to see
+multidim_spanish,item_452,finish,predicate,1.1373974547582015,to finish
+multidim_spanish,item_453,accompany,predicate,1.8850793966897927,to join
+multidim_spanish,item_454,lie down,predicate,2.2815256506561425,lay down
+multidim_spanish,item_455,hold,predicate,2.494073278286272,to grab
+multidim_spanish,item_456,lunch (action),predicate,1.2147230342632065,to launch
+multidim_spanish,item_457,tie (action),predicate,1.8369134486688048,to tie up
+multidim_spanish,item_458,walk,predicate,1.454961918903331,walk
+multidim_spanish,item_459,turn off,predicate,2.077718927413618,to turn off
+multidim_spanish,item_460,hurry,predicate,1.7456845644457737,hurry
+multidim_spanish,item_461,fix,predicate,2.0494354803809185,to fix
+multidim_spanish,item_462,scared,predicate,2.333826510237332,to frighten
+multidim_spanish,item_463,throw,predicate,2.280966795036567,to blow
+multidim_spanish,item_464,help,predicate,1.6756459400515198,to help
+multidim_spanish,item_465,dance,predicate,1.858647510108726,to dance
+multidim_spanish,item_466,lower (action),predicate,1.7897926796192911,to come down
+multidim_spanish,item_467,sweep,predicate,2.3338279786990226,to sweep
+multidim_spanish,item_468,kiss,predicate,1.6148769080059735,to kiss
+multidim_spanish,item_469,jump,predicate,2.237996764626534,to hop
+multidim_spanish,item_470,watch (action),predicate,2.99880194062224,search for
+multidim_spanish,item_471,fit,predicate,1.7183722172176124,to fit
+multidim_spanish,item_472,fall,predicate,1.583942416571209,to fall
+multidim_spanish,item_473,quiet (action),predicate,2.108227272834899,shut up
+multidim_spanish,item_474,walk,predicate,2.1254777307983836,walk
+multidim_spanish,item_475,sing,predicate,1.979736439779348,to sing
+multidim_spanish,item_476,carry,predicate,1.8173470175702924,to load
+multidim_spanish,item_477,dine,predicate,1.7215334509454958,to have dinner
+multidim_spanish,item_478,close,predicate,1.9349162621752227,to close
+multidim_spanish,item_479,cook,predicate,0.8739503127280857,to cook
+multidim_spanish,item_480,eat,predicate,1.7380923599404614,to eat
+multidim_spanish,item_481,buy,predicate,2.310596362092081,to purchase
+multidim_spanish,item_482,run,predicate,1.86223921728218,run
+multidim_spanish,item_483,cut,predicate,1.900709615833984,to cut
+multidim_spanish,item_484,give,predicate,1.3655217886859476,to give
+multidim_spanish,item_485,say,predicate,1.851461730621968,to say
+multidim_spanish,item_486,breakfast (action),predicate,1.6824762401676725,to have breakfast
+multidim_spanish,item_487,draw,predicate,1.786967597568275,to draw
+multidim_spanish,item_488,hurt (action),predicate,1.7615205683366904,hurt
+multidim_spanish,item_489,sleep,predicate,1.712128310423366,to sleep
+multidim_spanish,item_490,push,predicate,2.0243879615536153,push
+multidim_spanish,item_491,find,predicate,2.70900017456977,to find
+multidim_spanish,item_492,show,predicate,2.4782334475187517,to teach
+multidim_spanish,item_493,enter,predicate,2.434564367447813,to enter
+multidim_spanish,item_494,mistake,predicate,2.049462198827279,to make a mistake
+multidim_spanish,item_495,hide,predicate,2.6202874332227903,to hide
+multidim_spanish,item_496,write,predicate,1.7512404744513337,to write
+multidim_spanish,item_497,listen,predicate,1.55322851485049,to listen
+multidim_spanish,item_498,wait,predicate,2.0923498771064772,to expect
+multidim_spanish,item_499,gain,predicate,2.059019350868179,to win
+multidim_spanish,item_500,shout,predicate,2.458381259928756,shout
+multidim_spanish,item_501,like,predicate,1.747185404868233,to like
+multidim_spanish,item_502,do,predicate,2.0746673862264142,to do
+multidim_spanish,item_503,open (action),predicate,1.4751736732053211,to open
+multidim_spanish,item_507,tall,predicate,0.7804757354625904,high up
+multidim_spanish,item_508,yellow,predicate,0.1646075520620824,yellow
+multidim_spanish,item_509,blue,predicate,-0.07718872828840553,blue
+multidim_spanish,item_510,white,predicate,0.422393560467444,white
+multidim_spanish,item_511,pretty,predicate,1.2655473793825924,pretty
+multidim_spanish,item_512,good,predicate,0.9358878419937028,okay
+multidim_spanish,item_513,hot,predicate,1.095510761488189,hot
+multidim_spanish,item_514,tired,predicate,1.4605075980392748,tired
+multidim_spanish,item_515,short,predicate,1.433560315789172,little one
+multidim_spanish,item_516,little (description),predicate,0.9765548759128202,boy
+multidim_spanish,item_517,cute,predicate,1.053669502577392,cute
+multidim_spanish,item_519,awake,predicate,2.0771790350212087,awake
+multidim_spanish,item_520,different,predicate,1.4029581823021744,different
+multidim_spanish,item_521,hard,predicate,1.3475822013183552,difficult
+multidim_spanish,item_522,tough,predicate,1.2052499971139838,hard
+multidim_spanish,item_523,sick,predicate,1.671517243087604,sick
+multidim_spanish,item_524,angry,predicate,1.8300320296642036,angry
+multidim_spanish,item_525,happy,predicate,0.9562712097410618,happy
+multidim_spanish,item_526,ugly,predicate,1.0252034126096656,ugly
+multidim_spanish,item_527,thin,predicate,1.1502952564695093,skinny
+multidim_spanish,item_528,cold,predicate,1.0244491685616015,cold
+multidim_spanish,item_529,yucky,predicate,1.0898994880670685,yucky
+multidim_spanish,item_530,strong,predicate,1.211385483108321,strong
+multidim_spanish,item_531,fat,predicate,1.215786461204697,fat
+multidim_spanish,item_532,big,predicate,0.993460123056322,great
+multidim_spanish,item_533,cute,predicate,0.980281553062402,handsome
+multidim_spanish,item_534,hungry,predicate,1.2365397149012174,hunger
+multidim_spanish,item_535,same,predicate,1.5862616054529788,equal
+multidim_spanish,item_536,long,predicate,1.230643030279518,long
+multidim_spanish,item_537,slow,predicate,1.0924430573849422,slow
+multidim_spanish,item_538,clean (description),predicate,1.3922575787742777,clean
+multidim_spanish,item_539,cute,predicate,0.46570146775125215,cute
+multidim_spanish,item_540,full,predicate,1.618117829358919,full
+multidim_spanish,item_541,bad,predicate,1.088252157217472,bad
+multidim_spanish,item_542,better,predicate,1.784037614517693,better off
+multidim_spanish,item_543,scared,predicate,1.7161715298211395,scared
+multidim_spanish,item_544,wet (description),predicate,1.9177808243245864,wet
+multidim_spanish,item_545,purple,predicate,0.4508470971304221,purple
+multidim_spanish,item_546,black,predicate,0.39066194801169024,black
+multidim_spanish,item_547,new,predicate,1.5153814688887786,new
+multidim_spanish,item_548,dark,predicate,1.1781685333254663,dark
+multidim_spanish,item_549,sticky,predicate,0.9979038962436936,sticky
+multidim_spanish,item_550,dangerous,predicate,0.9967726126641416,dangerous
+multidim_spanish,item_551,heavy,predicate,1.801017618947511,heavy
+multidim_spanish,item_552,poor,predicate,1.304187588396167,poor
+multidim_spanish,item_553,first,predicate,1.548420348263719,at first
+multidim_spanish,item_554,fast,predicate,1.3997203632096369,fast
+multidim_spanish,item_555,red,predicate,0.04996016838928965,red
+multidim_spanish,item_556,pink,predicate,0.4787787986628867,pink
+multidim_spanish,item_557,broken,predicate,1.2960501418780703,broken
+multidim_spanish,item_558,noisy,predicate,1.284696571119881,noisy
+multidim_spanish,item_559,dry (description),predicate,1.5158337078149704,dry
+multidim_spanish,item_560,soft,predicate,0.6667168203197289,soft
+multidim_spanish,item_561,dirty,predicate,0.8588471781242929,dirty
+multidim_spanish,item_562,silly,predicate,1.254945142883256,silly
+multidim_spanish,item_563,quiet,predicate,0.888595410654876,quiet
+multidim_spanish,item_564,naughty,predicate,1.5089504272298444,naughty
+multidim_spanish,item_565,sad,predicate,1.0586432575040892,sad
+multidim_spanish,item_566,last,predicate,1.5109407099490446,last one
+multidim_spanish,item_567,empty,predicate,1.1785025030962333,empty
+multidim_spanish,item_568,green,predicate,0.03742252755626683,green
+multidim_spanish,item_569,old,predicate,1.1939826248249144,old
