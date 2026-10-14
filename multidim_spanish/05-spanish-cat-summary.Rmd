@@ -1,0 +1,194 @@
+---
+title: "Toward a Multidimensional CDI-CAT: Noun/Predicate Bias in Spanish (Mexican)"
+author: "George Kachergis"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(here)
+library(tidyverse)
+library(mirt)
+library(kableExtra)
+```
+
+# Motivation
+
+Fourth replication of the noun/predicate bifactor CAT pipeline (Japanese: `multidim/`; Cantonese:
+`multidim_cantonese/`; English: `multidim_english/`), on Spanish (Mexican) -- pulled directly from
+Wordbank via `wordbankr`, using the shared pipeline (`multidim_pipeline/lib.R`) throughout, including
+the two fixes made along the way (an imputed-vs-raw-matrix bug in the CAT loop, and a vector-`min_items`
+bug in the criteria-comparison step -- both caught and fixed during this replication, see
+`multidim_pipeline/lib.R` history).
+
+```{r load-data}
+items <- read_csv(here("multidim_spanish/item_lexical_categories.csv"), show_col_types = FALSE)
+efa_loadings <- read_csv(here("multidim_spanish/efa2_loadings.csv"), show_col_types = FALSE)
+bifactor_items <- read_csv(here("multidim_spanish/bifactor_item_params.csv"), show_col_types = FALSE)
+bifactor_scores <- read_csv(here("multidim_spanish/bifactor_scores.csv"), show_col_types = FALSE) %>%
+  mutate(noun_predicate_bias = S1_noun - S2_predicate)
+cat_summary <- read_csv(here("multidim_spanish/cat_simulation_summary.csv"), show_col_types = FALSE)
+resp_data <- readRDS(here("multidim_spanish/noun_predicate_response_data.Rds"))
+
+jp_bifactor_scores <- read_csv(here("multidim/bifactor_scores.csv"), show_col_types = FALSE)
+can_bifactor_scores <- read_csv(here("multidim_cantonese/bifactor_scores.csv"), show_col_types = FALSE) %>%
+  mutate(noun_predicate_bias = S1_noun - S2_predicate)
+en_bifactor_scores <- read_csv(here("multidim_english/bifactor_scores.csv"), show_col_types = FALSE) %>%
+  mutate(noun_predicate_bias = S1_noun - S2_predicate)
+en_resp_data <- readRDS(here("multidim_english/noun_predicate_response_data.Rds"))
+can_resp_data <- readRDS(here("multidim_cantonese/noun_predicate_response_data.Rds"))
+```
+
+# 1. Data and item classification
+
+Spanish (Mexican) WS has 1682 administrations on Wordbank; after excluding 21 non-producers and 45
+children at ceiling, **`r nrow(resp_data$d_demo)`** remain -- comparable in scale to Cantonese, so
+(unlike English) the full sample was used directly for every fitting step, no subsampling needed.
+
+Item classification uses the same category &rarr; class mapping as the other three languages, plus two
+Spanish-specific categories (`prepositions`, `states`, both mapped to `function_word`; `states` has
+only 3 items). The resulting content-word bank is **478 items (312 noun, 166 predicate)** --
+numerically identical to Japanese and English, the expected result since all three descend from the
+same source CDI.
+
+```{r item-counts}
+items %>%
+  count(lexical_class, pos2) %>%
+  arrange(pos2) %>%
+  kable(col.names = c("Lexical class", "CAT dimension (pos2)", "N items"),
+        caption = "Spanish item counts by lexical class and CAT grouping.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+# 2. Exploratory factor check
+
+```{r efa-plot, fig.width=6, fig.height=5}
+ggplot(efa_loadings, aes(x = F1, y = F2, color = pos2)) +
+  geom_point(alpha = 0.4) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  labs(x = "F1 (general)", y = "F2 (noun vs. predicate)", color = "Item type",
+       title = "Spanish: exploratory 2-factor loadings") +
+  theme_bw()
+```
+
+Fourth replication of the same signature: dominant general factor (mean F1 = 0.77 nouns, 0.81
+predicates), a smaller but highly reliable noun/predicate-separating F2 (noun mean
+`r round(mean(efa_loadings$F2[efa_loadings$pos2=="noun"]),3)`, predicate mean
+`r round(mean(efa_loadings$F2[efa_loadings$pos2=="predicate"]),3)`; Welch t = 29.6, p < .0001), and
+clean F1/F2 orthogonality (r = 0.016, in between Japanese's -0.015 and Cantonese's 0.234).
+
+# 3. Confirmatory bifactor model
+
+```{r bifactor-loadings}
+bifactor_items %>%
+  mutate(own_specific = if_else(pos2 == "noun", S1_noun, S2_predicate)) %>%
+  group_by(pos2) %>%
+  summarise(mean_G = mean(G), mean_own_specific = mean(own_specific), n = n()) %>%
+  kable(digits = 2, caption = "Mean general (G) and own-specific-factor loadings by item type.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+This fit converged cleanly with no warnings -- unlike English, which raised a mild "log-likelihood
+decreasing" warning (later shown not to be consequential via a downstream CAT check).
+
+```{r bifactor-reliability}
+rel <- empirical_rxx(bifactor_scores %>%
+                        select(G, S1_noun, S2_predicate, SE_G, SE_S1_noun, SE_S2_predicate) %>%
+                        as.matrix())
+tibble(dimension = names(rel), empirical_rxx = rel) %>%
+  kable(digits = 2, caption = "Empirical reliability of full-item-bank (non-adaptive) factor scores.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+**Best specific-factor reliability of all four languages** (S1 = .89, S2 = .85, vs. Cantonese's
+previous best of .86/.80).
+
+```{r bias-vs-production, fig.width=6, fig.height=4.5}
+ggplot(bifactor_scores, aes(x = production, y = noun_predicate_bias)) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(x = "Total production (sum score)", y = "Noun/predicate bias (S1 - S2)",
+       title = sprintf("r = %.3f", cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias))) +
+  theme_bw()
+```
+
+The bias score decouples from vocabulary size more cleanly here than in any other language:
+r = `r round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias),3)` with production
+(Japanese: -.16, Cantonese: -.11, English: .04) and r =
+`r round(cor(bifactor_scores$age, bifactor_scores$noun_predicate_bias),2)` with age. The S1/S2 EAP
+score correlation is `r round(cor(bifactor_scores$S1_noun, bifactor_scores$S2_predicate),2)`.
+
+# 4. CAT simulation
+
+Applying the lesson learned from Cantonese and English *directly this time* -- rather than
+rediscovering it with a "forced longer" follow-up run -- `min_items` was set to ~75% of each length's
+ceiling from the start, and `min_SEM` computed from this dataset's own full-bank SE ceiling. This
+worked on the first attempt (after fixing a `min_items`-vector bug the attempt surfaced in
+`multidim_pipeline/lib.R`, see script comments).
+
+```{r cat-sim-table}
+cat_summary %>%
+  kable(digits = 3, caption = "Spanish CAT simulation: item budget vs. recovered precision.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+**Best recovery of all four languages**: r = .99 at a 300-item cap (259 items administered on
+average), and only 1 of 478 items was never selected across the whole simulated sample at that budget
+-- the CAT is using nearly the entire bank.
+
+# 5. Four-language comparison
+
+```{r comparison-table}
+tibble(
+  language = c("Japanese", "Cantonese", "English (American)", "Spanish (Mexican)"),
+  n_for_modeling = c(nrow(jp_bifactor_scores), nrow(can_bifactor_scores), nrow(en_bifactor_scores), nrow(bifactor_scores)),
+  n_available = c(nrow(jp_bifactor_scores), nrow(can_resp_data$d_demo), nrow(en_resp_data$d_demo), nrow(resp_data$d_demo)),
+  n_content_items = c(478, 572, 478, 478),
+  full_bank_reliability_S1 = c(0.71, 0.86, 0.81, 0.89),
+  full_bank_reliability_S2 = c(0.64, 0.80, 0.75, 0.85),
+  bias_vs_production_r = c(
+    round(cor(jp_bifactor_scores$production, jp_bifactor_scores$S1_noun - jp_bifactor_scores$S2_predicate), 2),
+    round(cor(can_bifactor_scores$production, can_bifactor_scores$noun_predicate_bias), 2),
+    round(cor(en_bifactor_scores$production, en_bifactor_scores$noun_predicate_bias), 3),
+    round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias), 3)
+  ),
+  best_cat_recovery_r = c(0.95, 0.97, 0.98, 0.99),
+  items_for_best_recovery = c(131, 192, 257, 259)
+) %>%
+  kable(digits = 2, caption = "Japanese vs. Cantonese vs. English vs. Spanish: key numbers side by side.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The bifactor design and Drule-based CAT transfer cleanly across all four languages tested, with
+Spanish giving the strongest results on every metric: highest specific-factor reliability, tightest
+bias/vocabulary-size decoupling, and best CAT recovery. The engineering also matured across the four
+replications -- Spanish is the first language where the full pipeline (prep through CAT simulation)
+ran correctly without needing a follow-up "forced longer" or bug-fix run *during the CAT stage itself*
+(one `min_items`-vector bug was caught and fixed in `multidim_pipeline/lib.R` before the successful run,
+rather than being discovered via a bad result afterward).
+
+A related question was tested and resolved during this replication (on Japanese): whether a genuinely
+2-dimensional model (G + a single bipolar noun-vs-predicate contrast, instead of two orthogonal
+specific factors subtracted post-hoc) might be a cleaner alternative. Two independent fit attempts
+(default and EFA-informed starting values) both failed to converge to a sensible solution -- G loadings
+diverged to implausible magnitudes (-1 to -21) and the Bias dimension lost its bipolar character. This
+appears to be a structural estimation problem (G and Bias sharing the exact same item set with no "pure
+G" anchor items), not a fixable numerical fluke, so the current 2-group bifactor design (bias = S1-S2)
+remains the recommended approach; see `multidim_pipeline/bias_dimensionality_comparison.R` and
+`bias_1group_refit_with_starts.R` for the full investigation.
+
+# 6. Open questions
+
+1. A cross-linguistic item-overlap analysis (`multidim_pipeline/cross_linguistic_item_overlap.R`) is
+   being extended to include Spanish: do the same concepts (`uni_lemma`) turn out to be the most
+   discriminating items for the noun/predicate dimension across all four languages? Preliminary
+   3-language results (before Spanish) showed strong cross-linguistic transfer for nouns but much
+   weaker (and for Japanese, below-chance) transfer for predicates -- echoing Hagihara et al.'s own
+   finding that verb/adjective bias is more cross-linguistically variable than noun bias.
+2. English used a documented n=1500 subsample given its much larger available sample (~9000); Spanish
+   and Cantonese used their full samples directly. Worth deciding whether a full-sample English refit
+   is warranted given how promising the subsampled results already are.
+3. Given the min_items floor needed for good recovery (150-250+ across all four languages) is much
+   longer than the existing unidimensional production CATs (~25-50 items), the combined-vs-separate
+   administration question (raised in the English write-up) remains open across all four languages.

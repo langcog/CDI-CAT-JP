@@ -1,0 +1,131 @@
+---
+title: "Cross-linguistic item overlap for the noun/predicate bias dimension"
+author: "George Kachergis"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(here)
+library(tidyverse)
+library(kableExtra)
+```
+
+# Question
+
+Are the same concepts (Wordbank's `uni_lemma` -- a language-independent identifier linking
+translation-equivalent CDI items, e.g. "dog" links English *dog*, Japanese *inu*, Cantonese *gau2*,
+Spanish *perro*) the most informative items for the noun-vs-predicate bias dimension across languages,
+or is item-level informativeness mostly language-specific? Each language's confirmatory bifactor model
+(`multidim*/bifactor_item_params.csv`) gives every item a loading on its own specific factor (S1 for
+nouns, S2 for predicates) -- a direct, per-item measure of how much that item discriminates
+noun-leaning from predicate-leaning children. This compares those loadings across all four languages
+fit so far: Japanese, Cantonese, English (American), Spanish (Mexican).
+
+```{r load-data}
+wide <- read_csv(here("multidim_pipeline/cross_linguistic_item_loadings_wide.csv"), show_col_types = FALSE)
+pair_cors <- read_csv(here("multidim_pipeline/cross_linguistic_pairwise_correlations.csv"), show_col_types = FALSE)
+top_overlap <- read_csv(here("multidim_pipeline/cross_linguistic_top_item_overlap.csv"), show_col_types = FALSE)
+all_items <- read_csv(here("multidim_pipeline/cross_linguistic_item_loadings.csv"), show_col_types = FALSE)
+
+lang_labels <- c(multidim = "Japanese", multidim_cantonese = "Cantonese",
+                  multidim_english = "English", multidim_spanish = "Spanish")
+pair_cors <- pair_cors %>% mutate(lang1 = recode(lang1, !!!lang_labels), lang2 = recode(lang2, !!!lang_labels))
+top_overlap <- top_overlap %>% mutate(lang1 = recode(lang1, !!!lang_labels), lang2 = recode(lang2, !!!lang_labels))
+```
+
+# 1. Pairwise correlation of item loadings
+
+For every pair of languages, the correlation (across items sharing a `uni_lemma`) between how strongly
+each item loads on its own specific factor in each language.
+
+```{r cor-table}
+pair_cors %>%
+  arrange(pos2, lang1, lang2) %>%
+  kable(digits = 2, col.names = c("Language 1", "Language 2", "Item type", "N shared items", "r")) %>%
+  kable_styling(full_width = FALSE) %>%
+  row_spec(which(grepl("Spanish", paste(pair_cors$lang1, pair_cors$lang2))), background = "#fff3cd")
+```
+
+Three languages (Japanese, Cantonese, English) agree well with each other on nouns (r = .61-.71) and
+much less on predicates (r = .15-.73, inconsistent). **Every pair involving Spanish is negative for
+nouns** (r = -.42 to -.50) and mostly negative for predicates too (r = -.41 to -.44, except Japanese-Spanish
+predicates at +.29). This is highlighted rather than averaged away, because it turned out to be a real
+and informative pattern, not noise (Section 3).
+
+# 2. Top-30 most-discriminating-item overlap vs. chance
+
+For each language pair, how many of the 30 most-discriminating items (by loading magnitude) share a
+`uni_lemma`, compared to the number expected if item informativeness were independent across languages.
+
+```{r overlap-table}
+top_overlap %>%
+  arrange(pos2, lang1, lang2) %>%
+  kable(digits = 1, col.names = c("Language 1", "Language 2", "Item type", "Top N", "Shared-item pool",
+                                    "Observed overlap", "Chance-expected overlap")) %>%
+  kable_styling(full_width = FALSE)
+```
+
+Japanese-Cantonese-English noun overlap runs 2-3x above chance. Every pair involving Spanish's nouns
+shows **zero** observed overlap against an expected ~4-5 by chance -- not just "no enrichment," but
+below what random assignment would produce, which is the signature of systematically different items
+being informative, not merely noisier estimates.
+
+# 3. Is this a sign-convention artifact?
+
+Bifactor specific-factor loadings don't have a globally fixed sign (unlike a single bipolar dimension,
+each specific factor's orientation is whatever the model happened to converge to), so a first hypothesis
+was that Spanish's S1_noun dimension simply came out sign-flipped relative to the other three languages.
+Checked directly: flipping Spanish's sign does turn the raw correlation positive, but doesn't recover a
+sensible "same items, just inverted" pattern -- rather than mirroring which items *are* top-loading,
+Spanish's ranking is a genuinely different ordering.
+
+```{r animal-household-check}
+animals <- c("tiger", "turtle", "fish (animal)", "frog", "bird", "giraffe", "lion", "penguin",
+             "chick", "horse", "monkey", "bear", "squirrel", "pig")
+household <- c("stove", "money", "iron (object)", "bag", "broom", "scissors", "soap", "sweater",
+               "comb (object)", "basket")
+
+check <- all_items %>%
+  filter(uni_lemma %in% c(animals, household), pos2 == "noun") %>%
+  mutate(category = if_else(uni_lemma %in% animals, "animal", "household"),
+         language = recode(language, !!!lang_labels)) %>%
+  group_by(language, category) %>%
+  summarise(mean_own_specific_loading = round(mean(own_specific_loading), 2), n = n(), .groups = "drop") %>%
+  pivot_wider(names_from = category, values_from = c(mean_own_specific_loading, n))
+
+check %>%
+  kable(caption = "Mean noun-specific (S1) loading for the same animal vs. household-object items, by language.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+This is the actual mechanism: in Japanese/Cantonese/English, **animal words are the strongest
+noun-specific-bias indicators**; in Spanish, **animal words are comparatively weak noun-bias indicators
+and household-object words are the strongest**. Checking Spanish's own G vs. S1 loadings for these
+items directly confirms why: Spanish animal words have high G loadings (2.0-3.2, near the top of the
+noun G distribution) but comparatively low S1 loadings (0.18-1.24) -- i.e. in the Spanish (Mexican)
+CDI sample, knowing an animal word is a strong marker of *overall* vocabulary size but doesn't carry
+much *extra* information about noun-vs-predicate bias specifically, whereas the reverse is true for
+household objects. This isn't a model-fitting artifact -- Spanish's bifactor fit is the cleanest of
+the four languages by every other diagnostic (highest reliability, cleanest convergence, best CAT
+recovery) -- it's a genuine difference in which noun subcategories carry bias-specific signal in this
+population, plausibly reflecting how early and uniformly animal words are acquired in Mexican Spanish
+CDI norms specifically (making them excellent general-vocabulary markers but poor bias-specific
+markers), though confirming that explanation would need a look at the raw item difficulty/frequency
+distributions rather than resting on this loading pattern alone.
+
+# 4. Summary
+
+- **Nouns are not universally cross-linguistically transferable at the item level** -- the original
+  3-language result (Japanese/Cantonese/English agreeing at r=.6-.7) looked like it might generalize,
+  but Spanish breaks it cleanly and systematically, not through noise but through a real, checkable
+  difference in which noun subcategory (animals vs. household objects) carries bias-specific signal.
+- **Predicates remain the weaker, more inconsistent case** across all six language pairs, consistent
+  with Hagihara et al.'s finding that verb/adjective bias is more cross-linguistically variable than
+  noun bias -- though with only 4 languages and a mix of positive and negative correlations, this is
+  suggestive rather than conclusive.
+- **Practical implication for item bank design**: a cross-linguistically "universal" short-list of
+  maximally-informative noun items (e.g., for a rapid cross-language screening tool) is not supported
+  by this data -- the most useful items for the bias dimension appear to be genuinely
+  population/language-specific, at least between these four languages.

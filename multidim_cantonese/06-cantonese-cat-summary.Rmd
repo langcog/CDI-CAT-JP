@@ -1,0 +1,210 @@
+---
+title: "Toward a Multidimensional CDI-CAT: Noun/Predicate Bias in Cantonese"
+author: "George Kachergis"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(here)
+library(tidyverse)
+library(mirt)
+library(kableExtra)
+```
+
+# Motivation
+
+This replicates the pipeline built for Japanese (`multidim/06-noun-predicate-cat-summary.Rmd`) on
+Cantonese, as a cross-linguistic check of whether the same noun/predicate bifactor CAT design
+generalizes to a second, typologically different language. Unlike Japanese, this repo has no local
+Cantonese response data, so item metadata and administration data were pulled directly from Wordbank
+via `wordbankr`. Scripts are in `multidim_cantonese/01` through `04`; this document loads their saved
+output rather than refitting anything.
+
+```{r load-data}
+items <- read_csv(here("multidim_cantonese/item_lexical_categories.csv"), show_col_types = FALSE)
+efa_loadings <- read_csv(here("multidim_cantonese/efa2_loadings.csv"), show_col_types = FALSE)
+bifactor_items <- read_csv(here("multidim_cantonese/bifactor_item_params.csv"), show_col_types = FALSE)
+bifactor_scores <- read_csv(here("multidim_cantonese/bifactor_scores.csv"), show_col_types = FALSE) %>%
+  mutate(noun_predicate_bias = S1_noun - S2_predicate)
+cat_summary <- read_csv(here("multidim_cantonese/cat_simulation_summary.csv"), show_col_types = FALSE)
+resp_data <- readRDS(here("multidim_cantonese/noun_predicate_response_data.Rds"))
+
+# Japanese results, for the cross-linguistic comparison in Section 6
+jp_items <- read_csv(here("multidim/item_lexical_categories.csv"), show_col_types = FALSE)
+jp_bifactor_scores <- read_csv(here("multidim/bifactor_scores.csv"), show_col_types = FALSE)
+jp_cat_summary <- read_csv(here("multidim/cat_simulation_summary.csv"), show_col_types = FALSE)
+jp_resp_data <- readRDS(here("multidim/noun_predicate_response_data.Rds"))
+```
+
+# 1. Data source and item classification
+
+Cantonese Wordbank has a single WS form (16-30 months, no WG), 804 word items. Unlike the Japanese
+pipeline (which used a locally-maintained item CSV), item metadata and response data come directly
+from `wordbankr::get_item_data()` / `get_instrument_data()`. Items are classified the same way as for
+Japanese: Wordbank's own `lexical_category` field already collapses verbs+adjectives into a single
+"predicates" class for Cantonese too (confirmed by an exact crosstab match between our
+category-based mapping and Wordbank's own coding), so `action_words`/`descriptive_words` were kept
+separate as `lexical_class` while also providing the 2-way `pos2` (noun/predicate) collapse used for
+the CAT.
+
+```{r item-counts}
+items %>%
+  count(lexical_class, pos2) %>%
+  arrange(pos2) %>%
+  kable(col.names = c("Lexical class", "CAT dimension (pos2)", "N items"),
+        caption = "Cantonese item counts by lexical class and CAT grouping.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The content-word item bank is **572 items** (316 noun, 256 predicate = 172 verb + 84 adjective) --
+larger than Japanese's 478, both because Cantonese Wordbank has more items overall and because a
+larger share are content words.
+
+# 2. Sample
+
+Starting from 1208 Wordbank administrations, 2 non-producers and 1 child at ceiling were dropped,
+leaving **`r nrow(resp_data$d_demo)`** administrations. Missingness in the content-word matrix was
+negligible (`r round(100*mean(is.na(resp_data$d_mat_content)),2)`%, vs. 12.6% for Japanese, since
+there's no separate short-form data to reconcile here) and was imputed the same way (`mirt::imputeMissing()`)
+before the CAT simulation regardless.
+
+# 3. Exploratory factor check
+
+```{r efa-plot, fig.width=6, fig.height=5}
+ggplot(efa_loadings, aes(x = F1, y = F2, color = pos2)) +
+  geom_point(alpha = 0.4) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  labs(x = "F1 (general)", y = "F2 (noun vs. predicate)", color = "Item type",
+       title = "Cantonese: exploratory 2-factor loadings") +
+  theme_bw()
+```
+
+The same qualitative signature as Japanese: **every item's dominant loading is on F1** (mean 0.80 for
+nouns, 0.85 for predicates), with F2 a much smaller but reliably separating secondary factor
+(noun mean `r round(mean(efa_loadings$F2[efa_loadings$pos2=="noun"]),3)`, predicate mean
+`r round(mean(efa_loadings$F2[efa_loadings$pos2=="predicate"]),3)`; Welch t = 11.6, p < .0001).
+One difference from Japanese: F1/F2 correlate r = .23 after oblimin rotation here, vs. r = -.015 for
+Japanese -- less cleanly orthogonal, though F2 is still clearly a secondary, much smaller factor. This
+still supports a bifactor structure as the confirmatory model, which was fit next.
+
+# 4. Confirmatory bifactor model
+
+```{r bifactor-loadings}
+bifactor_items %>%
+  mutate(own_specific = if_else(pos2 == "noun", S1_noun, S2_predicate)) %>%
+  group_by(pos2) %>%
+  summarise(mean_G = mean(G), mean_own_specific = mean(own_specific), n = n()) %>%
+  kable(digits = 2, caption = "Mean general (G) and own-specific-factor loadings by item type.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+```{r bifactor-reliability}
+rel <- empirical_rxx(bifactor_scores %>%
+                        select(G, S1_noun, S2_predicate, SE_G, SE_S1_noun, SE_S2_predicate) %>%
+                        as.matrix())
+tibble(dimension = names(rel), empirical_rxx = rel) %>%
+  kable(digits = 2, caption = "Empirical reliability of full-item-bank (non-adaptive) factor scores.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+Reliability is **notably higher than Japanese** for the specific factors (S1 = .86, S2 = .80, vs.
+Japanese's .71/.64) -- consistent with the larger item bank and sample.
+
+```{r bias-vs-production, fig.width=6, fig.height=4.5}
+ggplot(bifactor_scores, aes(x = production, y = noun_predicate_bias)) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(x = "Total production (sum score)", y = "Noun/predicate bias (S1 - S2)",
+       title = sprintf("r = %.2f", cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias))) +
+  theme_bw()
+```
+
+The bias score decouples from vocabulary size even more cleanly than in Japanese: r =
+`r round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias),2)` with production
+(Japanese: -.16) and r = `r round(cor(bifactor_scores$age, bifactor_scores$noun_predicate_bias),2)`
+with age (Japanese: -.17). As with Japanese, the S1/S2 EAP *score* correlation is non-trivial
+(r = `r round(cor(bifactor_scores$S1_noun, bifactor_scores$S2_predicate),2)`, actually higher than
+Japanese's .48) despite the model constraining them to be latently orthogonal -- the same known
+bifactor artifact, more pronounced here.
+
+# 5. CAT simulation
+
+## 5.1 Item selection criterion
+
+As with Japanese, `Drule` (D-optimal across all 3 dimensions) was compared against `Wrule` with
+weights down-weighting G; `Drule` again matched or beat `Wrule` on a 100-person subsample, so `Drule`
+was used throughout.
+
+## 5.2 A stopping-rule lesson
+
+The first full-sample simulation used `min_SEM = c(0.3, 0.5, 0.5)` -- the same target used for
+Japanese, chosen from that language's full-bank SE ceiling. For Cantonese this badly **under-shoots**:
+because the full item bank supports much better specific-factor precision here (median full-bank SE
+&approx; 0.26-0.32, vs. Japanese's &approx; 0.50-0.52), a target of 0.5 is satisfied very early --
+the CAT was stopping after a mean of only 56-85 items even with a 100-200 item ceiling available, and
+correlation with the full-bank bias estimate stayed disappointingly low (r &approx; .75-.82).
+
+```{r cat-sim-table}
+cat_summary %>%
+  kable(digits = 3, caption = "Cantonese CAT simulation: item budget vs. recovered precision.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+Forcing more items administered (`min_items = 150`, tightened `min_SEM = c(0.3,0.3,0.3)`, still capped
+at 200) resolved this: mean items rose to 192, and **r(CAT bias, full-bank bias) jumped to .97** --
+better than Japanese's best result (.95 at 200 items). This is the most important methodological
+finding from the Cantonese replication: **the empirically-grounded `min_SEM` target used for Japanese
+was too loose when applied to a different item bank/sample with a better achievable ceiling**, and
+premature SE-based stopping silently produced worse recovery than a longer, fixed-ish administration
+would have. This is worth revisiting for the Japanese CAT too, rather than assuming its `min_SEM = 0.5`
+choice was well-calibrated just because it seemed reasonable at the time.
+
+# 6. Cross-linguistic comparison
+
+```{r comparison-table}
+tibble(
+  language = c("Japanese", "Cantonese"),
+  n_administrations = c(nrow(jp_resp_data$d_demo), nrow(resp_data$d_demo)),
+  n_content_items = c(ncol(jp_resp_data$d_mat_content), ncol(resp_data$d_mat_content)),
+  n_noun = c(sum(jp_items$pos2 == "noun"), sum(items$pos2 == "noun")),
+  n_predicate = c(sum(jp_items$pos2 == "predicate"), sum(items$pos2 == "predicate")),
+  full_bank_reliability_S1 = c(0.71, 0.86),
+  full_bank_reliability_S2 = c(0.64, 0.80),
+  bias_vs_production_r = c(
+    round(cor(jp_bifactor_scores$production, jp_bifactor_scores$S1_noun - jp_bifactor_scores$S2_predicate), 2),
+    round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias), 2)
+  ),
+  best_cat_recovery_r = c(0.95, 0.97),
+  items_for_best_recovery = c(131, 192)
+) %>%
+  kable(digits = 2, caption = "Japanese vs. Cantonese: key numbers side by side.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The core design -- bifactor model, Drule item selection -- transfers cleanly across two typologically
+different languages. Cantonese, with a larger item bank and sample, supports a *more* reliable bias
+measure at the full-bank level, but realizing that advantage in a CAT required noticing and correcting
+an under-calibrated stopping rule, not just porting the Japanese settings over.
+
+# 7. Summary and open questions
+
+- **Item bank**: 572 items (316 noun, 256 predicate), pulled and classified directly from Wordbank,
+  with the classification cross-validated exactly against Wordbank's own `lexical_category` coding.
+- **Model**: the same bifactor structure holds -- EFA shows one dominant general factor plus a small,
+  reliable noun/predicate-separating second factor, and the confirmatory bifactor model decouples the
+  bias score from vocabulary size/age (better than Japanese: r &approx; -.09 to -.11).
+- **CAT**: `Drule` selection; **the `min_SEM` stopping target must be recalibrated per item
+  bank/sample rather than reused across languages** -- this was the main actionable finding from the
+  replication.
+
+Open questions:
+
+1. Should the Japanese CAT simulation (`multidim/04-05`) be rerun with a tighter `min_SEM` /
+   higher `min_items` floor, given the same under-shooting risk likely applies there too?
+2. Cantonese's 3-way verb/adjective split (172 vs. 84 items) is even more asymmetric than Japanese's
+   (103 vs. 63) -- worth checking before attempting a 3-way model for either language.
+3. Given Cantonese has no WG (short) form, is a similar dual-form imputation approach available if a
+   deployed CAT wants to accept both short- and long-form partial administrations, or should Cantonese
+   deployment assume WS-only from the start?

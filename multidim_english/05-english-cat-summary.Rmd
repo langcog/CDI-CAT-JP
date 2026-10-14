@@ -1,0 +1,225 @@
+---
+title: "Toward a Multidimensional CDI-CAT: Noun/Predicate Bias in American English"
+author: "George Kachergis"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(here)
+library(tidyverse)
+library(mirt)
+library(kableExtra)
+```
+
+# Motivation
+
+A third replication of the noun/predicate bifactor CAT pipeline (Japanese: `multidim/`; Cantonese:
+`multidim_cantonese/`), on American English -- both as a further cross-linguistic check and because
+English is the source CDI the Japanese form was translated from. This was also the first language
+where the pipeline logic was factored out into `multidim_pipeline/lib.R` rather than copy-pasted.
+
+**This write-up reports the full-sample (N=8998) fit as canonical.** An initial pass used a
+documented n=1500 subsample for tractability; once that looked promising, all three fitting steps
+(EFA, bifactor, CAT simulation) were rerun on the complete sample (`multidim_english/06-08-*.R`).
+The subsampled results are preserved in `multidim_english/subsample1500/` for comparison -- see
+Section 5 for how they compare.
+
+```{r load-data}
+items <- read_csv(here("multidim_english/item_lexical_categories.csv"), show_col_types = FALSE)
+efa_loadings <- read_csv(here("multidim_english/efa2_loadings.csv"), show_col_types = FALSE)
+bifactor_items <- read_csv(here("multidim_english/bifactor_item_params.csv"), show_col_types = FALSE)
+bifactor_scores <- read_csv(here("multidim_english/bifactor_scores.csv"), show_col_types = FALSE) %>%
+  mutate(noun_predicate_bias = S1_noun - S2_predicate)
+cat_summary <- read_csv(here("multidim_english/cat_simulation_summary.csv"), show_col_types = FALSE)
+resp_data <- readRDS(here("multidim_english/noun_predicate_response_data.Rds"))
+
+sub_bifactor_scores <- read_csv(here("multidim_english/subsample1500/bifactor_scores.csv"), show_col_types = FALSE) %>%
+  mutate(noun_predicate_bias = S1_noun - S2_predicate)
+sub_cat_summary <- read_csv(here("multidim_english/subsample1500/cat_simulation_summary.csv"), show_col_types = FALSE)
+
+jp_bifactor_scores <- read_csv(here("multidim/bifactor_scores.csv"), show_col_types = FALSE)
+can_bifactor_scores <- read_csv(here("multidim_cantonese/bifactor_scores.csv"), show_col_types = FALSE) %>%
+  mutate(noun_predicate_bias = S1_noun - S2_predicate)
+can_resp_data <- readRDS(here("multidim_cantonese/noun_predicate_response_data.Rds"))
+sp_bifactor_scores <- read_csv(here("multidim_spanish/bifactor_scores.csv"), show_col_types = FALSE) %>%
+  mutate(noun_predicate_bias = S1_noun - S2_predicate)
+sp_resp_data <- readRDS(here("multidim_spanish/noun_predicate_response_data.Rds"))
+```
+
+# 1. Data and item classification
+
+English (American) WS has **`r nrow(resp_data$d_demo)`** administrations on Wordbank after excluding
+non-producers and children at ceiling -- by far the largest of the four languages fit so far. Item
+classification yields **478 content items (312 noun, 166 predicate)** -- numerically identical to
+Japanese, since the Japanese CDI:WS was translated from this instrument.
+
+```{r item-counts}
+items %>%
+  count(lexical_class, pos2) %>%
+  arrange(pos2) %>%
+  kable(col.names = c("Lexical class", "CAT dimension (pos2)", "N items"),
+        caption = "English item counts by lexical class and CAT grouping.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+# 2. Exploratory factor check (full sample)
+
+```{r efa-plot, fig.width=6, fig.height=5}
+ggplot(efa_loadings, aes(x = F1, y = F2, color = pos2)) +
+  geom_point(alpha = 0.4) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  labs(x = "F1 (general)", y = "F2 (noun vs. predicate)", color = "Item type",
+       title = "English: exploratory 2-factor loadings (full sample)") +
+  theme_bw()
+```
+
+Same signature as the subsampled fit and the other languages: dominant general factor (mean F1 = 0.85
+nouns, 0.88 predicates), a much smaller but highly reliable noun/predicate-separating F2 (noun mean
+`r round(mean(efa_loadings$F2[efa_loadings$pos2=="noun"]),3)`, predicate mean
+`r round(mean(efa_loadings$F2[efa_loadings$pos2=="predicate"]),3)`; Welch t = 35.0, p < .0001), and
+the cleanest F1/F2 orthogonality yet (r = -0.01).
+
+# 3. Confirmatory bifactor model (full sample)
+
+```{r bifactor-loadings}
+bifactor_items %>%
+  mutate(own_specific = if_else(pos2 == "noun", S1_noun, S2_predicate)) %>%
+  group_by(pos2) %>%
+  summarise(mean_G = mean(G), mean_own_specific = mean(own_specific), n = n()) %>%
+  kable(digits = 2, caption = "Mean general (G) and own-specific-factor loadings by item type.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+`mirt` printed the same "Log-likelihood was decreasing near the ML solution" warning on this fit as it
+did on the n=1500 subsample. Having now seen it twice, on independently-drawn samples, with highly
+consistent resulting parameters both times (reliability, G-vs-production correlation, and item
+loadings all close across the two fits -- see Section 5), this looks like a benign optimizer quirk
+near convergence rather than a sign of a bad fit, resolving the caveat flagged in the earlier version
+of this write-up.
+
+```{r bifactor-reliability}
+rel <- empirical_rxx(bifactor_scores %>%
+                        select(G, S1_noun, S2_predicate, SE_G, SE_S1_noun, SE_S2_predicate) %>%
+                        as.matrix())
+tibble(dimension = names(rel), empirical_rxx = rel) %>%
+  kable(digits = 2, caption = "Empirical reliability of full-item-bank (non-adaptive) factor scores, full N=8998 sample.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+```{r bias-vs-production, fig.width=6, fig.height=4.5}
+ggplot(bifactor_scores, aes(x = production, y = noun_predicate_bias)) +
+  geom_point(alpha = 0.05) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(x = "Total production (sum score)", y = "Noun/predicate bias (S1 - S2)",
+       title = sprintf("r = %.3f", cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias))) +
+  theme_bw()
+```
+
+The bias score decouples from vocabulary size: r =
+`r round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias),3)` with production and
+r = `r round(cor(bifactor_scores$age, bifactor_scores$noun_predicate_bias),2)` with age (both
+essentially null, tighter to zero than the n=1500 fit's -.06/-.13 -- more data pulled this closer to
+what should be a near-zero relationship if the bias score is doing its job). The S1/S2 EAP score
+correlation is `r round(cor(bifactor_scores$S1_noun, bifactor_scores$S2_predicate),2)`.
+
+# 4. CAT simulation (full sample)
+
+```{r cat-sim-table}
+cat_summary %>%
+  kable(digits = 3, caption = "English CAT simulation: item budget vs. recovered precision, full sample.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The by-then-established design (`Drule`, `min_items` ~75% of `max_items`, `min_SEM` from this
+dataset's own full-bank ceiling) worked correctly on the first attempt this time -- no "forced longer"
+follow-up needed. At a 300-item cap (257 administered on average), **r = .98** against the full-bank
+estimate, matching Spanish's best result.
+
+# 5. Did the extra ~7500 participants actually help?
+
+```{r subsample-comparison}
+tibble(
+  fit = c("n=1500 subsample", "N=8998 full sample"),
+  reliability_S1 = c(round(empirical_rxx(as.matrix(sub_bifactor_scores %>%
+    select(G, S1_noun, S2_predicate, SE_G, SE_S1_noun, SE_S2_predicate)))["S1"], 3),
+    round(rel["S1"], 3)),
+  reliability_S2 = c(round(empirical_rxx(as.matrix(sub_bifactor_scores %>%
+    select(G, S1_noun, S2_predicate, SE_G, SE_S1_noun, SE_S2_predicate)))["S2"], 3),
+    round(rel["S2"], 3)),
+  bias_vs_production_r = c(round(cor(sub_bifactor_scores$production, sub_bifactor_scores$noun_predicate_bias), 3),
+                             round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias), 3)),
+  cat_r_at_100_items = c(sub_cat_summary$r_bias_vs_full[sub_cat_summary$max_items == 100],
+                          cat_summary$r_bias_vs_full[cat_summary$max_items == 100]),
+  cat_r_at_200_items = c(sub_cat_summary$r_bias_vs_full[sub_cat_summary$max_items == 200],
+                          cat_summary$r_bias_vs_full[cat_summary$max_items == 200])
+) %>%
+  kable(digits = 3, caption = "Subsample (n=1500) vs. full sample (N=8998): same model structure, different precision.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+Yes, meaningfully: reliability and the bias/production null-correlation both tightened, and CAT
+recovery at matched item budgets improved noticeably at the 100- and 200-item marks (the two converge
+by ~250-300 items, where both were already doing well). The full sample is the more trustworthy result
+and is used as canonical from here on; the subsampled fit is kept for this comparison and as a record
+of the tractability tradeoff that was made initially.
+
+# 6. Four-language comparison
+
+```{r comparison-table}
+tibble(
+  language = c("Japanese", "Cantonese", "English (American)", "Spanish (Mexican)"),
+  n_for_modeling = c(nrow(jp_bifactor_scores), nrow(can_bifactor_scores), nrow(bifactor_scores), nrow(sp_bifactor_scores)),
+  n_content_items = c(478, 572, 478, 478),
+  full_bank_reliability_S1 = c(0.71, 0.86, round(rel["S1"], 2), 0.89),
+  full_bank_reliability_S2 = c(0.64, 0.80, round(rel["S2"], 2), 0.85),
+  bias_vs_production_r = c(
+    round(cor(jp_bifactor_scores$production, jp_bifactor_scores$S1_noun - jp_bifactor_scores$S2_predicate), 2),
+    round(cor(can_bifactor_scores$production, can_bifactor_scores$noun_predicate_bias), 2),
+    round(cor(bifactor_scores$production, bifactor_scores$noun_predicate_bias), 3),
+    round(cor(sp_bifactor_scores$production, sp_bifactor_scores$noun_predicate_bias), 3)
+  ),
+  best_cat_recovery_r = c(0.95, 0.97, 0.98, 0.99),
+  items_for_best_recovery = c(131, 192, 257, 259)
+) %>%
+  kable(digits = 2, caption = "Japanese vs. Cantonese vs. English vs. Spanish: key numbers side by side.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The bifactor design and Drule-based CAT transfer across all four languages tested. Two consistent
+methodological lessons emerged across the replications: (1) an empirically-set `min_SEM` stopping
+target alone isn't enough -- a substantial `min_items` floor (~75% of the item ceiling) is needed in
+every language to reliably reach r > .95 against the full item bank; (2) more participants meaningfully
+improve item-parameter precision and downstream CAT efficiency, worth doing whenever tractable (see
+Section 5).
+
+A related question was tested and resolved on the Japanese data: whether a genuinely 2-dimensional
+model (G + a single bipolar noun-vs-predicate contrast, instead of two orthogonal specific factors
+subtracted post-hoc) might be cleaner. Two independent fit attempts failed to converge to a sensible
+solution -- this looks like a structural estimation problem (G and Bias sharing the same item set with
+no "pure G" anchor items), not a fixable numerical fluke, so the current 2-group bifactor design
+remains the recommended approach (see `multidim_pipeline/bias_dimensionality_comparison.R`).
+
+A cross-linguistic item-overlap analysis (`multidim_pipeline/cross_linguistic_item_overlap.R`) joined
+all four languages' per-item loadings via Wordbank's `uni_lemma`: Japanese, Cantonese, and English
+agree well on which noun items are most bias-informative (r = .61-.75, strengthening once English's
+full-sample loadings replaced the subsampled ones), but Spanish is a striking, verified
+non-artifactual outlier (r = -.33 to -.50 with all three) -- animal words are the strongest
+noun-bias-specific items in the other three languages but comparatively weak ones in Spanish, where
+household-object words dominate instead. Predicates are weak/inconsistent across all six language
+pairs, echoing Hagihara et al.'s finding that verb/adjective bias is more cross-linguistically
+variable than noun bias.
+
+# 7. Open questions
+
+1. Given the min_items floor needed for good recovery (150-260 across all four languages) is much
+   longer than the existing unidimensional production CATs (~25-50 items), is a combined single-session
+   CAT (general ability + bias, sharing items) preferable to a separate, longer bias-specific
+   instrument?
+2. Cantonese and Spanish used their full available samples already; Japanese's 939 is the smallest of
+   the four -- worth checking whether more Japanese data is available to close that gap the way it was
+   closed here for English.
+3. The Spanish item-overlap anomaly (Section 6) deserves a closer look at raw item difficulty/frequency
+   distributions before concluding anything stronger than "the most bias-informative noun subcategory
+   differs by population."
