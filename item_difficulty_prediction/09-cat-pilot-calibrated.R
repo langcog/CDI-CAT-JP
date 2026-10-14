@@ -16,7 +16,7 @@
 ##   A_drop        the 60 verbs dropped
 ##   B7_pred_only  verbs kept with predicted parameters, no pilot
 ##   P<N>          verbs kept with pilot-calibrated parameters (prior = predicted)
-##   ML100         verbs kept, calibrated from N = 100 with NO prior
+##   ML<N>         verbs kept, calibrated from N = 50 / 100 / 200 with NO prior
 
 source(here::here("item_difficulty_prediction/05-sim-helpers.R"))
 library(parallel)
@@ -28,7 +28,9 @@ verbs <- inp$items$WS[inp$items$category_en == "action_words"]
 ws_kids <- which(rowSums(is.na(raw)) == 0)
 K <- 60; n_items <- 150; Ns <- c(50, 100, 200, 400)
 out_file <- here::here("item_difficulty_prediction/cat_sim_pilot.csv")
-if (file.exists(out_file)) file.remove(out_file)
+# Resumable: cells (rep, condition) already in the CSV are skipped, so a crashed or
+# extended run can simply be restarted. Delete the CSV to start from scratch.
+done <- if (file.exists(out_file)) read_csv(out_file, show_col_types = FALSE) |> transmute(key = paste(rep, condition)) |> pull(key) else character()
 
 true_par <- inp$bif_params |> transmute(item = WS, a_G = G, a_S = if_else(pos2 == "noun", S1_noun, S2_predicate), d)
 cv <- map_dfr(verbs, \(v) predict_params(inp, v, "M7") |>
@@ -49,7 +51,9 @@ param_err <- function(est, hold) {
 na_err <- tibble(rmse_a_G = NA_real_, rmse_a_S = NA_real_, rmse_d = NA_real_, irf_rmse = NA_real_)
 
 cl <- makeCluster(12)
-for (r in 1:3) {
+args <- commandArgs(trailingOnly = TRUE)
+reps <- if (length(args)) as.integer(args) else 1:3
+for (r in reps) {
   set.seed(1000 * K + r); hold <- sample(verbs, K)
   p7 <- predict_params(inp, hold, "M7"); p0 <- predict_params(inp, hold, "M0")
   set.seed(2000 + r); pool <- sample(ws_kids, 400)
@@ -64,10 +68,13 @@ for (r in 1:3) {
     est <- calibrate_verbs(inp, raw[pool[seq_len(N)], , drop = FALSE], hold, start = p7, prior_mean = p7, prior_sd = cv_sd)
     banks[[paste0("P", N)]] <- list(model = make_model(inp, all_items, est), err = param_err(est, hold), pilot_N = N)
   }
-  est_ml <- calibrate_verbs(inp, raw[pool[1:100], , drop = FALSE], hold, start = p0)
-  banks[["ML100"]] <- list(model = make_model(inp, all_items, est_ml), err = param_err(est_ml, hold), pilot_N = 100)
+  for (N in c(50, 100, 200)) {   # no-prior comparisons (start at class means)
+    est_ml <- calibrate_verbs(inp, raw[pool[seq_len(N)], , drop = FALSE], hold, start = p0)
+    banks[[paste0("ML", N)]] <- list(model = make_model(inp, all_items, est_ml), err = param_err(est_ml, hold), pilot_N = N)
+  }
 
   for (nm in names(banks)) {
+    if (paste(r, nm) %in% done) next
     t0 <- Sys.time()
     run <- run_cat(banks[[nm]]$model, inp, n_items, cl, kids = test)
     row <- bind_cols(tibble(K = K, rep = r, condition = nm, pilot_N = banks[[nm]]$pilot_N),

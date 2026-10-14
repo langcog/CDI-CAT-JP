@@ -113,14 +113,23 @@ score_run <- function(run, inp, tracked = character(0), kids = NULL) {
 ## truth). Prior (optional): normal, centred on prior_mean (data frame with a_G, a_S,
 ## d in `hold` order) with SDs prior_sd (named a_G, a_S, d).
 calibrate_verbs <- function(inp, raw, hold, start, prior_mean = NULL, prior_sd = NULL) {
+  # mirt cannot handle an item with a single observed response category (typical in a
+  # small pilot: everyone, or no one, produced it). Such ANCHORS are simply dropped
+  # (their parameters are fixed, so they carry no information about the new verbs);
+  # a new VERB with no usable pilot signal keeps its starting values.
+  has_var <- apply(raw, 2, \(x) length(unique(x[!is.na(x)])) > 1)
+  est_verbs <- hold[has_var[hold]]
+  idx <- match(est_verbs, hold)
+  raw <- raw[, has_var, drop = FALSE]
   items <- colnames(raw)
   grp <- as.integer(factor(inp$items$pos2, levels = c("noun", "predicate")))[match(items, inp$items$WS)]
   pv <- bfactor(raw, model = grp, itemtype = "2PL", pars = "values")
   pv_true <- mod2values(inp$mod_true)
   pv$value <- pv_true$value[match(paste(pv$item, pv$name), paste(pv_true$item, pv_true$name))]
   pv$est <- FALSE
-  for (i in seq_along(hold)) for (nm in c("a1", "a3", "d")) {
-    row <- which(pv$item == hold[i] & pv$name == nm)
+  for (k in seq_along(est_verbs)) for (nm in c("a1", "a3", "d")) {
+    i <- idx[k]
+    row <- which(pv$item == est_verbs[k] & pv$name == nm)
     pv$value[row] <- switch(nm, a1 = start$a_G[i], a3 = start$a_S[i], d = start$d[i])
     pv$est[row] <- TRUE
     if (nm == "d") { pv$lbound[row] <- -30; pv$ubound[row] <- 30 } else { pv$lbound[row] <- 0.05; pv$ubound[row] <- 20 }
@@ -130,11 +139,19 @@ calibrate_verbs <- function(inp, raw, hold, start, prior_mean = NULL, prior_sd =
       pv$prior_2[row] <- switch(nm, a1 = prior_sd[["a_G"]], a3 = prior_sd[["a_S"]], d = prior_sd[["d"]])
     }
   }
-  m <- suppressWarnings(bfactor(raw, model = grp, itemtype = "2PL", pars = pv, verbose = FALSE,
-                                technical = list(NCYCLES = 400)))
-  out <- mod2values(m)
-  tibble(item = hold,
-         a_G = map_dbl(hold, \(h) out$value[out$item == h & out$name == "a1"]),
-         a_S = map_dbl(hold, \(h) out$value[out$item == h & out$name == "a3"]),
-         d   = map_dbl(hold, \(h) out$value[out$item == h & out$name == "d"]))
+  out_tab <- tibble(item = hold, a_G = start$a_G, a_S = start$a_S, d = start$d)   # fallback = start values
+  if (length(est_verbs)) {
+    m <- suppressWarnings(bfactor(raw, model = grp, itemtype = "2PL", pars = pv, verbose = FALSE,
+                                  technical = list(NCYCLES = 400)))
+    out <- mod2values(m)
+    for (k in seq_along(est_verbs)) {
+      i <- idx[k]
+      out_tab$a_G[i] <- out$value[out$item == est_verbs[k] & out$name == "a1"]
+      out_tab$a_S[i] <- out$value[out$item == est_verbs[k] & out$name == "a3"]
+      out_tab$d[i]   <- out$value[out$item == est_verbs[k] & out$name == "d"]
+    }
+  }
+  attr(out_tab, "n_unestimable_verbs") <- length(hold) - length(est_verbs)
+  attr(out_tab, "n_dropped_anchors") <- sum(!has_var) - (length(hold) - length(est_verbs))
+  out_tab
 }
